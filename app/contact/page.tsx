@@ -11,14 +11,14 @@ import { PageHeroVisual } from '@/components/page-hero-visual'
 // See app/contact/metadata.ts
 
 const services = [
-  'Site de prezentare profesional',
-  'Magazin online (E-Commerce)',
-  'Redesign site existent',
-  'SEO & Optimizare pentru motoare de căutare',
-  'Google Ads & Campanii Plătite',
-  'Mentenanță și Suport Tehnic',
-  'Integrări și Automatizări',
-  'Consultanță Digitală',
+  'Găzduire Web SSD',
+  'Găzduire WordPress',
+  'Găzduire PrestaShop',
+  'Găzduire Magazin Online (E-Commerce)',
+  'Domenii Web',
+  'VPS Cloud',
+  'Certificat SSL',
+  'Migrare Site Web',
 ]
 
 const contactInfo = [
@@ -108,16 +108,15 @@ export default function ContactPage() {
                   Contact FXF Web Solution
                 </p>
                 <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-5 text-balance">
-                  Solicită ofertă gratuită pentru proiectul tău web
+                  Contactează-ne pentru găzduire web de calitate
                 </h1>
                 <p className="text-white/70 text-lg leading-relaxed mb-4">
-                  Consultanța inițială este 100% gratuită și fără obligații. Completează formularul 
-                  și te contactăm în maxim 24 de ore pentru a discuta despre cerințele tale și 
-                  oportunitățile de colaborare.
+                  Consultanța inițială este 100% gratuită și fără obligații. Spune-ne despre necesitățile tale 
+                  și oferim recomandări personalizate pentru soluția de găzduire potrivită.
                 </p>
                 <p className="text-white/50 text-sm">
-                  Răspundem la toate solicitările în maxim 4 ore lucrative. Proiecte de web design, 
-                  magazine online, SEO sau marketing digital - suntem aici să te ajutăm.
+                  Răspundem la toate solicitările în maxim 4 ore lucrative. Găzduire web SSD, WordPress, 
+                  PrestaShop, domenii, VPS - avem soluția pentru fiecare nevoie.
                 </p>
               </div>
               <PageHeroVisual page="contact" />

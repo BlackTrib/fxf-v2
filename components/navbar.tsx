@@ -6,11 +6,11 @@ import { Menu, X, ChevronDown, Monitor, ShoppingCart, Wrench, Search, BarChart2 
 import { cn } from '@/lib/utils'
 
 const services = [
-  { href: '/servicii/web-design', label: 'Web Design', icon: Monitor },
-  { href: '/servicii/magazin-online', label: 'E-Commerce', icon: ShoppingCart },
-  { href: '/servicii/mentenanta-web', label: 'Mentenanță', icon: Wrench },
-  { href: '/servicii/optimizare-seo', label: 'SEO', icon: Search },
-  { href: '/servicii/google-ads', label: 'Google Ads', icon: BarChart2 },
+  { href: '/servicii/gazduire-web', label: 'Găzduire Web', icon: Monitor },
+  { href: '/servicii/gazduire-wordpress', label: 'Găzduire WordPress', icon: ShoppingCart },
+  { href: '/servicii/gazduire-prestashop', label: 'Găzduire PrestaShop', icon: Wrench },
+  { href: '/servicii/gazduire-ecommerce', label: 'E-Commerce', icon: Search },
+  { href: '/servicii/vps', label: 'VPS Cloud', icon: BarChart2 },
 ]
 
 const links = [
