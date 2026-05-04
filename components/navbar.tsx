@@ -21,78 +21,21 @@ const links = [
   { href: '/contact', label: 'Contact' },
 ]
 
-// Helper function to normalize pathname (remove trailing slash except for root)
-function normalizePath(path: string): string {
-  if (path === '/' || path === '') return '/'
-  return path.replace(/\/+$/, '')
-}
-
-// Helper to check if a link is active
-function isLinkActive(linkHref: string, currentPath: string): boolean {
-  const normalizedLink = normalizePath(linkHref)
-  const normalizedCurrent = normalizePath(currentPath)
-  return normalizedLink === normalizedCurrent
-}
-
-// Helper to check if path starts with prefix
-function pathStartsWith(currentPath: string, prefix: string): boolean {
-  const normalizedCurrent = normalizePath(currentPath)
-  return normalizedCurrent.startsWith(prefix)
-}
-
 export function Navbar() {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [dropdown, setDropdown] = useState(false)
   const [mobileServices, setMobileServices] = useState(false)
-  
-  // Start with empty pathname - will be set after mount from data attribute
-  const [pathname, setPathname] = useState('')
-  const [isMounted, setIsMounted] = useState(false)
-  
-  // Read pathname from data attribute on mount (set by inline script in layout)
+  const [isHome, setIsHome] = useState(true)
+
   useEffect(() => {
-    // Read initial pathname from data attribute (set by inline script before React)
-    const initialPath = document.documentElement.dataset.currentPath || 
-                        window.location.pathname.replace(/\/$/, '') || '/'
-    setPathname(initialPath)
-    setIsMounted(true)
-    
-    const updatePathname = () => {
-      const path = window.location.pathname.replace(/\/$/, '') || '/'
-      setPathname(path)
-      document.documentElement.setAttribute('data-current-path', path)
+    const checkIsHome = () => {
+      setIsHome(window.location.pathname === '/' || window.location.pathname === '')
     }
-    
-    // Listen for popstate (back/forward navigation)
-    window.addEventListener('popstate', updatePathname)
-    
-    // Listen for click to catch client-side navigation
-    const handleClick = () => {
-      setTimeout(updatePathname, 100)
-    }
-    document.addEventListener('click', handleClick)
-    
-    return () => {
-      window.removeEventListener('popstate', updatePathname)
-      document.removeEventListener('click', handleClick)
-    }
+    checkIsHome()
+    window.addEventListener('popstate', checkIsHome)
+    return () => window.removeEventListener('popstate', checkIsHome)
   }, [])
-
-  // Check if link is active - returns false before mount to avoid wrong active state
-  const checkActive = (linkHref: string): boolean => {
-    if (!isMounted) return false
-    return isLinkActive(linkHref, pathname)
-  }
-  
-  // Check if pathname starts with prefix - returns false before mount
-  const checkStartsWith = (prefix: string): boolean => {
-    if (!isMounted) return false
-    return pathStartsWith(pathname, prefix)
-  }
-
-  // Before mount, assume we're not on home page to avoid showing home as active everywhere
-  const isHome = isMounted ? normalizePath(pathname) === '/' : false
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10)
@@ -100,12 +43,9 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  useEffect(() => {
-    setOpen(false)
-    setDropdown(false)
-  }, [pathname])
-
-  const light = scrolled || !isHome
+  // On home + not scrolled: transparent bg, white text, white CTA
+  // Scrolled or other pages: blue (primary) bg, white text, white CTA
+  const darkMode = isHome && !scrolled
 
   return (
     <header className={cn(
@@ -114,114 +54,98 @@ export function Navbar() {
     )}>
       <div className={cn(
         'absolute inset-0 transition-all duration-300',
-        scrolled 
-          ? 'bg-white/90 backdrop-blur-md border-b border-border/50 shadow-sm' 
-          : isHome ? 'bg-transparent' : 'bg-white/80 backdrop-blur-sm'
+        darkMode
+          ? 'bg-transparent'
+          : 'bg-primary shadow-md'
       )} />
 
       <div className="max-w-6xl mx-auto px-5 relative">
         <div className="flex items-center justify-between h-12">
+
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 group">
-            <div className={cn(
-              'w-9 h-9 rounded-lg flex items-center justify-center font-mono text-sm font-bold transition-all',
-              light 
-                ? 'bg-primary text-white' 
-                : 'bg-white/10 text-white border border-white/20'
-            )}>
+            <div className="w-9 h-9 rounded-lg flex items-center justify-center font-mono text-sm font-bold bg-white/15 text-white border border-white/20 transition-all group-hover:bg-white/25">
               {'</>'}
             </div>
             <div className="flex flex-col leading-none">
-              <span className={cn(
-                'font-display font-bold text-base tracking-wide transition-colors',
-                light ? 'text-primary' : 'text-white'
-              )}>FXF <span className="ml-0.5">WEB</span></span>
-              <span className={cn(
-                'text-[8px] font-medium tracking-[0.48em] uppercase transition-colors',
-                light ? 'text-muted-foreground' : 'text-white/50'
-              )}>SOLUTION</span>
+              <span className="font-display font-bold text-base tracking-wide text-white">
+                FXF <span className="ml-0.5">WEB</span>
+              </span>
+              <span className="text-[8px] font-medium tracking-[0.48em] uppercase text-white/60">
+                SOLUTION
+              </span>
             </div>
           </Link>
 
-          {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-1">
-            {links.map((link) => (
-              link.dropdown ? (
-                <div 
-                  key={link.href}
-                  className="relative"
-                  onMouseEnter={() => setDropdown(true)}
-                  onMouseLeave={() => setDropdown(false)}
-                >
-                  <button className={cn(
-                    'px-3 py-1.5 rounded-md text-[13px] font-medium flex items-center gap-1 transition-colors',
-                    checkStartsWith('/servicii')
-                      ? light ? 'text-primary bg-white shadow-sm border border-border/50' : 'text-white bg-white/20'
-                      : light ? 'text-foreground/70 hover:text-foreground' : 'text-white/70 hover:text-white'
-                  )}>
-                    {link.label}
-                    <ChevronDown size={12} className={cn('transition-transform', dropdown && 'rotate-180')} />
-                  </button>
-                  
-                  {/* Dropdown */}
-                  <div className={cn(
-                    'absolute top-full left-0 pt-2 transition-all duration-200',
-                    dropdown ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
-                  )}>
-                    <div className="bg-white rounded-lg shadow-xl border border-border/50 p-1.5 min-w-[180px]">
-                      {services.map((s) => {
-                        const Icon = s.icon
-                        return (
+          {/* Desktop Nav - tutti i link insieme con bg unificat */}
+          <nav className="hidden lg:flex items-center">
+            <div className={cn(
+              'flex items-center gap-0.5 rounded-xl px-2 py-1.5 transition-all duration-300',
+              darkMode ? 'bg-white/10 backdrop-blur-sm' : 'bg-white/15'
+            )}>
+              {links.map((link) => (
+                link.dropdown ? (
+                  <div
+                    key={link.href}
+                    className="relative"
+                    onMouseEnter={() => setDropdown(true)}
+                    onMouseLeave={() => setDropdown(false)}
+                  >
+                    <button className="px-3 py-1.5 rounded-lg text-[13px] font-medium text-white/80 hover:text-white hover:bg-white/15 flex items-center gap-1 transition-colors">
+                      {link.label}
+                      <ChevronDown size={12} className={cn('transition-transform', dropdown && 'rotate-180')} />
+                    </button>
+
+                    {/* Dropdown */}
+                    <div className={cn(
+                      'absolute top-full left-0 pt-2 transition-all duration-200',
+                      dropdown ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
+                    )}>
+                      <div className="bg-white rounded-lg shadow-xl border border-border/50 p-1.5 min-w-[180px]">
+                        {services.map((s) => {
+                          const Icon = s.icon
+                          return (
+                            <Link
+                              key={s.href}
+                              href={s.href}
+                              className="flex items-center gap-2.5 px-3 py-2 rounded-md text-[13px] text-foreground/80 hover:bg-secondary hover:text-primary transition-colors"
+                            >
+                              <Icon size={14} className="text-muted-foreground" />
+                              {s.label}
+                            </Link>
+                          )
+                        })}
+                        <div className="border-t border-border/50 mt-1 pt-1">
                           <Link
-                            key={s.href}
-                            href={s.href}
-                            className="flex items-center gap-2.5 px-3 py-2 rounded-md text-[13px] text-foreground/80 hover:bg-secondary hover:text-primary transition-colors"
+                            href="/servicii"
+                            className="flex items-center px-3 py-2 rounded-md text-[13px] text-primary font-medium hover:bg-primary/5 transition-colors"
                           >
-                            <Icon size={14} className="text-muted-foreground" />
-                            {s.label}
+                            Toate serviciile
                           </Link>
-                        )
-                      })}
-                      <div className="border-t border-border/50 mt-1 pt-1">
-                        <Link
-                          href="/servicii"
-                          className="flex items-center px-3 py-2 rounded-md text-[13px] text-primary font-medium hover:bg-primary/5 transition-colors"
-                        >
-                          Toate serviciile
-                        </Link>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              ) : (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={cn(
-                    'px-3 py-1.5 rounded-md text-[13px] font-medium transition-colors',
-                    checkActive(link.href)
-                      ? 'text-primary bg-white shadow-sm border border-border/50'
-                      : light ? 'text-foreground/70 hover:text-foreground' : 'text-white/70 hover:text-white'
-                  )}
-                >
-                  {link.label}
-                </Link>
-              )
-            ))}
+                ) : (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="px-3 py-1.5 rounded-lg text-[13px] font-medium text-white/80 hover:text-white hover:bg-white/15 transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                )
+              ))}
+            </div>
           </nav>
 
-          {/* CTA */}
+          {/* CTA - acelasi stil ca "Solicita oferta" */}
           <div className="hidden lg:block">
             <Link
               href="/contact"
-              className={cn(
-                'inline-flex items-center gap-2 px-4 py-2 rounded-lg text-[13px] font-semibold transition-all',
-                light
-                  ? 'bg-primary text-white hover:bg-primary/90'
-                  : 'bg-white text-primary hover:bg-white/90'
-              )}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-[13px] font-semibold bg-white text-primary hover:bg-white/90 transition-all"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
               Solicită ofertă
             </Link>
           </div>
@@ -229,10 +153,7 @@ export function Navbar() {
           {/* Mobile Toggle */}
           <button
             onClick={() => setOpen(!open)}
-            className={cn(
-              'lg:hidden p-2 rounded-lg transition-colors',
-              light ? 'text-foreground hover:bg-secondary' : 'text-white hover:bg-white/10'
-            )}
+            className="lg:hidden p-2 rounded-lg text-white hover:bg-white/10 transition-colors"
           >
             {open ? <X size={20} /> : <Menu size={20} />}
           </button>
@@ -250,12 +171,7 @@ export function Navbar() {
               <div key={link.href}>
                 <button
                   onClick={() => setMobileServices(!mobileServices)}
-                  className={cn(
-                    'w-full flex items-center justify-between px-4 py-2.5 rounded-lg text-sm font-medium transition-colors',
-                    checkStartsWith('/servicii')
-                      ? 'text-primary bg-primary/5'
-                      : 'text-foreground/70 hover:bg-secondary'
-                  )}
+                  className="w-full flex items-center justify-between px-4 py-2.5 rounded-lg text-sm font-medium text-foreground/70 hover:bg-secondary transition-colors"
                 >
                   {link.label}
                   <ChevronDown size={14} className={cn('transition-transform', mobileServices && 'rotate-180')} />
@@ -271,12 +187,7 @@ export function Navbar() {
                         <Link
                           key={s.href}
                           href={s.href}
-                          className={cn(
-                            'flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm transition-colors',
-                            checkActive(s.href)
-                              ? 'text-primary font-semibold bg-primary/5'
-                              : 'text-foreground/70 hover:bg-secondary hover:text-primary'
-                          )}
+                          className="flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm text-foreground/70 hover:bg-secondary hover:text-primary transition-colors"
                         >
                           <Icon size={14} className="text-muted-foreground" />
                           {s.label}
@@ -296,12 +207,7 @@ export function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={cn(
-                  'block px-4 py-2.5 rounded-lg text-sm font-medium transition-colors',
-                  checkActive(link.href)
-                    ? 'text-primary bg-primary/5'
-                    : 'text-foreground/70 hover:bg-secondary'
-                )}
+                className="block px-4 py-2.5 rounded-lg text-sm font-medium text-foreground/70 hover:bg-secondary transition-colors"
               >
                 {link.label}
               </Link>
