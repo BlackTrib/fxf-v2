@@ -1,0 +1,278 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { Navbar } from '@/components/navbar'
+import { Footer } from '@/components/footer'
+import { Server, ArrowRight, Check, HardDrive, Shield, Clock, Headphones, Zap } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'Găzduire Web SSD România | Hosting de la 55 lei | FXF',
+  description: 'Găzduire web pe servere SSD NVMe în România. Pachete de la 55 lei/6 luni cu cPanel, SSL gratuit, backup zilnic și suport 24/7. Uptime 99.9% garantat!',
+  keywords: [
+    'gazduire web',
+    'hosting romania',
+    'gazduire ssd',
+    'web hosting',
+    'gazduire nvme',
+    'hosting ieftin',
+    'cpanel hosting',
+    'gazduire site',
+    'hosting rapid',
+    'server romania',
+  ],
+  openGraph: {
+    title: 'Găzduire Web SSD România | Hosting de la 55 lei | FXF',
+    description: 'Găzduire web pe servere SSD NVMe. cPanel, SSL gratuit, backup zilnic, suport 24/7. Uptime 99.9% garantat!',
+    url: 'https://fxfweb.ro/servicii/gazduire-web',
+  },
+  alternates: {
+    canonical: 'https://fxfweb.ro/servicii/gazduire-web',
+  },
+}
+
+const packages = [
+  {
+    name: 'Starter',
+    price: '55',
+    period: '6 luni',
+    desc: 'Ideal pentru site-uri mici de prezentare, bloguri și serviciul email.',
+    features: [
+      { label: 'Spațiu alocat', value: '1GB NVMe SSD' },
+      { label: 'Domenii găzduite', value: 'Nelimitat' },
+      { label: 'Baze de date', value: 'Nelimitat' },
+      { label: 'Adrese email', value: 'Nelimitat' },
+      { label: 'Trafic lunar', value: 'Nelimitat' },
+      { label: 'cPanel + JetBackup', value: 'Inclus' },
+      { label: 'LiteSpeed + Imunify', value: 'Inclus' },
+      { label: 'Resurse server', value: '1 CPU / 1GB RAM' },
+    ],
+  },
+  {
+    name: 'Business',
+    price: '207',
+    period: '6 luni',
+    desc: 'Perfect pentru proiecte medii, site-uri WordPress și aplicații web.',
+    popular: true,
+    features: [
+      { label: 'Spațiu alocat', value: '10GB NVMe SSD' },
+      { label: 'Domenii găzduite', value: 'Nelimitat' },
+      { label: 'Baze de date', value: 'Nelimitat' },
+      { label: 'Adrese email', value: 'Nelimitat' },
+      { label: 'Trafic lunar', value: 'Nelimitat' },
+      { label: 'cPanel + JetBackup', value: 'Inclus' },
+      { label: 'LiteSpeed + Imunify', value: 'Inclus' },
+      { label: 'Resurse server', value: '2 CPU / 2GB RAM' },
+    ],
+  },
+  {
+    name: 'E-Commerce',
+    price: '455',
+    period: '6 luni',
+    desc: 'Creat special pentru magazine online și platforme e-commerce.',
+    features: [
+      { label: 'Spațiu alocat', value: '30GB NVMe SSD' },
+      { label: 'Domenii găzduite', value: 'Nelimitat' },
+      { label: 'Baze de date', value: 'Nelimitat' },
+      { label: 'Adrese email', value: 'Nelimitat' },
+      { label: 'Trafic lunar', value: 'Nelimitat' },
+      { label: 'cPanel + JetBackup', value: 'Inclus' },
+      { label: 'LiteSpeed + Imunify', value: 'Inclus' },
+      { label: 'Resurse server', value: '3 CPU / 3GB RAM' },
+    ],
+  },
+]
+
+const allFeatures = [
+  { icon: HardDrive, title: 'SSD NVMe ultrarapid', desc: 'Stocare de până la 5x mai rapidă decât SSD tradițional.' },
+  { icon: Server, title: 'cPanel inclus', desc: 'Panou de control intuitiv pentru gestionarea hosting-ului.' },
+  { icon: Shield, title: 'SSL gratuit', desc: 'Certificat Let\'s Encrypt pentru toate domeniile.' },
+  { icon: Clock, title: 'Backup zilnic', desc: 'JetBackup cu restaurare cu un click.' },
+  { icon: Zap, title: 'LiteSpeed Server', desc: 'Server web rapid cu cache integrat.' },
+  { icon: Headphones, title: 'Suport 24/7', desc: 'Echipă tehnică disponibilă non-stop.' },
+]
+
+export default function GazduireWebPage() {
+  return (
+    <>
+      <Navbar />
+      <main>
+        {/* Hero */}
+        <section className="relative pt-28 pb-14 bg-primary overflow-hidden">
+          <div 
+            className="absolute inset-0 opacity-[0.03]"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            }}
+            aria-hidden="true"
+          />
+          
+          <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <div className="max-w-3xl">
+              <div className="inline-flex items-center gap-2 bg-white/10 text-white/80 text-xs font-medium px-3 py-1.5 rounded-full mb-6 border border-white/10">
+                <Server size={14} />
+                Serviciu principal
+              </div>
+              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 text-balance">
+                Găzduire Web SSD
+                <span className="block text-2xl sm:text-3xl lg:text-4xl mt-2" style={{ color: 'oklch(0.72 0.14 70)' }}>
+                  Servere NVMe rapide în Germania
+                </span>
+              </h1>
+              <p className="text-white/70 text-lg sm:text-xl leading-relaxed mb-8">
+                Găzduire web profesională pe servere SSD NVMe ultrarapide. Toate pachetele includ 
+                cPanel, SSL gratuit, backup zilnic și suport tehnic 24/7. Uptime 99.9% garantat.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing */}
+        <section className="py-14 bg-background">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="text-center max-w-2xl mx-auto mb-12">
+              <p className="text-accent-brand font-semibold text-sm uppercase tracking-widest mb-3">
+                Pachete găzduire
+              </p>
+              <h2 className="font-display text-3xl sm:text-4xl font-bold text-primary leading-tight mb-4 text-balance">
+                Alege pachetul potrivit pentru tine
+              </h2>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                Toate pachetele includ SSL gratuit, cPanel, backup zilnic și suport 24/7.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              {packages.map((pkg) => (
+                <div
+                  key={pkg.name}
+                  className={`rounded-2xl p-6 border-2 ${
+                    pkg.popular 
+                      ? 'border-primary bg-primary/5 relative' 
+                      : 'border-border bg-card'
+                  }`}
+                >
+                  {pkg.popular && (
+                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">
+                      CEL MAI POPULAR
+                    </span>
+                  )}
+                  
+                  <div className="text-center mb-6">
+                    <h3 className="font-display text-xl font-bold text-foreground mb-2">
+                      Găzduire {pkg.name}
+                    </h3>
+                    <p className="text-sm text-muted-foreground mb-4">{pkg.desc}</p>
+                    <div className="flex items-baseline justify-center gap-1">
+                      <span className="text-4xl font-bold text-primary">{pkg.price}</span>
+                      <span className="text-muted-foreground">lei/{pkg.period}</span>
+                    </div>
+                  </div>
+
+                  <ul className="space-y-3 mb-6">
+                    {pkg.features.map((f) => (
+                      <li key={f.label} className="flex items-center justify-between text-sm">
+                        <span className="text-muted-foreground">{f.label}</span>
+                        <span className="font-medium text-foreground">{f.value}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <Link
+                    href="/contact"
+                    className={`block w-full text-center py-3 rounded-xl text-sm font-semibold transition-all ${
+                      pkg.popular
+                        ? 'bg-primary text-white hover:bg-primary/90'
+                        : 'bg-secondary text-foreground hover:bg-secondary/80'
+                    }`}
+                  >
+                    Comandă acum
+                  </Link>
+                </div>
+              ))}
+            </div>
+
+            {/* Promo */}
+            <div className="mt-8 text-center">
+              <p className="text-sm text-muted-foreground">
+                Folosește codul <span className="font-bold text-primary">FXF10</span> pentru 10% reducere la prima comandă!
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Features */}
+        <section className="py-14 bg-secondary/30">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="text-center max-w-2xl mx-auto mb-12">
+              <h2 className="font-display text-3xl font-bold text-primary mb-4">
+                Inclus în toate pachetele
+              </h2>
+              <p className="text-muted-foreground">
+                Tehnologii enterprise pentru performanță și securitate maximă.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {allFeatures.map((f) => {
+                const Icon = f.icon
+                return (
+                  <div key={f.title} className="bg-white rounded-xl p-6 border border-border">
+                    <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                      <Icon size={20} className="text-primary" />
+                    </div>
+                    <h3 className="font-bold text-foreground mb-2">{f.title}</h3>
+                    <p className="text-sm text-muted-foreground">{f.desc}</p>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* Server Specs */}
+        <section className="py-14 bg-background">
+          <div className="max-w-4xl mx-auto px-6 lg:px-8">
+            <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8">
+              <h2 className="font-display text-2xl font-bold text-primary mb-6 text-center">
+                Specificații Server
+              </h2>
+              <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+                {[
+                  { label: 'Procesor', value: '64 Core CPU' },
+                  { label: 'Memorie', value: '96GB RAM DDR4' },
+                  { label: 'Stocare', value: '6x 1TB SSD NVMe' },
+                  { label: 'Redundanță', value: 'Raid 10' },
+                  { label: 'Sistem operare', value: 'CloudLinux' },
+                  { label: 'Locație', value: 'Datacenter Germania' },
+                ].map((spec) => (
+                  <div key={spec.label} className="text-center">
+                    <p className="text-sm text-muted-foreground">{spec.label}</p>
+                    <p className="font-bold text-foreground">{spec.value}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="py-12 bg-primary">
+          <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+            <h2 className="font-display text-3xl font-bold text-white mb-4">
+              Pregătit să începi?
+            </h2>
+            <p className="text-white/60 text-lg mb-8">
+              Contactează-ne pentru a comanda pachetul de găzduire potrivit pentru tine.
+            </p>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 bg-white text-primary px-8 py-4 rounded-xl font-semibold hover:bg-white/90 transition-all"
+            >
+              Comandă acum <ArrowRight size={16} />
+            </Link>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  )
+}

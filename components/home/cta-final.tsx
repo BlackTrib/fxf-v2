@@ -2,9 +2,9 @@ import Link from 'next/link'
 import { ArrowRight, Phone, CheckCircle2 } from 'lucide-react'
 
 const benefits = [
-  'Consultanță gratuită',
-  'Răspuns în 24h',
-  'Fără obligații',
+  'SSL gratuit inclus',
+  'Migrare gratuită',
+  'Suport 24/7',
 ]
 
 export function CTAFinal() {
@@ -16,12 +16,18 @@ export function CTAFinal() {
           <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '24px 24px' }} />
           
           <div className="relative z-10">
+            {/* Promo badge */}
+            <div className="inline-flex items-center gap-2 bg-green-500 text-white text-xs font-bold px-3 py-1.5 rounded-full mb-4">
+              <span>Reducere 10%</span>
+              <span className="bg-white/20 px-2 py-0.5 rounded">cod: FXF10</span>
+            </div>
+
             <h2 className="font-display text-2xl lg:text-3xl font-bold text-white mb-3 text-balance">
-              Pregătit să-ți dezvolți afacerea online?
+              Începe acum cu găzduire web profesională
             </h2>
             <p className="text-white/60 text-sm mb-4 max-w-lg mx-auto leading-relaxed">
-              Solicită o consultanță gratuită pentru proiectul tău de web design, magazin online sau 
-              marketing digital. Discutăm despre obiectivele tale și îți oferim o estimare realistă.
+              Plasează acum o comandă nouă și beneficiezi de o reducere de 10% la toate serviciile 
+              de găzduire. Folosește codul promoțional &ldquo;FXF10&rdquo; în comandă.
             </p>
             
             {/* Benefits */}
@@ -36,17 +42,17 @@ export function CTAFinal() {
             
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
-                href="/contact"
+                href="/servicii/gazduire-web"
                 className="inline-flex items-center justify-center gap-2 bg-white text-primary px-6 py-2.5 rounded-lg text-sm font-semibold hover:bg-cyber transition-colors"
               >
-                Solicită ofertă gratuită <ArrowRight size={14} />
+                Vezi pachetele <ArrowRight size={14} />
               </Link>
               <a
-                href="tel:+40700000000"
+                href="tel:+40785277566"
                 className="inline-flex items-center justify-center gap-2 border border-white/20 text-white px-6 py-2.5 rounded-lg text-sm font-medium hover:bg-white/5 transition-colors"
               >
                 <Phone size={14} />
-                Sună acum
+                +40 785 277 566
               </a>
             </div>
           </div>

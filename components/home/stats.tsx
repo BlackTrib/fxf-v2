@@ -1,10 +1,10 @@
-import { CheckCircle2, TrendingUp, Users, Clock } from 'lucide-react'
+import { Server, TrendingUp, Users, Clock } from 'lucide-react'
 
 const stats = [
-  { icon: CheckCircle2, value: '150+', label: 'Proiecte Web', desc: 'Site-uri și magazine online livrate' },
-  { icon: TrendingUp, value: '98%', label: 'Satisfacție Clienți', desc: 'Rating mediu al colaborărilor' },
-  { icon: Users, value: '94%', label: 'Rată Retenție', desc: 'Clienți care revin pentru noi proiecte' },
-  { icon: Clock, value: '4h', label: 'Timp Răspuns', desc: 'Suport tehnic în zilele lucrătoare' },
+  { icon: Server, value: '99.9%', label: 'Uptime Garantat', desc: 'Disponibilitate servere' },
+  { icon: TrendingUp, value: '5x', label: 'Mai Rapid', desc: 'Cu SSD NVMe vs HDD' },
+  { icon: Users, value: '500+', label: 'Clienți Activi', desc: 'Site-uri găzduite' },
+  { icon: Clock, value: '24/7', label: 'Suport Tehnic', desc: 'Disponibil non-stop' },
 ]
 
 export function Stats() {

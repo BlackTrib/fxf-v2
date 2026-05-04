@@ -5,32 +5,32 @@ import { Reveal } from '@/components/ui/reveal'
 
 const testimonials = [
   { 
-    quote: 'Magazinul nostru online a fost gata în doar 6 săptămâni, cu toate integrările cerute: plăți card, curier și facturare automată. În primele 3 luni am avut peste 500 de comenzi. Investiția s-a amortizat rapid!', 
-    name: 'Alexandru Popa', 
-    role: 'Fondator, AutoParts Express', 
-    result: '+420% comenzi',
-    project: 'Magazin online piese auto'
+    quote: 'Perfect pentru a îmi ține căsuța poștală activă și să stochez anumite date. Pe lângă toate, am și un site de prezentare. Suficient pentru ce am nevoie, recomand!', 
+    name: 'Laur Văcărescu', 
+    role: 'Antreprenor', 
+    result: 'Găzduire Starter',
+    project: 'Site prezentare + Email'
   },
   { 
-    quote: 'Am lucrat cu alte agenții înainte, dar FXF e la alt nivel. În primele 6 luni am triplat vânzările față de site-ul vechi. Suportul post-lansare este exceptional - răspund în ore, nu zile.', 
-    name: 'Maria Ionescu', 
-    role: 'Fondator, Velvet Fashion Store', 
-    result: '+300% vânzări',
-    project: 'Magazin online fashion'
+    quote: 'Prețuri mici față de concurență. Apreciez faptul că v-ați ocupat și de migrarea datelor fără să pierd nimic în doar câteva ore. Nota 10, recomand serviciile voastre!', 
+    name: 'George Petrescu', 
+    role: 'Manager IT', 
+    result: 'Găzduire Business',
+    project: 'Migrare de la alt furnizor'
   },
   { 
-    quote: 'De când FXF administrează serverul nostru dedicat, nu am mai avut niciun downtime. Monitorizare 24/7, backup-uri automate și răspuns în maxim 30 de minute la orice problemă. Liniște totală pentru business.', 
-    name: 'Cristian Dragomir', 
-    role: 'CTO, DataFlow Systems', 
-    result: '99.98% uptime',
-    project: 'Administrare server dedicat'
+    quote: 'Mulțumesc pentru ajutorul oferit! Nici nu știam că magazinul meu poate să meargă așa rapid. Recomand celor ce vor calitate și suport prompt!', 
+    name: 'Cristian Iordache', 
+    role: 'Proprietar magazin online', 
+    result: 'Găzduire E-Commerce',
+    project: 'Magazin PrestaShop'
   },
 ]
 
 const badges = [
-  '150+ proiecte finalizate',
-  '98% satisfacție clienți',
-  '8+ ani experiență',
+  '500+ clienți activi',
+  '99.9% uptime',
+  '4+ ani experiență',
 ]
 
 export function Testimonials() {
@@ -42,11 +42,11 @@ export function Testimonials() {
           <div className="max-w-xl">
             <p className="text-accent-brand text-xs font-semibold uppercase tracking-widest mb-1">Testimoniale clienți</p>
             <h2 className="font-display text-3xl lg:text-4xl font-bold text-primary mb-2 lg:whitespace-nowrap">
-              Ce spun clienții noștri despre colaborare
+              Ce spun clienții noștri
             </h2>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Recenzii verificate de la companii care au colaborat cu FXF Web Solution pentru 
-              proiecte de web design, magazine online și marketing digital.
+              Recenzii verificate de la clienți care folosesc serviciile noastre de găzduire 
+              pentru site-uri de prezentare, magazine online și aplicații web.
             </p>
           </div>
           {/* Trust badges */}
@@ -86,7 +86,7 @@ export function Testimonials() {
               </p>
               
               {/* Result */}
-              <div className="text-xs font-semibold text-green-600 bg-green-50 px-2 py-1 rounded w-fit mb-3">
+              <div className="text-xs font-semibold text-primary bg-primary/10 px-2 py-1 rounded w-fit mb-3">
                 {t.result}
               </div>
               

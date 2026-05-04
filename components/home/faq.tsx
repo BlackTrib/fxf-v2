@@ -8,36 +8,36 @@ import { Reveal } from '@/components/ui/reveal'
 
 const faqs = [
   { 
-    q: 'Cât costă realizarea unui site web profesional?', 
-    a: 'Prețurile variază în funcție de complexitate. Un site de prezentare standard începe de la 1.000€, magazinele online de la 2.500€, iar aplicațiile web custom de la 5.000€. Oferim consultanță gratuită pentru a estima exact costurile proiectului tău.' 
+    q: 'Ce include un pachet de găzduire web?', 
+    a: 'Toate pachetele includ: spațiu SSD NVMe, domenii și baze de date nelimitate, email nelimitat, certificat SSL Let\'s Encrypt gratuit, cPanel, LiteSpeed, backup zilnic JetBackup, protecție Imunify360 și suport tehnic 24/7.' 
   },
   { 
-    q: 'Cât durează dezvoltarea unui website?', 
-    a: 'Site de prezentare: 2-4 săptămâni. Magazin online: 4-8 săptămâni. Aplicații web complexe: 8-16 săptămâni. Oferim timeline exact înainte de a începe, cu milestones clare și deadline-uri respectate.' 
+    q: 'Cum pot transfera site-ul de la alt furnizor?', 
+    a: 'Migrarea este gratuită! Echipa noastră se ocupă de transferul complet al site-ului, bazei de date și email-urilor de la vechiul furnizor. Procesul durează de obicei 24-48 de ore fără downtime.' 
   },
   { 
-    q: 'Pot să administrez singur site-ul după lansare?', 
-    a: 'Absolut! Toate site-urile noastre vin cu un CMS (Content Management System) intuitiv. Oferim training gratuit la lansare și documentație pentru a actualiza texte, imagini și produse fără cunoștințe tehnice.' 
+    q: 'Ce este certificatul SSL și este inclus?', 
+    a: 'SSL criptează datele dintre vizitator și server. Da, certificatul SSL Let\'s Encrypt este gratuit și se instalează automat pentru toate domeniile găzduite în contul tău.' 
   },
   { 
-    q: 'Ce se întâmplă dacă nu sunt mulțumit de design?', 
-    a: 'Lucrăm iterativ cu feedback constant. Ai dreptul la revizuiri până ești 100% mulțumit. Comunicăm clar numărul de runde de revizuiri incluse și nu lansăm nimic fără aprobarea ta finală.' 
+    q: 'Ce înseamnă uptime 99.9% garantat?', 
+    a: 'Garantăm că serverele noastre sunt online și funcționale cel puțin 99.9% din timp. În cazul rar în care nu respectăm această garanție, primești credit pentru perioada afectată.' 
   },
   { 
-    q: 'Includeți hosting și domeniu în preț?', 
-    a: 'Hosting-ul și domeniul sunt costuri separate (anuale). Recomandăm soluții profesionale precum Vercel sau hosting dedicat. Le gestionăm noi sau te ghidăm să le achiziționezi. Costul anual e între 100-300€.' 
+    q: 'Pot face upgrade la un pachet mai mare?', 
+    a: 'Da, poți face upgrade oricând! Plătești doar diferența de preț pentru perioada rămasă. Upgrade-ul se face instant, fără downtime sau pierdere de date.' 
   },
   { 
-    q: 'Oferiți mentenanță și suport după lansare?', 
-    a: 'Da! Oferim pachete lunare de mentenanță care includ: actualizări de securitate, backup-uri automate zilnice, monitorizare uptime 24/7, optimizări de performanță și suport tehnic prioritar. Prețuri de la 100€/lună.' 
+    q: 'Ce se întâmplă cu backup-urile?', 
+    a: 'JetBackup face automat backup-uri zilnice ale tuturor fișierelor și bazelor de date. Păstrăm backup-uri pentru ultimele 7 zile. Poți restaura oricând din cPanel cu un click.' 
   },
   { 
-    q: 'Site-ul va fi optimizat pentru Google (SEO)?', 
-    a: 'Toate proiectele noastre includ SEO tehnic de bază: structură URL-uri, meta tags, Schema markup, sitemap, Core Web Vitals optimizate. Pentru campanii SEO complete (link building, content), oferim pachete separate.' 
+    q: 'Oferiți suport pentru WordPress/PrestaShop?', 
+    a: 'Da! Oferim găzduire optimizată pentru WordPress și PrestaShop cu LiteSpeed Cache pre-instalat. Echipa noastră poate ajuta cu instalarea, configurarea și optimizarea acestor platforme.' 
   },
   { 
-    q: 'Lucrați cu clienți din afara României?', 
-    a: 'Da, lucrăm remote cu clienți din toată Europa. Comunicarea se face prin video call, email și platforme de project management. Facturăm în EUR și emitem factură fiscală.' 
+    q: 'Care sunt metodele de plată acceptate?', 
+    a: 'Acceptăm plăți prin card bancar, transfer bancar și PayPal. Facturarea se face la 6 luni sau anual, cu reducere pentru plata anuală.' 
   },
 ]
 
@@ -52,11 +52,11 @@ export function FAQ() {
           <Reveal direction="left" className="lg:col-span-1">
             <p className="text-accent-brand text-xs font-semibold uppercase tracking-widest mb-1">Întrebări frecvente</p>
             <h2 className="font-display text-3xl lg:text-4xl font-bold text-primary mb-3">
-              Ai întrebări despre serviciile noastre?
+              Ai întrebări despre găzduire?
             </h2>
             <p className="text-muted-foreground text-sm leading-relaxed mb-5">
-              Am compilat răspunsurile la cele mai frecvente întrebări despre procesul nostru de 
-              web development, prețuri, termene și suport.
+              Am compilat răspunsurile la cele mai frecvente întrebări despre serviciile noastre 
+              de găzduire web, migrare, backup și suport tehnic.
             </p>
             <div className="bg-secondary/50 border border-border rounded-xl p-4">
               <div className="flex items-start gap-3">
@@ -66,10 +66,10 @@ export function FAQ() {
                 <div>
                   <p className="font-semibold text-sm text-foreground mb-1">Nu găsești răspunsul?</p>
                   <p className="text-xs text-muted-foreground mb-2">
-                    Contactează-ne direct și îți răspundem în maxim 4 ore în zilele lucrătoare.
+                    Echipa noastră de suport este disponibilă 24/7 pentru orice întrebare.
                   </p>
                   <Link href="/contact" className="text-xs font-semibold text-primary hover:text-accent-brand transition-colors">
-                    Trimite o întrebare →
+                    Contactează suportul →
                   </Link>
                 </div>
               </div>

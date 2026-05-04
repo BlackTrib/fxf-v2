@@ -1,17 +1,17 @@
 import Link from 'next/link'
-import { MapPin, Building2, Briefcase, GraduationCap } from 'lucide-react'
-
-const locations = [
-  'București', 'Cluj-Napoca', 'Timișoara', 'Iași', 'Constanța', 'Brașov', 'Craiova', 'Sibiu'
-]
+import { MapPin, Server, Briefcase } from 'lucide-react'
 
 const services = [
-  { title: 'Web Design România', href: '/servicii/web-design', desc: 'Servicii profesionale de web design pentru afaceri din Romania' },
-  { title: 'Creare Site de Prezentare', href: '/servicii/web-design', desc: 'Site-uri de prezentare moderne pentru companii și freelanceri' },
-  { title: 'Dezvoltare Magazin Online', href: '/servicii/magazin-online', desc: 'Platforme e-commerce complete cu plăți și gestiune stoc' },
-  { title: 'Optimizare SEO Site', href: '/servicii/optimizare-seo', desc: 'Servicii SEO pentru poziționare în prima pagină Google' },
-  { title: 'Mentenanță Website', href: '/servicii/mentenanta-web', desc: 'Pachete de întreținere și suport tehnic pentru site-uri' },
-  { title: 'Campanii Google Ads', href: '/servicii/google-ads', desc: 'Gestionare campanii PPC cu ROI măsurabil' },
+  { title: 'Găzduire Web România', href: '/servicii/gazduire-web', desc: 'Pachete hosting SSD NVMe cu cPanel și SSL gratuit' },
+  { title: 'Găzduire WordPress', href: '/servicii/gazduire-wordpress', desc: 'Hosting optimizat pentru WordPress cu LiteSpeed Cache' },
+  { title: 'Găzduire PrestaShop', href: '/servicii/gazduire-prestashop', desc: 'Găzduire performantă pentru magazine PrestaShop' },
+  { title: 'Găzduire E-Commerce', href: '/servicii/gazduire-ecommerce', desc: 'Pachete speciale pentru magazine online' },
+  { title: 'Înregistrare Domenii', href: '/servicii/domenii', desc: 'Domenii .ro, .com, .eu la prețuri competitive' },
+  { title: 'VPS Cloud', href: '/servicii/vps', desc: 'Servere virtuale private cu resurse dedicate' },
+]
+
+const features = [
+  'cPanel', 'LiteSpeed', 'CloudLinux', 'Imunify360', 'JetBackup', 'SSL Gratuit'
 ]
 
 export function SEOContent() {
@@ -23,25 +23,23 @@ export function SEOContent() {
           {/* About */}
           <div className="lg:col-span-2">
             <h2 className="font-display text-2xl font-bold text-primary mb-4">
-              Agenție Web Development România - FXF Web Solution
+              Găzduire Web Profesională în România - FXF Web Hosting
             </h2>
             <div className="prose prose-sm max-w-none text-muted-foreground space-y-3">
               <p>
-                <strong>FXF Web Solution</strong> este o agenție de web design și dezvoltare web din România, 
-                specializată în crearea de site-uri profesionale, magazine online și aplicații web personalizate. 
-                Cu peste 8 ani de experiență și 150+ proiecte finalizate, oferim soluții digitale complete 
-                pentru afaceri mici, medii și corporații.
+                <strong>FXF Web Hosting</strong> oferă servicii de găzduire web profesionale pe servere 
+                SSD NVMe ultrarapide localizate în Germania. Cu peste 4 ani de experiență și 500+ site-uri 
+                găzduite, suntem alegerea potrivită pentru afacerea ta online, indiferent de dimensiune.
               </p>
               <p>
-                Echipa noastră de developeri și designeri creează website-uri moderne, responsive și optimizate 
-                pentru motoarele de căutare (SEO). Folosim tehnologii de ultimă generație precum React, Next.js, 
-                WordPress, PrestaShop, OpenCart, Shopify și WooCommerce pentru a livra proiecte de înaltă calitate 
-                care generează rezultate măsurabile: mai mult trafic, mai multe conversii și mai multe vânzări.
+                Serverele noastre sunt echipate cu procesoare 64 Core, 96GB RAM DDR4 și stocare SSD NVMe 
+                montată în Raid 10 pentru performanță maximă și redundanță a datelor. Folosim CloudLinux 
+                pentru izolarea conturilor, LiteSpeed pentru viteză și Imunify360 pentru securitate avansată.
               </p>
               <p>
-                Colaborăm cu clienți din diverse industrii: e-commerce, medical, B2B, SaaS, retail, HoReCa 
-                și consultanță. Indiferent de dimensiunea proiectului, oferim aceeași atenție la detalii și 
-                dedicare pentru rezultate.
+                Toate pachetele de găzduire includ: certificat SSL Let&apos;s Encrypt gratuit, panou de control 
+                cPanel, backup zilnic automat JetBackup, trafic nelimitat, baze de date și conturi email 
+                nelimitate. Oferim suport tehnic 24/7 și migrare gratuită de la alt furnizor.
               </p>
             </div>
           </div>
@@ -50,7 +48,7 @@ export function SEOContent() {
           <div>
             <h3 className="font-display font-bold text-lg text-primary mb-4 flex items-center gap-2">
               <Briefcase size={18} />
-              Servicii Web
+              Servicii Hosting
             </h3>
             <ul className="space-y-2">
               {services.map((s) => (
@@ -65,26 +63,43 @@ export function SEOContent() {
           </div>
         </div>
 
-        {/* Locations */}
-        <div className="bg-card border border-border rounded-xl p-5">
+        {/* Features bar */}
+        <div className="bg-card border border-border rounded-xl p-5 mb-6">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div className="flex items-start gap-3">
               <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                <MapPin size={18} className="text-primary" />
+                <Server size={18} className="text-primary" />
               </div>
               <div>
-                <h3 className="font-semibold text-sm text-foreground mb-1">Servicii web development în toată România</h3>
+                <h3 className="font-semibold text-sm text-foreground mb-1">Tehnologii enterprise incluse</h3>
                 <p className="text-xs text-muted-foreground">
-                  Lucrăm remote cu clienți din toate orașele mari. Comunicare online, rezultate locale.
+                  Stack profesional pentru performanță și securitate maximă.
                 </p>
               </div>
             </div>
             <div className="flex flex-wrap gap-2">
-              {locations.map((loc) => (
-                <span key={loc} className="text-xs text-muted-foreground bg-secondary px-2.5 py-1 rounded-md">
-                  Web Design {loc}
+              {features.map((f) => (
+                <span key={f} className="text-xs text-muted-foreground bg-secondary px-2.5 py-1 rounded-md">
+                  {f}
                 </span>
               ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Location */}
+        <div className="bg-card border border-border rounded-xl p-5">
+          <div className="flex items-start gap-3">
+            <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+              <MapPin size={18} className="text-primary" />
+            </div>
+            <div>
+              <h3 className="font-semibold text-sm text-foreground mb-1">Datacenter Germania - Acces rapid din România</h3>
+              <p className="text-xs text-muted-foreground">
+                Serverele noastre sunt colocate în cel mai modern datacenter din Germania, 
+                garantând un timp de răspuns optim pentru vizitatorii din România și Europa. 
+                Uptime 99.9% garantat și latență minimă pentru o experiență excelentă a utilizatorilor.
+              </p>
             </div>
           </div>
         </div>
