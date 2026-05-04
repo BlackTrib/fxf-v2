@@ -45,10 +45,14 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [dropdown, setDropdown] = useState(false)
   const [mobileServices, setMobileServices] = useState(false)
-  const [pathname, setPathname] = useState('/')
+  const [pathname, setPathname] = useState('')
+  const [mounted, setMounted] = useState(false)
   
   // Get pathname from window.location on mount and on navigation
   useEffect(() => {
+    // Mark as mounted (client-side)
+    setMounted(true)
+    
     const updatePathname = () => {
       if (typeof window !== 'undefined') {
         setPathname(window.location.pathname)
@@ -74,7 +78,18 @@ export function Navbar() {
     }
   }, [])
 
-  const isHome = normalizePath(pathname) === '/'
+  // Only check active state after client-side mount to avoid hydration mismatch
+  const checkActive = (linkHref: string): boolean => {
+    if (!mounted) return false
+    return isLinkActive(linkHref, pathname)
+  }
+  
+  const checkStartsWith = (prefix: string): boolean => {
+    if (!mounted) return false
+    return pathStartsWith(pathname, prefix)
+  }
+
+  const isHome = mounted ? normalizePath(pathname) === '/' : true
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10)
@@ -137,7 +152,7 @@ export function Navbar() {
                 >
                   <button className={cn(
                     'px-3 py-1.5 rounded-md text-[13px] font-medium flex items-center gap-1 transition-colors',
-                    pathStartsWith(pathname, '/servicii')
+                    checkStartsWith('/servicii')
                       ? light ? 'text-primary bg-white shadow-sm border border-border/50' : 'text-white bg-white/20'
                       : light ? 'text-foreground/70 hover:text-foreground' : 'text-white/70 hover:text-white'
                   )}>
@@ -181,7 +196,7 @@ export function Navbar() {
                   href={link.href}
                   className={cn(
                     'px-3 py-1.5 rounded-md text-[13px] font-medium transition-colors',
-                    isLinkActive(link.href, pathname)
+                    checkActive(link.href)
                       ? 'text-primary bg-white shadow-sm border border-border/50'
                       : light ? 'text-foreground/70 hover:text-foreground' : 'text-white/70 hover:text-white'
                   )}
@@ -234,7 +249,7 @@ export function Navbar() {
                   onClick={() => setMobileServices(!mobileServices)}
                   className={cn(
                     'w-full flex items-center justify-between px-4 py-2.5 rounded-lg text-sm font-medium transition-colors',
-                    pathStartsWith(pathname, '/servicii')
+                    checkStartsWith('/servicii')
                       ? 'text-primary bg-primary/5'
                       : 'text-foreground/70 hover:bg-secondary'
                   )}
@@ -255,7 +270,7 @@ export function Navbar() {
                           href={s.href}
                           className={cn(
                             'flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm transition-colors',
-                            isLinkActive(s.href, pathname)
+                            checkActive(s.href)
                               ? 'text-primary font-semibold bg-primary/5'
                               : 'text-foreground/70 hover:bg-secondary hover:text-primary'
                           )}
@@ -280,7 +295,7 @@ export function Navbar() {
                 href={link.href}
                 className={cn(
                   'block px-4 py-2.5 rounded-lg text-sm font-medium transition-colors',
-                  isLinkActive(link.href, pathname)
+                  checkActive(link.href)
                     ? 'text-primary bg-primary/5'
                     : 'text-foreground/70 hover:bg-secondary'
                 )}
