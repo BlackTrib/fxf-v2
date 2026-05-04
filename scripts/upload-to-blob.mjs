@@ -8,6 +8,7 @@ const fileBuffer = readFileSync(filePath);
 const blob = await put('cpanel-deploy-optimized.tar.gz', fileBuffer, {
   access: 'public',
   contentType: 'application/gzip',
+  allowOverwrite: true,
 });
 
 console.log('Upload successful!');

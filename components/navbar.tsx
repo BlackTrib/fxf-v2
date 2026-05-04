@@ -27,7 +27,9 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [dropdown, setDropdown] = useState(false)
   const [mobileServices, setMobileServices] = useState(false)
-  const pathname = usePathname()
+  const rawPathname = usePathname()
+  // Normalize pathname - remove trailing slash for comparison (except for root)
+  const pathname = rawPathname === '/' ? '/' : rawPathname.replace(/\/$/, '')
   const isHome = pathname === '/'
 
   useEffect(() => {
