@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import { Menu, X, ChevronDown, Monitor, ShoppingCart, Wrench, Search, BarChart2 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
@@ -22,15 +21,60 @@ const links = [
   { href: '/contact', label: 'Contact' },
 ]
 
+// Helper function to normalize pathname (remove trailing slash except for root)
+function normalizePath(path: string): string {
+  if (path === '/' || path === '') return '/'
+  return path.replace(/\/+$/, '')
+}
+
+// Helper to check if a link is active
+function isLinkActive(linkHref: string, currentPath: string): boolean {
+  const normalizedLink = normalizePath(linkHref)
+  const normalizedCurrent = normalizePath(currentPath)
+  return normalizedLink === normalizedCurrent
+}
+
+// Helper to check if path starts with prefix
+function pathStartsWith(currentPath: string, prefix: string): boolean {
+  const normalizedCurrent = normalizePath(currentPath)
+  return normalizedCurrent.startsWith(prefix)
+}
+
 export function Navbar() {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [dropdown, setDropdown] = useState(false)
   const [mobileServices, setMobileServices] = useState(false)
-  const rawPathname = usePathname()
-  // Normalize pathname - remove trailing slash for comparison (except for root)
-  const pathname = rawPathname === '/' ? '/' : rawPathname.replace(/\/$/, '')
-  const isHome = pathname === '/'
+  const [pathname, setPathname] = useState('/')
+  
+  // Get pathname from window.location on mount and on navigation
+  useEffect(() => {
+    const updatePathname = () => {
+      if (typeof window !== 'undefined') {
+        setPathname(window.location.pathname)
+      }
+    }
+    
+    // Set initial pathname
+    updatePathname()
+    
+    // Listen for popstate (back/forward navigation)
+    window.addEventListener('popstate', updatePathname)
+    
+    // Also update on any click (for client-side navigation)
+    const handleClick = () => {
+      // Small delay to allow navigation to complete
+      setTimeout(updatePathname, 50)
+    }
+    window.addEventListener('click', handleClick)
+    
+    return () => {
+      window.removeEventListener('popstate', updatePathname)
+      window.removeEventListener('click', handleClick)
+    }
+  }, [])
+
+  const isHome = normalizePath(pathname) === '/'
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10)
@@ -93,7 +137,7 @@ export function Navbar() {
                 >
                   <button className={cn(
                     'px-3 py-1.5 rounded-md text-[13px] font-medium flex items-center gap-1 transition-colors',
-                    pathname.startsWith('/servicii')
+                    pathStartsWith(pathname, '/servicii')
                       ? light ? 'text-primary bg-white shadow-sm border border-border/50' : 'text-white bg-white/20'
                       : light ? 'text-foreground/70 hover:text-foreground' : 'text-white/70 hover:text-white'
                   )}>
@@ -137,7 +181,7 @@ export function Navbar() {
                   href={link.href}
                   className={cn(
                     'px-3 py-1.5 rounded-md text-[13px] font-medium transition-colors',
-                    pathname === link.href
+                    isLinkActive(link.href, pathname)
                       ? 'text-primary bg-white shadow-sm border border-border/50'
                       : light ? 'text-foreground/70 hover:text-foreground' : 'text-white/70 hover:text-white'
                   )}
@@ -190,7 +234,7 @@ export function Navbar() {
                   onClick={() => setMobileServices(!mobileServices)}
                   className={cn(
                     'w-full flex items-center justify-between px-4 py-2.5 rounded-lg text-sm font-medium transition-colors',
-                    pathname.startsWith('/servicii')
+                    pathStartsWith(pathname, '/servicii')
                       ? 'text-primary bg-primary/5'
                       : 'text-foreground/70 hover:bg-secondary'
                   )}
@@ -211,7 +255,7 @@ export function Navbar() {
                           href={s.href}
                           className={cn(
                             'flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm transition-colors',
-                            pathname === s.href
+                            isLinkActive(s.href, pathname)
                               ? 'text-primary font-semibold bg-primary/5'
                               : 'text-foreground/70 hover:bg-secondary hover:text-primary'
                           )}
@@ -236,7 +280,7 @@ export function Navbar() {
                 href={link.href}
                 className={cn(
                   'block px-4 py-2.5 rounded-lg text-sm font-medium transition-colors',
-                  pathname === link.href
+                  isLinkActive(link.href, pathname)
                     ? 'text-primary bg-primary/5'
                     : 'text-foreground/70 hover:bg-secondary'
                 )}
