@@ -95,7 +95,7 @@ export function Navbar() {
             <div className={cn(
               'flex items-center gap-0.5 rounded-xl px-2 py-1.5 transition-all duration-300',
               transparent
-                ? 'bg-foreground text-white border border-white/10 shadow-sm'
+                ? 'bg-white shadow-sm'
                 : 'bg-secondary/60'
             )}>
               {links.map((link) => (
@@ -109,7 +109,7 @@ export function Navbar() {
                     <button className={cn(
                       'px-3 py-1.5 rounded-lg text-[13px] font-medium flex items-center gap-1 transition-colors',
                       transparent
-                        ? 'text-white/80 hover:text-white hover:bg-white/15'
+                        ? 'text-foreground/70 hover:text-foreground hover:bg-secondary'
                         : 'text-foreground/70 hover:text-foreground hover:bg-secondary'
                     )}>
                       {link.label}
@@ -150,12 +150,7 @@ export function Navbar() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={cn(
-                      'px-3 py-1.5 rounded-lg text-[13px] font-medium transition-colors',
-                      transparent
-                        ? 'text-white/80 hover:text-white hover:bg-white/15'
-                        : 'text-foreground/70 hover:text-foreground hover:bg-secondary'
-                    )}
+                    className="px-3 py-1.5 rounded-lg text-[13px] font-medium transition-colors text-foreground/70 hover:text-foreground hover:bg-secondary"
                   >
                     {link.label}
                   </Link>
@@ -168,9 +163,14 @@ export function Navbar() {
           <div className="hidden lg:block">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-[13px] font-semibold bg-primary text-white hover:bg-primary/90 transition-all"
+              className={cn(
+                'inline-flex items-center gap-2 px-4 py-2 rounded-lg text-[13px] font-semibold transition-all',
+                transparent
+                  ? 'bg-white text-foreground hover:bg-white/90 shadow-sm'
+                  : 'bg-primary text-white hover:bg-primary/90'
+              )}
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
               Solicită ofertă
             </Link>
           </div>
