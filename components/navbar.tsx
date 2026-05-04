@@ -45,51 +45,54 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [dropdown, setDropdown] = useState(false)
   const [mobileServices, setMobileServices] = useState(false)
-  const [pathname, setPathname] = useState('')
-  const [mounted, setMounted] = useState(false)
   
-  // Get pathname from window.location on mount and on navigation
+  // Start with empty pathname - will be set after mount from data attribute
+  const [pathname, setPathname] = useState('')
+  const [isMounted, setIsMounted] = useState(false)
+  
+  // Read pathname from data attribute on mount (set by inline script in layout)
   useEffect(() => {
-    // Mark as mounted (client-side)
-    setMounted(true)
+    // Read initial pathname from data attribute (set by inline script before React)
+    const initialPath = document.documentElement.dataset.currentPath || 
+                        window.location.pathname.replace(/\/$/, '') || '/'
+    setPathname(initialPath)
+    setIsMounted(true)
     
     const updatePathname = () => {
-      if (typeof window !== 'undefined') {
-        setPathname(window.location.pathname)
-      }
+      const path = window.location.pathname.replace(/\/$/, '') || '/'
+      setPathname(path)
+      document.documentElement.setAttribute('data-current-path', path)
     }
-    
-    // Set initial pathname
-    updatePathname()
     
     // Listen for popstate (back/forward navigation)
     window.addEventListener('popstate', updatePathname)
     
-    // Also update on any click (for client-side navigation)
+    // Listen for click to catch client-side navigation
     const handleClick = () => {
-      // Small delay to allow navigation to complete
-      setTimeout(updatePathname, 50)
+      setTimeout(updatePathname, 100)
     }
-    window.addEventListener('click', handleClick)
+    document.addEventListener('click', handleClick)
     
     return () => {
       window.removeEventListener('popstate', updatePathname)
-      window.removeEventListener('click', handleClick)
+      document.removeEventListener('click', handleClick)
     }
   }, [])
 
-  // Only check active state after client-side mount to avoid hydration mismatch
+  // Check if link is active - returns false before mount to avoid wrong active state
   const checkActive = (linkHref: string): boolean => {
-    if (!mounted) return false
+    if (!isMounted) return false
     return isLinkActive(linkHref, pathname)
   }
   
+  // Check if pathname starts with prefix - returns false before mount
   const checkStartsWith = (prefix: string): boolean => {
-    if (!mounted) return false
+    if (!isMounted) return false
     return pathStartsWith(pathname, prefix)
   }
 
-  const isHome = mounted ? normalizePath(pathname) === '/' : true
+  // Before mount, assume we're not on home page to avoid showing home as active everywhere
+  const isHome = isMounted ? normalizePath(pathname) === '/' : false
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10)

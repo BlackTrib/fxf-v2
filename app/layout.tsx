@@ -233,6 +233,17 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        {/* Inline script to set current pathname before React hydration */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                var path = window.location.pathname.replace(/\\/$/, '') || '/';
+                document.documentElement.setAttribute('data-current-path', path);
+              })();
+            `,
+          }}
+        />
       </head>
       <body className="font-sans antialiased">
         {children}
