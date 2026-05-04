@@ -43,9 +43,11 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // On home + not scrolled: transparent bg, white text, white CTA
-  // Scrolled or other pages: blue (primary) bg, white text, white CTA
-  const darkMode = isHome && !scrolled
+  // Acasa + fara scroll: transparent, text alb
+  // Acasa + scroll: alb, text inchis
+  // Alte pagini: intotdeauna alb, text inchis
+  const transparent = isHome && !scrolled
+  const light = !transparent // alb cu text inchis
 
   return (
     <header className={cn(
@@ -54,9 +56,9 @@ export function Navbar() {
     )}>
       <div className={cn(
         'absolute inset-0 transition-all duration-300',
-        darkMode
+        transparent
           ? 'bg-transparent'
-          : 'bg-primary shadow-md'
+          : 'bg-white border-b border-border/50 shadow-sm'
       )} />
 
       <div className="max-w-6xl mx-auto px-5 relative">
@@ -64,24 +66,35 @@ export function Navbar() {
 
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 group">
-            <div className="w-9 h-9 rounded-lg flex items-center justify-center font-mono text-sm font-bold bg-white/15 text-white border border-white/20 transition-all group-hover:bg-white/25">
+            <div className={cn(
+              'w-9 h-9 rounded-lg flex items-center justify-center font-mono text-sm font-bold transition-all',
+              transparent
+                ? 'bg-white/15 text-white border border-white/20 group-hover:bg-white/25'
+                : 'bg-primary text-white group-hover:bg-primary/90'
+            )}>
               {'</>'}
             </div>
             <div className="flex flex-col leading-none">
-              <span className="font-display font-bold text-base tracking-wide text-white">
+              <span className={cn(
+                'font-display font-bold text-base tracking-wide transition-colors',
+                transparent ? 'text-white' : 'text-primary'
+              )}>
                 FXF <span className="ml-0.5">WEB</span>
               </span>
-              <span className="text-[8px] font-medium tracking-[0.48em] uppercase text-white/60">
+              <span className={cn(
+                'text-[8px] font-medium tracking-[0.48em] uppercase transition-colors',
+                transparent ? 'text-white/60' : 'text-muted-foreground'
+              )}>
                 SOLUTION
               </span>
             </div>
           </Link>
 
-          {/* Desktop Nav - tutti i link insieme con bg unificat */}
+          {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center">
             <div className={cn(
               'flex items-center gap-0.5 rounded-xl px-2 py-1.5 transition-all duration-300',
-              darkMode ? 'bg-white/10 backdrop-blur-sm' : 'bg-white/15'
+              transparent ? 'bg-white/10 backdrop-blur-sm' : 'bg-secondary/60'
             )}>
               {links.map((link) => (
                 link.dropdown ? (
@@ -91,7 +104,12 @@ export function Navbar() {
                     onMouseEnter={() => setDropdown(true)}
                     onMouseLeave={() => setDropdown(false)}
                   >
-                    <button className="px-3 py-1.5 rounded-lg text-[13px] font-medium text-white/80 hover:text-white hover:bg-white/15 flex items-center gap-1 transition-colors">
+                    <button className={cn(
+                      'px-3 py-1.5 rounded-lg text-[13px] font-medium flex items-center gap-1 transition-colors',
+                      transparent
+                        ? 'text-white/80 hover:text-white hover:bg-white/15'
+                        : 'text-foreground/70 hover:text-foreground hover:bg-secondary'
+                    )}>
                       {link.label}
                       <ChevronDown size={12} className={cn('transition-transform', dropdown && 'rotate-180')} />
                     </button>
@@ -130,7 +148,12 @@ export function Navbar() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="px-3 py-1.5 rounded-lg text-[13px] font-medium text-white/80 hover:text-white hover:bg-white/15 transition-colors"
+                    className={cn(
+                      'px-3 py-1.5 rounded-lg text-[13px] font-medium transition-colors',
+                      transparent
+                        ? 'text-white/80 hover:text-white hover:bg-white/15'
+                        : 'text-foreground/70 hover:text-foreground hover:bg-secondary'
+                    )}
                   >
                     {link.label}
                   </Link>
@@ -139,13 +162,13 @@ export function Navbar() {
             </div>
           </nav>
 
-          {/* CTA - acelasi stil ca "Solicita oferta" */}
+          {/* CTA */}
           <div className="hidden lg:block">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-[13px] font-semibold bg-white text-primary hover:bg-white/90 transition-all"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-[13px] font-semibold bg-primary text-white hover:bg-primary/90 transition-all"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
               Solicită ofertă
             </Link>
           </div>
@@ -153,7 +176,10 @@ export function Navbar() {
           {/* Mobile Toggle */}
           <button
             onClick={() => setOpen(!open)}
-            className="lg:hidden p-2 rounded-lg text-white hover:bg-white/10 transition-colors"
+            className={cn(
+              'lg:hidden p-2 rounded-lg transition-colors',
+              transparent ? 'text-white hover:bg-white/10' : 'text-foreground hover:bg-secondary'
+            )}
           >
             {open ? <X size={20} /> : <Menu size={20} />}
           </button>
