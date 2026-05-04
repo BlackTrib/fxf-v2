@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
-import { Server, Globe, ShoppingCart, HardDrive, Cloud, ArrowRight, Check, Zap, Shield, Clock, Headphones, Layers } from 'lucide-react'
+import { Server, Globe, ShoppingCart, HardDrive, Cloud, ArrowRight, Check, Zap, Shield, Clock, Headphones, Layers, ShoppingBag, Rocket } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Servicii Găzduire Web România | FXF Web Hosting',
@@ -85,22 +85,40 @@ const services = [
     color: 'bg-emerald-50',
   },
   {
-    id: 'gazduire-ecommerce',
-    href: '/servicii/gazduire-ecommerce',
-    icon: ShoppingCart,
-    title: 'Găzduire E-Commerce',
-    subtitle: 'Pachete speciale pentru magazine online',
-    desc: 'Găzduire creată special pentru magazine online: WooCommerce, OpenCart, Magento. Resurse generoase, performanță ridicată și toate funcționalitățile necesare pentru a vinde online cu succes.',
+    id: 'gazduire-opencart',
+    href: '/servicii/gazduire-opencart',
+    icon: ShoppingBag,
+    title: 'Găzduire OpenCart',
+    subtitle: 'Hosting optimizat pentru magazine OpenCart',
+    desc: 'Găzduire optimizată pentru OpenCart cu auto-instalare, MySQL optimizat și resurse dedicate pentru magazine cu mii de produse. SSL gratuit pentru plăți securizate.',
     features: [
-      '30GB+ spațiu NVMe SSD',
-      '3+ CPU cores / 3GB+ RAM',
-      'Optimizat pentru e-commerce',
-      'SSL & securitate avansată',
-      'Suport prioritar e-commerce',
+      'Auto-instalare OpenCart',
+      'MySQL optimizat e-commerce',
+      'LiteSpeed Cache inclus',
+      'SSL gratuit pentru plăți',
       'Backup zilnic automat',
+      'Suport specializat OpenCart',
+    ],
+    price: 'de la 55 lei/6 luni',
+    color: 'bg-amber-50',
+  },
+  {
+    id: 'gazduire-performance',
+    href: '/servicii/gazduire-performance',
+    icon: Rocket,
+    title: 'Găzduire Performance',
+    subtitle: 'Resurse dedicate pentru site-uri cu trafic intens',
+    desc: 'Găzduire Performance cu resurse CPU și RAM garantate. Ideal pentru site-uri cu trafic intens, aplicații web complexe și proiecte enterprise care necesită putere maximă.',
+    features: [
+      'CPU & RAM garantate',
+      'LiteSpeed Enterprise',
+      'Backup de 2x pe zi',
+      'Uptime 99.99% SLA',
+      'CDN inclus',
+      'Suport prioritar 30 min',
     ],
     price: 'de la 455 lei/6 luni',
-    color: 'bg-amber-50',
+    color: 'bg-rose-50',
   },
   {
     id: 'domenii',
@@ -136,7 +154,7 @@ const services = [
       'Scalare flexibilă',
     ],
     price: 'de la 150 lei/lună',
-    color: 'bg-rose-50',
+    color: 'bg-indigo-50',
   },
 ]
 

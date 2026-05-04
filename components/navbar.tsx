@@ -2,15 +2,16 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Menu, X, ChevronDown, Monitor, ShoppingCart, Wrench, Search, BarChart2 } from 'lucide-react'
+import { Menu, X, ChevronDown, Server, HardDrive, ShoppingCart, ShoppingBag, Rocket, Globe } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const services = [
-  { href: '/servicii/gazduire-web', label: 'Găzduire Web', icon: Monitor },
-  { href: '/servicii/gazduire-wordpress', label: 'Găzduire WordPress', icon: ShoppingCart },
-  { href: '/servicii/gazduire-prestashop', label: 'Găzduire PrestaShop', icon: Wrench },
-  { href: '/servicii/gazduire-ecommerce', label: 'E-Commerce', icon: Search },
-  { href: '/servicii/vps', label: 'VPS Cloud', icon: BarChart2 },
+  { href: '/servicii/gazduire-web', label: 'Găzduire Web', icon: Server },
+  { href: '/servicii/gazduire-wordpress', label: 'Găzduire WordPress', icon: HardDrive },
+  { href: '/servicii/gazduire-prestashop', label: 'Găzduire PrestaShop', icon: ShoppingCart },
+  { href: '/servicii/gazduire-opencart', label: 'Găzduire OpenCart', icon: ShoppingBag },
+  { href: '/servicii/gazduire-performance', label: 'Găzduire Performance', icon: Rocket },
+  { href: '/servicii/domenii', label: 'Domenii Web', icon: Globe },
 ]
 
 const links = [
