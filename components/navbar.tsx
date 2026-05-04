@@ -94,7 +94,9 @@ export function Navbar() {
           <nav className="hidden lg:flex items-center">
             <div className={cn(
               'flex items-center gap-0.5 rounded-xl px-2 py-1.5 transition-all duration-300',
-              transparent ? 'bg-white/10 backdrop-blur-sm' : 'bg-secondary/60'
+              transparent
+                ? 'bg-foreground text-white border border-white/10 shadow-sm'
+                : 'bg-secondary/60'
             )}>
               {links.map((link) => (
                 link.dropdown ? (
