@@ -4,8 +4,6 @@ import { Hero } from '@/components/home/hero'
 import { Stats } from '@/components/home/stats'
 import { ServicesOverview } from '@/components/home/services-overview'
 import { Differentiators } from '@/components/home/differentiators'
-import { PortfolioPreview } from '@/components/home/portfolio-preview'
-import { Process } from '@/components/home/process'
 import { Testimonials } from '@/components/home/testimonials'
 import { FAQ } from '@/components/home/faq'
 import { CTAFinal } from '@/components/home/cta-final'
@@ -17,42 +15,42 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Cât costă realizarea unui site web profesional?',
+      name: 'Ce include un pachet de găzduire web?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Prețurile variază în funcție de complexitate. Un site de prezentare standard începe de la 1.000€, magazinele online de la 2.500€, iar aplicațiile web custom de la 5.000€. Oferim consultanță gratuită pentru a estima exact costurile proiectului tău.',
+        text: 'Toate pachetele includ: spațiu SSD NVMe, domenii și baze de date nelimitate, email nelimitat, certificat SSL Let\'s Encrypt gratuit, cPanel, LiteSpeed, backup zilnic JetBackup, protecție Imunify360 și suport tehnic 24/7.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Cât durează dezvoltarea unui website?',
+      name: 'Cum pot transfera site-ul de la alt furnizor?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Site de prezentare: 2-4 săptămâni. Magazin online: 4-8 săptămâni. Aplicații web complexe: 8-16 săptămâni. Oferim timeline exact înainte de a începe, cu milestones clare și deadline-uri respectate.',
+        text: 'Migrarea este gratuită! Echipa noastră se ocupă de transferul complet al site-ului, bazei de date și email-urilor de la vechiul furnizor. Procesul durează de obicei 24-48 de ore fără downtime.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Pot să administrez singur site-ul după lansare?',
+      name: 'Ce înseamnă uptime 99.9% garantat?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Absolut! Toate site-urile noastre vin cu un CMS intuitiv. Oferim training gratuit la lansare și documentație pentru a actualiza texte, imagini și produse fără cunoștințe tehnice.',
+        text: 'Garantăm că serverele noastre sunt online și funcționale cel puțin 99.9% din timp. În cazul rar în care nu respectăm această garanție, primești credit pentru perioada afectată.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Site-ul va fi optimizat pentru Google (SEO)?',
+      name: 'Oferiți suport pentru WordPress/PrestaShop?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Toate proiectele noastre includ SEO tehnic de bază: structură URL-uri, meta tags, Schema markup, sitemap, Core Web Vitals optimizate. Pentru campanii SEO complete oferim pachete separate.',
+        text: 'Da! Oferim găzduire optimizată pentru WordPress și PrestaShop cu LiteSpeed Cache pre-instalat. Echipa noastră poate ajuta cu instalarea, configurarea și optimizarea acestor platforme.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Oferiți mentenanță și suport după lansare?',
+      name: 'Ce se întâmplă cu backup-urile?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Da! Oferim pachete lunare de mentenanță care includ: actualizări de securitate, backup-uri automate zilnice, monitorizare uptime 24/7 și suport tehnic prioritar. Prețuri de la 100€/lună.',
+        text: 'JetBackup face automat backup-uri zilnice ale tuturor fișierelor și bazelor de date. Păstrăm backup-uri pentru ultimele 7 zile. Poți restaura oricând din cPanel cu un click.',
       },
     },
   ],
@@ -74,12 +72,6 @@ export default function HomePage() {
         </div>
         <div className="below-fold">
           <Differentiators />
-        </div>
-        <div className="below-fold">
-          <PortfolioPreview />
-        </div>
-        <div className="below-fold">
-          <Process />
         </div>
         <div className="below-fold">
           <Testimonials />

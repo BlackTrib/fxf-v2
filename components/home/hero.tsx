@@ -1,33 +1,29 @@
 import Link from 'next/link'
-import { ArrowRight, Star, Zap, Shield, Gauge, CheckCircle2, ChevronDown } from 'lucide-react'
+import { ArrowRight, Star, Server, Shield, Zap, CheckCircle2, ChevronDown, HardDrive, Clock, Headphones } from 'lucide-react'
 
 const benefits = [
-  'Consultanță gratuită',
-  'Tehnologii moderne',
+  'SSL gratuit inclus',
+  'cPanel inclus',
   'Suport tehnic 24/7',
-  'Garanția proiectului',
+  'Uptime 99.9% garantat',
 ]
 
-// Web development themed floating elements with animations
+// Server/hosting themed floating elements
 const floatingElements = [
-  { symbol: '</>', x: '8%', y: '15%', size: 'text-2xl', anim: 'animate-float-slow', delay: '0s', color: 'text-cyber/20' },
-  { symbol: '{ }', x: '85%', y: '20%', size: 'text-3xl', anim: 'animate-float-medium', delay: '0.5s', color: 'text-white/15' },
-  { symbol: '<div>', x: '12%', y: '70%', size: 'text-lg', anim: 'animate-float-fast', delay: '1s', color: 'text-accent-brand/15' },
-  { symbol: 'const', x: '78%', y: '75%', size: 'text-base', anim: 'animate-float-slow', delay: '0.3s', color: 'text-cyber/15' },
-  { symbol: '=>', x: '92%', y: '45%', size: 'text-xl', anim: 'animate-float-medium', delay: '0.8s', color: 'text-white/12' },
-  { symbol: '[ ]', x: '5%', y: '45%', size: 'text-xl', anim: 'animate-float-fast', delay: '0.2s', color: 'text-accent-brand/12' },
-  { symbol: '</html>', x: '88%', y: '85%', size: 'text-sm', anim: 'animate-float-slow', delay: '1.2s', color: 'text-white/10' },
-  { symbol: '( )', x: '15%', y: '88%', size: 'text-lg', anim: 'animate-float-medium', delay: '0.6s', color: 'text-cyber/12' },
-  { symbol: '/*', x: '75%', y: '12%', size: 'text-base', anim: 'animate-float-fast', delay: '0.4s', color: 'text-white/15' },
-  { symbol: '*/', x: '82%', y: '55%', size: 'text-base', anim: 'animate-float-slow', delay: '0.9s', color: 'text-accent-brand/10' },
-  { symbol: '<>', x: '25%', y: '25%', size: 'text-lg', anim: 'animate-float-medium', delay: '0.7s', color: 'text-cyber/15' },
-  { symbol: ';;', x: '70%', y: '35%', size: 'text-xl', anim: 'animate-float-fast', delay: '0.1s', color: 'text-white/12' },
+  { symbol: '< />', x: '8%', y: '15%', size: 'text-2xl', anim: 'animate-float-slow', delay: '0s', color: 'text-cyber/20' },
+  { symbol: 'SSD', x: '85%', y: '20%', size: 'text-xl', anim: 'animate-float-medium', delay: '0.5s', color: 'text-white/15' },
+  { symbol: 'NVMe', x: '12%', y: '70%', size: 'text-lg', anim: 'animate-float-fast', delay: '1s', color: 'text-accent-brand/15' },
+  { symbol: '99.9%', x: '78%', y: '75%', size: 'text-base', anim: 'animate-float-slow', delay: '0.3s', color: 'text-cyber/15' },
+  { symbol: 'SSL', x: '92%', y: '45%', size: 'text-xl', anim: 'animate-float-medium', delay: '0.8s', color: 'text-white/12' },
+  { symbol: 'CPU', x: '5%', y: '45%', size: 'text-xl', anim: 'animate-float-fast', delay: '0.2s', color: 'text-accent-brand/12' },
+  { symbol: 'RAM', x: '88%', y: '85%', size: 'text-sm', anim: 'animate-float-slow', delay: '1.2s', color: 'text-white/10' },
+  { symbol: 'PHP', x: '15%', y: '88%', size: 'text-lg', anim: 'animate-float-medium', delay: '0.6s', color: 'text-cyber/12' },
 ]
 
 export function Hero() {
   return (
     <section className="relative min-h-[100svh] flex items-center bg-primary overflow-hidden">
-      {/* Floating code elements with animations - hidden on mobile to avoid overlap */}
+      {/* Floating elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden hidden sm:block">
         {floatingElements.map((el, i) => (
           <div
@@ -44,7 +40,7 @@ export function Hero() {
         ))}
       </div>
 
-      {/* Static gradient mesh background - no animation for better LCP */}
+      {/* Gradient background */}
       <div className="absolute inset-0 pointer-events-none hidden sm:block">
         <div 
           className="absolute w-[500px] h-[500px] rounded-full opacity-20"
@@ -64,7 +60,7 @@ export function Hero() {
         />
       </div>
 
-      {/* Subtle grid */}
+      {/* Grid */}
       <div 
         className="absolute inset-0 opacity-[0.03]"
         style={{
@@ -84,32 +80,30 @@ export function Hero() {
                   <Star key={i} className="w-3 h-3 text-amber-400 fill-amber-400" />
                 ))}
               </div>
-              <span className="text-white/60 text-xs font-medium">Agenție web development high-tech</span>
+              <span className="text-white/60 text-xs font-medium">Hosting de încredere din 2020</span>
             </div>
 
             {/* Headline */}
             <h1 className="font-display text-3xl sm:text-5xl lg:text-[3.5rem] font-bold text-white leading-[1.1] tracking-tight">
-              Servicii profesionale de{' '}
-              <span style={{ color: 'oklch(0.72 0.14 70)' }}>web design</span>{' '}
-              și{' '}
-              <span style={{ color: 'oklch(0.72 0.14 70)' }}>dezvoltare web</span>{' '}
-              pentru afaceri din Romania
+              Găzduire Web{' '}
+              <span style={{ color: 'oklch(0.72 0.14 70)' }}>SSD NVMe</span>{' '}
+              în România cu{' '}
+              <span style={{ color: 'oklch(0.72 0.14 70)' }}>uptime 99.9%</span>
             </h1>
 
-            {/* Description - more SEO content */}
+            {/* Description */}
             <p className="text-white/70 text-sm sm:text-base lg:text-lg leading-relaxed max-w-xl">
-              FXF Web Solution este o agenție de web development cu sediul în București, România, 
-              specializată în crearea de site-uri profesionale, magazine online și aplicații web 
-              personalizate. Oferim soluții digitale complete: de la web design modern și 
-              responsive până la optimizare SEO și campanii Google Ads cu ROI măsurabil.
+              FXF Web Hosting oferă servicii de găzduire web profesionale pe servere SSD NVMe 
+              ultrarapide. Hosting optimizat pentru WordPress, PrestaShop și magazine online, 
+              cu cPanel, SSL gratuit și suport tehnic 24/7. Prețuri de la doar 55 lei/6 luni.
             </p>
 
             {/* Features */}
             <div className="flex flex-wrap gap-x-4 gap-y-2">
               {[
-                { icon: Zap, label: 'Site-uri rapide' },
-                { icon: Shield, label: 'Securitate avansată' },
-                { icon: Gauge, label: 'Optimizare SEO' },
+                { icon: Zap, label: 'Servere NVMe rapide' },
+                { icon: Shield, label: 'SSL gratuit inclus' },
+                { icon: Headphones, label: 'Suport 24/7' },
               ].map((f) => (
                 <div key={f.label} className="flex items-center gap-1.5 text-white/60 text-sm">
                   <f.icon size={14} className="text-cyber" />
@@ -131,71 +125,89 @@ export function Hero() {
             {/* CTAs */}
             <div className="flex flex-wrap gap-3 pt-2">
               <Link
-                href="/contact"
+                href="/servicii/gazduire-web"
                 className="inline-flex items-center gap-2 bg-white text-primary px-6 py-3 rounded-lg text-sm font-semibold hover:bg-cyber hover:text-primary transition-all glow-hover"
               >
-                Solicită ofertă gratuită
+                Vezi pachetele de hosting
                 <ArrowRight size={14} />
               </Link>
               <Link
-                href="/portofoliu"
+                href="/contact"
                 className="inline-flex items-center gap-2 border border-white/20 text-white px-6 py-3 rounded-lg text-sm font-medium hover:bg-white/5 transition-colors"
               >
-                Vezi portofoliu
+                Contactează-ne
               </Link>
             </div>
           </div>
 
-          {/* Code Window - 2 cols */}
+          {/* Pricing Preview - 2 cols */}
           <div className="lg:col-span-2 hidden lg:block">
             <div className="relative animate-float-slow">
               {/* Glow */}
               <div className="absolute -inset-4 bg-accent-brand/10 rounded-2xl blur-2xl" />
               
-              <div className="relative bg-[#0d1117] rounded-xl border border-white/10 overflow-hidden shadow-2xl">
+              <div className="relative bg-white rounded-xl border border-white/10 overflow-hidden shadow-2xl">
                 {/* Header */}
-                <div className="flex items-center gap-2 px-4 py-2.5 bg-white/5 border-b border-white/5">
-                  <div className="flex gap-1.5">
-                    <span className="w-2.5 h-2.5 rounded-full bg-red-400/80" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-amber-400/80" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-green-400/80" />
+                <div className="bg-primary/5 px-5 py-4 border-b border-border/50">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <span className="text-[10px] font-bold text-primary bg-primary/10 px-2 py-0.5 rounded-full">
+                        CEL MAI POPULAR
+                      </span>
+                      <h3 className="font-display font-bold text-lg text-foreground mt-1">Găzduire Business</h3>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-2xl font-bold text-primary">207 lei</p>
+                      <p className="text-xs text-muted-foreground">/6 luni</p>
+                    </div>
                   </div>
-                  <span className="text-white/30 text-[10px] font-mono ml-2">fxf-project.tsx</span>
                 </div>
 
-                {/* Code */}
-                <div className="p-4 font-mono text-xs leading-relaxed">
-                  <div><span className="text-[#ff7b72]">const</span> <span className="text-[#d2a8ff]">website</span> <span className="text-white/50">=</span> <span className="text-[#ff7b72]">await</span> <span className="text-[#79c0ff]">FXF</span><span className="text-white/50">.</span><span className="text-[#d2a8ff]">build</span><span className="text-white/50">{'({'}</span></div>
-                  <div className="pl-4"><span className="text-[#79c0ff]">type</span><span className="text-white/50">:</span> <span className="text-[#a5d6ff]">&apos;professional&apos;</span><span className="text-white/50">,</span></div>
-                  <div className="pl-4"><span className="text-[#79c0ff]">design</span><span className="text-white/50">:</span> <span className="text-[#a5d6ff]">&apos;custom&apos;</span><span className="text-white/50">,</span></div>
-                  <div className="pl-4"><span className="text-[#79c0ff]">responsive</span><span className="text-white/50">:</span> <span className="text-[#ff7b72]">true</span><span className="text-white/50">,</span></div>
-                  <div className="pl-4"><span className="text-[#79c0ff]">seo</span><span className="text-white/50">:</span> <span className="text-[#a5d6ff]">&apos;optimized&apos;</span><span className="text-white/50">,</span></div>
-                  <div className="pl-4"><span className="text-[#79c0ff]">performance</span><span className="text-white/50">:</span> <span className="text-[#a5d6ff]">&apos;fast&apos;</span><span className="text-white/50">,</span></div>
-                  <div className="pl-4"><span className="text-[#79c0ff]">support</span><span className="text-white/50">:</span> <span className="text-[#a5d6ff]">&apos;24/7&apos;</span></div>
-                  <div><span className="text-white/50">{'}'});</span></div>
-                  <div className="mt-3 pt-3 border-t border-white/5">
-                    <span className="text-[#8b949e]">// Rezultate garantate</span>
-                  </div>
-                  <div className="text-[#3fb950]">✓ Lighthouse Score: 98/100</div>
-                  <div className="text-[#3fb950]">✓ Mobile-First Design</div>
-                  <div className="text-[#3fb950]">✓ SEO Optimizat</div>
+                {/* Features */}
+                <div className="p-5 space-y-3">
+                  {[
+                    { icon: HardDrive, label: 'Spațiu: 10GB NVMe SSD' },
+                    { icon: Server, label: 'Domenii găzduite: Nelimitat' },
+                    { icon: Zap, label: 'LiteSpeed + cPanel' },
+                    { icon: Shield, label: 'SSL Let\'s Encrypt gratuit' },
+                    { icon: Clock, label: 'Backup zilnic JetBackup' },
+                    { icon: Headphones, label: 'Suport tehnic 24/7' },
+                  ].map((f) => (
+                    <div key={f.label} className="flex items-center gap-3 text-sm text-foreground/80">
+                      <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                        <f.icon size={16} className="text-primary" />
+                      </div>
+                      {f.label}
+                    </div>
+                  ))}
+                </div>
+
+                {/* CTA */}
+                <div className="px-5 pb-5">
+                  <Link
+                    href="/servicii/gazduire-web"
+                    className="block w-full bg-primary text-white text-center py-3 rounded-lg text-sm font-semibold hover:bg-primary/90 transition-colors"
+                  >
+                    Comandă acum
+                  </Link>
                 </div>
               </div>
 
-              {/* Floating card */}
-              <div className="absolute -bottom-4 -left-4 bg-white rounded-lg shadow-xl px-3 py-2 flex items-center gap-2 animate-float-medium" style={{ animationDelay: '0.5s' }}>
-                <div className="w-10 h-10 rounded-md bg-green-50 flex items-center justify-center text-green-600 text-sm font-bold">
-                  +48%
+              {/* Floating badge */}
+              <div className="absolute -bottom-4 -left-4 bg-green-500 text-white rounded-lg shadow-xl px-3 py-2 flex items-center gap-2 animate-float-medium" style={{ animationDelay: '0.5s' }}>
+                <div className="w-8 h-8 rounded-md bg-white/20 flex items-center justify-center text-sm font-bold">
+                  -10%
                 </div>
                 <div className="text-[11px]">
-                  <p className="font-semibold text-foreground">Conversii medii</p>
-                  <p className="text-muted-foreground">pentru clienții noștri</p>
+                  <p className="font-semibold">Cod: FXF10</p>
+                  <p className="text-white/80">Reducere bun venit</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1">
         <span className="text-white/30 text-[10px] font-medium uppercase tracking-widest">Scroll</span>

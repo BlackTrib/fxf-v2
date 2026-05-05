@@ -1,20 +1,19 @@
 'use client'
 
 import Link from 'next/link'
-import { Mail, Phone, ArrowRight, MapPin, Star, CheckCircle2, Code2 } from 'lucide-react'
+import { Mail, Phone, ArrowRight, MapPin, Star, CheckCircle2 } from 'lucide-react'
 
 const services = [
-  { href: '/servicii/web-design', label: 'Web Design Profesional' },
-  { href: '/servicii/magazin-online', label: 'Magazine Online E-Commerce' },
-  { href: '/servicii/mentenanta-web', label: 'Mentenanță Web' },
-  { href: '/servicii/optimizare-seo', label: 'Optimizare SEO' },
-  { href: '/servicii/google-ads', label: 'Google Ads & PPC' },
-  { href: 'https://fxfweb.ro', label: 'Găzduire Web' },
+  { href: '/servicii/gazduire-web', label: 'Găzduire Web' },
+  { href: '/servicii/gazduire-wordpress', label: 'Găzduire WordPress' },
+  { href: '/servicii/gazduire-prestashop', label: 'Găzduire PrestaShop' },
+  { href: '/servicii/gazduire-ecommerce', label: 'Găzduire E-Commerce' },
+  { href: '/servicii/domenii', label: 'Înregistrare Domenii' },
+  { href: '/servicii/vps', label: 'VPS Cloud' },
 ]
 
 const company = [
   { href: '/despre', label: 'Despre noi' },
-  { href: '/portofoliu', label: 'Portofoliu' },
   { href: '/servicii', label: 'Servicii' },
   { href: '/contact', label: 'Contact' },
   { href: '/termeni', label: 'Termeni și condiții' },
@@ -22,10 +21,10 @@ const company = [
 ]
 
 const badges = [
-  'Consultanță gratuită',
-  'Profesionalism',
+  'SSL gratuit',
   'Suport 24/7',
-  'GDPR Compliant',
+  'Uptime 99.9%',
+  'Migrare gratuită',
 ]
 
 export function Footer() {
@@ -36,24 +35,24 @@ export function Footer() {
       <div className="border-b border-white/10">
         <div className="max-w-6xl mx-auto px-5 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <p className="text-white/50 text-xs font-semibold uppercase tracking-widest mb-1">Gata să începi?</p>
+            <p className="text-white/50 text-xs font-semibold uppercase tracking-widest mb-1">Reducere bun venit</p>
             <h2 className="font-display text-2xl md:text-3xl font-bold text-white">
-              Transformă-ți afacerea cu un site{' '}
-              <span className="text-cyber">profesional</span>
+              10% reducere cu codul{' '}
+              <span className="text-cyber">FXF10</span>
             </h2>
           </div>
           <div className="flex items-center gap-3 shrink-0">
             <Link
-              href="/contact"
+              href="/servicii/gazduire-web"
               className="inline-flex items-center gap-2 bg-cyber text-primary px-5 py-2.5 rounded-lg text-sm font-bold hover:opacity-90 transition-opacity"
             >
-              Solicită ofertă gratuită <ArrowRight size={14} />
+              Vezi pachetele <ArrowRight size={14} />
             </Link>
             <Link
-              href="/portofoliu"
+              href="/contact"
               className="inline-flex items-center gap-2 border border-white/20 text-white/80 px-5 py-2.5 rounded-lg text-sm font-medium hover:border-white/40 hover:text-white transition-all"
             >
-              Vezi portofoliu
+              Contact
             </Link>
           </div>
         </div>
@@ -74,7 +73,7 @@ export function Footer() {
             {[1,2,3,4,5].map((s) => (
               <Star key={s} size={11} className="text-yellow-400 fill-yellow-400" />
             ))}
-            <span className="text-white/40 text-xs ml-1">4.9/5 — 53 recenzii</span>
+            <span className="text-white/40 text-xs ml-1">4.9/5 — 127 recenzii</span>
           </div>
         </div>
       </div>
@@ -92,13 +91,13 @@ export function Footer() {
               </div>
               <div className="flex flex-col leading-none">
                 <span className="font-display font-bold text-base tracking-wide text-white">FXF <span className="ml-0.5">WEB</span></span>
-                <span className="text-[8px] font-medium tracking-[0.48em] uppercase text-white/50">SOLUTION</span>
+                <span className="text-[8px] font-medium tracking-[0.48em] uppercase text-white/50">HOSTING</span>
               </div>
             </div>
 
             <p className="text-white/50 text-xs leading-relaxed mb-5">
-              Agentie web high-tech din Romania specializata in creare site-uri profesionale, 
-              magazine online și soluții digitale complete pentru afaceri.
+              Găzduire web profesională pe servere SSD NVMe în Germania. 
+              cPanel, SSL gratuit, backup zilnic și suport tehnic 24/7.
             </p>
 
             {/* Contact */}
@@ -109,11 +108,11 @@ export function Footer() {
                 </div>
                 +40 785 277 566
               </a>
-              <a href="mailto:office@fxf.ro" className="flex items-center gap-2 hover:text-white transition-colors group">
+              <a href="mailto:office@fxfweb.ro" className="flex items-center gap-2 hover:text-white transition-colors group">
                 <div className="w-6 h-6 rounded-md bg-white/10 flex items-center justify-center group-hover:bg-white/15 transition-colors">
                   <Mail size={11} />
                 </div>
-                office@fxf.ro
+                office@fxfweb.ro
               </a>
               <div className="flex items-center gap-2">
                 <div className="w-6 h-6 rounded-md bg-white/10 flex items-center justify-center">
@@ -132,8 +131,6 @@ export function Footer() {
                 <li key={s.href}>
                   <Link
                     href={s.href}
-                    target={s.href.startsWith('http') ? '_blank' : undefined}
-                    rel={s.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                     className="text-white/55 text-xs hover:text-white hover:translate-x-0.5 transition-all inline-flex items-center gap-1.5 group"
                   >
                     <span className="w-1 h-1 rounded-full bg-white/20 group-hover:bg-cyber transition-colors shrink-0" />
@@ -162,14 +159,14 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Working hours & quick info */}
+          {/* Working hours & server info */}
           <div>
-            <h3 className="text-[10px] font-bold uppercase tracking-wider text-white/30 mb-4">Program</h3>
+            <h3 className="text-[10px] font-bold uppercase tracking-wider text-white/30 mb-4">Suport</h3>
             <div className="space-y-2 mb-6">
               {[
-                { day: 'Luni — Vineri', hours: '10:00 — 18:00' },
-                { day: 'Sâmbătă', hours: 'Închis' },
-                { day: 'Duminică', hours: 'Închis' },
+                { day: 'Telefon / Email', hours: '24/7' },
+                { day: 'Ticket', hours: 'Răspuns < 4h' },
+                { day: 'Migrare', hours: 'Gratuită' },
               ].map((row) => (
                 <div key={row.day} className="flex items-center justify-between gap-4">
                   <span className="text-white/40 text-xs">{row.day}</span>
@@ -178,11 +175,11 @@ export function Footer() {
               ))}
             </div>
 
-            {/* Stack snippet */}
+            {/* Server stack */}
             <div className="bg-white/5 rounded-lg p-3 border border-white/10">
-              <p className="text-[9px] text-white/30 uppercase tracking-wider font-semibold mb-2">Stack folosit</p>
+              <p className="text-[9px] text-white/30 uppercase tracking-wider font-semibold mb-2">Tehnologii</p>
               <div className="flex flex-wrap gap-1">
-                {['Next.js', 'React', 'TypeScript', 'Node.js', 'PrestaShop', 'WooCommerce', 'OpenCart', 'WordPress', 'Shopify', 'Vercel'].map((tech) => (
+                {['cPanel', 'LiteSpeed', 'CloudLinux', 'Imunify360', 'JetBackup', 'SSL'].map((tech) => (
                   <span
                     key={tech}
                     className="text-[10px] bg-white/10 text-white/60 px-2 py-0.5 rounded font-mono"
@@ -202,9 +199,9 @@ export function Footer() {
             &copy; {new Date().getFullYear()} FXF Creative Agency SRL. Toate drepturile rezervate.
           </p>
           <div className="flex items-center gap-1 text-white/25 text-[10px]">
-            <span>Realizat cu</span>
-            <span className="text-red-400 mx-0.5">♥</span>
-            <span>în Romania</span>
+            <span>Servere în</span>
+            <span className="text-cyber mx-0.5">Germania</span>
+            <span>• Datacenter Tier III</span>
           </div>
         </div>
       </div>

@@ -2,141 +2,176 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
-import { Monitor, ShoppingCart, Wrench, Search, BarChart2, ArrowRight, Check, Code2, Layers, Zap, Shield, Clock, Users } from 'lucide-react'
-import { PageHeroVisual } from '@/components/page-hero-visual'
+import { Server, Globe, ShoppingCart, HardDrive, Cloud, ArrowRight, Check, Zap, Shield, Clock, Headphones, Layers, ShoppingBag, Rocket } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Servicii Web Design & SEO București | FXF Web Solution',
-  description: 'Web design, magazine online, SEO și Google Ads în București. Servicii complete de dezvoltare web cu rezultate măsurabile. Solicită ofertă gratuită acum!',
+  title: 'Servicii Găzduire Web România | FXF Web Hosting',
+  description: 'Găzduire web SSD NVMe, domenii, VPS și hosting optimizat pentru WordPress și PrestaShop. Prețuri de la 55 lei/6 luni. SSL gratuit, cPanel, suport 24/7.',
   keywords: [
-    'servicii web development',
-    'web design romania',
-    'creare site web',
-    'magazin online',
-    'optimizare seo',
-    'google ads romania',
-    'mentenanta website',
-    'agentie web romania',
-    'dezvoltare web',
-    'e-commerce romania',
+    'gazduire web',
+    'hosting romania',
+    'gazduire wordpress',
+    'gazduire prestashop',
+    'domenii web',
+    'vps romania',
+    'hosting ssd',
+    'cpanel hosting',
+    'ssl gratuit',
+    'web hosting',
   ],
   openGraph: {
-    title: 'Servicii Web Design & SEO București | FXF Web Solution',
-    description: 'Web design, e-commerce, SEO și Google Ads. Servicii complete pentru prezența ta digitală. Consultanță gratuită, rezultate măsurabile.',
-    url: 'https://fxf.ro/servicii',
+    title: 'Servicii Găzduire Web România | FXF Web Hosting',
+    description: 'Găzduire web profesională pe servere SSD NVMe. WordPress, PrestaShop, E-Commerce. SSL gratuit, cPanel, suport 24/7.',
+    url: 'https://fxfweb.ro/servicii',
   },
   alternates: {
-    canonical: 'https://fxf.ro/servicii',
+    canonical: 'https://fxfweb.ro/servicii',
   },
 }
 
 const services = [
   {
-    id: 'web-design',
-    href: '/servicii/web-design',
-    icon: Monitor,
-    title: 'Web Design & Development',
-    subtitle: 'Site-uri profesionale care convertesc vizitatori în clienți',
-    desc: 'Creăm site-uri de prezentare cu design modern, cod curat și performanță excelentă. Fiecare proiect este gândit strategic, de la structura informațională la optimizarea pentru conversii. Folosim tehnologii moderne precum React și Next.js pentru viteză și scalabilitate.',
+    id: 'gazduire-web',
+    href: '/servicii/gazduire-web',
+    icon: Server,
+    title: 'Găzduire Web',
+    subtitle: 'Pachete hosting SSD NVMe pentru orice tip de site',
+    desc: 'Găzduire web profesională pe servere ultrarapide SSD NVMe. Pachete de la 55 lei/6 luni cu SSL gratuit, cPanel, backup zilnic și suport tehnic 24/7. Ideal pentru site-uri de prezentare, bloguri și aplicații web.',
     features: [
-      'Design personalizat, de la zero',
-      'Responsive impecabil pe orice dispozitiv',
-      'Viteză PageSpeed 90+ garantată',
-      'Optimizare SEO integrat',
-      'CMS intuitiv pentru administrare',
-      'SSL, securitate și backup incluse',
+      'Stocare SSD NVMe rapidă',
+      'cPanel & LiteSpeed incluse',
+      'SSL Let\'s Encrypt gratuit',
+      'Backup zilnic JetBackup',
+      'Domenii & email nelimitate',
+      'Suport tehnic 24/7',
     ],
-    forWho: 'Ideal pentru: antreprenori, IMM-uri, cabinete medicale, firme de servicii, startupuri.',
+    price: 'de la 55 lei/6 luni',
     color: 'bg-blue-50',
   },
   {
-    id: 'ecommerce',
-    href: '/servicii/magazin-online',
-    icon: ShoppingCart,
-    title: 'Creare Magazin Online',
-    subtitle: 'Platforme e-commerce complete care vând 24/7',
-    desc: 'Construim magazine online profesionale cu plăți integrate, gestionare stoc și integrare curierat. Design orientat pe conversii, experiență de cumpărare optimizată și toate funcționalitățile necesare pentru a vinde online cu succes.',
+    id: 'gazduire-wordpress',
+    href: '/servicii/gazduire-wordpress',
+    icon: HardDrive,
+    title: 'Găzduire WordPress',
+    subtitle: 'Hosting optimizat special pentru WordPress',
+    desc: 'Găzduire optimizată pentru WordPress cu LiteSpeed Cache pre-instalat pentru viteză maximă. Include instalare cu un click, actualizări automate și protecție avansată împotriva atacurilor.',
     features: [
-      'Design modern orientat pe conversie',
-      'Plăți online: card, transfer, ramburs',
-      'Gestionare produse, categorii și stoc',
-      'Integrare cu firme de curierat',
-      'SEO e-commerce integrat',
-      'Rapoarte și analytics vânzări',
+      'LiteSpeed Cache pre-instalat',
+      'Instalare WordPress 1-click',
+      'Actualizări automate opționale',
+      'Protecție Imunify360',
+      'Staging environment',
+      'Optimizare automată',
     ],
-    forWho: 'Ideal pentru: retaileri, branduri, producători, importatori, artizani.',
+    price: 'de la 83 lei/6 luni',
+    color: 'bg-cyan-50',
+  },
+  {
+    id: 'gazduire-prestashop',
+    href: '/servicii/gazduire-prestashop',
+    icon: ShoppingCart,
+    title: 'Găzduire PrestaShop',
+    subtitle: 'Hosting performant pentru magazine PrestaShop',
+    desc: 'Găzduire optimizată pentru PrestaShop cu resurse dedicate și configurații speciale pentru e-commerce. Performanță ridicată pentru magazine cu mii de produse și trafic intens.',
+    features: [
+      'Configurație optimizată PrestaShop',
+      'Resurse dedicate e-commerce',
+      'Cache avansat pentru produse',
+      'Suport tehnic specializat',
+      'Backup zilnic pentru siguranță',
+      'SSL gratuit pentru plăți',
+    ],
+    price: 'de la 207 lei/6 luni',
     color: 'bg-emerald-50',
   },
   {
-    id: 'mentenanta',
-    href: '/servicii/mentenanta-web',
-    icon: Wrench,
-    title: 'Mentenanță & Suport Tehnic',
-    subtitle: 'Actualizări, backup-uri, securitate — liniște totală',
-    desc: 'Un site fără mentenanță este un site vulnerabil. Oferim actualizări regulate, backup-uri automate, monitorizare uptime 24/7 și suport tehnic rapid. Tu te concentrezi pe afacere, noi ne ocupăm de partea tehnică.',
+    id: 'gazduire-opencart',
+    href: '/servicii/gazduire-opencart',
+    icon: ShoppingBag,
+    title: 'Găzduire OpenCart',
+    subtitle: 'Hosting optimizat pentru magazine OpenCart',
+    desc: 'Găzduire optimizată pentru OpenCart cu auto-instalare, MySQL optimizat și resurse dedicate pentru magazine cu mii de produse. SSL gratuit pentru plăți securizate.',
     features: [
-      'Actualizări CMS, plugin-uri și teme',
-      'Backup automat zilnic sau săptămânal',
-      'Monitorizare uptime 24/7',
-      'Scanare și curățare malware',
-      'Optimizare performanță continuă',
-      'Suport tehnic prin email și chat',
+      'Auto-instalare OpenCart',
+      'MySQL optimizat e-commerce',
+      'LiteSpeed Cache inclus',
+      'SSL gratuit pentru plăți',
+      'Backup zilnic automat',
+      'Suport specializat OpenCart',
     ],
-    forWho: 'Ideal pentru: orice afacere care are un site și vrea să îl păstreze funcțional și sigur.',
+    price: 'de la 55 lei/6 luni',
     color: 'bg-amber-50',
   },
   {
-    id: 'seo',
-    href: '/servicii/optimizare-seo',
-    icon: Search,
-    title: 'Optimizare SEO',
-    subtitle: 'Vizibilitate organică pe Google, rezultate pe termen lung',
-    desc: 'Creștem vizibilitatea afacerii tale în rezultatele organice Google. Audit tehnic complet, optimizare on-page, cercetare cuvinte cheie, creație conținut și link building etic pentru trafic calificat și durabil.',
+    id: 'gazduire-performance',
+    href: '/servicii/gazduire-performance',
+    icon: Rocket,
+    title: 'Găzduire Performance',
+    subtitle: 'Resurse dedicate pentru site-uri cu trafic intens',
+    desc: 'Găzduire Performance cu resurse CPU și RAM garantate. Ideal pentru site-uri cu trafic intens, aplicații web complexe și proiecte enterprise care necesită putere maximă.',
     features: [
-      'Audit SEO tehnic complet',
-      'Cercetare cuvinte cheie relevante',
-      'Optimizare on-page (titluri, meta, structură)',
-      'Creație conținut optimizat SEO',
-      'Link building natural și etic',
-      'Raport lunar cu progres și recomandări',
+      'CPU & RAM garantate',
+      'LiteSpeed Enterprise',
+      'Backup de 2x pe zi',
+      'Uptime 99.99% SLA',
+      'CDN inclus',
+      'Suport prioritar 30 min',
     ],
-    forWho: 'Ideal pentru: afaceri care vor trafic organic consistent și vizibilitate locală sau națională.',
+    price: 'de la 455 lei/6 luni',
+    color: 'bg-rose-50',
+  },
+  {
+    id: 'domenii',
+    href: '/servicii/domenii',
+    icon: Globe,
+    title: 'Înregistrare Domenii',
+    subtitle: 'Domenii .ro, .com, .eu și 500+ extensii',
+    desc: 'Înregistrează sau transferă domeniul perfect pentru afacerea ta. Prețuri competitive, management simplu prin cPanel și protecție WHOIS inclusă pentru confidențialitate.',
+    features: [
+      'Domenii .ro, .com, .eu, .net',
+      '500+ extensii disponibile',
+      'Protecție WHOIS inclusă',
+      'DNS management gratuit',
+      'Transfer domeniu facil',
+      'Auto-reînnoire opțională',
+    ],
+    price: 'de la 63 lei/an',
     color: 'bg-purple-50',
   },
   {
-    id: 'ads',
-    href: '/servicii/google-ads',
-    icon: BarChart2,
-    title: 'Google Ads & Marketing Digital',
-    subtitle: 'Campanii PPC care aduc clienți, nu doar clicuri',
-    desc: 'Setăm și gestionăm campanii Google Ads cu focus pe ROI. Structură corectă, tracking precis, optimizare continuă și transparență totală. Campanii Search, Display, Shopping și Performance Max pentru rezultate măsurabile.',
+    id: 'vps',
+    href: '/servicii/vps',
+    icon: Cloud,
+    title: 'VPS Cloud',
+    subtitle: 'Servere virtuale private cu resurse dedicate',
+    desc: 'Servere VPS cloud pentru proiecte care necesită resurse dedicate și control complet. Root access, alegere sistem de operare și scalare flexibilă după nevoi.',
     features: [
-      'Audit cont Google Ads existent',
-      'Structurare campanii Search, Display, Shopping',
-      'Cercetare și selecție cuvinte cheie',
-      'Setare conversii și tracking corect',
-      'Optimizare licitare și bugete',
-      'Raport detaliat cu ROI',
+      'Resurse CPU/RAM dedicate',
+      'Root access complet',
+      'Alegere OS (Linux/Windows)',
+      'SSD NVMe rapid',
+      'IP dedicat inclus',
+      'Scalare flexibilă',
     ],
-    forWho: 'Ideal pentru: afaceri cu buget de publicitate și obiective clare de generare lead-uri sau vânzări.',
-    color: 'bg-rose-50',
+    price: 'de la 150 lei/lună',
+    color: 'bg-indigo-50',
   },
 ]
 
 const stats = [
-  { value: '120+', label: 'Proiecte livrate' },
-  { value: '8+', label: 'Ani experiență' },
-  { value: '95%', label: 'Clienți mulțumiți' },
-  { value: '90+', label: 'Scor PageSpeed mediu' },
+  { value: '99.9%', label: 'Uptime garantat' },
+  { value: '500+', label: 'Clienți activi' },
+  { value: '24/7', label: 'Suport tehnic' },
+  { value: '5x', label: 'Mai rapid cu NVMe' },
 ]
 
 const whyUs = [
-  { icon: Code2, title: 'Cod curat & modern', desc: 'Folosim tehnologii actuale (React, Next.js, TypeScript) pentru performanță și scalabilitate.' },
-  { icon: Layers, title: 'Abordare strategică', desc: 'Nu doar executăm — gândim strategic fiecare proiect pentru rezultate reale.' },
-  { icon: Shield, title: 'Securitate prioritară', desc: 'SSL, backup-uri, actualizări și practici de securitate pentru liniștea ta.' },
-  { icon: Clock, title: 'Suport post-lansare', desc: 'Nu te lăsăm singur după livrare. Suport inclus și mentenanță disponibilă.' },
-  { icon: Zap, title: 'Performanță garantată', desc: 'Site-uri rapide cu scoruri PageSpeed 90+. Viteza contează pentru SEO și conversii.' },
-  { icon: Users, title: 'Comunicare transparentă', desc: 'Ești implicat la fiecare pas. Fără surprize, fără costuri ascunse.' },
+  { icon: Zap, title: 'Servere NVMe ultrarapide', desc: 'Stocare SSD NVMe care crește viteza de încărcare de până la 5 ori față de HDD tradițional.' },
+  { icon: Shield, title: 'Securitate avansată', desc: 'Imunify360, firewall puternic și protecție DDoS pentru siguranța datelor tale.' },
+  { icon: Clock, title: 'Uptime 99.9% garantat', desc: 'Datacenter Germania cu redundanță completă pentru disponibilitate maximă.' },
+  { icon: Headphones, title: 'Suport 24/7', desc: 'Echipa noastră de suport tehnic este disponibilă non-stop prin telefon, email sau ticket.' },
+  { icon: Server, title: 'cPanel & LiteSpeed', desc: 'Panou de control intuitiv și server web LiteSpeed pentru performanță maximă.' },
+  { icon: HardDrive, title: 'Backup zilnic automat', desc: 'JetBackup face backup-uri zilnice cu restaurare cu un click în caz de nevoie.' },
 ]
 
 export default function ServiciiPage() {
@@ -156,39 +191,36 @@ export default function ServiciiPage() {
           <div className="absolute top-1/4 right-0 w-[500px] h-[500px] rounded-full opacity-10 blur-3xl pointer-events-none" style={{ background: 'oklch(0.55 0.22 250)' }} />
 
           <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="max-w-3xl">
               <div className="inline-flex items-center gap-2 bg-white/10 text-white/80 text-xs font-medium px-3 py-1.5 rounded-full mb-6 border border-white/10">
                 <Layers size={14} />
-                Servicii complete de web development
+                Servicii complete de găzduire web
               </div>
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 text-balance">
-                Servicii Web Development
+                Servicii Găzduire Web
                 <span className="block text-2xl sm:text-3xl lg:text-4xl mt-2" style={{ color: 'oklch(0.72 0.14 70)' }}>
-                  Tot ce ai nevoie pentru prezența ta online
+                  Hosting rapid, sigur și accesibil
                 </span>
               </h1>
               <p className="text-white/70 text-lg sm:text-xl leading-relaxed mb-8">
-                De la primul pixel la prima vânzare — web design, e-commerce, SEO și marketing digital, 
-                gestionate de o echipă specializată cu peste 8 ani experiență.
+                De la găzduire shared până la VPS dedicat — servere SSD NVMe în Germania, 
+                cPanel, SSL gratuit și suport tehnic 24/7. Alege pachetul potrivit pentru afacerea ta.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link
-                  href="/contact"
+                  href="/servicii/gazduire-web"
                   className="inline-flex items-center justify-center gap-2 bg-white text-primary px-7 py-3.5 rounded-xl font-semibold text-sm hover:bg-white/90 transition-all duration-200 hover:shadow-xl hover:-translate-y-0.5"
                 >
-                  Solicită consultanță gratuită
+                  Vezi pachetele de hosting
                   <ArrowRight size={16} />
                 </Link>
                 <Link
-                  href="/portofoliu"
+                  href="/contact"
                   className="inline-flex items-center justify-center gap-2 border border-white/20 text-white px-7 py-3.5 rounded-xl font-semibold text-sm hover:bg-white/10 transition-all duration-200"
                 >
-                  Vezi portofoliul
+                  Contactează-ne
                 </Link>
               </div>
-            </div>
-            <PageHeroVisual page="servicii" />
             </div>
           </div>
         </section>
@@ -215,11 +247,11 @@ export default function ServiciiPage() {
                 Serviciile noastre
               </p>
               <h2 className="font-display text-3xl sm:text-4xl font-bold text-primary leading-tight mb-4 text-balance">
-                Soluții complete pentru afacerea ta online
+                Soluții de hosting pentru orice nevoie
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Fie că ai nevoie de un site de prezentare, magazin online, optimizare SEO sau campanii Google Ads, 
-                oferim servicii profesionale cu rezultate măsurabile.
+                De la site-uri mici până la magazine online cu trafic intens, avem pachetul 
+                potrivit pentru tine.
               </p>
             </div>
 
@@ -243,12 +275,12 @@ export default function ServiciiPage() {
                         </h3>
                         <p className="text-accent-brand font-medium text-sm mb-4">{service.subtitle}</p>
                         <p className="text-muted-foreground leading-relaxed mb-4">{service.desc}</p>
-                        <p className="text-xs text-muted-foreground mb-6 italic">{service.forWho}</p>
+                        <p className="text-lg font-bold text-primary mb-6">{service.price}</p>
                         <Link
                           href={service.href}
                           className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-xl text-sm font-semibold hover:bg-primary/90 transition-all hover:-translate-y-0.5"
                         >
-                          Află mai multe despre acest serviciu <ArrowRight size={14} />
+                          Află mai multe <ArrowRight size={14} />
                         </Link>
                       </div>
 
@@ -281,13 +313,13 @@ export default function ServiciiPage() {
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="text-center max-w-2xl mx-auto mb-16">
               <p className="text-accent-brand font-semibold text-sm uppercase tracking-widest mb-3">
-                De ce să lucrezi cu noi
+                De ce FXF Web Hosting
               </p>
               <h2 className="font-display text-3xl sm:text-4xl font-bold text-primary leading-tight mb-4 text-balance">
-                O echipă pe care te poți baza
+                Tehnologie enterprise la prețuri accesibile
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Nu suntem o fabrică de site-uri. Suntem parteneri de încredere care înțeleg că fiecare afacere este unică.
+                Serverele noastre sunt echipate cu cele mai noi tehnologii pentru performanță și securitate maximă.
               </p>
             </div>
 
@@ -308,67 +340,24 @@ export default function ServiciiPage() {
           </div>
         </section>
 
-        {/* SEO Content */}
-        <section className="py-14 bg-background">
-          <div className="max-w-4xl mx-auto px-6 lg:px-8">
-            <article className="prose prose-lg max-w-none">
-              <h2 className="font-display text-3xl font-bold text-primary mb-6">
-                Servicii profesionale de web development în România
-              </h2>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                La <strong>FXF Web Solution</strong>, oferim servicii complete de dezvoltare web pentru afaceri din România. 
-                Fie că ai nevoie de un <strong>site de prezentare profesional</strong>, un <strong>magazin online complet</strong> 
-                sau servicii de <strong>optimizare SEO</strong> și <strong>Google Ads</strong>, avem expertiza și experiența 
-                necesară pentru a-ți construi prezența digitală de succes.
-              </p>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                Cu peste <strong>8 ani de experiență</strong> și <strong>120+ proiecte livrate</strong>, înțelegem nevoile 
-                afacerilor românești și livrăm soluții care funcționează. Nu construim doar site-uri frumoase — construim 
-                instrumente de business care generează rezultate reale: mai mulți clienți, mai multe vânzări, mai multă vizibilitate.
-              </p>
-              
-              <h3 className="font-display text-xl font-bold text-primary mt-10 mb-4">
-                Abordare completă pentru prezența ta online
-              </h3>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                Multe agenții se specializează pe un singur serviciu. Noi oferim o <strong>abordare integrată</strong>: 
-                de la design și development, la SEO și marketing digital. Această abordare asigură consistență, 
-                eficiență și rezultate mai bune pe termen lung.
-              </p>
-              <ul className="text-muted-foreground space-y-3 mb-6">
-                <li><strong>Web Design:</strong> Site-uri responsive, moderne și optimizate pentru conversii.</li>
-                <li><strong>E-Commerce:</strong> Magazine online complete cu plăți, stoc și integrare curierat.</li>
-                <li><strong>SEO:</strong> Vizibilitate organică pe Google pentru trafic calificat și durabil.</li>
-                <li><strong>Google Ads:</strong> Campanii PPC cu focus pe ROI și rezultate măsurabile.</li>
-                <li><strong>Mentenanță:</strong> Actualizări, backup-uri și suport tehnic pentru liniște totală.</li>
-              </ul>
-
-              <h3 className="font-display text-xl font-bold text-primary mt-10 mb-4">
-                Partenerul tău de încredere pentru dezvoltare web
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Alegerea unei agenții web este o decizie importantă. La FXF Web Solution, construim relații pe termen lung, 
-                nu proiecte one-time. Comunicare transparentă, prețuri clare, suport post-lansare inclus și o echipă care 
-                înțelege că succesul tău este și succesul nostru.
-              </p>
-            </article>
-          </div>
-        </section>
-
         {/* Final CTA */}
         <section className="py-12 bg-primary">
           <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+            <div className="inline-flex items-center gap-2 bg-green-500 text-white text-xs font-bold px-3 py-1.5 rounded-full mb-4">
+              <span>Reducere 10%</span>
+              <span className="bg-white/20 px-2 py-0.5 rounded">cod: FXF10</span>
+            </div>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-4 text-balance">
-              Nu știi ce serviciu ți se potrivește?
+              Începe acum cu găzduire profesională
             </h2>
             <p className="text-white/60 text-lg mb-8">
-              Contactează-ne pentru o consultanță gratuită. Analizăm situația ta și îți recomandăm cea mai bună abordare.
+              Plasează o comandă nouă și beneficiezi de 10% reducere cu codul promoțional FXF10.
             </p>
             <Link
-              href="/contact"
+              href="/servicii/gazduire-web"
               className="inline-flex items-center gap-2 bg-white text-primary px-8 py-4 rounded-xl font-semibold hover:bg-white/90 transition-all hover:-translate-y-0.5"
             >
-              Solicită consultanță gratuită <ArrowRight size={16} />
+              Comandă acum <ArrowRight size={16} />
             </Link>
           </div>
         </section>

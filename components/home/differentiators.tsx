@@ -1,15 +1,15 @@
 'use client'
 
-import { Rocket, Zap, Users, Target, Lock, Handshake } from 'lucide-react'
+import { Zap, Shield, HardDrive, Clock, Headphones, Server } from 'lucide-react'
 import { Reveal } from '@/components/ui/reveal'
 
 const items = [
-  { icon: Rocket, title: 'Dezvoltare custom', desc: 'Cod scris de la zero, nu template-uri modificate. Fiecare proiect este unic și adaptat nevoilor tale.' },
-  { icon: Zap, title: 'Performanță optimă', desc: 'Core Web Vitals optimizate, Lighthouse 90+. Site-uri rapide care convertesc mai bine.' },
-  { icon: Users, title: 'Echipă internă', desc: 'Fără outsourcing sau intermediari. Lucrezi direct cu developerii și designerii noștri.' },
-  { icon: Target, title: 'Orientare pe ROI', desc: 'KPIs clari, rapoarte lunare și optimizări continue. Măsurăm și îmbunătățim constant.' },
-  { icon: Lock, title: 'Securitate completă', desc: 'SSL gratuit, backup-uri automate, protecție DDoS și conformitate GDPR pentru Romania.' },
-  { icon: Handshake, title: 'Parteneriat pe termen lung', desc: 'Suport tehnic continuu, mentenanță proactivă și consultanță strategică post-lansare.' },
+  { icon: Zap, title: 'Servere NVMe ultrarapide', desc: 'Stocare SSD NVMe care crește viteza de încărcare a site-ului de până la 5 ori față de HDD tradițional.' },
+  { icon: Shield, title: 'Securitate avansată', desc: 'Firewall puternic, Imunify360, protecție DDoS și actualizări de securitate automate pentru datele tale.' },
+  { icon: HardDrive, title: 'Backup zilnic automat', desc: 'JetBackup face backup-uri zilnice ale site-ului tău. Restaurare cu un click în caz de nevoie.' },
+  { icon: Clock, title: 'Uptime 99.9% garantat', desc: 'Serverele noastre din Germania garantează disponibilitate maximă și timp de răspuns optim.' },
+  { icon: Headphones, title: 'Suport 24/7', desc: 'Echipa noastră de suport tehnic e disponibilă non-stop prin telefon, email sau ticket.' },
+  { icon: Server, title: 'cPanel & LiteSpeed', desc: 'Panou de control intuitiv cPanel și server web LiteSpeed pentru performanță maximă.' },
 ]
 
 export function Differentiators() {
@@ -19,21 +19,33 @@ export function Differentiators() {
         <div className="grid lg:grid-cols-5 gap-8 items-start">
           {/* Left */}
           <Reveal direction="left" className="lg:col-span-2">
-            <p className="text-accent-brand text-xs font-semibold uppercase tracking-widest mb-1">De ce să alegi FXF</p>
+            <p className="text-accent-brand text-xs font-semibold uppercase tracking-widest mb-1">De ce FXF Web Hosting</p>
             <h2 className="font-display text-3xl lg:text-4xl font-bold text-primary mb-3">
-              Diferența dintre o agenție web și un partener digital real
+              Servere adaptate necesității tale
             </h2>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-              Site-uri frumoase face multă lume. Site-uri care generează vânzări și transformă 
-              vizitatorii în clienți? Asta e cu totul altă poveste. La FXF, ne concentrăm pe 
-              rezultate măsurabile, nu doar pe estetică.
+              Folosim tehnologie care crește de până la 5 ori viteza de încărcare a site-ului. 
+              Serverele noastre sunt rapide și puternice, având o arhitectură 64 Core, 96GB RAM 
+              cu 6 unități SSD 1TB montate în Raid 10.
             </p>
             <p className="text-muted-foreground text-sm leading-relaxed mb-5">
-              Fiecare proiect de web development pe care îl livrăm este construit cu focus pe 
-              conversii, optimizare SEO și experiență utilizator. Folosim tehnologii moderne 
-              precum React, Next.js și WordPress pentru a crea soluții scalabile.
+              Echipamentele noastre sunt colocate în cel mai modern datacenter din Germania, 
+              garantând astfel un timp de acces optim și o încărcare rapidă a site-ului dvs., 
+              indiferent de mărimea paginilor.
             </p>
             
+            {/* Server specs */}
+            <div className="bg-primary/5 border border-primary/20 rounded-lg p-4">
+              <p className="text-xs font-semibold text-primary mb-2">Specificații server:</p>
+              <div className="grid grid-cols-2 gap-2 text-xs text-muted-foreground">
+                <div>64 Core CPU</div>
+                <div>96GB RAM DDR4</div>
+                <div>6x 1TB SSD NVMe</div>
+                <div>Raid 10</div>
+                <div>CloudLinux OS</div>
+                <div>Datacenter Germania</div>
+              </div>
+            </div>
           </Reveal>
 
           {/* Right - Grid */}
