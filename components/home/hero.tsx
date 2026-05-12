@@ -87,7 +87,7 @@ export function Hero() {
             <h1 className="font-display text-3xl sm:text-5xl lg:text-[3.5rem] font-bold text-white leading-[1.1] tracking-tight">
               Găzduire Web{' '}
               <span style={{ color: 'oklch(0.72 0.14 70)' }}>SSD NVMe</span>{' '}
-              în România cu{' '}
+              în Profesională cu{' '}
               <span style={{ color: 'oklch(0.72 0.14 70)' }}>uptime 99.9%</span>
             </h1>
 
