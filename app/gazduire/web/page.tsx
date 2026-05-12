@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
 import { Server, ArrowRight, HardDrive, Shield, Clock, Headphones, Zap, Globe, Database, Mail, Cpu, Lock, RefreshCw } from 'lucide-react'
+import { PageHeroVisual } from '@/components/page-hero-visual'
 
 export const metadata: Metadata = {
   title: 'Găzduire Web SSD România | Hosting de la 55 lei | FXF Web Hosting',
@@ -140,19 +141,22 @@ export default function GazduireWebPage() {
         <section className="relative pt-28 pb-14 bg-primary overflow-hidden">
           <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")` }} aria-hidden="true" />
           <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-            <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 bg-white/10 text-white/80 text-xs font-medium px-3 py-1.5 rounded-full mb-6 border border-white/10">
-                <Server size={14} />
-                Găzduire Web
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="inline-flex items-center gap-2 bg-white/10 text-white/80 text-xs font-medium px-3 py-1.5 rounded-full mb-6 border border-white/10">
+                  <Server size={14} />
+                  Găzduire Web
+                </div>
+                <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 text-balance">
+                  Găzduire Web SSD
+                  <span className="block text-2xl sm:text-3xl lg:text-4xl mt-2 text-white/70">Servere NVMe rapide în Germania</span>
+                </h1>
+                <p className="text-white/70 text-lg sm:text-xl leading-relaxed mb-8">
+                  Găzduire web profesională pe servere SSD NVMe ultrarapide. Toate pachetele includ 
+                  cPanel, SSL gratuit, backup zilnic și suport tehnic 24/7. Uptime 99.9% garantat.
+                </p>
               </div>
-              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 text-balance">
-                Găzduire Web SSD
-                <span className="block text-2xl sm:text-3xl lg:text-4xl mt-2 text-white/70">Servere NVMe rapide în Germania</span>
-              </h1>
-              <p className="text-white/70 text-lg sm:text-xl leading-relaxed mb-8">
-                Găzduire web profesională pe servere SSD NVMe ultrarapide. Toate pachetele includ 
-                cPanel, SSL gratuit, backup zilnic și suport tehnic 24/7. Uptime 99.9% garantat.
-              </p>
+              <PageHeroVisual page="gazduire-web" />
             </div>
           </div>
         </section>

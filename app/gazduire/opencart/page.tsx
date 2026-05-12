@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
 import { ShoppingBag, ArrowRight, HardDrive, Shield, Clock, Headphones, Zap, Database, Cpu, Lock, RefreshCw, CreditCard } from 'lucide-react'
+import { PageHeroVisual } from '@/components/page-hero-visual'
 
 export const metadata: Metadata = {
   title: 'Găzduire OpenCart România | Hosting E-Commerce de la 83 lei | FXF',
@@ -107,19 +108,22 @@ export default function GazduireOpencartPage() {
         <section className="relative pt-28 pb-14 bg-primary overflow-hidden">
           <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")` }} aria-hidden="true" />
           <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-            <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 bg-white/10 text-white/80 text-xs font-medium px-3 py-1.5 rounded-full mb-6 border border-white/10">
-                <ShoppingBag size={14} />
-                Găzduire OpenCart
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="inline-flex items-center gap-2 bg-white/10 text-white/80 text-xs font-medium px-3 py-1.5 rounded-full mb-6 border border-white/10">
+                  <ShoppingBag size={14} />
+                  Găzduire OpenCart
+                </div>
+                <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 text-balance">
+                  Găzduire OpenCart
+                  <span className="block text-2xl sm:text-3xl lg:text-4xl mt-2 text-white/70">Optimizată pentru magazine online ușor de administrat</span>
+                </h1>
+                <p className="text-white/70 text-lg sm:text-xl leading-relaxed mb-8">
+                  Găzduire OpenCart profesională cu auto-instalare, configurație optimizată pentru e-commerce și 
+                  suport tehnic specializat 24/7. Ideal pentru magazine cu interfață intuitivă și administrare simplă.
+                </p>
               </div>
-              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 text-balance">
-                Găzduire OpenCart
-                <span className="block text-2xl sm:text-3xl lg:text-4xl mt-2 text-white/70">Optimizată pentru magazine online ușor de administrat</span>
-              </h1>
-              <p className="text-white/70 text-lg sm:text-xl leading-relaxed mb-8">
-                Găzduire OpenCart profesională cu auto-instalare, configurație optimizată pentru e-commerce și 
-                suport tehnic specializat 24/7. Ideal pentru magazine cu interfață intuitivă și administrare simplă.
-              </p>
+              <PageHeroVisual page="gazduire-opencart" />
             </div>
           </div>
         </section>

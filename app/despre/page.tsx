@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
 import { ArrowRight, Target, Zap, Heart, Shield, Users, Server, Award, Clock, MapPin, Briefcase } from 'lucide-react'
+import { PageHeroVisual } from '@/components/page-hero-visual'
 
 export const metadata: Metadata = {
   title: 'Despre FXF Web Hosting | Găzduire Web România',
@@ -67,30 +68,33 @@ export default function DespreNoi() {
         {/* Hero */}
         <section className="pt-28 pb-14 bg-gradient-to-br from-primary via-primary to-primary/90">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="max-w-3xl">
-              <p className="text-white/50 font-semibold text-sm uppercase tracking-widest mb-3">
-                Despre FXF Web Hosting
-              </p>
-              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-5 text-balance">
-                Găzduire web profesională din România
-              </h1>
-              <p className="text-white/70 text-lg leading-relaxed mb-6">
-                FXF Web Hosting oferă servicii de găzduire web de înaltă calitate din 2020. 
-                Cu servere SSD NVMe în Germania și o echipă de suport dedicată 24/7, suntem 
-                alegerea de încredere pentru peste 500 de clienți activi din România.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                {[
-                  { icon: MapPin, text: 'Servere în Germania' },
-                  { icon: Clock, text: '4+ ani experiență' },
-                  { icon: Briefcase, text: '500+ clienți activi' },
-                ].map((item) => (
-                  <div key={item.text} className="flex items-center gap-2 text-white/60 text-sm">
-                    <item.icon size={14} />
-                    {item.text}
-                  </div>
-                ))}
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <p className="text-white/50 font-semibold text-sm uppercase tracking-widest mb-3">
+                  Despre FXF Web Hosting
+                </p>
+                <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-5 text-balance">
+                  Găzduire web profesională din România
+                </h1>
+                <p className="text-white/70 text-lg leading-relaxed mb-6">
+                  FXF Web Hosting oferă servicii de găzduire web de înaltă calitate din 2020. 
+                  Cu servere SSD NVMe în Germania și o echipă de suport dedicată 24/7, suntem 
+                  alegerea de încredere pentru peste 500 de clienți activi din România.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  {[
+                    { icon: MapPin, text: 'Servere în Germania' },
+                    { icon: Clock, text: '4+ ani experiență' },
+                    { icon: Briefcase, text: '500+ clienți activi' },
+                  ].map((item) => (
+                    <div key={item.text} className="flex items-center gap-2 text-white/60 text-sm">
+                      <item.icon size={14} />
+                      {item.text}
+                    </div>
+                  ))}
+                </div>
               </div>
+              <PageHeroVisual page="despre" />
             </div>
           </div>
         </section>

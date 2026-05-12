@@ -341,7 +341,211 @@ function MentenantaVisual() {
   )
 }
 
-type PageType = 'despre' | 'servicii' | 'portofoliu' | 'contact' | 'web-design' | 'magazin-online' | 'optimizare-seo' | 'google-ads' | 'mentenanta-web'
+// Gazduire Web visual
+function GazduireWebVisual() {
+  return (
+    <div className="relative w-full h-full flex items-center justify-center">
+      <div className="relative bg-white/10 border border-white/20 rounded-2xl p-5 w-64 backdrop-blur-sm animate-[float_4s_ease-in-out_infinite]">
+        <div className="flex items-center gap-2 mb-4">
+          <div className="w-10 h-10 rounded-xl bg-blue-400/20 flex items-center justify-center">
+            <Target size={18} className="text-blue-300" />
+          </div>
+          <div>
+            <p className="text-white font-bold text-sm">Găzduire Web</p>
+            <p className="text-white/50 text-xs">SSD NVMe România</p>
+          </div>
+        </div>
+        <div className="space-y-2">
+          {['Uptime 99.9%', 'SSL gratuit', 'cPanel inclus'].map((item, i) => (
+            <div key={item} className="flex items-center gap-2 bg-white/10 rounded-lg px-3 py-2" style={{ animation: `float ${3 + i * 0.3}s ease-in-out infinite ${i * 0.3}s` }}>
+              <CheckCircle2 size={12} className="text-emerald-400" />
+              <span className="text-white/80 text-xs">{item}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="absolute top-4 right-4 bg-white/15 border border-white/20 rounded-xl px-3 py-2 backdrop-blur-sm animate-[float_3s_ease-in-out_infinite_0.5s]">
+        <p className="text-white font-bold text-sm">500+</p>
+        <p className="text-white/50 text-[10px]">Clienți activi</p>
+      </div>
+      <div className="absolute bottom-6 left-4 bg-white/15 border border-white/20 rounded-xl px-3 py-2 backdrop-blur-sm animate-[float_3.5s_ease-in-out_infinite_1s] flex items-center gap-2">
+        <Briefcase size={14} className="text-amber-300" />
+        <span className="text-white text-xs font-semibold">De la 2.49€/lună</span>
+      </div>
+    </div>
+  )
+}
+
+// VPS Cloud visual
+function VpsVisual() {
+  return (
+    <div className="relative w-full h-full flex items-center justify-center">
+      <div className="relative bg-white/10 border border-white/20 rounded-2xl p-5 w-64 backdrop-blur-sm animate-[float_4s_ease-in-out_infinite]">
+        <div className="flex items-center gap-2 mb-4">
+          <div className="w-10 h-10 rounded-xl bg-purple-400/20 flex items-center justify-center">
+            <Target size={18} className="text-purple-300" />
+          </div>
+          <div>
+            <p className="text-white font-bold text-sm">VPS Cloud</p>
+            <p className="text-white/50 text-xs">Resurse dedicate</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-2">
+          {[
+            { label: 'CPU', value: '4 Core' },
+            { label: 'RAM', value: '8GB' },
+            { label: 'SSD', value: '100GB' },
+            { label: 'Trafic', value: 'Nelimitat' },
+          ].map((s, i) => (
+            <div key={s.label} className="bg-white/10 rounded-lg p-2 text-center" style={{ animation: `float ${3 + i * 0.2}s ease-in-out infinite ${i * 0.2}s` }}>
+              <p className="text-white font-bold text-sm">{s.value}</p>
+              <p className="text-white/50 text-[10px]">{s.label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="absolute top-4 right-0 bg-white/15 border border-white/20 rounded-xl px-3 py-2 backdrop-blur-sm animate-[float_3s_ease-in-out_infinite_0.5s]">
+        <p className="text-white font-bold text-sm">Root Access</p>
+        <p className="text-white/50 text-[10px]">Control total</p>
+      </div>
+    </div>
+  )
+}
+
+// Servere Dedicate visual
+function ServereDedicateVisual() {
+  return (
+    <div className="relative w-full h-full flex items-center justify-center">
+      <div className="relative bg-white/10 border border-white/20 rounded-2xl p-5 w-64 backdrop-blur-sm animate-[float_4s_ease-in-out_infinite]">
+        <div className="flex items-center gap-2 mb-4">
+          <div className="w-10 h-10 rounded-xl bg-rose-400/20 flex items-center justify-center">
+            <Target size={18} className="text-rose-300" />
+          </div>
+          <div>
+            <p className="text-white font-bold text-sm">Server Dedicat</p>
+            <p className="text-white/50 text-xs">Hardware 100% al tău</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-2">
+          {[
+            { label: 'CPU', value: '64 Core' },
+            { label: 'RAM', value: '128GB' },
+            { label: 'SSD', value: '2TB' },
+            { label: 'Bandă', value: '1Gbps' },
+          ].map((s, i) => (
+            <div key={s.label} className="bg-white/10 rounded-lg p-2 text-center" style={{ animation: `float ${3 + i * 0.2}s ease-in-out infinite ${i * 0.2}s` }}>
+              <p className="text-white font-bold text-sm">{s.value}</p>
+              <p className="text-white/50 text-[10px]">{s.label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="absolute top-4 right-4 bg-white/15 border border-white/20 rounded-xl px-3 py-2 backdrop-blur-sm animate-[float_3s_ease-in-out_infinite_0.5s]">
+        <p className="text-white font-bold text-sm">Enterprise</p>
+        <p className="text-white/50 text-[10px]">Nivel pro</p>
+      </div>
+      <div className="absolute bottom-6 left-4 bg-white/15 border border-white/20 rounded-xl px-3 py-2 backdrop-blur-sm animate-[float_3.5s_ease-in-out_infinite_1s] flex items-center gap-2">
+        <TrendingUp size={14} className="text-emerald-300" />
+        <span className="text-white text-xs font-semibold">Uptime 99.99%</span>
+      </div>
+    </div>
+  )
+}
+
+// Gazduire WordPress visual
+function GazduireWordPressVisual() {
+  return (
+    <div className="relative w-full h-full flex items-center justify-center">
+      <div className="relative bg-white/10 border border-white/20 rounded-2xl p-5 w-64 backdrop-blur-sm animate-[float_4s_ease-in-out_infinite]">
+        <div className="flex items-center gap-2 mb-4">
+          <div className="w-10 h-10 rounded-xl bg-blue-400/20 flex items-center justify-center">
+            <Code2 size={18} className="text-blue-300" />
+          </div>
+          <div>
+            <p className="text-white font-bold text-sm">WordPress Hosting</p>
+            <p className="text-white/50 text-xs">Optimizat LiteSpeed</p>
+          </div>
+        </div>
+        <div className="space-y-2">
+          {['LiteSpeed Cache', 'WP-CLI activ', 'Staging inclus'].map((item, i) => (
+            <div key={item} className="flex items-center gap-2 bg-white/10 rounded-lg px-3 py-2" style={{ animation: `float ${3 + i * 0.3}s ease-in-out infinite ${i * 0.3}s` }}>
+              <CheckCircle2 size={12} className="text-emerald-400" />
+              <span className="text-white/80 text-xs">{item}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="absolute top-4 right-4 bg-white/15 border border-white/20 rounded-xl px-3 py-2 backdrop-blur-sm animate-[float_3s_ease-in-out_infinite_0.5s]">
+        <p className="text-white font-bold text-sm">5x</p>
+        <p className="text-white/50 text-[10px]">Mai rapid</p>
+      </div>
+    </div>
+  )
+}
+
+// Gazduire PrestaShop visual
+function GazduirePrestaShopVisual() {
+  return (
+    <div className="relative w-full h-full flex items-center justify-center">
+      <div className="relative bg-white/10 border border-white/20 rounded-2xl p-5 w-64 backdrop-blur-sm animate-[float_4s_ease-in-out_infinite]">
+        <div className="flex items-center gap-2 mb-4">
+          <div className="w-10 h-10 rounded-xl bg-pink-400/20 flex items-center justify-center">
+            <ShoppingCart size={18} className="text-pink-300" />
+          </div>
+          <div>
+            <p className="text-white font-bold text-sm">PrestaShop Host</p>
+            <p className="text-white/50 text-xs">E-Commerce ready</p>
+          </div>
+        </div>
+        <div className="space-y-2">
+          {['PHP optimizat', 'Redis cache', 'Memorie dedicată'].map((item, i) => (
+            <div key={item} className="flex items-center gap-2 bg-white/10 rounded-lg px-3 py-2" style={{ animation: `float ${3 + i * 0.3}s ease-in-out infinite ${i * 0.3}s` }}>
+              <CheckCircle2 size={12} className="text-emerald-400" />
+              <span className="text-white/80 text-xs">{item}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="absolute bottom-6 left-4 bg-white/15 border border-white/20 rounded-xl px-3 py-2 backdrop-blur-sm animate-[float_3.5s_ease-in-out_infinite_1s] flex items-center gap-2">
+        <TrendingUp size={14} className="text-emerald-300" />
+        <span className="text-white text-xs font-semibold">+150% viteză</span>
+      </div>
+    </div>
+  )
+}
+
+// Generic hosting visual for other hosting types
+function GenericHostingVisual({ title, subtitle, icon: Icon, color }: { title: string; subtitle: string; icon: typeof Target; color: string }) {
+  return (
+    <div className="relative w-full h-full flex items-center justify-center">
+      <div className="relative bg-white/10 border border-white/20 rounded-2xl p-5 w-64 backdrop-blur-sm animate-[float_4s_ease-in-out_infinite]">
+        <div className="flex items-center gap-2 mb-4">
+          <div className={`w-10 h-10 rounded-xl ${color} flex items-center justify-center`}>
+            <Icon size={18} className="text-white" />
+          </div>
+          <div>
+            <p className="text-white font-bold text-sm">{title}</p>
+            <p className="text-white/50 text-xs">{subtitle}</p>
+          </div>
+        </div>
+        <div className="space-y-2">
+          {['Performanță maximă', 'Suport 24/7', 'Uptime 99.9%'].map((item, i) => (
+            <div key={item} className="flex items-center gap-2 bg-white/10 rounded-lg px-3 py-2" style={{ animation: `float ${3 + i * 0.3}s ease-in-out infinite ${i * 0.3}s` }}>
+              <CheckCircle2 size={12} className="text-emerald-400" />
+              <span className="text-white/80 text-xs">{item}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="absolute top-4 right-4 bg-white/15 border border-white/20 rounded-xl px-3 py-2 backdrop-blur-sm animate-[float_3s_ease-in-out_infinite_0.5s]">
+        <p className="text-white font-bold text-sm">Pro</p>
+        <p className="text-white/50 text-[10px]">Hosting</p>
+      </div>
+    </div>
+  )
+}
+
+type PageType = 'despre' | 'servicii' | 'portofoliu' | 'contact' | 'web-design' | 'magazin-online' | 'optimizare-seo' | 'google-ads' | 'mentenanta-web' | 'gazduire' | 'gazduire-web' | 'gazduire-wordpress' | 'gazduire-prestashop' | 'gazduire-opencart' | 'gazduire-magento' | 'gazduire-performance' | 'vps' | 'servere-dedicat' | 'servere'
 
 export function PageHeroVisual({ page }: { page: PageType }) {
   return (
@@ -355,6 +559,16 @@ export function PageHeroVisual({ page }: { page: PageType }) {
       {page === 'optimizare-seo' && <SeoVisual />}
       {page === 'google-ads' && <GoogleAdsVisual />}
       {page === 'mentenanta-web' && <MentenantaVisual />}
+      {page === 'gazduire' && <GazduireWebVisual />}
+      {page === 'gazduire-web' && <GazduireWebVisual />}
+      {page === 'gazduire-wordpress' && <GazduireWordPressVisual />}
+      {page === 'gazduire-prestashop' && <GazduirePrestaShopVisual />}
+      {page === 'gazduire-opencart' && <GenericHostingVisual title="OpenCart Host" subtitle="Magazine performante" icon={ShoppingCart} color="bg-orange-400/20" />}
+      {page === 'gazduire-magento' && <GenericHostingVisual title="Magento Host" subtitle="Enterprise e-commerce" icon={ShoppingCart} color="bg-red-400/20" />}
+      {page === 'gazduire-performance' && <GenericHostingVisual title="Performance Host" subtitle="Viteză maximă" icon={TrendingUp} color="bg-emerald-400/20" />}
+      {page === 'vps' && <VpsVisual />}
+      {page === 'servere-dedicat' && <ServereDedicateVisual />}
+      {page === 'servere' && <ServereDedicateVisual />}
     </div>
   )
 }

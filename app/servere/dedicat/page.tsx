@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
 import { Cpu, ArrowRight, Check, Server, Shield, Zap, HardDrive, Globe, RefreshCw, Headphones, Lock, Database } from 'lucide-react'
+import { PageHeroVisual } from '@/components/page-hero-visual'
 
 export const metadata: Metadata = {
   title: 'Servere Dedicate România | Hardware Enterprise de la 499 lei | FXF',
@@ -86,19 +87,22 @@ export default function DedicatPage() {
         <section className="relative pt-28 pb-14 bg-primary overflow-hidden">
           <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")` }} aria-hidden="true" />
           <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-            <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 bg-white/10 text-white/80 text-xs font-medium px-3 py-1.5 rounded-full mb-6 border border-white/10">
-                <Cpu size={14} />
-                Servere Dedicate
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="inline-flex items-center gap-2 bg-white/10 text-white/80 text-xs font-medium px-3 py-1.5 rounded-full mb-6 border border-white/10">
+                  <Cpu size={14} />
+                  Servere Dedicate
+                </div>
+                <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 text-balance">
+                  Servere Dedicate
+                  <span className="block text-2xl sm:text-3xl lg:text-4xl mt-2 text-white/70">Hardware exclusiv pentru performanță maximă</span>
+                </h1>
+                <p className="text-white/70 text-lg sm:text-xl leading-relaxed mb-8">
+                  Servere fizice dedicate cu procesoare Intel Xeon și AMD EPYC, RAM DDR4 ECC și stocare SSD NVMe enterprise. 
+                  Putere brută pentru cele mai exigente proiecte.
+                </p>
               </div>
-              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 text-balance">
-                Servere Dedicate
-                <span className="block text-2xl sm:text-3xl lg:text-4xl mt-2 text-white/70">Hardware exclusiv pentru performanță maximă</span>
-              </h1>
-              <p className="text-white/70 text-lg sm:text-xl leading-relaxed mb-8">
-                Servere fizice dedicate cu procesoare Intel Xeon și AMD EPYC, RAM DDR4 ECC și stocare SSD NVMe enterprise. 
-                Putere brută pentru cele mai exigente proiecte.
-              </p>
+              <PageHeroVisual page="servere-dedicat" />
             </div>
           </div>
         </section>
