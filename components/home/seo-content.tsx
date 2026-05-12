@@ -2,12 +2,12 @@ import Link from 'next/link'
 import { MapPin, Server, Briefcase } from 'lucide-react'
 
 const services = [
-  { title: 'Găzduire Web România', href: '/servicii/gazduire-web', desc: 'Pachete hosting SSD NVMe cu cPanel și SSL gratuit' },
-  { title: 'Găzduire WordPress', href: '/servicii/gazduire-wordpress', desc: 'Hosting optimizat pentru WordPress cu LiteSpeed Cache' },
-  { title: 'Găzduire PrestaShop', href: '/servicii/gazduire-prestashop', desc: 'Găzduire performantă pentru magazine PrestaShop' },
-  { title: 'Găzduire E-Commerce', href: '/servicii/gazduire-ecommerce', desc: 'Pachete speciale pentru magazine online' },
-  { title: 'Înregistrare Domenii', href: '/servicii/domenii', desc: 'Domenii .ro, .com, .eu la prețuri competitive' },
-  { title: 'VPS Cloud', href: '/servicii/vps', desc: 'Servere virtuale private cu resurse dedicate' },
+  { title: 'Găzduire Web România', href: '/gazduire/web', desc: 'Pachete hosting SSD NVMe cu cPanel și SSL gratuit' },
+  { title: 'Găzduire WordPress', href: '/gazduire/wordpress', desc: 'Hosting optimizat pentru WordPress cu LiteSpeed Cache' },
+  { title: 'Găzduire PrestaShop', href: '/gazduire/prestashop', desc: 'Găzduire performantă pentru magazine PrestaShop' },
+  { title: 'Găzduire E-Commerce', href: '/gazduire/magento', desc: 'Pachete speciale pentru magazine online' },
+  { title: 'Servere Dedicate', href: '/servere/dedicat', desc: 'Hardware dedicat 100% pentru proiecte enterprise' },
+  { title: 'VPS Cloud', href: '/servere/vps', desc: 'Servere virtuale private cu resurse dedicate' },
 ]
 
 const features = [
