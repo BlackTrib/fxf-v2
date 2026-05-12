@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { Server, ShoppingCart, HardDrive, ArrowRight, CheckCircle2, Zap, Cloud, Cpu } from 'lucide-react'
+import { Server, ShoppingCart, HardDrive, ArrowRight, CheckCircle2, Zap, Cloud, Cpu, Globe } from 'lucide-react'
 import { Reveal } from '@/components/ui/reveal'
 
 const hostingPackages = [
