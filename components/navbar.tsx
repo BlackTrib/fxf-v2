@@ -130,14 +130,14 @@ export function Navbar() {
                       'absolute top-full left-0 pt-2 transition-all duration-200',
                       activeDropdown === link.dropdown ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
                     )}>
-                      <div className="bg-white rounded-lg shadow-xl border border-border/50 p-1.5 min-w-[180px]">
+                      <div className="bg-white rounded-lg shadow-xl border border-border/50 p-1.5 min-w-[220px]">
                         {getDropdownServices(link.dropdown).map((s) => {
                           const Icon = s.icon
                           return (
                             <Link
                               key={s.href}
                               href={s.href}
-                              className="flex items-center gap-2.5 px-3 py-2 rounded-md text-[13px] text-foreground/80 hover:bg-secondary hover:text-primary transition-colors"
+                              className="flex items-center gap-2.5 px-3 py-2 rounded-md text-[13px] text-foreground/80 hover:bg-secondary hover:text-primary transition-colors whitespace-nowrap"
                             >
                               <Icon size={14} className="text-muted-foreground" />
                               {s.label}
