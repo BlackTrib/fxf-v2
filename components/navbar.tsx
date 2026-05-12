@@ -171,7 +171,7 @@ export function Navbar() {
           {/* CTA */}
           <div className="hidden lg:block">
             <Link
-              href="/contact"
+              href="/autentificare"
               className={cn(
                 'inline-flex items-center gap-2 px-4 py-2 rounded-lg text-[13px] font-semibold transition-all',
                 transparent
@@ -180,7 +180,7 @@ export function Navbar() {
               )}
             >
               <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-              Solicită ofertă
+              Autentificare
             </Link>
           </div>
 
@@ -288,10 +288,10 @@ export function Navbar() {
           )}
           <div className="border-t border-border/50 mt-2 pt-2">
             <Link
-              href="/contact"
+              href="/autentificare"
               className="block px-4 py-2.5 rounded-lg text-sm font-semibold bg-primary text-white text-center"
             >
-              Solicită ofertă
+              Autentificare
             </Link>
           </div>
         </div>

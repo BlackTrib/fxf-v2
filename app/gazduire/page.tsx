@@ -238,51 +238,41 @@ export default function GazduirePage() {
               </p>
             </div>
 
-            <div className="space-y-8">
-              {services.map((service, i) => {
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {services.map((service) => {
                 const Icon = service.icon
-                const isEven = i % 2 === 0
                 return (
                   <div
                     key={service.id}
-                    className={`rounded-3xl p-8 lg:p-10 ${service.color} border border-border/50`}
+                    className={`rounded-2xl p-6 ${service.color} border border-border/50 flex flex-col`}
                   >
-                    <div className={`grid lg:grid-cols-2 gap-10 items-center ${!isEven ? 'lg:grid-flow-dense' : ''}`}>
-                      {/* Text */}
-                      <div className={!isEven ? 'lg:col-start-2' : ''}>
-                        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
-                          <Icon size={22} className="text-primary" />
-                        </div>
-                        <h3 className="font-display text-2xl sm:text-3xl font-bold text-primary mb-2 text-balance">
-                          {service.title}
-                        </h3>
-                        <p className="text-accent-brand font-medium text-sm mb-4">{service.subtitle}</p>
-                        <p className="text-muted-foreground leading-relaxed mb-4">{service.desc}</p>
-                        <p className="text-lg font-bold text-primary mb-6">{service.price}</p>
-                        <Link
-                          href={service.href}
-                          className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-xl text-sm font-semibold hover:bg-primary/90 transition-all hover:-translate-y-0.5"
-                        >
-                          Află mai multe <ArrowRight size={14} />
-                        </Link>
-                      </div>
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                      <Icon size={22} className="text-primary" />
+                    </div>
+                    <h3 className="font-display text-xl font-bold text-primary mb-1">
+                      {service.title}
+                    </h3>
+                    <p className="text-accent-brand font-medium text-xs mb-3">{service.subtitle}</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1">{service.desc}</p>
 
-                      {/* Features list */}
-                      <div className={!isEven ? 'lg:col-start-1 lg:row-start-1' : ''}>
-                        <div className="bg-white rounded-2xl p-6 border border-border">
-                          <h4 className="font-display font-bold text-sm text-foreground mb-4 uppercase tracking-wider">
-                            Ce include
-                          </h4>
-                          <ul className="space-y-3">
-                            {service.features.map((f) => (
-                              <li key={f} className="flex items-start gap-2.5">
-                                <Check size={15} className="text-accent-brand mt-0.5 shrink-0" />
-                                <span className="text-sm text-foreground/80">{f}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      </div>
+                    {/* Features list */}
+                    <ul className="space-y-2 mb-5">
+                      {service.features.map((f) => (
+                        <li key={f} className="flex items-start gap-2">
+                          <Check size={13} className="text-accent-brand mt-0.5 shrink-0" />
+                          <span className="text-xs text-foreground/80">{f}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    <div className="flex items-center justify-between mt-auto pt-4 border-t border-border/50">
+                      <p className="text-sm font-bold text-primary">{service.price}</p>
+                      <Link
+                        href={service.href}
+                        className="inline-flex items-center gap-1.5 bg-primary text-primary-foreground px-4 py-2 rounded-lg text-xs font-semibold hover:bg-primary/90 transition-all"
+                      >
+                        Detalii <ArrowRight size={12} />
+                      </Link>
                     </div>
                   </div>
                 )

@@ -45,13 +45,13 @@ const additionalServices = [
   { 
     icon: Cloud, 
     title: 'VPS Cloud', 
-    desc: 'Servere virtuale private cu resurse dedicate și root access.',
+    desc: 'Servere virtuale private cu resurse dedicate și root access complet.',
     href: '/servere/vps' 
   },
   { 
     icon: Cpu, 
     title: 'Servere Dedicate', 
-    desc: 'Hardware dedicat pentru proiecte enterprise cu trafic intens.',
+    desc: 'Hardware dedicat 100% pentru proiecte enterprise cu trafic intens.',
     href: '/servere/dedicat' 
   },
 ]
