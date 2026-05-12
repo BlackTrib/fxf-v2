@@ -3,18 +3,24 @@
 import Link from 'next/link'
 import { Mail, Phone, ArrowRight, MapPin, Star, CheckCircle2 } from 'lucide-react'
 
-const services = [
-  { href: '/servicii/gazduire-web', label: 'Găzduire Web' },
-  { href: '/servicii/gazduire-wordpress', label: 'Găzduire WordPress' },
-  { href: '/servicii/gazduire-prestashop', label: 'Găzduire PrestaShop' },
-  { href: '/servicii/gazduire-ecommerce', label: 'Găzduire E-Commerce' },
-  { href: '/servicii/domenii', label: 'Înregistrare Domenii' },
-  { href: '/servicii/vps', label: 'VPS Cloud' },
+const gazduire = [
+  { href: '/gazduire/web', label: 'Găzduire Web' },
+  { href: '/gazduire/wordpress', label: 'Găzduire WordPress' },
+  { href: '/gazduire/prestashop', label: 'Găzduire PrestaShop' },
+  { href: '/gazduire/opencart', label: 'Găzduire OpenCart' },
+  { href: '/gazduire/magento', label: 'Găzduire Magento' },
+  { href: '/gazduire/performance', label: 'Găzduire Performance' },
+]
+
+const servere = [
+  { href: '/servere/vps', label: 'VPS Cloud' },
+  { href: '/servere/dedicat', label: 'Servere Dedicate' },
 ]
 
 const company = [
   { href: '/despre', label: 'Despre noi' },
-  { href: '/servicii', label: 'Servicii' },
+  { href: '/gazduire', label: 'Găzduire' },
+  { href: '/servere', label: 'Servere' },
   { href: '/contact', label: 'Contact' },
   { href: '/termeni', label: 'Termeni și condiții' },
   { href: '/confidentialitate', label: 'Politică confidențialitate' },
@@ -43,7 +49,7 @@ export function Footer() {
           </div>
           <div className="flex items-center gap-3 shrink-0">
             <Link
-              href="/servicii/gazduire-web"
+              href="/gazduire/web"
               className="inline-flex items-center gap-2 bg-cyber text-primary px-5 py-2.5 rounded-lg text-sm font-bold hover:opacity-90 transition-opacity"
             >
               Vezi pachetele <ArrowRight size={14} />
@@ -80,7 +86,7 @@ export function Footer() {
 
       {/* Main grid */}
       <div className="max-w-6xl mx-auto px-5 py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 mb-10">
 
           {/* Brand column */}
           <div className="sm:col-span-2 lg:col-span-1">
@@ -123,11 +129,29 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Services column */}
+          {/* Gazduire column */}
           <div>
-            <h3 className="text-[10px] font-bold uppercase tracking-wider text-white/30 mb-4">Servicii</h3>
+            <h3 className="text-[10px] font-bold uppercase tracking-wider text-white/30 mb-4">Găzduire</h3>
             <ul className="space-y-2.5">
-              {services.map((s) => (
+              {gazduire.map((s) => (
+                <li key={s.href}>
+                  <Link
+                    href={s.href}
+                    className="text-white/55 text-xs hover:text-white hover:translate-x-0.5 transition-all inline-flex items-center gap-1.5 group"
+                  >
+                    <span className="w-1 h-1 rounded-full bg-white/20 group-hover:bg-cyber transition-colors shrink-0" />
+                    {s.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Servere column */}
+          <div>
+            <h3 className="text-[10px] font-bold uppercase tracking-wider text-white/30 mb-4">Servere</h3>
+            <ul className="space-y-2.5">
+              {servere.map((s) => (
                 <li key={s.href}>
                   <Link
                     href={s.href}

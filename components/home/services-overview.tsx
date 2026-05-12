@@ -1,18 +1,18 @@
 'use client'
 
 import Link from 'next/link'
-import { Server, ShoppingCart, Globe, HardDrive, ArrowRight, CheckCircle2, Zap } from 'lucide-react'
+import { Server, ShoppingCart, HardDrive, ArrowRight, CheckCircle2, Zap, Cloud, Cpu } from 'lucide-react'
 import { Reveal } from '@/components/ui/reveal'
 
 const hostingPackages = [
   { 
     icon: Server, 
-    title: 'Găzduire Starter', 
+    title: 'Găzduire Start', 
     desc: 'Ideal pentru site-uri de prezentare mici, bloguri și serviciul email. Perfect pentru a începe.',
     price: '55',
     period: '6 luni',
     features: ['1GB NVMe SSD', 'Domenii nelimitate', 'Email nelimitat', 'cPanel + JetBackup', '1 CPU / 1GB RAM'],
-    href: '/servicii/gazduire-web', 
+    href: '/gazduire/web', 
   },
   { 
     icon: HardDrive, 
@@ -21,7 +21,7 @@ const hostingPackages = [
     price: '207',
     period: '6 luni',
     features: ['10GB NVMe SSD', 'Domenii nelimitate', 'Email nelimitat', 'LiteSpeed + Imunify', '2 CPU / 2GB RAM'],
-    href: '/servicii/gazduire-web',
+    href: '/gazduire/web',
     popular: true 
   },
   { 
@@ -31,28 +31,28 @@ const hostingPackages = [
     price: '455',
     period: '6 luni',
     features: ['30GB NVMe SSD', 'Domenii nelimitate', 'Email nelimitat', 'LiteSpeed + Imunify', '3 CPU / 3GB RAM'],
-    href: '/servicii/gazduire-ecommerce' 
+    href: '/gazduire/prestashop' 
   },
 ]
 
 const additionalServices = [
   { 
-    icon: Globe, 
-    title: 'Înregistrare Domenii', 
-    desc: 'Domenii .ro, .com, .eu și alte extensii la prețuri competitive.',
-    href: '/servicii/domenii' 
-  },
-  { 
     icon: Zap, 
     title: 'Găzduire WordPress', 
     desc: 'Hosting optimizat special pentru WordPress cu LiteSpeed Cache.',
-    href: '/servicii/gazduire-wordpress' 
+    href: '/gazduire/wordpress' 
   },
   { 
-    icon: Server, 
+    icon: Cloud, 
     title: 'VPS Cloud', 
-    desc: 'Servere virtuale private pentru proiecte care necesită resurse dedicate.',
-    href: '/servicii/vps' 
+    desc: 'Servere virtuale private cu resurse dedicate și root access.',
+    href: '/servere/vps' 
+  },
+  { 
+    icon: Cpu, 
+    title: 'Servere Dedicate', 
+    desc: 'Hardware dedicat pentru proiecte enterprise cu trafic intens.',
+    href: '/servere/dedicat' 
   },
 ]
 
@@ -74,8 +74,8 @@ export function ServicesOverview() {
               cPanel, backup zilnic și suport tehnic 24/7.
             </p>
           </div>
-          <Link href="/servicii" className="text-sm font-medium text-primary hover:text-accent-brand flex items-center gap-1 transition-colors shrink-0">
-            Toate serviciile <ArrowRight size={14} />
+          <Link href="/gazduire" className="text-sm font-medium text-primary hover:text-accent-brand flex items-center gap-1 transition-colors shrink-0">
+            Toate pachetele <ArrowRight size={14} />
           </Link>
         </Reveal>
 
