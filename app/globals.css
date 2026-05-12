@@ -10,38 +10,41 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Premium Dark Dev Agency Palette */
-  --background: oklch(0.985 0.002 260);
-  --foreground: oklch(0.13 0.02 260);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.13 0.02 260);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.13 0.02 260);
+  /* FXF Web Hosting — Electric Slate Palette */
 
-  /* Brand: Rich Navy */
-  --primary: oklch(0.22 0.065 260);
+  /* Background: crisp cool white */
+  --background: oklch(0.982 0.003 240);
+  --foreground: oklch(0.14 0.03 240);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.14 0.03 240);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.14 0.03 240);
+
+  /* Primary: Deep Slate Blue — trustworthy, techy, like Hetzner/Cloudflare */
+  --primary: oklch(0.245 0.075 248);
   --primary-foreground: oklch(0.98 0 0);
 
-  /* Accent: Vibrant Blue */
-  --accent-brand: oklch(0.62 0.22 260);
+  /* Accent: Electric Cyan — fast, modern, energetic */
+  --accent-brand: oklch(0.62 0.19 218);
   --accent-brand-foreground: oklch(0.98 0 0);
 
-  --secondary: oklch(0.965 0.006 260);
-  --secondary-foreground: oklch(0.22 0.065 260);
-  --muted: oklch(0.95 0.004 260);
-  --muted-foreground: oklch(0.48 0.015 260);
-  --accent: oklch(0.95 0.004 260);
-  --accent-foreground: oklch(0.22 0.065 260);
+  --secondary: oklch(0.96 0.007 240);
+  --secondary-foreground: oklch(0.245 0.075 248);
+  --muted: oklch(0.945 0.005 240);
+  --muted-foreground: oklch(0.46 0.018 240);
+  --accent: oklch(0.945 0.005 240);
+  --accent-foreground: oklch(0.245 0.075 248);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.915 0.008 260);
-  --input: oklch(0.915 0.008 260);
-  --ring: oklch(0.62 0.22 260);
+  --border: oklch(0.905 0.009 240);
+  --input: oklch(0.905 0.009 240);
+  --ring: oklch(0.62 0.19 218);
   --radius: 0.625rem;
 
-  /* Cyber accent */
-  --cyber: oklch(0.75 0.18 175);
-  --cyber-foreground: oklch(0.13 0.02 260);
+  /* Emerald — uptime / success signals */
+  --cyber: oklch(0.72 0.17 158);
+  --cyber-foreground: oklch(0.14 0.03 240);
 }
 
 @theme inline {
@@ -131,7 +134,7 @@ body {
 
 /* Selection */
 ::selection {
-  background: oklch(0.62 0.22 260 / 0.2);
+  background: oklch(0.62 0.19 218 / 0.22);
 }
 
 /* Floating animations for parallax elements */
@@ -276,8 +279,8 @@ body {
 
 .card-hover:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px -15px oklch(0.22 0.065 260 / 0.15),
-              0 8px 16px -8px oklch(0.22 0.065 260 / 0.1);
+  box-shadow: 0 20px 40px -15px oklch(0.245 0.075 248 / 0.15),
+              0 8px 16px -8px oklch(0.245 0.075 248 / 0.1);
 }
 
 /* Glow hover for buttons */
@@ -290,7 +293,7 @@ body {
   content: '';
   position: absolute;
   inset: -2px;
-  background: linear-gradient(135deg, oklch(0.62 0.22 260), oklch(0.75 0.18 175));
+  background: linear-gradient(135deg, oklch(0.62 0.19 218), oklch(0.72 0.17 158));
   border-radius: inherit;
   opacity: 0;
   z-index: -1;
@@ -331,7 +334,7 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, oklch(0.62 0.22 260), oklch(0.75 0.18 175));
+  background: linear-gradient(90deg, oklch(0.62 0.19 218), oklch(0.72 0.17 158));
   transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -343,9 +346,9 @@ body {
 .gradient-text-animate {
   background: linear-gradient(
     90deg,
-    oklch(0.62 0.22 260) 0%,
-    oklch(0.75 0.18 175) 50%,
-    oklch(0.62 0.22 260) 100%
+    oklch(0.62 0.19 218) 0%,
+    oklch(0.72 0.17 158) 50%,
+    oklch(0.62 0.19 218) 100%
   );
   background-size: 200% auto;
   -webkit-background-clip: text;
