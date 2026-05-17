@@ -28,7 +28,7 @@ const testimonials = [
 ]
 
 const badges = [
-  '500+ clienți activi',
+  '200+ clienți activi',
   '99.9% uptime',
   '5+ ani experiență',
 ]

@@ -2,7 +2,7 @@
 
 import { Users, Award, Target, TrendingUp, Briefcase, ShoppingCart, Search, BarChart2, Wrench, Code2, Mail, Phone, MessageSquare, Star, FolderOpen, CheckCircle2 } from 'lucide-react'
 
-// Despre page - floating team/agency stats
+// Despre page - floating hosting company stats
 function DespreVisual() {
   return (
     <div className="relative w-full h-full flex items-center justify-center">
@@ -13,16 +13,16 @@ function DespreVisual() {
             <Briefcase size={18} className="text-white" />
           </div>
           <div>
-            <p className="text-white font-bold text-sm">FXF Web Solution</p>
-            <p className="text-white/50 text-xs">Agenție Web România</p>
+            <p className="text-white font-bold text-sm">FXF Web Hosting</p>
+            <p className="text-white/50 text-xs">Găzduire Web România</p>
           </div>
         </div>
         <div className="grid grid-cols-2 gap-3">
           {[
-            { value: '150+', label: 'Proiecte' },
-            { value: '8+', label: 'Ani exp.' },
-            { value: '94%', label: 'Retenție' },
-            { value: '4h', label: 'Răspuns' },
+            { value: '200+', label: 'Clienți' },
+            { value: '5+', label: 'Ani exp.' },
+            { value: '99.9%', label: 'Uptime' },
+            { value: '24/7', label: 'Suport' },
           ].map((s) => (
             <div key={s.label} className="bg-white/10 rounded-lg p-2.5 text-center">
               <p className="text-white font-bold text-base">{s.value}</p>
@@ -35,15 +35,15 @@ function DespreVisual() {
       {/* Floating badges */}
       <div className="absolute top-4 right-4 bg-white/15 border border-white/20 rounded-xl px-3 py-2 backdrop-blur-sm animate-[float_3s_ease-in-out_infinite_0.5s] flex items-center gap-2">
         <Award size={14} className="text-yellow-300" />
-        <span className="text-white text-xs font-semibold">Agenție High-Tech</span>
+        <span className="text-white text-xs font-semibold">Hosting Profesional</span>
       </div>
       <div className="absolute bottom-6 left-4 bg-white/15 border border-white/20 rounded-xl px-3 py-2 backdrop-blur-sm animate-[float_3.5s_ease-in-out_infinite_1s] flex items-center gap-2">
         <Users size={14} className="text-emerald-300" />
-        <span className="text-white text-xs font-semibold">Echipă Internă</span>
+        <span className="text-white text-xs font-semibold">Suport 24/7</span>
       </div>
       <div className="absolute top-1/2 -right-2 bg-white/15 border border-white/20 rounded-xl px-3 py-2 backdrop-blur-sm animate-[float_4s_ease-in-out_infinite_0.8s] flex items-center gap-2">
-        <Target size={14} className="text-blue-300" />
-        <span className="text-white text-xs font-semibold">Rezultate Reale</span>
+        <Target size={14} className="text-cyan-300" />
+        <span className="text-white text-xs font-semibold">SSD NVMe</span>
       </div>
     </div>
   )

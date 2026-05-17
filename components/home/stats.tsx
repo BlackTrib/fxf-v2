@@ -3,7 +3,7 @@ import { Server, TrendingUp, Users, Clock } from 'lucide-react'
 const stats = [
   { icon: Server, value: '99.9%', label: 'Uptime Garantat', desc: 'Disponibilitate servere' },
   { icon: TrendingUp, value: '5x', label: 'Mai Rapid', desc: 'Cu SSD NVMe vs HDD' },
-  { icon: Users, value: '500+', label: 'Clienți Activi', desc: 'Site-uri găzduite' },
+  { icon: Users, value: '200+', label: 'Clienți Activi', desc: 'Site-uri găzduite' },
   { icon: Clock, value: '24/7', label: 'Suport Tehnic', desc: 'Disponibil non-stop' },
 ]
 
