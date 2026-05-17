@@ -125,7 +125,7 @@ export function Hero() {
             {/* CTAs */}
             <div className="flex flex-wrap gap-3 pt-2">
               <Link
-                href="/servicii/gazduire-web"
+                href="/gazduire/web"
                 className="inline-flex items-center gap-2 bg-white text-primary px-6 py-3 rounded-lg text-sm font-semibold hover:bg-cyber hover:text-primary transition-all glow-hover"
               >
                 Vezi pachetele de hosting

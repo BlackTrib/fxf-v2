@@ -373,7 +373,7 @@ export default function DespreNoi() {
               Beneficiezi de 10% reducere la prima comandă cu codul FXF10.
             </p>
             <Link
-              href="/servicii/gazduire-web"
+              href="/gazduire/web"
               className="inline-flex items-center gap-2 bg-white text-primary px-8 py-3.5 rounded-xl font-semibold hover:bg-white/90 transition-all hover:-translate-y-0.5"
             >
               Vezi pachetele de hosting <ArrowRight size={16} />

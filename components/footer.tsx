@@ -124,7 +124,7 @@ export function Footer() {
                 <div className="w-6 h-6 rounded-md bg-white/10 flex items-center justify-center">
                   <MapPin size={11} />
                 </div>
-                FXF Creative Agency SRL
+                FXF Web Hosting SRL
               </div>
             </div>
           </div>
@@ -220,7 +220,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-white/25 text-[10px]">
-            &copy; {new Date().getFullYear()} FXF Creative Agency SRL. Toate drepturile rezervate.
+            &copy; {new Date().getFullYear()} FXF Web Hosting SRL. Toate drepturile rezervate.
           </p>
           <div className="flex items-center gap-1 text-white/25 text-[10px]">
             <span>Servere în</span>
