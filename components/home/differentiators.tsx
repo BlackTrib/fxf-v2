@@ -34,7 +34,7 @@ export function Differentiators() {
               <p className="text-xs font-semibold text-primary mb-2">Specificații server:</p>
               <div className="grid grid-cols-2 gap-2 text-xs text-muted-foreground">
                 <div>64 Core CPU</div>
-                <div>96GB RAM DDR4</div>
+                <div>96GB RAM DDR5</div>
                 <div>6x 1TB SSD NVMe</div>
                 <div>Raid 10</div>
                 <div>CloudLinux OS</div>

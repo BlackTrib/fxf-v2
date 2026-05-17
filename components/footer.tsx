@@ -79,7 +79,7 @@ export function Footer() {
             {[1,2,3,4,5].map((s) => (
               <Star key={s} size={11} className="text-yellow-400 fill-yellow-400" />
             ))}
-            <span className="text-white/40 text-xs ml-1">4.9/5 — 127 recenzii</span>
+            <span className="text-white/40 text-xs ml-1">4.9/5 — 54 recenzii</span>
           </div>
         </div>
       </div>

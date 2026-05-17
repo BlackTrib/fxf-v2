@@ -80,7 +80,7 @@ export function Hero() {
                   <Star key={i} className="w-3 h-3 text-amber-400 fill-amber-400" />
                 ))}
               </div>
-              <span className="text-white/60 text-xs font-medium">Hosting de încredere din 2020</span>
+              <span className="text-white/60 text-xs font-medium">Hosting de încredere din 2021</span>
             </div>
 
             {/* Headline */}

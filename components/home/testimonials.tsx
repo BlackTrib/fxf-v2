@@ -30,7 +30,7 @@ const testimonials = [
 const badges = [
   '500+ clienți activi',
   '99.9% uptime',
-  '4+ ani experiență',
+  '5+ ani experiență',
 ]
 
 export function Testimonials() {

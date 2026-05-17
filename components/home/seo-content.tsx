@@ -32,7 +32,7 @@ export function SEOContent() {
                 găzduite, suntem alegerea potrivită pentru afacerea ta online, indiferent de dimensiune.
               </p>
               <p>
-                Serverele noastre sunt echipate cu procesoare 64 Core, 96GB RAM DDR4 și stocare SSD NVMe 
+                Serverele noastre sunt echipate cu procesoare 64 Core, 96GB RAM DDR5 și stocare SSD NVMe 
                 montată în Raid 10 pentru performanță maximă și redundanță a datelor. Folosim CloudLinux 
                 pentru izolarea conturilor, LiteSpeed pentru viteză și Imunify360 pentru securitate avansată.
               </p>

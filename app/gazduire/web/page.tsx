@@ -241,7 +241,7 @@ export default function GazduireWebPage() {
               <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
                 {[
                   { label: 'Procesor', value: '64 Core CPU' },
-                  { label: 'Memorie', value: '96GB RAM DDR4' },
+                  { label: 'Memorie', value: '96GB RAM DDR5' },
                   { label: 'Stocare', value: '6x 1TB SSD NVMe' },
                   { label: 'Redundanță', value: 'RAID 10' },
                   { label: 'Sistem operare', value: 'CloudLinux' },

@@ -47,13 +47,13 @@ const values = [
 const stats = [
   { number: '500+', label: 'Clienți Activi', desc: 'Site-uri găzduite pe serverele noastre' },
   { number: '99.9%', label: 'Uptime', desc: 'Disponibilitate garantată' },
-  { number: '4+', label: 'Ani Experiență', desc: 'În industria hosting' },
+  { number: '5+', label: 'Ani Experiență', desc: 'În industria hosting' },
   { number: '24/7', label: 'Suport', desc: 'Disponibil non-stop' },
 ]
 
 const serverSpecs = [
   { label: 'Procesor', value: '64 Core CPU' },
-  { label: 'Memorie', value: '96GB RAM DDR4' },
+  { label: 'Memorie', value: '96GB RAM DDR5' },
   { label: 'Stocare', value: '6x 1TB SSD NVMe' },
   { label: 'Redundanță', value: 'Raid 10' },
   { label: 'Sistem operare', value: 'CloudLinux' },
@@ -77,14 +77,14 @@ export default function DespreNoi() {
                   Găzduire web profesională din România
                 </h1>
                 <p className="text-white/70 text-lg leading-relaxed mb-6">
-                  FXF Web Hosting oferă servicii de găzduire web de înaltă calitate din 2020. 
+                  FXF Web Hosting oferă servicii de găzduire web de înaltă calitate din 2021. 
                   Cu servere SSD NVMe în Germania și o echipă de suport dedicată 24/7, suntem 
                   alegerea de încredere pentru peste 500 de clienți activi din România.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   {[
                     { icon: MapPin, text: 'Servere în Germania' },
-                    { icon: Clock, text: '4+ ani experiență' },
+                    { icon: Clock, text: '5+ ani experiență' },
                     { icon: Briefcase, text: '500+ clienți activi' },
                   ].map((item) => (
                     <div key={item.text} className="flex items-center gap-2 text-white/60 text-sm">
