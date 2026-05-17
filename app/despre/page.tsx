@@ -311,7 +311,7 @@ export default function DespreNoi() {
 
         {/* Our Story / Timeline */}
         <section className="py-14 bg-secondary/30">
-          <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto px-6 lg:px-8">
             <div className="text-center mb-10">
               <p className="text-primary font-semibold text-sm uppercase tracking-widest mb-2">
                 Povestea noastră
@@ -323,21 +323,17 @@ export default function DespreNoi() {
                 De la o idee simplă la un furnizor de încredere pentru sute de afaceri din România.
               </p>
             </div>
-            <div className="relative">
-              <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-primary/20 md:-translate-x-1/2" />
-              <div className="space-y-8">
-                {timeline.map((item, i) => (
-                  <div key={item.year} className={`relative flex items-start gap-6 ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
-                    <div className={`flex-1 ${i % 2 === 0 ? 'md:text-right md:pr-8' : 'md:text-left md:pl-8'} pl-10 md:pl-0`}>
-                      <span className="inline-block text-xs font-bold text-primary bg-primary/10 px-2 py-1 rounded mb-2">{item.year}</span>
-                      <h3 className="font-bold text-foreground mb-1">{item.title}</h3>
-                      <p className="text-muted-foreground text-sm">{item.desc}</p>
-                    </div>
-                    <div className="absolute left-4 md:left-1/2 w-3 h-3 bg-primary rounded-full md:-translate-x-1/2 mt-1.5" />
-                    <div className="flex-1 hidden md:block" />
+            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+              {timeline.map((item) => (
+                <div key={item.year} className="bg-card border border-border rounded-xl p-5 relative overflow-hidden hover:border-primary/30 transition-colors group">
+                  <span className="absolute -top-2 -right-2 text-6xl font-bold text-primary/5 group-hover:text-primary/10 transition-colors select-none">{item.year}</span>
+                  <div className="relative">
+                    <span className="inline-block text-xs font-bold text-white bg-primary px-2.5 py-1 rounded-full mb-3">{item.year}</span>
+                    <h3 className="font-bold text-foreground text-sm mb-1.5">{item.title}</h3>
+                    <p className="text-muted-foreground text-xs leading-relaxed">{item.desc}</p>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
