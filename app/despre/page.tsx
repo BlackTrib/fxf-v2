@@ -2,23 +2,27 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
-import { ArrowRight, Target, Zap, Heart, Shield, Users, Server, Award, Clock, MapPin, Briefcase } from 'lucide-react'
+import { ArrowRight, Target, Zap, Heart, Shield, Users, Server, Award, Clock, MapPin, Briefcase, CheckCircle2, HelpCircle, Building2, Globe, Cpu, Database, Lock, Headphones } from 'lucide-react'
 import { PageHeroVisual } from '@/components/page-hero-visual'
 
 export const metadata: Metadata = {
-  title: 'Despre FXF Web Hosting | Găzduire Web România',
+  title: 'Despre FXF Web Hosting | Găzduire Web Profesională România | Din 2021',
   description:
-    'FXF Web Hosting - furnizor de găzduire web în România din 2020. Servere SSD NVMe în Germania, uptime 99.9%, suport 24/7. Peste 500 de clienți activi.',
+    'FXF Web Hosting - furnizor român de găzduire web din 2021. Servere SSD NVMe în Germania, uptime 99.9% garantat, suport tehnic 24/7. Peste 200 de clienți activi. Hosting pentru WordPress, PrestaShop, Magento.',
   keywords: [
     'fxf web hosting',
     'gazduire web romania',
     'despre fxf',
     'hosting romania',
-    'furnizor hosting',
+    'furnizor hosting romania',
+    'gazduire web profesionala',
+    'hosting ssd nvme',
+    'web hosting bucuresti',
+    'gazduire site romania',
   ],
   openGraph: {
-    title: 'Despre FXF Web Hosting | Găzduire Web România',
-    description: 'FXF Web Hosting - furnizor de găzduire web în România din 2020. Servere SSD NVMe, uptime 99.9%, suport 24/7.',
+    title: 'Despre FXF Web Hosting | Găzduire Web Profesională România',
+    description: 'FXF Web Hosting - furnizor român de găzduire web din 2021. Servere SSD NVMe, uptime 99.9%, suport 24/7. Peste 200 clienți activi.',
     url: 'https://fxfweb.ro/despre',
   },
   alternates: {
@@ -60,11 +64,81 @@ const serverSpecs = [
   { label: 'Locație', value: 'Datacenter Germania' },
 ]
 
+const technologies = [
+  { name: 'cPanel', desc: 'Panou de control profesional' },
+  { name: 'CloudLinux', desc: 'Izolare resurse per cont' },
+  { name: 'LiteSpeed', desc: 'Web server ultrarapid' },
+  { name: 'Imunify360', desc: 'Protecție malware și atacuri' },
+  { name: 'JetBackup', desc: 'Backup-uri automate 24/24h' },
+  { name: "Let's Encrypt", desc: 'Certificate SSL gratuite' },
+]
+
+const faqs = [
+  {
+    q: 'Ce tipuri de găzduire web oferă FXF Web Hosting?',
+    a: 'FXF Web Hosting oferă găzduire web shared pe servere SSD NVMe, găzduire optimizată pentru WordPress, PrestaShop, OpenCart și Magento, precum și pachete Performance cu resurse dedicate pentru site-uri cu trafic intens.',
+  },
+  {
+    q: 'Unde sunt localizate serverele FXF Web Hosting?',
+    a: 'Serverele noastre sunt localizate într-un datacenter de nivel Tier III în Germania, asigurând latență redusă pentru vizitatorii din România și Europa, precum și o infrastructură de înaltă disponibilitate.',
+  },
+  {
+    q: 'Ce garanție de uptime oferă FXF Web Hosting?',
+    a: 'Garantăm un uptime de 99.9% pentru toate pachetele de găzduire. În cazul în care nu respectăm această promisiune, clienții primesc credit proporțional pentru timpul de indisponibilitate.',
+  },
+  {
+    q: 'Cum funcționează suportul tehnic la FXF Web Hosting?',
+    a: 'Echipa noastră de suport tehnic este disponibilă 24/7 prin sistem de ticketing. Timpul mediu de răspuns este sub 4 ore, iar pentru probleme critice oferim asistență prioritară.',
+  },
+  {
+    q: 'Ce înseamnă backup 24 din 24 ore?',
+    a: 'Realizăm backup-uri automate la fiecare 24 de ore pentru toate conturile de hosting. Backup-urile sunt păstrate timp de 30 de zile și pot fi restaurate gratuit din panoul cPanel sau prin JetBackup.',
+  },
+  {
+    q: 'Pot migra gratuit site-ul meu la FXF Web Hosting?',
+    a: 'Da, oferim migrare gratuită pentru toate pachetele de găzduire. Echipa noastră se ocupă de transferul complet al site-ului, bazei de date și email-urilor, fără întreruperi.',
+  },
+]
+
+const timeline = [
+  { year: '2021', title: 'Lansarea FXF Web Hosting', desc: 'Am pornit cu o viziune simplă: hosting de calitate la prețuri corecte pentru antreprenorii români.' },
+  { year: '2022', title: 'Extindere infrastructură', desc: 'Am upgradat la servere cu procesoare de ultimă generație și stocare exclusiv NVMe pentru performanță maximă.' },
+  { year: '2023', title: '100+ clienți activi', desc: 'Am depășit pragul de 100 de clienți mulțumiți și am introdus pachetele specializate pentru e-commerce.' },
+  { year: '2024', title: 'Pachete Performance', desc: 'Am lansat gama de găzduire Performance cu resurse dedicate pentru proiecte enterprise și site-uri cu trafic intens.' },
+  { year: '2025', title: '200+ clienți și continuăm', desc: 'Astăzi găzduim peste 200 de site-uri și continuăm să investim în tehnologie și în echipa de suport.' },
+]
+
 export default function DespreNoi() {
   return (
     <>
       <Navbar />
       <main>
+        {/* Organization Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: 'FXF Web Hosting',
+              url: 'https://fxfweb.ro',
+              logo: 'https://fxfweb.ro/logo.png',
+              description: 'Furnizor român de servicii de găzduire web din 2021. Servere SSD NVMe în Germania, uptime 99.9%, suport 24/7.',
+              foundingDate: '2021',
+              address: {
+                '@type': 'PostalAddress',
+                addressCountry: 'RO',
+              },
+              contactPoint: {
+                '@type': 'ContactPoint',
+                contactType: 'customer service',
+                availableLanguage: ['Romanian', 'English'],
+                hoursAvailable: 'Mo-Su 00:00-23:59',
+              },
+              sameAs: [],
+            }),
+          }}
+        />
         {/* Hero */}
         <section className="pt-28 pb-14 bg-gradient-to-br from-primary via-primary to-primary/90">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -233,6 +307,164 @@ export default function DespreNoi() {
               })}
             </div>
           </div>
+        </section>
+
+        {/* Our Story / Timeline */}
+        <section className="py-14 bg-secondary/30">
+          <div className="max-w-4xl mx-auto px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <p className="text-primary font-semibold text-sm uppercase tracking-widest mb-2">
+                Povestea noastră
+              </p>
+              <h2 className="font-display text-3xl font-bold text-primary mb-3">
+                Evoluția FXF Web Hosting
+              </h2>
+              <p className="text-muted-foreground max-w-xl mx-auto">
+                De la o idee simplă la un furnizor de încredere pentru sute de afaceri din România.
+              </p>
+            </div>
+            <div className="relative">
+              <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-primary/20 md:-translate-x-1/2" />
+              <div className="space-y-8">
+                {timeline.map((item, i) => (
+                  <div key={item.year} className={`relative flex items-start gap-6 ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+                    <div className={`flex-1 ${i % 2 === 0 ? 'md:text-right md:pr-8' : 'md:text-left md:pl-8'} pl-10 md:pl-0`}>
+                      <span className="inline-block text-xs font-bold text-primary bg-primary/10 px-2 py-1 rounded mb-2">{item.year}</span>
+                      <h3 className="font-bold text-foreground mb-1">{item.title}</h3>
+                      <p className="text-muted-foreground text-sm">{item.desc}</p>
+                    </div>
+                    <div className="absolute left-4 md:left-1/2 w-3 h-3 bg-primary rounded-full md:-translate-x-1/2 mt-1.5" />
+                    <div className="flex-1 hidden md:block" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Technologies */}
+        <section className="py-14 bg-background">
+          <div className="max-w-5xl mx-auto px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <p className="text-primary font-semibold text-sm uppercase tracking-widest mb-2">
+                Tehnologii
+              </p>
+              <h2 className="font-display text-3xl font-bold text-primary mb-3">
+                Stack tehnologic profesional
+              </h2>
+              <p className="text-muted-foreground max-w-xl mx-auto">
+                Folosim doar tehnologii de nivel enterprise pentru a asigura performanță, securitate și stabilitate maximă.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+              {technologies.map((tech) => (
+                <div key={tech.name} className="bg-card border border-border rounded-xl p-4 text-center hover:border-primary/20 transition-colors">
+                  <p className="font-bold text-foreground text-sm mb-1">{tech.name}</p>
+                  <p className="text-muted-foreground text-xs">{tech.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SEO Content Block */}
+        <section className="py-14 bg-secondary/30">
+          <div className="max-w-4xl mx-auto px-6 lg:px-8">
+            <div className="prose prose-sm max-w-none text-muted-foreground">
+              <h2 className="font-display text-2xl font-bold text-primary mb-4">FXF Web Hosting - Furnizor de găzduire web în România</h2>
+              <p>
+                <strong>FXF Web Hosting</strong> este un furnizor român de servicii de găzduire web, activ pe piață din 2021. 
+                Ne-am propus să oferim o alternativă de calitate la furnizorii internaționali, cu suport local și prețuri 
+                adaptate pieței din România.
+              </p>
+              <p>
+                Infrastructura noastră se bazează pe servere de ultimă generație cu stocare <strong>SSD NVMe</strong>, 
+                procesoare multi-core și memorie RAM DDR5 abundentă. Toate serverele sunt localizate într-un 
+                <strong> datacenter de nivel Tier III în Germania</strong>, asigurând latență redusă pentru vizitatorii 
+                din România și restul Europei.
+              </p>
+              <h3 className="font-display text-xl font-bold text-primary mt-6 mb-3">Servicii de găzduire web pentru orice tip de proiect</h3>
+              <p>
+                Oferim pachete de <strong>găzduire web shared</strong> pentru site-uri de prezentare și bloguri, 
+                <strong> hosting optimizat pentru WordPress</strong> cu LiteSpeed Cache pre-instalat, găzduire specializată 
+                pentru platforme e-commerce precum <strong>PrestaShop, OpenCart și Magento</strong>, precum și 
+                pachete <strong>Performance</strong> cu resurse CPU și RAM dedicate pentru proiecte cu trafic intens.
+              </p>
+              <p>
+                Toate pachetele includ <strong>cPanel</strong> pentru administrare ușoară, <strong>certificat SSL gratuit</strong> 
+                de la Let&apos;s Encrypt, <strong>backup-uri automate la fiecare 24 de ore</strong> prin JetBackup, protecție 
+                activă <strong>Imunify360</strong> împotriva malware și atacurilor, și <strong>suport tehnic 24/7</strong>.
+              </p>
+              <h3 className="font-display text-xl font-bold text-primary mt-6 mb-3">De ce să alegi FXF Web Hosting?</h3>
+              <ul className="space-y-2">
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 size={16} className="text-primary mt-0.5 shrink-0" />
+                  <span><strong>Performanță garantată</strong> — servere SSD NVMe cu uptime 99.9% și timp de încărcare sub 1 secundă</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 size={16} className="text-primary mt-0.5 shrink-0" />
+                  <span><strong>Securitate avansată</strong> — Imunify360, firewall WAF, protecție DDoS și scanare malware inclusă</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 size={16} className="text-primary mt-0.5 shrink-0" />
+                  <span><strong>Suport tehnic real</strong> — echipă disponibilă 24/7 cu timp de răspuns sub 4 ore</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 size={16} className="text-primary mt-0.5 shrink-0" />
+                  <span><strong>Prețuri corecte</strong> — pachete de la 99 lei pentru 6 luni, fără costuri ascunse</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 size={16} className="text-primary mt-0.5 shrink-0" />
+                  <span><strong>Migrare gratuită</strong> — transferăm site-ul tău de la alt furnizor fără costuri suplimentare</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section with Schema */}
+        <section className="py-14 bg-background">
+          <div className="max-w-4xl mx-auto px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <p className="text-primary font-semibold text-sm uppercase tracking-widest mb-2">
+                Întrebări frecvente
+              </p>
+              <h2 className="font-display text-3xl font-bold text-primary mb-3">
+                Tot ce trebuie să știi despre FXF Web Hosting
+              </h2>
+            </div>
+            <div className="space-y-4">
+              {faqs.map((faq, i) => (
+                <details key={i} className="group bg-card border border-border rounded-xl overflow-hidden">
+                  <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
+                    <span className="font-semibold text-foreground text-sm pr-4">{faq.q}</span>
+                    <HelpCircle size={18} className="text-muted-foreground shrink-0 group-open:rotate-45 transition-transform" />
+                  </summary>
+                  <div className="px-5 pb-5 text-muted-foreground text-sm leading-relaxed border-t border-border pt-4">
+                    {faq.a}
+                  </div>
+                </details>
+              ))}
+            </div>
+          </div>
+          {/* FAQ Schema Markup */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'FAQPage',
+                mainEntity: faqs.map((faq) => ({
+                  '@type': 'Question',
+                  name: faq.q,
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: faq.a,
+                  },
+                })),
+              }),
+            }}
+          />
         </section>
 
         {/* CTA */}
