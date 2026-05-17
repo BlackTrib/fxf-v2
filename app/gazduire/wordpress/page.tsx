@@ -195,6 +195,37 @@ export default function GazduireWordPressPage() {
           </div>
         </section>
 
+        {/* Platform config info */}
+        <section className="py-14 bg-background">
+          <div className="max-w-5xl mx-auto px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <h2 className="font-display text-2xl font-bold text-foreground mb-3">Fiecare pachet, configurat special pentru WordPress</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">Serverele noastre nu rulează WordPress generic. Fiecare plan este presetat cu parametrii tehnici de care WordPress are nevoie pentru a funcționa la capacitate maximă.</p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                {
+                  title: 'PHP și MySQL optimizat pentru WP',
+                  desc: 'Valorile php.ini — memory_limit, max_execution_time, upload_max_filesize — sunt configurate conform recomandărilor oficiale WordPress, fără să fie nevoie să intervii manual.',
+                },
+                {
+                  title: 'LiteSpeed Cache pre-activat',
+                  desc: 'Pluginul LiteSpeed Cache este pre-instalat și gata de utilizare, oferind cache la nivel de server, optimizare imagini WebP, lazy load și minificare CSS/JS direct din panoul de control.',
+                },
+                {
+                  title: 'Protecție activă împotriva atacurilor WP',
+                  desc: 'Imunify360 detectează și blochează în timp real tentativele de brute-force pe wp-login.php, injecțiile de cod malițios și vulnerabilitățile specifice plugin-urilor WordPress.',
+                },
+              ].map((item) => (
+                <div key={item.title} className="bg-primary/5 border border-primary/15 rounded-2xl p-6">
+                  <h3 className="font-bold text-foreground mb-2 text-sm">{item.title}</h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section className="py-14 bg-secondary/30">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="text-center max-w-2xl mx-auto mb-12">

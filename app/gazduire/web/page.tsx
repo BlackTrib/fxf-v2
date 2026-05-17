@@ -241,6 +241,37 @@ export default function GazduireWebPage() {
           </div>
         </section>
 
+        {/* Platform config info */}
+        <section className="py-14 bg-background">
+          <div className="max-w-5xl mx-auto px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <h2 className="font-display text-2xl font-bold text-foreground mb-3">Fiecare pachet, configurat pentru găzduire web</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">Nu vindem resurse generice. Fiecare plan este calibrat specific pentru a livra performanță reală pe serverele noastre NVMe.</p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                {
+                  title: 'Configurare server dedicată',
+                  desc: 'Fiecare pachet vine cu parametri PHP, MySQL și Apache/LiteSpeed presetați optim pentru o găzduire web stabilă și rapidă, fără configurare manuală din partea ta.',
+                },
+                {
+                  title: 'Resurse izolate per cont',
+                  desc: 'Prin CloudLinux, resursele CPU și RAM alocate fiecărui pachet sunt izolate — vecinii de pe server nu îți afectează niciodată performanța sau disponibilitatea site-ului.',
+                },
+                {
+                  title: 'Stack optimizat pentru viteză',
+                  desc: 'LiteSpeed Web Server, Imunify360 și JetBackup sunt pre-instalate și configurate, oferind viteză de încărcare superioară, protecție activă și backup automat la fiecare 24 de ore.',
+                },
+              ].map((item) => (
+                <div key={item.title} className="bg-primary/5 border border-primary/15 rounded-2xl p-6">
+                  <h3 className="font-bold text-foreground mb-2 text-sm">{item.title}</h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Benefits Grid */}
         <section className="py-14 bg-secondary/30">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">

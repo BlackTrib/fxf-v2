@@ -195,6 +195,37 @@ export default function GazduireOpencartPage() {
           </div>
         </section>
 
+        {/* Platform config info */}
+        <section className="py-14 bg-background">
+          <div className="max-w-5xl mx-auto px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <h2 className="font-display text-2xl font-bold text-foreground mb-3">Fiecare pachet, configurat special pentru OpenCart</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">OpenCart funcționează cel mai bine pe un mediu de hosting calibrat pentru cerințele sale specifice. Noi facem această configurare în avans, astfel încât magazinul tău să meargă din prima zi.</p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                {
+                  title: 'Permisiuni și structură de directoare',
+                  desc: 'Permisiunile de fișiere necesare OpenCart pentru directoarele image/, system/storage/ și cache/ sunt configurate corect din start, eliminând erorile frecvente de instalare sau upload.',
+                },
+                {
+                  title: 'PHP cu extensiile necesare activate',
+                  desc: 'Extensiile cURL, GD2, ZIP și MySQLi sunt activate implicit, iar versiunea PHP este setată pe o versiune compatibilă și stabilă cu OpenCart 3.x și 4.x.',
+                },
+                {
+                  title: 'Performanță optimizată pentru catalog',
+                  desc: 'LiteSpeed cu cache activat la nivel de server reduce drastic timpul de răspuns al paginilor de produs și categorie, chiar și pentru cataloage cu mii de articole.',
+                },
+              ].map((item) => (
+                <div key={item.title} className="bg-primary/5 border border-primary/15 rounded-2xl p-6">
+                  <h3 className="font-bold text-foreground mb-2 text-sm">{item.title}</h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section className="py-14 bg-secondary/30">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="text-center max-w-2xl mx-auto mb-12">

@@ -195,6 +195,37 @@ export default function GazduirePrestashopPage() {
           </div>
         </section>
 
+        {/* Platform config info */}
+        <section className="py-14 bg-background">
+          <div className="max-w-5xl mx-auto px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <h2 className="font-display text-2xl font-bold text-foreground mb-3">Fiecare pachet, configurat special pentru PrestaShop</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">PrestaShop este o platformă pretențioasă din punct de vedere tehnic. Planurile noastre sunt ajustate direct la nivel de server pentru a răspunde acestor cerințe fără compromisuri.</p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                {
+                  title: 'PHP configurat pentru PrestaShop',
+                  desc: 'Extensiile PHP necesare PrestaShop (GD, cURL, PDO, ZIP, OpenSSL) sunt activate implicit, iar limitele de memorie și timp de execuție sunt setate pentru a susține cataloage mari de produse.',
+                },
+                {
+                  title: 'MySQL InnoDB și indexare rapidă',
+                  desc: 'Serverele noastre folosesc MySQL cu engine InnoDB și query cache activat, esențiale pentru performanța bazelor de date PrestaShop cu mii de produse, comenzi și clienți.',
+                },
+                {
+                  title: 'Cache și compresie pentru viteza magazinului',
+                  desc: 'LiteSpeed cu mod_rewrite activ și regulile .htaccess PrestaShop pre-verificate asigură că SEF URL-urile și cache-ul Smarty funcționează corect de la prima instalare.',
+                },
+              ].map((item) => (
+                <div key={item.title} className="bg-primary/5 border border-primary/15 rounded-2xl p-6">
+                  <h3 className="font-bold text-foreground mb-2 text-sm">{item.title}</h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section className="py-14 bg-secondary/30">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="text-center max-w-2xl mx-auto mb-12">
