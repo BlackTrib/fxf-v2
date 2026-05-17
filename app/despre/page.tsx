@@ -1,5 +1,6 @@
 'use client'
 
+// Client component - FAQ with controlled accordion
 import { useState } from 'react'
 import Link from 'next/link'
 import { Navbar } from '@/components/navbar'
