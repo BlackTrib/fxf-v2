@@ -326,7 +326,7 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <label htmlFor="period" className="block text-sm font-semibold text-foreground mb-2.5">
-                          Perioadă dorită
+                          Perioadă dorit��
                         </label>
                         <select
                           id="period"
@@ -411,31 +411,6 @@ export default function ContactPage() {
                   </form>
                 )}
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ or CTA */}
-        <section className="py-14 bg-secondary/30">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-            <h2 className="font-display text-3xl lg:text-4xl font-bold text-foreground mb-4 text-balance">
-              Întrebări frecvente despre colaborare
-            </h2>
-            <p className="text-muted-foreground text-base mb-8 max-w-2xl mx-auto leading-relaxed">
-              Răspunsuri la cele mai frecvente întrebări despre serviciile noastre de web design și development.
-            </p>
-            <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
-              {[
-                { q: 'Cât costă un site?', a: 'Prețurile variază în funcție de complex și funcționalități. Oferim pachete de la 1.000€ pentru site-uri de prezentare și de la 2.500€ pentru magazine online.' },
-                { q: 'Cât timp durează dezvoltarea?', a: 'Un site standard durează 4-8 săptămâni. E-commerce-urile și platformele complexe pot dura 10-16 săptămâni.' },
-                { q: 'Oferiți suport după lansare?', a: 'Da, oferim mentenanță inclusă prima lună, apoi pachete de suport de la 100€/lună.' },
-                { q: 'Cum funcționează procesul?', a: 'Discuție inițială → Propunere → Design → Development → Testing → Lansare → Suport continuu.' },
-              ].map((faq, i) => (
-                <div key={i} className="bg-card border border-border rounded-xl p-6 text-left">
-                  <h3 className="font-bold text-foreground mb-2">{faq.q}</h3>
-                  <p className="text-muted-foreground text-sm">{faq.a}</p>
-                </div>
-              ))}
             </div>
           </div>
         </section>
