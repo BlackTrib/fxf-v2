@@ -414,6 +414,56 @@ export default function ContactPage() {
             </div>
           </div>
         </section>
+
+        {/* FAQ Hosting */}
+        <section className="py-14 bg-secondary/30">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <h2 className="font-display text-3xl lg:text-4xl font-bold text-foreground mb-3 text-balance">
+                Întrebări frecvente despre hosting
+              </h2>
+              <p className="text-muted-foreground text-base max-w-2xl mx-auto leading-relaxed">
+                Răspunsuri la cele mai frecvente întrebări despre serviciile noastre de găzduire web.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              {[
+                { 
+                  q: 'Cum se face migrarea de la alt furnizor?', 
+                  a: 'Migrarea este complet gratuită! Echipa noastră se ocupă de transferul site-ului, bazei de date și email-urilor. În general, procesul durează 1-3 zile fără întreruperi pentru site-ul tău.' 
+                },
+                { 
+                  q: 'Care este diferența dintre pachete?', 
+                  a: 'Principala diferență este spațiul de stocare și resursele server (CPU/RAM). Pachete Web sunt ideale pentru site-uri mici, Business pentru WordPress/magazine medii, iar Performance pentru trafic intens cu resurse dedicate.' 
+                },
+                { 
+                  q: 'Ce este inclus în fiecare pachet?', 
+                  a: 'Toate pachetele includ: cPanel, SSL gratuit Let\'s Encrypt, backup 24/24h, protecție Imunify360, LiteSpeed Web Server, email nelimitat, și suport tehnic 24/7.' 
+                },
+                { 
+                  q: 'Cât durează activarea unui pachet?', 
+                  a: 'Activarea este instantanee! După plată, pachetul tău este activ în maxim 30 de minute. Dacă migrezi, echipa te contactează pentru a coordona transferul datelor.' 
+                },
+                { 
+                  q: 'Oferați garanție de uptime?', 
+                  a: 'Da, garantăm 99.9% uptime. Dacă nu respectăm această promisiune, primești credit proporțional cu orele de indisponibilitate.' 
+                },
+                { 
+                  q: 'Pot schimba pachetul ulterior?', 
+                  a: 'Absolut! Poți face upgrade sau downgrade oricând din panoul cPanel. Diferența de preț se va calcula proporțional pentru perioada rămasă.' 
+                },
+              ].map((faq, i) => (
+                <div key={i} className="bg-card border border-border rounded-xl p-6 hover:border-primary/20 transition-colors">
+                  <h3 className="font-bold text-foreground mb-2 flex items-start gap-2">
+                    <CheckCircle2 size={18} className="text-primary mt-0.5 shrink-0" />
+                    {faq.q}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{faq.a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </>
