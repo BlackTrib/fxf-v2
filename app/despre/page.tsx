@@ -44,7 +44,7 @@ const faqs = [
   },
   {
     q: 'Ce înseamnă backup 24 din 24 ore?',
-    a: 'Realizăm backup-uri automate la fiecare 24 de ore pentru toate conturile de hosting. Backup-urile sunt păstrate timp de 30 de zile și pot fi restaurate gratuit din panoul cPanel sau prin JetBackup.',
+    a: 'Realizăm backup-uri automate la fiecare 24 de ore pentru toate conturile de hosting. Backup-urile sunt păstrate timp de 7 zile și pot fi restaurate gratuit din panoul cPanel sau prin JetBackup.',
   },
   {
     q: 'Pot migra gratuit site-ul meu la FXF Web Hosting?',
