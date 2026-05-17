@@ -365,7 +365,7 @@ function GazduireWebVisual() {
         </div>
       </div>
       <div className="absolute top-4 right-4 bg-white/15 border border-white/20 rounded-xl px-3 py-2 backdrop-blur-sm animate-[float_3s_ease-in-out_infinite_0.5s]">
-        <p className="text-white font-bold text-sm">500+</p>
+        <p className="text-white font-bold text-sm">200+</p>
         <p className="text-white/50 text-[10px]">Clienți activi</p>
       </div>
       <div className="absolute bottom-6 left-4 bg-white/15 border border-white/20 rounded-xl px-3 py-2 backdrop-blur-sm animate-[float_3.5s_ease-in-out_infinite_1s] flex items-center gap-2">
