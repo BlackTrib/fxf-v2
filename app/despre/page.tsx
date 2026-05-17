@@ -1,34 +1,12 @@
-import type { Metadata } from 'next'
+'use client'
+
+import { useState } from 'react'
 import Link from 'next/link'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
-import { ArrowRight, Target, Zap, Heart, Clock, MapPin, Briefcase, CheckCircle2, ChevronDown } from 'lucide-react'
+import { ArrowRight, Target, Zap, Clock, MapPin, Briefcase, CheckCircle2, ChevronDown, HelpCircle } from 'lucide-react'
 import { PageHeroVisual } from '@/components/page-hero-visual'
-
-export const metadata: Metadata = {
-  title: 'Despre FXF Web Hosting | Găzduire Web Profesională România | Din 2021',
-  description:
-    'FXF Web Hosting - furnizor român de găzduire web din 2021. Servere SSD NVMe în Germania, uptime 99.9% garantat, suport tehnic 24/7. Peste 200 de clienți activi. Hosting pentru WordPress, PrestaShop, Magento.',
-  keywords: [
-    'fxf web hosting',
-    'gazduire web romania',
-    'despre fxf',
-    'hosting romania',
-    'furnizor hosting romania',
-    'gazduire web profesionala',
-    'hosting ssd nvme',
-    'web hosting bucuresti',
-    'gazduire site romania',
-  ],
-  openGraph: {
-    title: 'Despre FXF Web Hosting | Găzduire Web Profesională România',
-    description: 'FXF Web Hosting - furnizor român de găzduire web din 2021. Servere SSD NVMe, uptime 99.9%, suport 24/7. Peste 200 clienți activi.',
-    url: 'https://fxfweb.ro/despre',
-  },
-  alternates: {
-    canonical: 'https://fxfweb.ro/despre',
-  },
-}
+import { cn } from '@/lib/utils'
 
 const stats = [
   { number: '200+', label: 'Clienți Activi', desc: 'Site-uri găzduite pe serverele noastre' },
@@ -82,6 +60,8 @@ const timeline = [
 ]
 
 export default function DespreNoi() {
+  const [openFaq, setOpenFaq] = useState<number | null>(0)
+
   return (
     <>
       <Navbar />
@@ -312,27 +292,54 @@ export default function DespreNoi() {
 
         {/* FAQ Section with Schema */}
         <section className="py-14 bg-background">
-          <div className="max-w-4xl mx-auto px-6 lg:px-8">
-            <div className="text-center mb-10">
-              <p className="text-primary font-semibold text-sm uppercase tracking-widest mb-2">
-                Întrebări frecvente
-              </p>
-              <h2 className="font-display text-3xl font-bold text-primary mb-3">
-                Tot ce trebuie să știi despre FXF Web Hosting
-              </h2>
-            </div>
-            <div className="space-y-4">
-              {faqs.map((faq, i) => (
-                <details key={i} className="group bg-card border border-border rounded-xl overflow-hidden">
-                  <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
-                    <span className="font-semibold text-foreground text-sm pr-4">{faq.q}</span>
-                    <ChevronDown size={18} className="text-muted-foreground shrink-0 group-open:-rotate-180 transition-transform" />
-                  </summary>
-                  <div className="px-5 pb-5 text-muted-foreground text-sm leading-relaxed border-t border-border pt-4">
-                    {faq.a}
+          <div className="max-w-6xl mx-auto px-6 lg:px-8">
+            <div className="grid lg:grid-cols-3 gap-8">
+              {/* Left - Header */}
+              <div className="lg:col-span-1">
+                <p className="text-primary font-semibold text-xs uppercase tracking-widest mb-1">Întrebări frecvente</p>
+                <h2 className="font-display text-3xl lg:text-4xl font-bold text-primary mb-3">
+                  Tot ce trebuie să știi despre FXF
+                </h2>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-5">
+                  Răspunsuri la cele mai frecvente întrebări despre serviciile noastre de găzduire web, infrastructură și suport tehnic.
+                </p>
+                <div className="bg-secondary/50 border border-border rounded-xl p-4">
+                  <div className="flex items-start gap-3">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                      <HelpCircle size={18} className="text-primary" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-sm text-foreground mb-1">Nu găsești răspunsul?</p>
+                      <p className="text-xs text-muted-foreground mb-2">
+                        Echipa noastră de suport este disponibilă 24/7 pentru orice întrebare.
+                      </p>
+                      <Link href="/contact" className="text-xs font-semibold text-primary hover:text-accent-brand transition-colors">
+                        Contactează suportul →
+                      </Link>
+                    </div>
                   </div>
-                </details>
-              ))}
+                </div>
+              </div>
+
+              {/* Right - Accordion */}
+              <div className="lg:col-span-2">
+                <div className="space-y-2">
+                  {faqs.map((faq, i) => (
+                    <div key={i} className="border border-border rounded-lg overflow-hidden bg-card">
+                      <button
+                        className="w-full flex items-center justify-between gap-3 px-4 py-3 text-left hover:bg-secondary/30 transition-colors"
+                        onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                      >
+                        <span className="font-medium text-sm text-foreground">{faq.q}</span>
+                        <ChevronDown size={16} className={cn('text-muted-foreground shrink-0 transition-transform', openFaq === i && 'rotate-180')} />
+                      </button>
+                      <div className={cn('overflow-hidden transition-all duration-200', openFaq === i ? 'max-h-48' : 'max-h-0')}>
+                        <p className="px-4 pb-4 text-muted-foreground text-sm leading-relaxed">{faq.a}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
           {/* FAQ Schema Markup */}
