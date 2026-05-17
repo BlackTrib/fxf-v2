@@ -20,56 +20,71 @@ export const metadata: Metadata = {
 const packages = [
   {
     name: 'Start',
-    price: '55',
+    price: '99.00',
     period: '6 luni',
     desc: 'Ideal pentru site-uri mici de prezentare și bloguri personale.',
     features: [
-      { label: 'Spațiu SSD NVMe', value: '1 GB' },
-      { label: 'Domenii găzduite', value: 'Nelimitat' },
-      { label: 'Baze de date MySQL', value: 'Nelimitat' },
-      { label: 'Conturi email', value: 'Nelimitat' },
-      { label: 'Trafic lunar', value: 'Nelimitat' },
-      { label: 'Resurse CPU', value: '1 Core' },
-      { label: 'Memorie RAM', value: '1 GB' },
-      { label: 'cPanel + JetBackup', value: 'Inclus' },
+      { label: 'spațiu alocat', value: '3GB' },
+      { label: 'mediu stocare', value: 'NVMe' },
+      { label: 'domenii găzduite', value: 'nelimitat' },
+      { label: 'baze de date', value: 'nelimitat' },
+      { label: 'adrese de mail', value: 'nelimitat' },
+      { label: 'trafic lunar', value: 'nelimitat' },
+      { label: 'licență', value: "Let's Encrypt SSL" },
+      { label: 'share ip', value: 'ipv4 sau ipv6' },
+      { label: 'tools', value: 'cPanel + JetBackup' },
+      { label: 'plugins', value: 'LiteSpeed + Imunify' },
+      { label: 'backup', value: '24 din 24 ore' },
+      { label: 'info server', value: '1CPU / 1GB ram' },
+      { label: 'asistență ticket', value: '24/7' },
     ],
   },
   {
     name: 'Basic',
-    price: '97',
+    price: '148.00',
     period: '6 luni',
     desc: 'Perfect pentru site-uri în creștere cu mai mult conținut.',
     features: [
-      { label: 'Spațiu SSD NVMe', value: '3 GB' },
-      { label: 'Domenii găzduite', value: 'Nelimitat' },
-      { label: 'Baze de date MySQL', value: 'Nelimitat' },
-      { label: 'Conturi email', value: 'Nelimitat' },
-      { label: 'Trafic lunar', value: 'Nelimitat' },
-      { label: 'Resurse CPU', value: '1 Core' },
-      { label: 'Memorie RAM', value: '1.5 GB' },
-      { label: 'cPanel + JetBackup', value: 'Inclus' },
+      { label: 'spațiu alocat', value: '6GB' },
+      { label: 'mediu stocare', value: 'NVMe' },
+      { label: 'domenii găzduite', value: 'nelimitat' },
+      { label: 'baze de date', value: 'nelimitat' },
+      { label: 'adrese de mail', value: 'nelimitat' },
+      { label: 'trafic lunar', value: 'nelimitat' },
+      { label: 'licență', value: "Let's Encrypt SSL" },
+      { label: 'share ip', value: 'ipv4 sau ipv6' },
+      { label: 'tools', value: 'cPanel + JetBackup' },
+      { label: 'plugins', value: 'LiteSpeed + Imunify' },
+      { label: 'backup', value: '24 din 24 ore' },
+      { label: 'info server', value: '1CPU / 1GB ram' },
+      { label: 'asistență ticket', value: '24/7' },
     ],
   },
   {
     name: 'Business',
-    price: '207',
+    price: '199.00',
     period: '6 luni',
     desc: 'Recomandat pentru site-uri de afaceri și proiecte medii.',
     popular: true,
     features: [
-      { label: 'Spațiu SSD NVMe', value: '10 GB' },
-      { label: 'Domenii găzduite', value: 'Nelimitat' },
-      { label: 'Baze de date MySQL', value: 'Nelimitat' },
-      { label: 'Conturi email', value: 'Nelimitat' },
-      { label: 'Trafic lunar', value: 'Nelimitat' },
-      { label: 'Resurse CPU', value: '2 Core' },
-      { label: 'Memorie RAM', value: '2 GB' },
-      { label: 'cPanel + JetBackup', value: 'Inclus' },
+      { label: 'spațiu alocat', value: '9GB' },
+      { label: 'mediu stocare', value: 'NVMe' },
+      { label: 'domenii găzduite', value: 'nelimitat' },
+      { label: 'baze de date', value: 'nelimitat' },
+      { label: 'adrese de mail', value: 'nelimitat' },
+      { label: 'trafic lunar', value: 'nelimitat' },
+      { label: 'licență', value: "Let's Encrypt SSL" },
+      { label: 'share ip', value: 'ipv4 sau ipv6' },
+      { label: 'tools', value: 'cPanel + JetBackup' },
+      { label: 'plugins', value: 'LiteSpeed + Imunify' },
+      { label: 'backup', value: '24 din 24 ore' },
+      { label: 'info server', value: '2CPU / 2GB ram' },
+      { label: 'asistență ticket', value: '24/7' },
     ],
   },
   {
     name: 'Professional',
-    price: '345',
+    price: '345.00',
     period: '6 luni',
     desc: 'Pentru site-uri profesionale cu trafic în creștere.',
     features: [
@@ -85,7 +100,7 @@ const packages = [
   },
   {
     name: 'E-Commerce',
-    price: '455',
+    price: '455.00',
     period: '6 luni',
     desc: 'Optimizat pentru magazine online cu trafic mediu.',
     features: [
@@ -101,7 +116,7 @@ const packages = [
   },
   {
     name: 'Enterprise',
-    price: '621',
+    price: '621.00',
     period: '6 luni',
     desc: 'Putere maximă pentru aplicații și site-uri cu trafic intens.',
     features: [
@@ -188,9 +203,11 @@ export default function GazduireWebPage() {
                   </div>
                   <ul className="space-y-2 mb-6">
                     {pkg.features.map((f) => (
-                      <li key={f.label} className="flex items-center justify-between text-sm">
-                        <span className="text-muted-foreground">{f.label}</span>
-                        <span className="font-medium text-foreground">{f.value}</span>
+                      <li key={f.label} className="flex items-start gap-2 text-sm">
+                        <span className="w-1.5 h-1.5 rounded-full bg-accent-brand mt-1.5 shrink-0" />
+                        <span className="text-muted-foreground">
+                          {f.label} <span className="font-bold text-foreground">{f.value}</span>
+                        </span>
                       </li>
                     ))}
                   </ul>
