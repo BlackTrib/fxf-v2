@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
-import { ArrowRight, Zap, Heart, Clock, MapPin, Briefcase, CheckCircle2, HelpCircle } from 'lucide-react'
+import { ArrowRight, Target, Zap, Heart, Clock, MapPin, Briefcase, CheckCircle2, HelpCircle } from 'lucide-react'
 import { PageHeroVisual } from '@/components/page-hero-visual'
 
 export const metadata: Metadata = {
