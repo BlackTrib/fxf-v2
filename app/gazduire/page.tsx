@@ -143,7 +143,7 @@ const services = [
 
 const stats = [
   { value: '99.9%', label: 'Uptime garantat' },
-  { value: '500+', label: 'Clienți activi' },
+  { value: '200+', label: 'Clienți activi' },
   { value: '24/7', label: 'Suport tehnic' },
   { value: '5x', label: 'Mai rapid cu NVMe' },
 ]
