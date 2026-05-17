@@ -94,7 +94,7 @@ export function Navbar() {
                 'text-[8px] font-medium tracking-[0.48em] uppercase transition-colors',
                 transparent ? 'text-white/60' : 'text-muted-foreground'
               )}>
-                HOSTING
+                SOLUTION
               </span>
             </div>
           </Link>

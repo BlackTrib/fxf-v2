@@ -124,7 +124,7 @@ export function Footer() {
                 <div className="w-6 h-6 rounded-md bg-white/10 flex items-center justify-center">
                   <MapPin size={11} />
                 </div>
-                FXF Web Hosting SRL
+                FXF Creative Agency SRL
               </div>
             </div>
           </div>
