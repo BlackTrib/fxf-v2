@@ -196,6 +196,37 @@ export default function GazduirePerformancePage() {
           </div>
         </section>
 
+        {/* Platform config info */}
+        <section className="py-14 bg-background">
+          <div className="max-w-5xl mx-auto px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <h2 className="font-display text-2xl font-bold text-foreground mb-3">Fiecare pachet, configurat special pentru performance</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">Găzduirea performance nu este despre mai multă putere brută — este despre arhitectură. Fiecare plan FXF Performance este construit pentru a livra consiliență și viteză maximă sub presiune.</p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                {
+                  title: 'Resurse dedicate și izolate',
+                  desc: 'CPU și RAM alocate sunt exclusiv pentru contul tău, fără partajare cu alți clienți. Comportamentul oricărui alt site pe server nu va putea niciodată să-ți afecteze resursele sau disponibilitatea.',
+                },
+                {
+                  title: 'LiteSpeed Enterprise cu cache avansat',
+                  desc: 'LiteSpeed Web Server Enterprise oferă cache la nivel de server, suport HTTP/3 QUIC, și compresie Brotli. Combinat cu LSCache, rezultatul este viteză de încarcare sub 500ms chiar și pentru pagini complexe.',
+                },
+                {
+                  title: 'Backup frecvent și CDN global inclus',
+                  desc: 'Backup-urile sunt create de două ori pe zi și stocate redundant pe mai mult de o locație, iar CDN-ul inclus distribuie conținutul tău în 50+ țări, reducând latența pentru toți vizitatorii tăi.',
+                },
+              ].map((item) => (
+                <div key={item.title} className="bg-primary/5 border border-primary/15 rounded-2xl p-6">
+                  <h3 className="font-bold text-foreground mb-2 text-sm">{item.title}</h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* SEO Content */}
         <section className="py-14 bg-background">
           <div className="max-w-4xl mx-auto px-6 lg:px-8">
