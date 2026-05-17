@@ -8,30 +8,30 @@ const hostingPackages = [
   { 
     icon: Server, 
     title: 'Găzduire Start', 
-    desc: 'Ideal pentru site-uri de prezentare mici, bloguri și serviciul email. Perfect pentru a începe.',
-    price: '55',
+    desc: 'Ideal pentru site-uri de prezentare, bloguri și servicii email. Perfect pentru a începe.',
+    price: '99.00',
     period: '6 luni',
-    features: ['1GB NVMe SSD', 'Domenii nelimitate', 'Email nelimitat', 'cPanel + JetBackup', '1 CPU / 1GB RAM'],
+    features: ['3GB NVMe SSD', 'Domenii nelimitate', 'Email nelimitat', 'cPanel + JetBackup', '1CPU / 1GB ram'],
     href: '/gazduire/web', 
   },
   { 
     icon: HardDrive, 
     title: 'Găzduire Business', 
     desc: 'Perfect pentru proiecte medii, site-uri WordPress și aplicații web cu trafic moderat.',
-    price: '207',
+    price: '199.00',
     period: '6 luni',
-    features: ['10GB NVMe SSD', 'Domenii nelimitate', 'Email nelimitat', 'LiteSpeed + Imunify', '2 CPU / 2GB RAM'],
+    features: ['10GB NVMe SSD', 'Domenii nelimitate', 'Email nelimitat', 'LiteSpeed + Imunify', '2CPU / 2GB ram'],
     href: '/gazduire/web',
-    popular: true 
+    popular: true,
   },
   { 
     icon: ShoppingCart, 
-    title: 'Găzduire E-Commerce', 
-    desc: 'Creat special pentru magazine online PrestaShop, WooCommerce sau alte platforme e-commerce.',
-    price: '455',
+    title: 'Găzduire Corporate', 
+    desc: 'Creat special pentru magazine online, WooCommerce, PrestaShop și alte platforme e-commerce.',
+    price: '348.00',
     period: '6 luni',
-    features: ['30GB NVMe SSD', 'Domenii nelimitate', 'Email nelimitat', 'LiteSpeed + Imunify', '3 CPU / 3GB RAM'],
-    href: '/gazduire/prestashop' 
+    features: ['20GB NVMe SSD', 'Domenii nelimitate', 'Email nelimitat', 'LiteSpeed + Imunify', '2CPU / 2GB ram'],
+    href: '/gazduire/web',
   },
 ]
 

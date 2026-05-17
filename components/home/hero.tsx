@@ -95,7 +95,7 @@ export function Hero() {
             <p className="text-white/70 text-sm sm:text-base lg:text-lg leading-relaxed max-w-xl">
               FXF Web Hosting oferă servicii de găzduire web profesionale pe servere SSD NVMe 
               ultrarapide. Hosting optimizat pentru WordPress, PrestaShop și magazine online, 
-              cu cPanel, SSL gratuit și suport tehnic 24/7. Prețuri de la doar 55 lei/6 luni.
+              cu cPanel, SSL gratuit și suport tehnic 24/7. Prețuri de la doar 99 lei/6 luni.
             </p>
 
             {/* Features */}
@@ -157,7 +157,7 @@ export function Hero() {
                       <h3 className="font-display font-bold text-lg text-foreground mt-1">Găzduire Business</h3>
                     </div>
                     <div className="text-right">
-                      <p className="text-2xl font-bold text-primary">207 lei</p>
+                      <p className="text-2xl font-bold text-primary">199 lei</p>
                       <p className="text-xs text-muted-foreground">/6 luni</p>
                     </div>
                   </div>
@@ -169,8 +169,8 @@ export function Hero() {
                     { icon: HardDrive, label: 'Spațiu: 10GB NVMe SSD' },
                     { icon: Server, label: 'Domenii găzduite: Nelimitat' },
                     { icon: Zap, label: 'LiteSpeed + cPanel' },
-                    { icon: Shield, label: 'SSL Let\'s Encrypt gratuit' },
-                    { icon: Clock, label: 'Backup zilnic JetBackup' },
+                    { icon: Shield, label: "SSL Let's Encrypt gratuit" },
+                    { icon: Clock, label: 'Backup 24 din 24 ore' },
                     { icon: Headphones, label: 'Suport tehnic 24/7' },
                   ].map((f) => (
                     <div key={f.label} className="flex items-center gap-3 text-sm text-foreground/80">

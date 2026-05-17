@@ -6,7 +6,7 @@ import { Server, HardDrive, ShoppingCart, ShoppingBag, Rocket, ArrowRight, Check
 
 export const metadata: Metadata = {
   title: 'Servicii Găzduire Web România | FXF Web Hosting',
-  description: 'Găzduire web SSD NVMe, VPS și hosting optimizat pentru WordPress, PrestaShop, OpenCart și Magento. Prețuri de la 55 lei/6 luni. SSL gratuit, cPanel, suport 24/7.',
+  description: 'Găzduire web SSD NVMe, VPS și hosting optimizat pentru WordPress, PrestaShop, OpenCart și Magento. Prețuri de la 99 lei/6 luni. SSL gratuit, cPanel, suport 24/7.',
   keywords: [
     'găzduire web',
     'hosting românia',
@@ -37,7 +37,7 @@ const services = [
     icon: Server,
     title: 'Găzduire Web',
     subtitle: 'Pachete hosting SSD NVMe pentru orice tip de site',
-    desc: 'Găzduire web profesională pe servere ultrarapide SSD NVMe. Pachete de la 55 lei/6 luni cu SSL gratuit, cPanel, backup zilnic și suport tehnic 24/7. Ideal pentru site-uri de prezentare, bloguri și aplicații web.',
+    desc: 'Găzduire web profesională pe servere ultrarapide SSD NVMe. Pachete de la 99 lei/6 luni cu SSL gratuit, cPanel, backup 24/24h și suport tehnic 24/7. Ideal pentru site-uri de prezentare, bloguri și aplicații web.',
     features: [
       'Stocare SSD NVMe rapidă',
       'cPanel & LiteSpeed incluse',
@@ -46,7 +46,7 @@ const services = [
       'Domenii & email nelimitate',
       'Suport tehnic 24/7',
     ],
-    price: 'de la 55 lei/6 luni',
+    price: 'de la 99 lei/6 luni',
     color: 'bg-blue-50',
   },
   {
@@ -64,7 +64,7 @@ const services = [
       'Staging environment',
       'Optimizare automată',
     ],
-    price: 'de la 83 lei/6 luni',
+    price: 'de la 546 lei/6 luni',
     color: 'bg-cyan-50',
   },
   {
@@ -82,7 +82,7 @@ const services = [
       'Backup zilnic pentru siguranță',
       'SSL gratuit pentru plăți',
     ],
-    price: 'de la 83 lei/6 luni',
+    price: 'de la 546 lei/6 luni',
     color: 'bg-emerald-50',
   },
   {
@@ -97,10 +97,10 @@ const services = [
       'MySQL optimizat e-commerce',
       'LiteSpeed Cache inclus',
       'SSL gratuit pentru plăți',
-      'Backup zilnic automat',
+      'Backup 24 din 24 ore',
       'Suport specializat OpenCart',
     ],
-    price: 'de la 83 lei/6 luni',
+    price: 'de la 546 lei/6 luni',
     color: 'bg-amber-50',
   },
   {
@@ -118,7 +118,7 @@ const services = [
       'SSL gratuit pentru plăți',
       'Suport specializat Magento',
     ],
-    price: 'de la 207 lei/6 luni',
+    price: 'de la 546 lei/6 luni',
     color: 'bg-orange-50',
   },
   {
@@ -131,12 +131,12 @@ const services = [
     features: [
       'CPU & RAM garantate',
       'LiteSpeed Enterprise',
-      'Backup de 2x pe zi',
+      'Backup 24 din 24 ore',
       'Uptime 99.99% SLA',
-      'CDN inclus',
-      'Suport prioritar 30 min',
+      'ipv4 sau ipv6',
+      'Suport ticket 24/7',
     ],
-    price: 'de la 455 lei/6 luni',
+    price: 'de la 890 lei/6 luni',
     color: 'bg-rose-50',
   },
 ]

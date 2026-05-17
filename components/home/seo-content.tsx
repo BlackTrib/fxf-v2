@@ -28,7 +28,7 @@ export function SEOContent() {
             <div className="prose prose-sm max-w-none text-muted-foreground space-y-3">
               <p>
                 <strong>FXF Web Hosting</strong> oferă servicii de găzduire web profesionale pe servere 
-                SSD NVMe ultrarapide localizate în Germania. Cu peste 4 ani de experiență și 500+ site-uri 
+                SSD NVMe ultrarapide localizate în Germania. Cu peste 5 ani de experiență și 200+ site-uri 
                 găzduite, suntem alegerea potrivită pentru afacerea ta online, indiferent de dimensiune.
               </p>
               <p>
