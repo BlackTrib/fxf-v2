@@ -115,18 +115,16 @@ export default function ContactPage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="text-white/50 font-semibold text-sm uppercase tracking-widest mb-3">
-                  Contact FXF Web Solution
+                  Contact FXF Web Hosting
                 </p>
                 <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-5 text-balance">
-                  Contactează-ne pentru găzduire web de calitate
+                  Găsești soluția de hosting potrivită?
                 </h1>
                 <p className="text-white/70 text-lg leading-relaxed mb-4">
-                  Consultanța inițială este 100% gratuită și fără obligații. Spune-ne despre necesitățile tale 
-                  și oferim recomandări personalizate pentru soluția de găzduire potrivită.
+                  Completează formularul cu detaliile tale și echipa noastră de specialiști în hosting îți va contacta în 24 de ore cu o ofertă personalizată. Consultația este complet gratuită și fără obligații.
                 </p>
                 <p className="text-white/50 text-sm">
-                  Răspundem la toate solicitările în maxim 4 ore lucrative. Găzduire web SSD, WordPress, 
-                  PrestaShop, domenii, VPS - avem soluția pentru fiecare nevoie.
+                  Oferim hosting SSD NVMe pentru WordPress, PrestaShop, OpenCart, Magento, pachete Performance cu resurse dedicate și multe altele. Găzduire de calitate enterprise cu suport 24/7 și uptime garantat 99.9%.
                 </p>
               </div>
               <PageHeroVisual page="contact" />
