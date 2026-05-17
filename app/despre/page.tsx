@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
-import { ArrowRight, Target, Zap, Heart, Clock, MapPin, Briefcase, CheckCircle2, HelpCircle } from 'lucide-react'
+import { ArrowRight, Target, Zap, Heart, Clock, MapPin, Briefcase, CheckCircle2, ChevronDown } from 'lucide-react'
 import { PageHeroVisual } from '@/components/page-hero-visual'
 
 export const metadata: Metadata = {
@@ -326,7 +326,7 @@ export default function DespreNoi() {
                 <details key={i} className="group bg-card border border-border rounded-xl overflow-hidden">
                   <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
                     <span className="font-semibold text-foreground text-sm pr-4">{faq.q}</span>
-                    <HelpCircle size={18} className="text-muted-foreground shrink-0 group-open:rotate-45 transition-transform" />
+                    <ChevronDown size={18} className="text-muted-foreground shrink-0 group-open:-rotate-180 transition-transform" />
                   </summary>
                   <div className="px-5 pb-5 text-muted-foreground text-sm leading-relaxed border-t border-border pt-4">
                     {faq.a}
