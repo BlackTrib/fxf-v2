@@ -11,14 +11,24 @@ import { PageHeroVisual } from '@/components/page-hero-visual'
 // See app/contact/metadata.ts
 
 const services = [
-  'Găzduire Web SSD',
+  'Găzduire Web SSD NVMe',
   'Găzduire WordPress',
   'Găzduire PrestaShop',
-  'Găzduire Magazin Online (E-Commerce)',
-  'Domenii Web',
-  'VPS Cloud',
+  'Găzduire OpenCart',
+  'Găzduire Magento',
+  'Găzduire Performance',
+  'Înregistrare Domeniu',
+  'Transfer Domeniu',
   'Certificat SSL',
   'Migrare Site Web',
+  'Altele',
+]
+
+const periods = [
+  '6 luni',
+  '12 luni',
+  '24 luni',
+  'Nu știu încă',
 ]
 
 const contactInfo = [
@@ -46,7 +56,7 @@ export default function ContactPage() {
     phone: '',
     company: '',
     service: '',
-    budget: '',
+    period: '',
     message: '',
   })
 
@@ -84,7 +94,7 @@ export default function ContactPage() {
       
       if (data.success) {
         setSent(true)
-        setForm({ name: '', email: '', phone: '', company: '', service: '', budget: '', message: '' })
+        setForm({ name: '', email: '', phone: '', company: '', service: '', period: '', message: '' })
       } else {
         alert('Eroare la trimitere. Încearcă din nou.')
       }
@@ -223,7 +233,7 @@ export default function ContactPage() {
                     className="bg-card border border-border rounded-2xl p-8 lg:p-10 shadow-sm hover:shadow-md transition-shadow"
                   >
                     <h2 className="font-display font-bold text-2xl text-foreground mb-8">
-                      Ofertă Gratuită
+                      Solicită o ofertă de hosting
                     </h2>
 
                     {/* Row 1 */}
@@ -315,22 +325,20 @@ export default function ContactPage() {
                         </select>
                       </div>
                       <div>
-                        <label htmlFor="budget" className="block text-sm font-semibold text-foreground mb-2.5">
-                          Buget estimat
+                        <label htmlFor="period" className="block text-sm font-semibold text-foreground mb-2.5">
+                          Perioadă dorită
                         </label>
                         <select
-                          id="budget"
-                          name="budget"
-                          value={form.budget}
+                          id="period"
+                          name="period"
+                          value={form.period}
                           onChange={handleChange}
                           className="w-full bg-background border border-border rounded-xl px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"
                         >
-                          <option value="">Nu sunt sigur</option>
-                          <option value="sub-1000">Sub 1.000 EUR</option>
-                          <option value="1000-3000">1.000 EUR – 3.000 EUR</option>
-                          <option value="3000-6000">3.000 EUR – 6.000 EUR</option>
-                          <option value="6000-10000">6.000 EUR – 10.000 EUR</option>
-                          <option value="peste-10000">Peste 10.000 EUR</option>
+                          <option value="">Selectează perioada</option>
+                          {periods.map((p) => (
+                            <option key={p} value={p}>{p}</option>
+                          ))}
                         </select>
                       </div>
                     </div>
@@ -347,7 +355,7 @@ export default function ContactPage() {
                         rows={6}
                         value={form.message}
                         onChange={handleChange}
-                        placeholder="Spune-ne despre afacerea ta, obiectivele actuale și ce vrei să realizezi cu ajutorul nostru..."
+                        placeholder="Ex: Am nevoie de hosting WordPress pentru magazinul meu online cu ~500 produse, sau hosting pentru un site de prezentare cu trafic mediu..."
                         className="w-full bg-background border border-border rounded-xl px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all resize-none"
                       />
                     </div>
