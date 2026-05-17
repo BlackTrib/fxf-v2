@@ -6,8 +6,8 @@ import { Rocket, ArrowRight, HardDrive, Shield, Clock, Headphones, Zap, Database
 import { PageHeroVisual } from '@/components/page-hero-visual'
 
 export const metadata: Metadata = {
-  title: 'Găzduire Performance România | Hosting Premium de la 455 lei | FXF',
-  description: 'Găzduire Performance cu resurse CPU și RAM dedicate. LiteSpeed Enterprise, backup 2x/zi, CDN inclus, uptime 99.99% SLA. Suport prioritar 24/7!',
+  title: 'Găzduire Performance România | Hosting Premium de la 890 lei | FXF',
+  description: 'Găzduire Performance cu resurse CPU și RAM dedicate. LiteSpeed Enterprise, backup 24/24h, uptime 99.99% SLA. Suport prioritar 24/7!',
   keywords: ['găzduire performance', 'hosting premium', 'găzduire resurse dedicate', 'hosting enterprise', 'găzduire rapidă'],
   openGraph: {
     title: 'Găzduire Performance România | Hosting Premium de la 455 lei | FXF',
@@ -20,67 +20,87 @@ export const metadata: Metadata = {
 const packages = [
   {
     name: 'Performance Start',
-    price: '455',
+    price: '890.00',
     period: '6 luni',
-    desc: 'Pentru site-uri cu trafic în creștere și cerințe de performanță.',
+    desc: 'Pentru site-uri cu trafic mediu și cerințe de performanță ridicată.',
     features: [
-      { label: 'Spațiu SSD NVMe', value: '40 GB' },
-      { label: 'Domenii găzduite', value: 'Nelimitat' },
-      { label: 'Baze de date MySQL', value: 'Nelimitat' },
-      { label: 'Conturi email', value: 'Nelimitat' },
-      { label: 'Trafic lunar', value: 'Nelimitat' },
-      { label: 'Resurse CPU', value: '4 Core (garantat)' },
-      { label: 'Memorie RAM', value: '4 GB (garantat)' },
-      { label: 'Backup 2x/zi', value: 'Inclus' },
+      { label: 'spațiu alocat', value: '100GB' },
+      { label: 'mediu stocare', value: 'NVMe' },
+      { label: 'domenii găzduite', value: 'nelimitat' },
+      { label: 'baze de date', value: 'nelimitat' },
+      { label: 'adrese de mail', value: 'nelimitat' },
+      { label: 'trafic lunar', value: 'nelimitat' },
+      { label: 'licență', value: "Let's Encrypt SSL" },
+      { label: 'share ip', value: 'ipv4 sau ipv6' },
+      { label: 'tools', value: 'cPanel + JetBackup' },
+      { label: 'plugins', value: 'LiteSpeed + Imunify' },
+      { label: 'backup', value: '24 din 24 ore' },
+      { label: 'info server', value: '4CPU / 4GB ram' },
+      { label: 'asistență ticket', value: '24/7' },
     ],
   },
   {
     name: 'Performance Pro',
-    price: '621',
+    price: '1,076.00',
     period: '6 luni',
-    desc: 'Ideal pentru aplicații complexe și magazine online mari.',
+    desc: 'Ideal pentru aplicații complexe și magazine online cu trafic ridicat.',
     popular: true,
     features: [
-      { label: 'Spațiu SSD NVMe', value: '70 GB' },
-      { label: 'Domenii găzduite', value: 'Nelimitat' },
-      { label: 'Baze de date MySQL', value: 'Nelimitat' },
-      { label: 'Conturi email', value: 'Nelimitat' },
-      { label: 'Trafic lunar', value: 'Nelimitat' },
-      { label: 'Resurse CPU', value: '6 Core (garantat)' },
-      { label: 'Memorie RAM', value: '6 GB (garantat)' },
-      { label: 'CDN inclus', value: 'Da' },
+      { label: 'spațiu alocat', value: '150GB' },
+      { label: 'mediu stocare', value: 'NVMe' },
+      { label: 'domenii găzduite', value: 'nelimitat' },
+      { label: 'baze de date', value: 'nelimitat' },
+      { label: 'adrese de mail', value: 'nelimitat' },
+      { label: 'trafic lunar', value: 'nelimitat' },
+      { label: 'licență', value: "Let's Encrypt SSL" },
+      { label: 'share ip', value: 'ipv4 sau ipv6' },
+      { label: 'tools', value: 'cPanel + JetBackup' },
+      { label: 'plugins', value: 'LiteSpeed + Imunify' },
+      { label: 'backup', value: '24 din 24 ore' },
+      { label: 'info server', value: '6CPU / 4GB ram' },
+      { label: 'asistență ticket', value: '24/7' },
     ],
   },
   {
     name: 'Performance Business',
-    price: '899',
+    price: '1,291.00',
     period: '6 luni',
-    desc: 'Pentru proiecte enterprise cu trafic intens.',
+    desc: 'Pentru proiecte enterprise cu trafic intens și cerințe premium.',
     features: [
-      { label: 'Spațiu SSD NVMe', value: '100 GB' },
-      { label: 'Domenii găzduite', value: 'Nelimitat' },
-      { label: 'Baze de date MySQL', value: 'Nelimitat' },
-      { label: 'Conturi email', value: 'Nelimitat' },
-      { label: 'Trafic lunar', value: 'Nelimitat' },
-      { label: 'Resurse CPU', value: '8 Core (garantat)' },
-      { label: 'Memorie RAM', value: '8 GB (garantat)' },
-      { label: 'Suport prioritar', value: '< 30 min' },
+      { label: 'spațiu alocat', value: '200GB' },
+      { label: 'mediu stocare', value: 'NVMe' },
+      { label: 'domenii găzduite', value: 'nelimitat' },
+      { label: 'baze de date', value: 'nelimitat' },
+      { label: 'adrese de mail', value: 'nelimitat' },
+      { label: 'trafic lunar', value: 'nelimitat' },
+      { label: 'licență', value: "Let's Encrypt SSL" },
+      { label: 'share ip', value: 'ipv4 sau ipv6' },
+      { label: 'tools', value: 'cPanel + JetBackup' },
+      { label: 'plugins', value: 'LiteSpeed + Imunify' },
+      { label: 'backup', value: '24 din 24 ore' },
+      { label: 'info server', value: '6CPU / 6GB ram' },
+      { label: 'asistență ticket', value: '24/7' },
     ],
   },
   {
     name: 'Performance Enterprise',
-    price: '1299',
+    price: '1,738.00',
     period: '6 luni',
-    desc: 'Putere maximă pentru cele mai exigente proiecte.',
+    desc: 'Putere maximă pentru cele mai exigente proiecte enterprise.',
     features: [
-      { label: 'Spațiu SSD NVMe', value: '150 GB' },
-      { label: 'Domenii găzduite', value: 'Nelimitat' },
-      { label: 'Baze de date MySQL', value: 'Nelimitat' },
-      { label: 'Conturi email', value: 'Nelimitat' },
-      { label: 'Trafic lunar', value: 'Nelimitat' },
-      { label: 'Resurse CPU', value: '12 Core (garantat)' },
-      { label: 'Memorie RAM', value: '12 GB (garantat)' },
-      { label: 'Manager dedicat', value: 'Inclus' },
+      { label: 'spațiu alocat', value: '300GB' },
+      { label: 'mediu stocare', value: 'NVMe' },
+      { label: 'domenii găzduite', value: 'nelimitat' },
+      { label: 'baze de date', value: 'nelimitat' },
+      { label: 'adrese de mail', value: 'nelimitat' },
+      { label: 'trafic lunar', value: 'nelimitat' },
+      { label: 'licență', value: "Let's Encrypt SSL" },
+      { label: 'share ip', value: 'ipv4 sau ipv6' },
+      { label: 'tools', value: 'cPanel + JetBackup' },
+      { label: 'plugins', value: 'LiteSpeed + Imunify' },
+      { label: 'backup', value: '24 din 24 ore' },
+      { label: 'info server', value: '8CPU / 8GB ram' },
+      { label: 'asistență ticket', value: '24/7' },
     ],
   },
 ]
@@ -154,9 +174,11 @@ export default function GazduirePerformancePage() {
                   </div>
                   <ul className="space-y-2 mb-6">
                     {pkg.features.map((f) => (
-                      <li key={f.label} className="flex items-center justify-between text-sm">
-                        <span className="text-muted-foreground">{f.label}</span>
-                        <span className="font-medium text-foreground">{f.value}</span>
+                      <li key={f.label} className="flex items-start gap-2 text-sm">
+                        <span className="w-1.5 h-1.5 rounded-full bg-accent-brand mt-1.5 shrink-0" />
+                        <span className="text-muted-foreground">
+                          {f.label} <span className="font-bold text-foreground">{f.value}</span>
+                        </span>
                       </li>
                     ))}
                   </ul>
