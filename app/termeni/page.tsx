@@ -5,6 +5,13 @@ import { Footer } from '@/components/footer'
 export const metadata: Metadata = {
   title: 'Termeni și Condiții | FXF Web Hosting România',
   description: 'Termenii și condițiile de utilizare a serviciilor de găzduire web FXF Web Hosting. Informații despre plăți, servicii, backup-uri și drepturi utilizator.',
+  alternates: {
+    canonical: 'https://fxfweb.ro/termeni',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export default function TermeniPage() {

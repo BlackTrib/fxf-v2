@@ -1,9 +1,17 @@
+import type { Metadata } from 'next'
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
-export const metadata = {
-  title: 'Servicii - Găzduire Web, Servere VPS și Dedicate | FXF',
+export const metadata: Metadata = {
+  title: 'Servicii - Găzduire Web, Servere VPS și Dedicate | FXF Web Hosting',
   description: 'Explorează serviciile noastre: Găzduire Web, Servere VPS, Servere Dedicate și soluții e-commerce. Găzduire WordPress, PrestaShop, OpenCart, Magento și Performance.',
+  alternates: {
+    canonical: 'https://fxfweb.ro/servicii',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function ServiciiPage() {

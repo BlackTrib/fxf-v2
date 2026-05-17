@@ -29,10 +29,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Web Design București | Creare Site Profesional | FXF',
     description: 'Creăm site-uri profesionale în București care convertesc vizitatori în clienți. Design modern, cod curat, PageSpeed 90+.',
-    url: 'https://fxf.ro/servicii/web-design',
+    url: 'https://fxfweb.ro/servicii/web-design',
   },
   alternates: {
-    canonical: 'https://fxf.ro/servicii/web-design',
+    canonical: 'https://fxfweb.ro/servicii/web-design',
   },
 }
 
@@ -44,10 +44,10 @@ const serviceSchema = {
   provider: {
     '@type': 'Organization',
     name: 'FXF Web Solution',
-    url: 'https://fxf.ro',
+    url: 'https://fxfweb.ro',
   },
   areaServed: { '@type': 'City', name: 'București' },
-  url: 'https://fxf.ro/servicii/web-design',
+  url: 'https://fxfweb.ro/servicii/web-design',
   serviceType: 'Web Design',
 }
 

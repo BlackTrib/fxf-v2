@@ -32,10 +32,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Creare Magazin Online București | E-Commerce | FXF',
     description: 'Magazine online cu WooCommerce, PrestaShop sau Shopify care vând 24/7. Plăți online, gestionare stoc și curierat integrat în București.',
-    url: 'https://fxf.ro/servicii/magazin-online',
+    url: 'https://fxfweb.ro/servicii/magazin-online',
   },
   alternates: {
-    canonical: 'https://fxf.ro/servicii/magazin-online',
+    canonical: 'https://fxfweb.ro/servicii/magazin-online',
   },
 }
 
@@ -136,10 +136,10 @@ const serviceSchema = {
   provider: {
     '@type': 'Organization',
     name: 'FXF Web Solution',
-    url: 'https://fxf.ro',
+    url: 'https://fxfweb.ro',
   },
   areaServed: { '@type': 'City', name: 'București' },
-  url: 'https://fxf.ro/servicii/magazin-online',
+  url: 'https://fxfweb.ro/servicii/magazin-online',
   serviceType: 'E-Commerce Development',
 }
 

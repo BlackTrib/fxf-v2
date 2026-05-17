@@ -29,10 +29,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Google Ads București | Campanii PPC & ROI | FXF Web',
     description: 'Campanii Google Ads în București care aduc clienți, nu doar clicuri. ROI măsurabil, rapoarte transparente și optimizare continuă.',
-    url: 'https://fxf.ro/servicii/google-ads',
+    url: 'https://fxfweb.ro/servicii/google-ads',
   },
   alternates: {
-    canonical: 'https://fxf.ro/servicii/google-ads',
+    canonical: 'https://fxfweb.ro/servicii/google-ads',
   },
 }
 
@@ -135,10 +135,10 @@ const serviceSchema = {
   provider: {
     '@type': 'Organization',
     name: 'FXF Web Solution',
-    url: 'https://fxf.ro',
+    url: 'https://fxfweb.ro',
   },
   areaServed: { '@type': 'City', name: 'București' },
-  url: 'https://fxf.ro/servicii/google-ads',
+  url: 'https://fxfweb.ro/servicii/google-ads',
   serviceType: 'Google Ads PPC',
 }
 

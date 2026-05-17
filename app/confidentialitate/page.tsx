@@ -5,6 +5,13 @@ import { Footer } from '@/components/footer'
 export const metadata: Metadata = {
   title: 'Politica de Confidențialitate GDPR | FXF Web Hosting',
   description: 'Politica de confidențialitate și protecția datelor personale la FXF Web Hosting. Conformitate GDPR completă. Transparență totală privind colectarea și prelucrarea datelor.',
+  alternates: {
+    canonical: 'https://fxfweb.ro/confidentialitate',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export default function ConfidentialitaterPage() {

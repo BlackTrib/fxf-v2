@@ -29,10 +29,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Mentenanță Website București | Suport Tehnic | FXF',
     description: 'Actualizări, backup-uri, securitate și suport tehnic 24/7 pentru site-ul tău din București. Pachete de la 100 lei/lună.',
-    url: 'https://fxf.ro/servicii/mentenanta-web',
+    url: 'https://fxfweb.ro/servicii/mentenanta-web',
   },
   alternates: {
-    canonical: 'https://fxf.ro/servicii/mentenanta-web',
+    canonical: 'https://fxfweb.ro/servicii/mentenanta-web',
   },
 }
 

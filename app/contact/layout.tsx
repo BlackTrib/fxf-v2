@@ -16,10 +16,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Contact | Solicită Ofertă Gratuită | FXF București',
     description: 'Contactează FXF pentru web design și SEO în București. Consultanță gratuită, răspuns în 24h. Telefon: +40 785 277 566.',
-    url: 'https://fxf.ro/contact',
+    url: 'https://fxfweb.ro/contact',
   },
   alternates: {
-    canonical: 'https://fxf.ro/contact',
+    canonical: 'https://fxfweb.ro/contact',
   },
 }
 

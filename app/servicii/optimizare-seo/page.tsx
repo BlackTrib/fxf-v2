@@ -31,10 +31,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'SEO București | Optimizare Google | FXF Web Solution',
     description: 'Creștem vizibilitatea afacerii tale pe Google din București. Audit SEO, optimizare on-page, conținut și link building cu rezultate măsurabile.',
-    url: 'https://fxf.ro/servicii/optimizare-seo',
+    url: 'https://fxfweb.ro/servicii/optimizare-seo',
   },
   alternates: {
-    canonical: 'https://fxf.ro/servicii/optimizare-seo',
+    canonical: 'https://fxfweb.ro/servicii/optimizare-seo',
   },
 }
 
@@ -46,10 +46,10 @@ const serviceSchema = {
   provider: {
     '@type': 'Organization',
     name: 'FXF Web Solution',
-    url: 'https://fxf.ro',
+    url: 'https://fxfweb.ro',
   },
   areaServed: { '@type': 'City', name: 'București' },
-  url: 'https://fxf.ro/servicii/optimizare-seo',
+  url: 'https://fxfweb.ro/servicii/optimizare-seo',
   serviceType: 'SEO',
 }
 
