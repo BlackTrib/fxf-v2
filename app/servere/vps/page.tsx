@@ -6,11 +6,11 @@ import { Cloud, ArrowRight, Check, Server, Shield, Zap, Settings, HardDrive, Glo
 import { PageHeroVisual } from '@/components/page-hero-visual'
 
 export const metadata: Metadata = {
-  title: 'VPS Cloud România | Servere Virtuale Private de la 150 lei | FXF',
-  description: 'Servere VPS cloud cu resurse dedicate. Root access, SSD NVMe, IP dedicat, alegere OS Linux/Windows. Scalare flexibilă și suport 24/7. De la 150 lei/lună.',
-  keywords: ['vps românia', 'server virtual', 'vps cloud', 'vps ssd', 'server vps', 'cloud hosting'],
+  title: 'VPS Cloud România | Servere Virtuale AMD EPYC de la 15 EUR | FXF',
+  description: 'Servere VPS cloud cu procesoare AMD EPYC, resurse dedicate și SSD NVMe. Root access, IP dedicat, scalare flexibilă și suport 24/7. De la 15 EUR/lună.',
+  keywords: ['vps românia', 'server virtual', 'vps cloud', 'vps ssd', 'server vps', 'vps epyc', 'cloud hosting'],
   openGraph: {
-    title: 'VPS Cloud România | Servere Virtuale Private de la 150 lei | FXF',
+    title: 'VPS Cloud România | Servere Virtuale Private de la 15 EUR | FXF',
     description: 'Servere VPS cu resurse dedicate, root access și SSD NVMe.',
     url: 'https://fxfweb.ro/servere/vps',
   },
@@ -25,10 +25,10 @@ const features = [
 ]
 
 const packages = [
-  { name: 'VPS Start', price: '150', cpu: '2 vCPU', ram: '4GB', storage: '50GB NVMe', bandwidth: '2TB', desc: 'Perfect pentru proiecte mici și dezvoltare.' },
-  { name: 'VPS Pro', price: '299', cpu: '4 vCPU', ram: '8GB', storage: '100GB NVMe', bandwidth: '4TB', popular: true, desc: 'Ideal pentru aplicații web și site-uri cu trafic mediu.' },
-  { name: 'VPS Business', price: '499', cpu: '6 vCPU', ram: '16GB', storage: '200GB NVMe', bandwidth: '8TB', desc: 'Pentru proiecte business și baze de date.' },
-  { name: 'VPS Enterprise', price: '899', cpu: '8 vCPU', ram: '32GB', storage: '400GB NVMe', bandwidth: 'Nelimitat', desc: 'Putere maximă pentru aplicații enterprise.' },
+  { name: 'VPS22', price: '15', cpu: '2 vCPU AMD', ram: '4GB', storage: '80GB NVMe', bandwidth: '2TB', desc: 'Perfect pentru proiecte mici și dezvoltare.' },
+  { name: 'VPS32', price: '25', cpu: '4 vCPU AMD', ram: '8GB', storage: '160GB NVMe', bandwidth: '4TB', popular: true, desc: 'Ideal pentru aplicații web și site-uri cu trafic mediu.' },
+  { name: 'VPS42', price: '45', cpu: '8 vCPU AMD', ram: '16GB', storage: '320GB NVMe', bandwidth: '8TB', desc: 'Pentru proiecte business și baze de date.' },
+  { name: 'VPS52', price: '75', cpu: '12 vCPU AMD', ram: '24GB', storage: '480GB NVMe', bandwidth: 'Nelimitat', desc: 'Putere maximă pentru aplicații enterprise și trafic intens.' },
 ]
 
 const benefits = [
@@ -108,9 +108,9 @@ export default function VPSPage() {
                   <div className="text-center mb-6">
                     <h3 className="font-display text-lg font-bold text-foreground mb-2">{pkg.name}</h3>
                     <p className="text-xs text-muted-foreground mb-4 min-h-[32px]">{pkg.desc}</p>
-                    <div className="flex items-baseline justify-center gap-1">
+                  <div className="flex items-baseline justify-center gap-1">
                       <span className="text-3xl font-bold text-primary">{pkg.price}</span>
-                      <span className="text-muted-foreground text-sm">lei/lună</span>
+                      <span className="text-muted-foreground text-sm">EUR/lună</span>
                     </div>
                   </div>
                   <ul className="space-y-2 mb-6">

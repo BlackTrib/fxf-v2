@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
-import { Cloud, Cpu, ArrowRight, Check, Zap, Shield, Clock, Headphones, Server, HardDrive } from 'lucide-react'
+import { Cloud, Cpu, HardDrive, ArrowRight, Check, Zap, Shield, Clock, Headphones, Server } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Servere VPS și Dedicate România | FXF Web Hosting',
@@ -42,7 +42,7 @@ const servers = [
       'IP dedicat inclus',
       'Scalare flexibilă',
     ],
-    price: 'de la 150 lei/lună',
+    price: 'de la 15 EUR/lună',
     color: 'bg-indigo-50',
   },
   {
@@ -62,6 +62,24 @@ const servers = [
     ],
     price: 'de la 499 lei/lună',
     color: 'bg-purple-50',
+  },
+  {
+    id: 'storage',
+    href: '/servere/storage',
+    icon: HardDrive,
+    title: 'Cloud Storage',
+    subtitle: 'Stocare sigură și backup automat',
+    desc: 'Servicii de cloud storage cu redundanță completă, backup automat zilnic și criptare end-to-end. Acces datelor tale de oriunde, cu securitate și conformitate GDPR. Ideal pentru backupuri importante și partajare de fișiere.',
+    features: [
+      'Stocare redundantă 3 locații',
+      'Backup automat zilnic',
+      'Criptare AES-256',
+      'Acces API și WebDAV',
+      'Partajare securizată',
+      'Version control fișiere',
+    ],
+    price: 'de la 10 EUR/lună',
+    color: 'bg-green-50',
   },
 ]
 
