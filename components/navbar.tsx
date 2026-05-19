@@ -17,6 +17,7 @@ const gazduireServices = [
 const servereServices = [
   { href: '/servere/vps', label: 'VPS Cloud', icon: Cloud },
   { href: '/servere/dedicat', label: 'Servere Dedicate', icon: Cpu },
+  { href: '/servere/storage', label: 'Cloud Storage', icon: HardDrive },
 ]
 
 const links = [
