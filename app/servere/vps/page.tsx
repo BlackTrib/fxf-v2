@@ -20,9 +20,8 @@ export const metadata: Metadata = {
 const packages = [
   {
     name: 'VPS Pro Start',
-    price: '25',
-    price6months: '1.092',
-    period: 'lună',
+    price: '1.092',
+    period: '6 luni',
     desc: 'Ideal pentru aplicații web și site-uri cu trafic mediu.',
     popular: true,
     features: [
@@ -41,9 +40,8 @@ const packages = [
   },
   {
     name: 'VPS Pro Business',
-    price: '45',
-    price6months: '2.184',
-    period: 'lună',
+    price: '2.184',
+    period: '6 luni',
     desc: 'Pentru proiecte business și baze de date.',
     features: [
       { label: 'procesor', value: '8 vCPU AMD EPYC' },
@@ -61,9 +59,8 @@ const packages = [
   },
   {
     name: 'VPS Pro Advanced',
-    price: '75',
-    price6months: '3.216',
-    period: 'lună',
+    price: '3.216',
+    period: '6 luni',
     desc: 'Putere pentru aplicații enterprise și trafic intens.',
     features: [
       { label: 'procesor', value: '12 vCPU AMD EPYC' },
@@ -81,9 +78,8 @@ const packages = [
   },
   {
     name: 'VPS Pro Enterprise',
-    price: '120',
-    price6months: '5.312',
-    period: 'lună',
+    price: '5.312',
+    period: '6 luni',
     desc: 'Maxim de performanță pentru proiecte critice.',
     features: [
       { label: 'procesor', value: '16 vCPU AMD EPYC' },
@@ -164,11 +160,8 @@ export default function VPSPage() {
                     <h3 className="font-display text-lg font-bold text-foreground mb-1">{pkg.name}</h3>
                     <p className="text-xs text-muted-foreground mb-3 min-h-[32px]">{pkg.desc}</p>
                     <div className="flex items-baseline justify-center gap-1">
-                      <span className="text-3xl font-bold text-primary">{pkg.price}</span>
-                      <span className="text-muted-foreground text-sm">EUR/{pkg.period}</span>
-                    </div>
-                    <div className="text-xs text-muted-foreground mt-2 pt-2 border-t border-border">
-                      {pkg.price6months} lei / 6 luni
+                      <span className="text-4xl font-bold text-primary">{pkg.price}</span>
+                      <span className="text-muted-foreground">lei/{pkg.period}</span>
                     </div>
                   </div>
                   <ul className="space-y-1.5 mb-5">
