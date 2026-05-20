@@ -6,8 +6,8 @@ import { Cloud, ArrowRight, Server, Shield, Zap, Settings, HardDrive, Globe, Cpu
 import { PageHeroVisual } from '@/components/page-hero-visual'
 
 export const metadata: Metadata = {
-  title: 'VPS Cloud România | Servere Virtuale AMD EPYC de la 15 EUR | FXF',
-  description: 'Servere VPS cloud cu procesoare AMD EPYC, resurse dedicate și SSD NVMe. Root access, IP dedicat, scalare flexibilă și suport 24/7. De la 15 EUR/lună.',
+  title: 'VPS Cloud România | Servere Virtuale AMD EPYC de la 25 EUR | FXF',
+  description: 'Servere VPS cloud cu procesoare AMD EPYC, resurse dedicate și SSD NVMe. Root access, IP dedicat IPv4, scalare flexibilă și suport 24/7. De la 25 EUR/lună. Linux: Ubuntu, Debian, AlmaLinux.',
   keywords: ['vps românia', 'server virtual', 'vps cloud', 'vps ssd', 'server vps', 'vps epyc', 'cloud hosting'],
   openGraph: {
     title: 'VPS Cloud România | Servere Virtuale Private de la 15 EUR | FXF',
@@ -19,25 +19,6 @@ export const metadata: Metadata = {
 
 const packages = [
   {
-    name: 'VPS22',
-    price: '15',
-    period: 'lună',
-    desc: 'Perfect pentru proiecte mici și dezvoltare.',
-    features: [
-      { label: 'procesor', value: '2 vCPU AMD EPYC' },
-      { label: 'memorie RAM', value: '4 GB DDR4' },
-      { label: 'stocare', value: '80 GB NVMe' },
-      { label: 'trafic lunar', value: 'nelimitat' },
-      { label: 'IP dedicat', value: 'IPv4 + IPv6' },
-      { label: 'root access', value: 'complet' },
-      { label: 'sistem operare', value: 'Linux / Windows' },
-      { label: 'protecție DDoS', value: 'inclusă' },
-      { label: 'backup', value: 'săptămânal' },
-      { label: 'rețea', value: '10 Gbps' },
-      { label: 'asistență ticket', value: '24/7' },
-    ],
-  },
-  {
     name: 'VPS32',
     price: '25',
     period: 'lună',
@@ -48,9 +29,9 @@ const packages = [
       { label: 'memorie RAM', value: '8 GB DDR4' },
       { label: 'stocare', value: '160 GB NVMe' },
       { label: 'trafic lunar', value: 'nelimitat' },
-      { label: 'IP dedicat', value: 'IPv4 + IPv6' },
+      { label: 'IP dedicat', value: 'IPv4' },
       { label: 'root access', value: 'complet' },
-      { label: 'sistem operare', value: 'Linux / Windows' },
+      { label: 'sistem operare', value: 'Ubuntu / Debian / AlmaLinux' },
       { label: 'protecție DDoS', value: 'inclusă' },
       { label: 'backup', value: 'săptămânal' },
       { label: 'rețea', value: '10 Gbps' },
@@ -67,9 +48,9 @@ const packages = [
       { label: 'memorie RAM', value: '16 GB DDR4' },
       { label: 'stocare', value: '320 GB NVMe' },
       { label: 'trafic lunar', value: 'nelimitat' },
-      { label: 'IP dedicat', value: 'IPv4 + IPv6' },
+      { label: 'IP dedicat', value: 'IPv4' },
       { label: 'root access', value: 'complet' },
-      { label: 'sistem operare', value: 'Linux / Windows' },
+      { label: 'sistem operare', value: 'Ubuntu / Debian / AlmaLinux' },
       { label: 'protecție DDoS', value: 'inclusă' },
       { label: 'backup', value: 'săptămânal' },
       { label: 'rețea', value: '10 Gbps' },
@@ -86,9 +67,9 @@ const packages = [
       { label: 'memorie RAM', value: '24 GB DDR4' },
       { label: 'stocare', value: '480 GB NVMe' },
       { label: 'trafic lunar', value: 'nelimitat' },
-      { label: 'IP dedicat', value: 'IPv4 + IPv6' },
+      { label: 'IP dedicat', value: 'IPv4' },
       { label: 'root access', value: 'complet' },
-      { label: 'sistem operare', value: 'Linux / Windows' },
+      { label: 'sistem operare', value: 'Ubuntu / Debian / AlmaLinux' },
       { label: 'protecție DDoS', value: 'inclusă' },
       { label: 'backup', value: 'săptămânal' },
       { label: 'rețea', value: '10 Gbps' },
@@ -105,9 +86,9 @@ const packages = [
       { label: 'memorie RAM', value: '32 GB DDR4' },
       { label: 'stocare', value: '640 GB NVMe' },
       { label: 'trafic lunar', value: 'nelimitat' },
-      { label: 'IP dedicat', value: 'IPv4 + IPv6' },
+      { label: 'IP dedicat', value: 'IPv4' },
       { label: 'root access', value: 'complet' },
-      { label: 'sistem operare', value: 'Linux / Windows' },
+      { label: 'sistem operare', value: 'Ubuntu / Debian / AlmaLinux' },
       { label: 'protecție DDoS', value: 'inclusă' },
       { label: 'backup', value: 'zilnic' },
       { label: 'rețea', value: '10 Gbps' },
@@ -169,7 +150,7 @@ export default function VPSPage() {
               <p className="text-muted-foreground text-lg">Toate pachetele includ IP dedicat, root access, trafic nelimitat și suport tehnic 24/7.</p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
               {packages.map((pkg) => (
                 <div key={pkg.name} className={`rounded-2xl p-5 border-2 ${pkg.popular ? 'border-primary bg-primary/5 relative' : 'border-border bg-card'}`}>
                   {pkg.popular && (
