@@ -23,6 +23,8 @@ const features = [
   { icon: Zap, title: 'Performanță maximă', desc: 'Procesoare AMD Ryzen și Intel Core Ultra.' },
   { icon: HardDrive, title: 'SSD NVMe Enterprise', desc: 'Stocare ultrarapidă pentru aplicații exigente.' },
 ]
+
+const packages = [
   { 
     name: 'Dedicat Start', 
     price: '726', 
