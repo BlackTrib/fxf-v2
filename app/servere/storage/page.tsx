@@ -155,8 +155,8 @@ export default function StoragePage() {
                     <h3 className="font-display text-lg font-bold text-foreground mb-1">{pkg.name}</h3>
                     <p className="text-xs text-muted-foreground mb-3 min-h-[32px]">{pkg.desc}</p>
                     <div className="flex items-baseline justify-center gap-1">
-                      <span className="text-3xl font-bold text-primary">{pkg.price}</span>
-                      <span className="text-muted-foreground text-sm">€/{pkg.period}</span>
+                      <span className="text-4xl font-bold text-primary">{pkg.price}</span>
+                      <span className="text-muted-foreground">€/{pkg.period}</span>
                     </div>
                   </div>
                   <ul className="space-y-1.5 mb-5">
