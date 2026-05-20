@@ -26,7 +26,7 @@ const packages = [
     popular: true,
     features: [
       { label: 'procesor', value: '4 vCPU AMD EPYC' },
-      { label: 'memorie RAM', value: '8 GB DDR4' },
+      { label: 'memorie RAM', value: '8 GB DDR5' },
       { label: 'stocare', value: '160 GB NVMe' },
       { label: 'trafic lunar', value: 'nelimitat' },
       { label: 'IP dedicat', value: 'IPv4 + IPv6' },
@@ -44,7 +44,7 @@ const packages = [
     desc: 'Pentru proiecte business și baze de date.',
     features: [
       { label: 'procesor', value: '8 vCPU AMD EPYC' },
-      { label: 'memorie RAM', value: '16 GB DDR4' },
+      { label: 'memorie RAM', value: '16 GB DDR5' },
       { label: 'stocare', value: '320 GB NVMe' },
       { label: 'trafic lunar', value: 'nelimitat' },
       { label: 'IP dedicat', value: 'IPv4 + IPv6' },
@@ -62,7 +62,7 @@ const packages = [
     desc: 'Putere pentru aplicații enterprise și trafic intens.',
     features: [
       { label: 'procesor', value: '12 vCPU AMD EPYC' },
-      { label: 'memorie RAM', value: '24 GB DDR4' },
+      { label: 'memorie RAM', value: '24 GB DDR5' },
       { label: 'stocare', value: '480 GB NVMe' },
       { label: 'trafic lunar', value: 'nelimitat' },
       { label: 'IP dedicat', value: 'IPv4 + IPv6' },
@@ -80,7 +80,7 @@ const packages = [
     desc: 'Maxim de performanță pentru proiecte critice.',
     features: [
       { label: 'procesor', value: '16 vCPU AMD EPYC' },
-      { label: 'memorie RAM', value: '32 GB DDR4' },
+      { label: 'memorie RAM', value: '32 GB DDR5' },
       { label: 'stocare', value: '640 GB NVMe' },
       { label: 'trafic lunar', value: 'nelimitat' },
       { label: 'IP dedicat', value: 'IPv4 + IPv6' },
