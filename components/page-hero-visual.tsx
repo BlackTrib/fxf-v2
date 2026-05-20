@@ -1,6 +1,6 @@
 'use client'
 
-import { Users, Award, Target, TrendingUp, Briefcase, ShoppingCart, Search, BarChart2, Wrench, Code2, Mail, Phone, MessageSquare, Star, FolderOpen, CheckCircle2 } from 'lucide-react'
+import { Users, Award, Target, TrendingUp, Briefcase, ShoppingCart, Search, BarChart2, Wrench, Code2, Mail, Phone, MessageSquare, Star, FolderOpen, CheckCircle2, HardDrive } from 'lucide-react'
 
 // Despre page - floating hosting company stats
 function DespreVisual() {
