@@ -87,7 +87,6 @@ const packages = [
       { label: 'root access', value: 'complet' },
       { label: 'os', value: 'Ubuntu / Debian / AlmaLinux' },
       { label: 'protecție DDoS', value: 'inclusă' },
-      { label: 'backup', value: 'zilnic' },
       { label: 'rețea', value: '10 Gbps' },
       { label: 'asistență ticket', value: '24/7 prioritar' },
     ],
