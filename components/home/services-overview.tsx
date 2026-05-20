@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { Server, HardDrive, ArrowRight, CheckCircle2, Zap, Cloud, Cpu, Globe, Clock, Headphones } from 'lucide-react'
+import { Server, HardDrive, ArrowRight, CheckCircle2, Zap, Cloud, Cpu, Globe } from 'lucide-react'
 import { Reveal } from '@/components/ui/reveal'
 
 const hostingPackages = [
@@ -80,59 +80,6 @@ export function ServicesOverview() {
           <Link href="/gazduire" className="text-sm font-medium text-primary hover:text-accent-brand flex items-center gap-1 transition-colors shrink-0">
             Toate pachetele <ArrowRight size={14} />
           </Link>
-        </Reveal>
-
-        {/* Featured Card */}
-        <Reveal direction="up" className="mb-8">
-          <div className="relative max-w-md mx-auto bg-white dark:bg-slate-900 border-2 border-primary rounded-2xl p-6 shadow-lg">
-            <div className="absolute -top-3 left-6 bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">
-              CEL MAI POPULAR
-            </div>
-            <div className="absolute -bottom-3 -left-2 bg-emerald-400 text-white text-[10px] font-bold px-3 py-1 rounded-full flex items-center gap-1">
-              <span>💰</span> Cod: FXF10 - Reducere bun venit
-            </div>
-            
-            <div className="flex items-start justify-between mb-4">
-              <div>
-                <h3 className="font-display text-xl font-bold text-foreground">Găzduire Business</h3>
-              </div>
-              <div className="text-right">
-                <span className="text-3xl font-bold text-primary">38</span>
-                <span className="text-muted-foreground text-sm">€ /6 luni</span>
-              </div>
-            </div>
-
-            <ul className="space-y-3 mb-6">
-              <li className="flex items-center gap-3 text-sm">
-                <HardDrive size={18} className="text-slate-400" />
-                <span className="text-foreground">Spațiu: 10GB NVMe SSD</span>
-              </li>
-              <li className="flex items-center gap-3 text-sm">
-                <Globe size={18} className="text-slate-400" />
-                <span className="text-foreground">Domenii găzduite: Nelimitat</span>
-              </li>
-              <li className="flex items-center gap-3 text-sm">
-                <Zap size={18} className="text-slate-400" />
-                <span className="text-foreground">LiteSpeed + cPanel</span>
-              </li>
-              <li className="flex items-center gap-3 text-sm">
-                <CheckCircle2 size={18} className="text-slate-400" />
-                <span className="text-foreground">SSL Let's Encrypt gratuit</span>
-              </li>
-              <li className="flex items-center gap-3 text-sm">
-                <Clock size={18} className="text-slate-400" />
-                <span className="text-foreground">Backup 24 din 24 ore</span>
-              </li>
-              <li className="flex items-center gap-3 text-sm">
-                <Headphones size={18} className="text-slate-400" />
-                <span className="text-foreground">Suport tehnic 24/7</span>
-              </li>
-            </ul>
-
-            <Link href="/gazduire/web" className="block w-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-center font-semibold py-3 rounded-xl hover:opacity-90 transition-opacity">
-              Comandă acum
-            </Link>
-          </div>
         </Reveal>
 
         {/* Hosting Packages Grid */}
