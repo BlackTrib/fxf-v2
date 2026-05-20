@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const packages = [
   {
     name: 'Magento Start',
-    price: '546.00',
+    price: '54600',
     period: '6 luni',
     desc: 'Pentru magazine Magento noi cu până la 1000 produse.',
     features: [
@@ -41,7 +41,7 @@ const packages = [
   },
   {
     name: 'Magento Business',
-    price: '596.00',
+    price: '59600',
     period: '6 luni',
     desc: 'Ideal pentru magazine în creștere cu mii de produse.',
     popular: true,
@@ -63,7 +63,7 @@ const packages = [
   },
   {
     name: 'Magento Pro',
-    price: '645.00',
+    price: '64500',
     period: '6 luni',
     desc: 'Pentru magazine enterprise cu trafic intens.',
     features: [
@@ -84,7 +84,7 @@ const packages = [
   },
   {
     name: 'Magento Enterprise',
-    price: '745.00',
+    price: '74500',
     period: '6 luni',
     desc: 'Putere maximă pentru magazine Magento de mari dimensiuni.',
     features: [

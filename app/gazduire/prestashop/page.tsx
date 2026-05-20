@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const packages = [
   {
     name: 'PS Start',
-    price: '546.00',
+    price: '54600',
     period: '6 luni',
     desc: 'Perfect pentru magazine noi PrestaShop cu până la 500 produse.',
     features: [
@@ -41,7 +41,7 @@ const packages = [
   },
   {
     name: 'PS Business',
-    price: '596.00',
+    price: '59600',
     period: '6 luni',
     desc: 'Ideal pentru magazine în creștere cu până la 2000 produse.',
     popular: true,
@@ -63,7 +63,7 @@ const packages = [
   },
   {
     name: 'PS Pro',
-    price: '645.00',
+    price: '64500',
     period: '6 luni',
     desc: 'Pentru magazine mari cu mii de produse și trafic intens.',
     features: [
@@ -84,7 +84,7 @@ const packages = [
   },
   {
     name: 'PS Enterprise',
-    price: '745.00',
+    price: '74500',
     period: '6 luni',
     desc: 'Putere maximă pentru magazine PrestaShop enterprise.',
     features: [

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const packages = [
   {
     name: 'Start',
-    price: '99.00',
+    price: '9900',
     period: '6 luni',
     desc: 'Ideal pentru site-uri mici de prezentare și bloguri personale.',
     features: [
@@ -41,7 +41,7 @@ const packages = [
   },
   {
     name: 'Basic',
-    price: '148.00',
+    price: '14800',
     period: '6 luni',
     desc: 'Perfect pentru site-uri în creștere cu mai mult conținut.',
     features: [
@@ -62,7 +62,7 @@ const packages = [
   },
   {
     name: 'Business',
-    price: '199.00',
+    price: '19900',
     period: '6 luni',
     desc: 'Recomandat pentru site-uri de afaceri și proiecte medii.',
     popular: true,
@@ -84,7 +84,7 @@ const packages = [
   },
   {
     name: 'Professional',
-    price: '297.00',
+    price: '29700',
     period: '6 luni',
     desc: 'Pentru site-uri profesionale cu trafic în creștere.',
     features: [
@@ -105,7 +105,7 @@ const packages = [
   },
   {
     name: 'Corporate',
-    price: '348.00',
+    price: '34800',
     period: '6 luni',
     desc: 'Optimizat pentru companii și magazine online medii.',
     features: [
@@ -126,7 +126,7 @@ const packages = [
   },
   {
     name: 'Enterprise',
-    price: '397.00',
+    price: '39700',
     period: '6 luni',
     desc: 'Putere maximă pentru aplicații și site-uri cu trafic intens.',
     features: [

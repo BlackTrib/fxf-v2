@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const packages = [
   {
     name: 'Performance Start',
-    price: '890.00',
+    price: '89000',
     period: '6 luni',
     desc: 'Pentru site-uri cu trafic mediu și cerințe de performanță ridicată.',
     features: [

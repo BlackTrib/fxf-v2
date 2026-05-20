@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const packages = [
   {
     name: 'WP Start',
-    price: '546.00',
+    price: '54600',
     period: '6 luni',
     desc: 'Perfect pentru bloguri personale și site-uri WordPress mici.',
     features: [
@@ -41,7 +41,7 @@ const packages = [
   },
   {
     name: 'WP Business',
-    price: '596.00',
+    price: '59600',
     period: '6 luni',
     desc: 'Ideal pentru site-uri de afaceri și portofolii profesionale.',
     popular: true,
@@ -63,7 +63,7 @@ const packages = [
   },
   {
     name: 'WP E-Commerce',
-    price: '645.00',
+    price: '64500',
     period: '6 luni',
     desc: 'Optimizat pentru WooCommerce și magazine online WordPress.',
     features: [
@@ -84,7 +84,7 @@ const packages = [
   },
   {
     name: 'WP Performance',
-    price: '745.00',
+    price: '74500',
     period: '6 luni',
     desc: 'Putere maximă pentru site-uri WordPress cu trafic intens.',
     features: [

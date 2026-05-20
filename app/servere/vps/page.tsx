@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const packages = [
   {
     name: 'VPS Pro Start',
-    price: '1.092',
+    price: '1092',
     period: '6 luni',
     desc: 'Ideal pentru aplicații web și site-uri cu trafic mediu.',
     popular: true,
@@ -39,7 +39,7 @@ const packages = [
   },
   {
     name: 'VPS Pro Business',
-    price: '2.184',
+    price: '2184',
     period: '6 luni',
     desc: 'Pentru proiecte business și baze de date.',
     features: [
@@ -57,7 +57,7 @@ const packages = [
   },
   {
     name: 'VPS Pro Advanced',
-    price: '3.216',
+    price: '3216',
     period: '6 luni',
     desc: 'Putere pentru aplicații enterprise și trafic intens.',
     features: [
@@ -75,7 +75,7 @@ const packages = [
   },
   {
     name: 'VPS Pro Enterprise',
-    price: '5.312',
+    price: '5312',
     period: '6 luni',
     desc: 'Maxim de performanță pentru proiecte critice.',
     features: [
