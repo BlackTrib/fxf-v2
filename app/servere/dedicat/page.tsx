@@ -37,6 +37,7 @@ const packages = [
       { label: 'stocare', value: '512 GB NVMe SSD' },
       { label: 'trafic lunar', value: 'nelimitat' },
       { label: 'IP dedicat', value: 'IPv4' },
+      { label: 'os', value: 'Ubuntu / Debian / AlmaLinux' },
       { label: 'protecție DDoS', value: 'inclusă' },
       { label: 'rețea', value: '1 Gbps' },
       { label: 'asistență ticket', value: '24/7' },
@@ -55,6 +56,7 @@ const packages = [
       { label: 'stocare', value: '512 GB NVMe SSD' },
       { label: 'trafic lunar', value: 'nelimitat' },
       { label: 'IP dedicat', value: 'IPv4' },
+      { label: 'os', value: 'Ubuntu / Debian / AlmaLinux' },
       { label: 'protecție DDoS', value: 'inclusă' },
       { label: 'rețea', value: '1 Gbps' },
       { label: 'asistență ticket', value: '24/7' },
@@ -72,6 +74,7 @@ const packages = [
       { label: 'stocare', value: '1 TB NVMe SSD' },
       { label: 'trafic lunar', value: 'nelimitat' },
       { label: 'IP dedicat', value: 'IPv4' },
+      { label: 'os', value: 'Ubuntu / Debian / AlmaLinux' },
       { label: 'protecție DDoS', value: 'inclusă' },
       { label: 'rețea', value: '1 Gbps' },
       { label: 'asistență ticket', value: '24/7' },
@@ -89,6 +92,7 @@ const packages = [
       { label: 'stocare', value: '2 TB NVMe SSD' },
       { label: 'trafic lunar', value: 'nelimitat' },
       { label: 'IP dedicat', value: 'IPv4' },
+      { label: 'os', value: 'Ubuntu / Debian / AlmaLinux' },
       { label: 'protecție DDoS', value: 'inclusă' },
       { label: 'rețea', value: '1 Gbps' },
       { label: 'asistență ticket', value: '24/7 prioritar' },
@@ -191,6 +195,43 @@ export default function DedicatPage() {
                   <Link href="/contact" className={`block w-full text-center py-2.5 rounded-xl text-sm font-semibold transition-all ${pkg.popular ? 'bg-primary text-white hover:bg-primary/90' : 'bg-secondary text-foreground hover:bg-secondary/80'}`}>
                     Comandă acum
                   </Link>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-8 text-center">
+              <p className="text-sm text-muted-foreground">
+                Configurație custom? <Link href="/contact" className="font-bold text-primary hover:underline">Contactează-ne</Link> pentru oferte personalizate!
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Platform config info */}
+        <section className="py-14 bg-background">
+          <div className="max-w-5xl mx-auto px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <h2 className="font-display text-2xl font-bold text-foreground mb-3">Fiecare server dedicat, configurat pentru performanță</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">Hardware de ultimă generație cu procesoare AMD Ryzen și Intel Core Ultra pentru putere maximă.</p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                {
+                  title: 'Hardware exclusiv 100%',
+                  desc: 'Spre deosebire de VPS, serverele dedicate îți oferă un server fizic complet. Toate resursele sunt ale tale - CPU, RAM, stocare, fără nicio partajare.',
+                },
+                {
+                  title: 'Control total',
+                  desc: 'Acces root complet și IPMI/KVM pentru control total asupra serverului. Instalează orice sistem de operare și configurează exact cum ai nevoie.',
+                },
+                {
+                  title: 'Scalare hardware',
+                  desc: 'Ai nevoie de mai multă putere? Upgrade-ul la un server mai puternic se face rapid, cu migrare asistată și downtime minim.',
+                },
+              ].map((item) => (
+                <div key={item.title} className="bg-primary/5 border border-primary/15 rounded-2xl p-6">
+                  <h3 className="font-bold text-foreground mb-2 text-sm">{item.title}</h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
