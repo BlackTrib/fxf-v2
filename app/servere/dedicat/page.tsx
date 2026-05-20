@@ -6,12 +6,12 @@ import { Cpu, ArrowRight, Check, Server, Shield, Zap, HardDrive, Globe, RefreshC
 import { PageHeroVisual } from '@/components/page-hero-visual'
 
 export const metadata: Metadata = {
-  title: 'Servere Dedicate România | Hardware Enterprise de la 499 lei | FXF',
-  description: 'Servere dedicate cu hardware exclusiv. Procesoare Intel Xeon, RAM DDR4 ECC, SSD NVMe Enterprise. Bandwidth nelimitat și suport prioritar 24/7. De la 499 lei/lună.',
-  keywords: ['servere dedicate', 'server dedicat românia', 'dedicated server', 'server fizic', 'hosting enterprise'],
+  title: 'Servere Dedicate România | Hardware AMD Ryzen & Intel de la 3775 lei | FXF',
+  description: 'Servere dedicate cu hardware exclusiv. Procesoare AMD Ryzen și Intel Core Ultra, RAM DDR5, SSD NVMe. Trafic nelimitat și suport prioritar 24/7. De la 3775 lei/6 luni.',
+  keywords: ['servere dedicate', 'server dedicat românia', 'dedicated server', 'server fizic', 'hosting enterprise', 'amd ryzen server', 'intel core ultra server'],
   openGraph: {
-    title: 'Servere Dedicate România | Hardware Enterprise de la 499 lei | FXF',
-    description: 'Servere dedicate cu hardware exclusiv, procesoare Intel Xeon și suport prioritar 24/7.',
+    title: 'Servere Dedicate România | Hardware AMD Ryzen & Intel de la 3775 lei | FXF',
+    description: 'Servere dedicate cu hardware exclusiv, procesoare AMD Ryzen și Intel Core Ultra și suport prioritar 24/7.',
     url: 'https://fxfweb.ro/servere/dedicat',
   },
   alternates: { canonical: 'https://fxfweb.ro/servere/dedicat' },
@@ -20,59 +20,87 @@ export const metadata: Metadata = {
 const features = [
   { icon: Cpu, title: 'Hardware dedicat', desc: 'Server fizic exclusiv pentru tine, fără virtualizare.' },
   { icon: Shield, title: 'Securitate totală', desc: 'Izolare completă și control total asupra hardware-ului.' },
-  { icon: Zap, title: 'Performanță maximă', desc: 'Procesoare Intel Xeon și RAM DDR4 ECC.' },
+  { icon: Zap, title: 'Performanță maximă', desc: 'Procesoare AMD Ryzen și Intel Core Ultra.' },
   { icon: HardDrive, title: 'SSD NVMe Enterprise', desc: 'Stocare ultrarapidă pentru aplicații exigente.' },
 ]
 
 const packages = [
   { 
     name: 'Dedicat Start', 
-    price: '499', 
-    cpu: 'Intel Xeon E-2136', 
-    cores: '6 Core / 12 Threads',
-    ram: '32GB DDR4 ECC', 
-    storage: '2x 500GB NVMe', 
-    bandwidth: '10TB',
-    desc: 'Perfect pentru proiecte medii și baze de date.'
+    price: '3775', 
+    period: '6 luni',
+    desc: 'Perfect pentru proiecte medii și aplicații business.',
+    features: [
+      { label: 'procesor', value: 'AMD Ryzen 5 3600' },
+      { label: 'CPU', value: '6 cores / 12 threads @ 3.6 GHz' },
+      { label: 'memorie RAM', value: '64 GB DDR4' },
+      { label: 'stocare', value: '512 GB NVMe SSD' },
+      { label: 'trafic lunar', value: 'nelimitat' },
+      { label: 'IP dedicat', value: 'IPv4' },
+      { label: 'protecție DDoS', value: 'inclusă' },
+      { label: 'rețea', value: '1 Gbps' },
+      { label: 'asistență ticket', value: '24/7' },
+    ],
   },
   { 
     name: 'Dedicat Pro', 
-    price: '799', 
-    cpu: 'Intel Xeon E-2288G', 
-    cores: '8 Core / 16 Threads',
-    ram: '64GB DDR4 ECC', 
-    storage: '2x 1TB NVMe', 
-    bandwidth: '30TB',
+    price: '4907', 
+    period: '6 luni',
     popular: true,
-    desc: 'Ideal pentru aplicații business și magazine mari.'
+    desc: 'Ideal pentru aplicații business și magazine mari.',
+    features: [
+      { label: 'procesor', value: 'AMD Ryzen 7 PRO 8700GE' },
+      { label: 'CPU', value: '8 cores / 16 threads @ 3.65 GHz' },
+      { label: 'memorie RAM', value: '64 GB DDR5' },
+      { label: 'stocare', value: '512 GB NVMe SSD' },
+      { label: 'trafic lunar', value: 'nelimitat' },
+      { label: 'IP dedicat', value: 'IPv4' },
+      { label: 'protecție DDoS', value: 'inclusă' },
+      { label: 'rețea', value: '1 Gbps' },
+      { label: 'asistență ticket', value: '24/7' },
+    ],
   },
   { 
     name: 'Dedicat Business', 
-    price: '1299', 
-    cpu: 'AMD EPYC 7302P', 
-    cores: '16 Core / 32 Threads',
-    ram: '128GB DDR4 ECC', 
-    storage: '4x 1TB NVMe RAID', 
-    bandwidth: 'Nelimitat',
-    desc: 'Pentru aplicații enterprise cu trafic intens.'
+    price: '7550', 
+    period: '6 luni',
+    desc: 'Pentru aplicații enterprise cu trafic intens.',
+    features: [
+      { label: 'procesor', value: 'Intel Core Ultra 7 265' },
+      { label: 'CPU', value: '20 cores / 20 threads @ 2.4 GHz' },
+      { label: 'memorie RAM', value: '64 GB DDR5' },
+      { label: 'stocare', value: '1 TB NVMe SSD' },
+      { label: 'trafic lunar', value: 'nelimitat' },
+      { label: 'IP dedicat', value: 'IPv4' },
+      { label: 'protecție DDoS', value: 'inclusă' },
+      { label: 'rețea', value: '1 Gbps' },
+      { label: 'asistență ticket', value: '24/7' },
+    ],
   },
   { 
     name: 'Dedicat Enterprise', 
-    price: '2499', 
-    cpu: 'AMD EPYC 7402P', 
-    cores: '24 Core / 48 Threads',
-    ram: '256GB DDR4 ECC', 
-    storage: '4x 2TB NVMe RAID', 
-    bandwidth: 'Nelimitat',
-    desc: 'Putere maximă pentru cele mai exigente proiecte.'
+    price: '11325', 
+    period: '6 luni',
+    desc: 'Putere maximă pentru cele mai exigente proiecte.',
+    features: [
+      { label: 'procesor', value: 'AMD Ryzen 9 7950X3D' },
+      { label: 'CPU', value: '16 cores / 32 threads @ 4.2 GHz' },
+      { label: 'memorie RAM', value: '128 GB DDR5' },
+      { label: 'stocare', value: '2 TB NVMe SSD' },
+      { label: 'trafic lunar', value: 'nelimitat' },
+      { label: 'IP dedicat', value: 'IPv4' },
+      { label: 'protecție DDoS', value: 'inclusă' },
+      { label: 'rețea', value: '1 Gbps' },
+      { label: 'asistență ticket', value: '24/7 prioritar' },
+    ],
   },
 ]
 
 const benefits = [
-  { icon: Cpu, title: 'Procesoare Enterprise', desc: 'Intel Xeon și AMD EPYC de ultimă generație pentru performanță maximă.' },
-  { icon: Database, title: 'RAM DDR4 ECC', desc: 'Memorie cu corectare erori pentru stabilitate și fiabilitate maximă.' },
-  { icon: HardDrive, title: 'SSD NVMe Enterprise', desc: 'Stocare enterprise cu viteze de până la 7000 MB/s și redundanță RAID.' },
-  { icon: Globe, title: 'Bandwidth generos', desc: 'Trafic generos sau nelimitat în funcție de pachet, la 10 Gbps.' },
+  { icon: Cpu, title: 'Procesoare Performante', desc: 'AMD Ryzen și Intel Core Ultra de ultimă generație pentru performanță maximă.' },
+  { icon: Database, title: 'RAM DDR5', desc: 'Memorie rapidă DDR5 pentru aplicații moderne și workload-uri intensive.' },
+  { icon: HardDrive, title: 'SSD NVMe Enterprise', desc: 'Stocare enterprise cu viteze de până la 7000 MB/s.' },
+  { icon: Globe, title: 'Trafic nelimitat', desc: 'Trafic nelimitat la toate pachetele, fără restricții.' },
   { icon: Shield, title: 'Protecție DDoS Pro', desc: 'Protecție avansată DDoS cu mitigare în timp real.' },
   { icon: Lock, title: 'IPMI/KVM', desc: 'Acces remote la consolă pentru control total, chiar și offline.' },
   { icon: RefreshCw, title: 'Hardware Swap', desc: 'Înlocuire rapidă a componentelor defecte în caz de nevoie.' },
@@ -98,7 +126,7 @@ export default function DedicatPage() {
                   <span className="block text-2xl sm:text-3xl lg:text-4xl mt-2 text-white/70">Hardware exclusiv pentru performanță maximă</span>
                 </h1>
                 <p className="text-white/70 text-lg sm:text-xl leading-relaxed mb-8">
-                  Servere fizice dedicate cu procesoare Intel Xeon și AMD EPYC, RAM DDR4 ECC și stocare SSD NVMe enterprise. 
+                  Servere fizice dedicate cu procesoare AMD Ryzen și Intel Core Ultra, RAM DDR5 și stocare SSD NVMe enterprise. 
                   Putere brută pentru cele mai exigente proiecte.
                 </p>
               </div>
@@ -140,25 +168,27 @@ export default function DedicatPage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {packages.map((pkg) => (
-                <div key={pkg.name} className={`rounded-2xl p-6 border-2 ${pkg.popular ? 'border-primary bg-primary/5 relative' : 'border-border bg-card'}`}>
+                <div key={pkg.name} className={`rounded-2xl p-5 border-2 ${pkg.popular ? 'border-primary bg-primary/5 relative' : 'border-border bg-card'}`}>
                   {pkg.popular && <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">POPULAR</span>}
-                  <div className="text-center mb-6">
-                    <h3 className="font-display text-lg font-bold text-foreground mb-2">{pkg.name}</h3>
-                    <p className="text-xs text-muted-foreground mb-4 min-h-[32px]">{pkg.desc}</p>
+                  <div className="text-center mb-5">
+                    <h3 className="font-display text-lg font-bold text-foreground mb-1">{pkg.name}</h3>
+                    <p className="text-xs text-muted-foreground mb-3 min-h-[32px]">{pkg.desc}</p>
                     <div className="flex items-baseline justify-center gap-1">
-                      <span className="text-3xl font-bold text-primary">{pkg.price}</span>
-                      <span className="text-muted-foreground text-sm">lei/lună</span>
+                      <span className="text-4xl font-bold text-primary">{pkg.price}</span>
+                      <span className="text-muted-foreground">lei/{pkg.period}</span>
                     </div>
                   </div>
-                  <ul className="space-y-2 mb-6">
-                    <li className="flex items-center gap-2 text-sm"><Check size={14} className="text-green-500 shrink-0" /><span className="text-xs">{pkg.cpu}</span></li>
-                    <li className="flex items-center gap-2 text-sm"><Check size={14} className="text-green-500 shrink-0" /><span className="text-xs">{pkg.cores}</span></li>
-                    <li className="flex items-center gap-2 text-sm"><Check size={14} className="text-green-500 shrink-0" /><span className="text-xs">{pkg.ram}</span></li>
-                    <li className="flex items-center gap-2 text-sm"><Check size={14} className="text-green-500 shrink-0" /><span className="text-xs">{pkg.storage}</span></li>
-                    <li className="flex items-center gap-2 text-sm"><Check size={14} className="text-green-500 shrink-0" /><span className="text-xs">{pkg.bandwidth} trafic</span></li>
-                    <li className="flex items-center gap-2 text-sm"><Check size={14} className="text-green-500 shrink-0" /><span className="text-xs">IPMI/KVM</span></li>
+                  <ul className="space-y-1.5 mb-5">
+                    {pkg.features.map((f) => (
+                      <li key={f.label} className="flex items-start gap-2 text-xs">
+                        <span className="w-1.5 h-1.5 rounded-full bg-accent-brand mt-1.5 shrink-0" />
+                        <span className="text-muted-foreground">
+                          {f.label} <span className="font-bold text-foreground">{f.value}</span>
+                        </span>
+                      </li>
+                    ))}
                   </ul>
-                  <Link href="/contact" className={`block w-full text-center py-3 rounded-xl text-sm font-semibold transition-all ${pkg.popular ? 'bg-primary text-white hover:bg-primary/90' : 'bg-secondary text-foreground hover:bg-secondary/80'}`}>
+                  <Link href="/contact" className={`block w-full text-center py-2.5 rounded-xl text-sm font-semibold transition-all ${pkg.popular ? 'bg-primary text-white hover:bg-primary/90' : 'bg-secondary text-foreground hover:bg-secondary/80'}`}>
                     Comandă acum
                   </Link>
                 </div>
@@ -194,12 +224,12 @@ export default function DedicatPage() {
         <section className="py-14 bg-background">
           <div className="max-w-4xl mx-auto px-6 lg:px-8">
             <div className="prose prose-sm max-w-none">
-              <h2 className="font-display text-2xl font-bold text-foreground mb-4">Servere Dedicate în România - Hardware Enterprise</h2>
+              <h2 className="font-display text-2xl font-bold text-foreground mb-4">Servere Dedicate în România - Hardware Performant</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 Serverele dedicate oferă cea mai înaltă formă de hosting - un server fizic complet dedicat proiectului tău, fără nicio formă de partajare a resurselor. Aceasta înseamnă performanță maximă, securitate totală și control complet asupra întregului stack hardware și software.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Toate serverele noastre dedicate sunt echipate cu procesoare Intel Xeon sau AMD EPYC de ultimă generație, memorie RAM DDR4 ECC pentru stabilitate maximă, și stocare SSD NVMe enterprise cu viteze de până la 7000 MB/s. Configurațiile RAID asigură redundanța datelor pentru protecție împotriva defectării hardware.
+                Toate serverele noastre dedicate sunt echipate cu procesoare AMD Ryzen sau Intel Core Ultra de ultimă generație, memorie RAM DDR5 pentru performanță maximă, și stocare SSD NVMe enterprise cu viteze de până la 7000 MB/s.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 Cu acces IPMI/KVM, ai control total asupra serverului chiar și când sistemul de operare nu răspunde. Suportul nostru prioritar garantează răspuns în maxim 15 minute pentru problemele critice, iar echipa de administratori de sistem este disponibilă 24/7 pentru asistență tehnică.
