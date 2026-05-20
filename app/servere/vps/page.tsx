@@ -249,7 +249,7 @@ export default function VPSPage() {
               <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
                 {[
                   { label: 'Procesoare', value: 'AMD EPYC' },
-                  { label: 'Memorie', value: 'DDR4 ECC' },
+                  { label: 'Memorie', value: 'DDR5 ECC' },
                   { label: 'Stocare', value: 'SSD NVMe Enterprise' },
                   { label: 'Rețea', value: '10 Gbps' },
                   { label: 'Virtualizare', value: 'KVM' },
