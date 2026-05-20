@@ -545,7 +545,55 @@ function GenericHostingVisual({ title, subtitle, icon: Icon, color }: { title: s
   )
 }
 
-type PageType = 'despre' | 'servicii' | 'portofoliu' | 'contact' | 'web-design' | 'magazin-online' | 'optimizare-seo' | 'google-ads' | 'mentenanta-web' | 'gazduire' | 'gazduire-web' | 'gazduire-wordpress' | 'gazduire-prestashop' | 'gazduire-opencart' | 'gazduire-magento' | 'gazduire-performance' | 'vps' | 'servere-dedicat' | 'servere'
+// Cloud Storage visual
+function CloudStorageVisual() {
+  return (
+    <div className="relative w-full h-full flex items-center justify-center">
+      <div className="relative bg-white/10 border border-white/20 rounded-2xl p-5 w-64 backdrop-blur-sm animate-[float_4s_ease-in-out_infinite]">
+        <div className="flex items-center gap-2 mb-4">
+          <div className="w-10 h-10 rounded-xl bg-cyan-400/20 flex items-center justify-center">
+            <HardDrive size={18} className="text-cyan-300" />
+          </div>
+          <div>
+            <p className="text-white font-bold text-sm">Cloud Storage</p>
+            <p className="text-white/50 text-xs">Datele tale în siguranță</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-2">
+          {[
+            { label: 'Stocare max', value: '20 TB' },
+            { label: 'Utilizatori', value: '10' },
+            { label: 'Bandă', value: 'Nelimitat' },
+            { label: 'Rețea', value: '1 Gbps' },
+          ].map((s, i) => (
+            <div key={s.label} className="bg-white/10 rounded-lg p-2 text-center" style={{ animation: `float ${3 + i * 0.2}s ease-in-out infinite ${i * 0.2}s` }}>
+              <p className="text-white font-bold text-sm">{s.value}</p>
+              <p className="text-white/50 text-[10px]">{s.label}</p>
+            </div>
+          ))}
+        </div>
+        <div className="mt-3 space-y-1.5">
+          {['FTP, SFTP, WebDAV', 'BorgBackup, Restic', 'Rclone, rsync SSH'].map((item, i) => (
+            <div key={item} className="flex items-center gap-2 bg-white/10 rounded-lg px-3 py-1.5" style={{ animation: `float ${3.5 + i * 0.3}s ease-in-out infinite ${i * 0.3}s` }}>
+              <CheckCircle2 size={11} className="text-emerald-400 shrink-0" />
+              <span className="text-white/80 text-[11px]">{item}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="absolute top-4 right-4 bg-white/15 border border-white/20 rounded-xl px-3 py-2 backdrop-blur-sm animate-[float_3s_ease-in-out_infinite_0.5s]">
+        <p className="text-white font-bold text-sm">Enterprise</p>
+        <p className="text-white/50 text-[10px]">20 TB stocare</p>
+      </div>
+      <div className="absolute bottom-6 left-4 bg-white/15 border border-white/20 rounded-xl px-3 py-2 backdrop-blur-sm animate-[float_3.5s_ease-in-out_infinite_1s] flex items-center gap-2">
+        <TrendingUp size={14} className="text-emerald-300" />
+        <span className="text-white text-xs font-semibold">Uptime 99.99%</span>
+      </div>
+    </div>
+  )
+}
+
+type PageType = 'despre' | 'servicii' | 'portofoliu' | 'contact' | 'web-design' | 'magazin-online' | 'optimizare-seo' | 'google-ads' | 'mentenanta-web' | 'gazduire' | 'gazduire-web' | 'gazduire-wordpress' | 'gazduire-prestashop' | 'gazduire-opencart' | 'gazduire-magento' | 'gazduire-performance' | 'vps' | 'servere-dedicat' | 'servere' | 'storage'
 
 export function PageHeroVisual({ page }: { page: PageType }) {
   return (
@@ -569,6 +617,7 @@ export function PageHeroVisual({ page }: { page: PageType }) {
       {page === 'vps' && <VpsVisual />}
       {page === 'servere-dedicat' && <ServereDedicateVisual />}
       {page === 'servere' && <ServereDedicateVisual />}
+      {page === 'storage' && <CloudStorageVisual />}
     </div>
   )
 }
