@@ -6,11 +6,11 @@ import { Cpu, ArrowRight, Check, Server, Shield, Zap, HardDrive, Globe, RefreshC
 import { PageHeroVisual } from '@/components/page-hero-visual'
 
 export const metadata: Metadata = {
-  title: 'Servere Dedicate România | Hardware AMD Ryzen & Intel de la 3775 lei | FXF',
-  description: 'Servere dedicate cu hardware exclusiv. Procesoare AMD Ryzen și Intel Core Ultra, RAM DDR5, SSD NVMe. Trafic nelimitat și suport prioritar 24/7. De la 3775 lei/6 luni.',
+  title: 'Servere Dedicate România | Hardware AMD Ryzen & Intel de la 726 EUR | FXF',
+  description: 'Servere dedicate cu hardware exclusiv. Procesoare AMD Ryzen și Intel Core Ultra, RAM DDR5, SSD NVMe. Trafic nelimitat și suport prioritar 24/7. De la 726 EUR/6 luni.',
   keywords: ['servere dedicate', 'server dedicat românia', 'dedicated server', 'server fizic', 'hosting enterprise', 'amd ryzen server', 'intel core ultra server'],
   openGraph: {
-    title: 'Servere Dedicate România | Hardware AMD Ryzen & Intel de la 3775 lei | FXF',
+    title: 'Servere Dedicate România | Hardware AMD Ryzen & Intel de la 726 EUR | FXF',
     description: 'Servere dedicate cu hardware exclusiv, procesoare AMD Ryzen și Intel Core Ultra și suport prioritar 24/7.',
     url: 'https://fxfweb.ro/servere/dedicat',
   },
@@ -27,7 +27,7 @@ const features = [
 const packages = [
   { 
     name: 'Dedicat Start', 
-    price: '3775', 
+    price: '726', 
     period: '6 luni',
     desc: 'Perfect pentru proiecte medii și aplicații business.',
     features: [
@@ -44,7 +44,7 @@ const packages = [
   },
   { 
     name: 'Dedicat Pro', 
-    price: '4907', 
+    price: '944', 
     period: '6 luni',
     popular: true,
     desc: 'Ideal pentru aplicații business și magazine mari.',
@@ -62,7 +62,7 @@ const packages = [
   },
   { 
     name: 'Dedicat Business', 
-    price: '7550', 
+    price: '1452', 
     period: '6 luni',
     desc: 'Pentru aplicații enterprise cu trafic intens.',
     features: [
@@ -79,7 +79,7 @@ const packages = [
   },
   { 
     name: 'Dedicat Enterprise', 
-    price: '11325', 
+    price: '2179', 
     period: '6 luni',
     desc: 'Putere maximă pentru cele mai exigente proiecte.',
     features: [
@@ -175,7 +175,7 @@ export default function DedicatPage() {
                     <p className="text-xs text-muted-foreground mb-3 min-h-[32px]">{pkg.desc}</p>
                     <div className="flex items-baseline justify-center gap-1">
                       <span className="text-4xl font-bold text-primary">{pkg.price}</span>
-                      <span className="text-muted-foreground">lei/{pkg.period}</span>
+                      <span className="text-muted-foreground">EUR/{pkg.period}</span>
                     </div>
                   </div>
                   <ul className="space-y-1.5 mb-5">

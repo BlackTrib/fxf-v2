@@ -6,11 +6,11 @@ import { Cloud, ArrowRight, Server, Shield, Zap, Settings, HardDrive, Globe, Cpu
 import { PageHeroVisual } from '@/components/page-hero-visual'
 
 export const metadata: Metadata = {
-  title: 'VPS Cloud România | Servere Virtuale AMD EPYC de la 25 EUR | FXF',
-  description: 'Servere VPS cloud cu procesoare AMD EPYC, resurse dedicate și SSD NVMe. Root access, IP dedicat IPv4, scalare flexibilă și suport 24/7. De la 25 EUR/lună. Linux: Ubuntu, Debian, AlmaLinux.',
+  title: 'VPS Cloud România | Servere Virtuale AMD EPYC de la 210 EUR | FXF',
+  description: 'Servere VPS cloud cu procesoare AMD EPYC, resurse dedicate și SSD NVMe. Root access, IP dedicat IPv4, scalare flexibilă și suport 24/7. De la 210 EUR/6 luni. Linux: Ubuntu, Debian, AlmaLinux.',
   keywords: ['vps românia', 'server virtual', 'vps cloud', 'vps ssd', 'server vps', 'vps epyc', 'cloud hosting'],
   openGraph: {
-    title: 'VPS Cloud România | Servere Virtuale Private de la 15 EUR | FXF',
+    title: 'VPS Cloud România | Servere Virtuale Private de la 210 EUR | FXF',
     description: 'Servere VPS cu resurse dedicate, root access și SSD NVMe.',
     url: 'https://fxfweb.ro/servere/vps',
   },
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const packages = [
   {
     name: 'VPS Pro Start',
-    price: '1092',
+    price: '210',
     period: '6 luni',
     desc: 'Ideal pentru aplicații web și site-uri cu trafic mediu.',
     popular: true,
@@ -39,7 +39,7 @@ const packages = [
   },
   {
     name: 'VPS Pro Business',
-    price: '2184',
+    price: '420',
     period: '6 luni',
     desc: 'Pentru proiecte business și baze de date.',
     features: [
@@ -57,7 +57,7 @@ const packages = [
   },
   {
     name: 'VPS Pro Advanced',
-    price: '3216',
+    price: '618',
     period: '6 luni',
     desc: 'Putere pentru aplicații enterprise și trafic intens.',
     features: [
@@ -75,7 +75,7 @@ const packages = [
   },
   {
     name: 'VPS Pro Enterprise',
-    price: '5312',
+    price: '1022',
     period: '6 luni',
     desc: 'Maxim de performanță pentru proiecte critice.',
     features: [
@@ -157,7 +157,7 @@ export default function VPSPage() {
                     <p className="text-xs text-muted-foreground mb-3 min-h-[32px]">{pkg.desc}</p>
                     <div className="flex items-baseline justify-center gap-1">
                       <span className="text-4xl font-bold text-primary">{pkg.price}</span>
-                      <span className="text-muted-foreground">lei/{pkg.period}</span>
+                      <span className="text-muted-foreground">EUR/{pkg.period}</span>
                     </div>
                   </div>
                   <ul className="space-y-1.5 mb-5">

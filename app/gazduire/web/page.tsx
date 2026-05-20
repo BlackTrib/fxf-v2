@@ -6,11 +6,11 @@ import { Server, ArrowRight, HardDrive, Shield, Clock, Headphones, Zap, Globe, D
 import { PageHeroVisual } from '@/components/page-hero-visual'
 
 export const metadata: Metadata = {
-  title: 'Găzduire Web SSD România | Hosting de la 55 lei | FXF Web Hosting',
-  description: 'Găzduire web pe servere SSD NVMe în România. 6 pachete de la 55 lei/6 luni cu cPanel, SSL gratuit, backup zilnic și suport 24/7. Uptime 99.9% garantat!',
+  title: 'Găzduire Web SSD România | Hosting de la 19 EUR | FXF Web Hosting',
+  description: 'Găzduire web pe servere SSD NVMe în România. 6 pachete de la 19 EUR/6 luni cu cPanel, SSL gratuit, backup zilnic și suport 24/7. Uptime 99.9% garantat!',
   keywords: ['găzduire web', 'hosting românia', 'găzduire ssd', 'web hosting', 'găzduire nvme', 'hosting ieftin', 'cpanel hosting'],
   openGraph: {
-    title: 'Găzduire Web SSD România | Hosting de la 55 lei | FXF Web Hosting',
+    title: 'Găzduire Web SSD România | Hosting de la 19 EUR | FXF Web Hosting',
     description: 'Găzduire web pe servere SSD NVMe. cPanel, SSL gratuit, backup zilnic, suport 24/7.',
     url: 'https://fxfweb.ro/gazduire/web',
   },
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const packages = [
   {
     name: 'Start',
-    price: '99',
+    price: '19',
     period: '6 luni',
     desc: 'Ideal pentru site-uri mici de prezentare și bloguri personale.',
     features: [
@@ -41,7 +41,7 @@ const packages = [
   },
   {
     name: 'Basic',
-    price: '148',
+    price: '28',
     period: '6 luni',
     desc: 'Perfect pentru site-uri în creștere cu mai mult conținut.',
     features: [
@@ -62,7 +62,7 @@ const packages = [
   },
   {
     name: 'Business',
-    price: '199',
+    price: '38',
     period: '6 luni',
     desc: 'Recomandat pentru site-uri de afaceri și proiecte medii.',
     popular: true,
@@ -84,7 +84,7 @@ const packages = [
   },
   {
     name: 'Professional',
-    price: '297',
+    price: '57',
     period: '6 luni',
     desc: 'Pentru site-uri profesionale cu trafic în creștere.',
     features: [
@@ -105,7 +105,7 @@ const packages = [
   },
   {
     name: 'Corporate',
-    price: '348',
+    price: '67',
     period: '6 luni',
     desc: 'Optimizat pentru companii și magazine online medii.',
     features: [
@@ -126,7 +126,7 @@ const packages = [
   },
   {
     name: 'Enterprise',
-    price: '397',
+    price: '76',
     period: '6 luni',
     desc: 'Putere maximă pentru aplicații și site-uri cu trafic intens.',
     features: [
@@ -213,7 +213,7 @@ export default function GazduireWebPage() {
                     <p className="text-sm text-muted-foreground mb-4 min-h-[40px]">{pkg.desc}</p>
                     <div className="flex items-baseline justify-center gap-1">
                       <span className="text-4xl font-bold text-primary">{pkg.price}</span>
-                      <span className="text-muted-foreground">lei/{pkg.period}</span>
+                      <span className="text-muted-foreground">EUR/{pkg.period}</span>
                     </div>
                   </div>
                   <ul className="space-y-2 mb-6">

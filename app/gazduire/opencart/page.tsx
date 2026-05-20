@@ -6,11 +6,11 @@ import { ShoppingBag, ArrowRight, HardDrive, Shield, Clock, Headphones, Zap, Dat
 import { PageHeroVisual } from '@/components/page-hero-visual'
 
 export const metadata: Metadata = {
-  title: 'Găzduire OpenCart România | Hosting E-Commerce de la 83 lei | FXF',
+  title: 'Găzduire OpenCart România | Hosting E-Commerce de la 105 EUR | FXF',
   description: 'Găzduire OpenCart optimizată pe servere SSD NVMe. Auto-instalare OpenCart, configurație specială pentru magazine online, SSL gratuit. Suport tehnic 24/7!',
   keywords: ['găzduire opencart', 'hosting opencart', 'opencart românia', 'hosting magazin online', 'găzduire e-commerce opencart'],
   openGraph: {
-    title: 'Găzduire OpenCart România | Hosting E-Commerce de la 83 lei | FXF',
+    title: 'Găzduire OpenCart România | Hosting E-Commerce de la 105 EUR | FXF',
     description: 'Găzduire OpenCart optimizată cu auto-instalare și configurație specială pentru magazine online.',
     url: 'https://fxfweb.ro/gazduire/opencart',
   },
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const packages = [
   {
     name: 'OC Start',
-    price: '546',
+    price: '105',
     period: '6 luni',
     desc: 'Perfect pentru magazine noi OpenCart cu până la 500 produse.',
     features: [
@@ -41,7 +41,7 @@ const packages = [
   },
   {
     name: 'OC Business',
-    price: '596',
+    price: '115',
     period: '6 luni',
     desc: 'Ideal pentru magazine în creștere cu până la 2000 produse.',
     popular: true,
@@ -63,7 +63,7 @@ const packages = [
   },
   {
     name: 'OC Pro',
-    price: '645',
+    price: '124',
     period: '6 luni',
     desc: 'Pentru magazine mari cu mii de produse și trafic intens.',
     features: [
@@ -84,7 +84,7 @@ const packages = [
   },
   {
     name: 'OC Enterprise',
-    price: '745',
+    price: '143',
     period: '6 luni',
     desc: 'Putere maximă pentru magazine OpenCart enterprise.',
     features: [
@@ -169,7 +169,7 @@ export default function GazduireOpencartPage() {
                     <p className="text-sm text-muted-foreground mb-4 min-h-[40px]">{pkg.desc}</p>
                     <div className="flex items-baseline justify-center gap-1">
                       <span className="text-4xl font-bold text-primary">{pkg.price}</span>
-                      <span className="text-muted-foreground">lei/{pkg.period}</span>
+                      <span className="text-muted-foreground">EUR/{pkg.period}</span>
                     </div>
                   </div>
                   <ul className="space-y-2 mb-6">

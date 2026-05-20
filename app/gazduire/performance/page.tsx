@@ -6,11 +6,11 @@ import { Rocket, ArrowRight, HardDrive, Shield, Clock, Headphones, Zap, Database
 import { PageHeroVisual } from '@/components/page-hero-visual'
 
 export const metadata: Metadata = {
-  title: 'Găzduire Performance România | Hosting Premium de la 890 lei | FXF',
+  title: 'Găzduire Performance România | Hosting Premium de la 171 EUR | FXF',
   description: 'Găzduire Performance cu resurse CPU și RAM dedicate. LiteSpeed Enterprise, backup 24/24h, uptime 99.99% SLA. Suport prioritar 24/7!',
   keywords: ['găzduire performance', 'hosting premium', 'găzduire resurse dedicate', 'hosting enterprise', 'găzduire rapidă'],
   openGraph: {
-    title: 'Găzduire Performance România | Hosting Premium de la 455 lei | FXF',
+    title: 'Găzduire Performance România | Hosting Premium de la 171 EUR | FXF',
     description: 'Găzduire Performance cu resurse dedicate, LiteSpeed Enterprise și uptime 99.99% SLA.',
     url: 'https://fxfweb.ro/gazduire/performance',
   },
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const packages = [
   {
     name: 'Performance Start',
-    price: '890',
+    price: '171',
     period: '6 luni',
     desc: 'Pentru site-uri cu trafic mediu și cerințe de performanță ridicată.',
     features: [
@@ -41,7 +41,7 @@ const packages = [
   },
   {
     name: 'Performance Pro',
-    price: '1076',
+    price: '207',
     period: '6 luni',
     desc: 'Ideal pentru aplicații complexe și magazine online cu trafic ridicat.',
     popular: true,
@@ -63,7 +63,7 @@ const packages = [
   },
   {
     name: 'Performance Business',
-    price: '1291',
+    price: '248',
     period: '6 luni',
     desc: 'Pentru proiecte enterprise cu trafic intens și cerințe premium.',
     features: [
@@ -84,7 +84,7 @@ const packages = [
   },
   {
     name: 'Performance Enterprise',
-    price: '1738',
+    price: '334',
     period: '6 luni',
     desc: 'Putere maximă pentru cele mai exigente proiecte enterprise.',
     features: [
@@ -169,7 +169,7 @@ export default function GazduirePerformancePage() {
                     <p className="text-sm text-muted-foreground mb-4 min-h-[40px]">{pkg.desc}</p>
                     <div className="flex items-baseline justify-center gap-1">
                       <span className="text-4xl font-bold text-primary">{pkg.price}</span>
-                      <span className="text-muted-foreground">lei/{pkg.period}</span>
+                      <span className="text-muted-foreground">EUR/{pkg.period}</span>
                     </div>
                   </div>
                   <ul className="space-y-2 mb-6">
