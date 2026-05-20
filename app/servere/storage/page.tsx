@@ -27,44 +27,76 @@ const features = [
 const packages = [
   { 
     name: 'Starter', 
-    storage: '500 GB', 
-    price: '10', 
-    bandwidth: '1 TB trafic', 
-    users: '1 utilizator',
-    backups: 'Zilnic',
-    sla: '99.9%',
-    desc: 'Perfect pentru backupuri personale și fișiere importante.' 
+    storage: '1 TB', 
+    price: '150', 
+    period: '6 luni',
+    users: '2 utilizatori',
+    desc: 'Perfect pentru backupuri și stocare personală.' ,
+    features: [
+      'Trafic nelimitat',
+      'rețea 1 Gbps',
+      'FTP, FTPS, SFTP',
+      'SCP, Samba/CIFS',
+      'HTTPS, WebDAV',
+      'Usable as network drive',
+      'BorgBackup, rsync via SSH',
+      'Restic, Rclone'
+    ]
   },
   { 
     name: 'Professional', 
-    storage: '2 TB', 
-    price: '25', 
-    bandwidth: '5 TB trafic', 
-    users: '5 utilizatori',
-    backups: 'Zilnic',
-    sla: '99.9%',
+    storage: '5 TB', 
+    price: '250', 
+    period: '6 luni',
+    users: '3 utilizatori',
     popular: true,
-    desc: 'Ideal pentru echipe mici și proiecte collaborative.' 
+    desc: 'Ideal pentru echipe mici și proiecte collaborative.' ,
+    features: [
+      'Trafic nelimitat',
+      'rețea 1 Gbps',
+      'FTP, FTPS, SFTP',
+      'SCP, Samba/CIFS',
+      'HTTPS, WebDAV',
+      'Usable as network drive',
+      'BorgBackup, rsync via SSH',
+      'Restic, Rclone'
+    ]
   },
   { 
     name: 'Business', 
-    storage: '5 TB', 
-    price: '60', 
-    bandwidth: 'Nelimitat', 
-    users: 'Nelimitat',
-    backups: 'Zilnic',
-    sla: '99.95%',
-    desc: 'Pentru departamente și companii cu nevoie de stocare mare.' 
+    storage: '10 TB', 
+    price: '500', 
+    period: '6 luni',
+    users: '5 utilizatori',
+    desc: 'Pentru departamente și companii cu nevoie de stocare mare.' ,
+    features: [
+      'Trafic nelimitat',
+      'rețea 1 Gbps',
+      'FTP, FTPS, SFTP',
+      'SCP, Samba/CIFS',
+      'HTTPS, WebDAV',
+      'Usable as network drive',
+      'BorgBackup, rsync via SSH',
+      'Restic, Rclone'
+    ]
   },
   { 
     name: 'Enterprise', 
-    storage: '10+ TB', 
-    price: 'Custom', 
-    bandwidth: 'Nelimitat', 
-    users: 'Nelimitat',
-    backups: '24 ore',
-    sla: '99.99%',
-    desc: 'Soluție personalizată cu SLA enterprise și suport dedicat.' 
+    storage: '20 TB', 
+    price: '1000', 
+    period: '6 luni',
+    users: '10 utilizatori',
+    desc: 'Soluție personalizată cu SLA enterprise și suport dedicat.' ,
+    features: [
+      'Trafic nelimitat',
+      'rețea 1 Gbps',
+      'FTP, FTPS, SFTP',
+      'SCP, Samba/CIFS',
+      'HTTPS, WebDAV',
+      'Usable as network drive',
+      'BorgBackup, rsync via SSH',
+      'Restic, Rclone'
+    ]
   },
 ]
 
@@ -138,26 +170,25 @@ export default function StoragePage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {packages.map((pkg) => (
-                <div key={pkg.name} className={`rounded-2xl p-6 border-2 ${pkg.popular ? 'border-primary bg-primary/5 relative' : 'border-border bg-card'}`}>
+                <div key={pkg.name} className={`rounded-2xl p-5 border-2 ${pkg.popular ? 'border-primary bg-primary/5 relative' : 'border-border bg-card'}`}>
                   {pkg.popular && <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">POPULAR</span>}
-                  <div className="text-center mb-6">
-                    <h3 className="font-display text-lg font-bold text-foreground mb-2">{pkg.name}</h3>
-                    <p className="text-xs text-muted-foreground mb-4 min-h-[32px]">{pkg.desc}</p>
+                  <div className="text-center mb-5">
+                    <h3 className="font-display text-lg font-bold text-foreground mb-1">{pkg.name}</h3>
+                    <p className="text-xs text-muted-foreground mb-3 min-h-[32px]">{pkg.desc}</p>
                     <div className="flex items-baseline justify-center gap-1">
-                      <span className="text-3xl font-bold text-primary">{pkg.price === 'Custom' ? pkg.price : pkg.price}</span>
-                      {pkg.price !== 'Custom' && <span className="text-muted-foreground text-sm">€/lună</span>}
+                      <span className="text-3xl font-bold text-primary">{pkg.price}</span>
+                      <span className="text-muted-foreground text-sm">€/{pkg.period}</span>
                     </div>
                   </div>
-                  <ul className="space-y-2 mb-6">
-                    <li className="flex items-center gap-2 text-sm"><Check size={14} className="text-green-500" />{pkg.storage} stocare</li>
-                    <li className="flex items-center gap-2 text-sm"><Check size={14} className="text-green-500" />{pkg.bandwidth} trafic</li>
-                    <li className="flex items-center gap-2 text-sm"><Check size={14} className="text-green-500" />{pkg.users}</li>
-                    <li className="flex items-center gap-2 text-sm"><Check size={14} className="text-green-500" />Backup {pkg.backups}</li>
-                    <li className="flex items-center gap-2 text-sm"><Check size={14} className="text-green-500" />SLA {pkg.sla}</li>
-                    <li className="flex items-center gap-2 text-sm"><Check size={14} className="text-green-500" />Criptare AES-256</li>
+                  <ul className="space-y-1.5 mb-5">
+                    <li className="flex items-start gap-2 text-xs"><span className="w-1.5 h-1.5 rounded-full bg-accent-brand mt-1.5 shrink-0" /><span className="text-muted-foreground"><span className="font-bold text-foreground">{pkg.storage}</span> stocare</span></li>
+                    <li className="flex items-start gap-2 text-xs"><span className="w-1.5 h-1.5 rounded-full bg-accent-brand mt-1.5 shrink-0" /><span className="text-muted-foreground"><span className="font-bold text-foreground">{pkg.users}</span></span></li>
+                    {pkg.features.map((f, i) => (
+                      <li key={i} className="flex items-start gap-2 text-xs"><span className="w-1.5 h-1.5 rounded-full bg-accent-brand mt-1.5 shrink-0" /><span className="text-muted-foreground">{f}</span></li>
+                    ))}
                   </ul>
-                  <Link href="/contact" className={`block w-full text-center py-3 rounded-xl text-sm font-semibold transition-all ${pkg.popular ? 'bg-primary text-white hover:bg-primary/90' : 'bg-secondary text-foreground hover:bg-secondary/80'}`}>
-                    {pkg.price === 'Custom' ? 'Solicită ofertă' : 'Comandă acum'}
+                  <Link href="/contact" className={`block w-full text-center py-2.5 rounded-xl text-sm font-semibold transition-all ${pkg.popular ? 'bg-primary text-white hover:bg-primary/90' : 'bg-secondary text-foreground hover:bg-secondary/80'}`}>
+                    Comandă acum
                   </Link>
                 </div>
               ))}
