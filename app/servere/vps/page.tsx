@@ -157,7 +157,7 @@ export default function VPSPage() {
                     <p className="text-xs text-muted-foreground mb-3 min-h-[32px]">{pkg.desc}</p>
                     <div className="flex items-baseline justify-center gap-1">
                       <span className="text-4xl font-bold text-primary">{pkg.price}</span>
-                      <span className="text-muted-foreground">€/{pkg.period}</span>
+                      <span className="flex items-baseline gap-1"><span className="text-lg font-semibold">€</span><span className="text-sm text-muted-foreground">/{pkg.period}</span></span>
                     </div>
                   </div>
                   <ul className="space-y-1.5 mb-5">

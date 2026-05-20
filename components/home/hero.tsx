@@ -158,7 +158,7 @@ export function Hero() {
                     </div>
                     <div className="text-right">
                       <p className="text-2xl font-bold text-primary">38 €</p>
-                      <p className="text-xs text-muted-foreground">/6 luni</p>
+                      <p className="text-sm text-muted-foreground">/6 luni</p>
                     </div>
                   </div>
                 </div>

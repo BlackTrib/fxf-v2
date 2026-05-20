@@ -109,9 +109,9 @@ export function ServicesOverview() {
                 <p className="text-muted-foreground text-sm leading-relaxed mb-3">{pkg.desc}</p>
                 
                 {/* Price */}
-                <div className="mb-3">
+                <div className="mb-3 flex items-baseline gap-1">
                   <span className="text-2xl font-bold text-primary">{pkg.price} {pkg.currency}</span>
-                  <span className="text-muted-foreground text-sm">/{pkg.period}</span>
+                  <span className="text-sm text-muted-foreground">/{pkg.period}</span>
                 </div>
                 
                 {/* Features list */}
