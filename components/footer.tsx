@@ -15,6 +15,7 @@ const gazduire = [
 const servere = [
   { href: '/servere/vps', label: 'VPS Cloud' },
   { href: '/servere/dedicat', label: 'Servere Dedicate' },
+  { href: '/servere/storage', label: 'Cloud Storage' },
 ]
 
 const company = [
