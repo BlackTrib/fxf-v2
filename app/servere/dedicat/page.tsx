@@ -223,6 +223,8 @@ export default function DedicatPage() {
                 </Link>
               </div>
             </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {packages.map((pkg) => (
                 <div key={pkg.name} className={`rounded-2xl p-5 border-2 ${pkg.popular ? 'border-primary bg-primary/5 relative' : 'border-border bg-card'}`}>
                   {pkg.popular && <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">POPULAR</span>}
