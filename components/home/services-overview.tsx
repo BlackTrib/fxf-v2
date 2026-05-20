@@ -1,37 +1,40 @@
 'use client'
 
 import Link from 'next/link'
-import { Server, ShoppingCart, HardDrive, ArrowRight, CheckCircle2, Zap, Cloud, Cpu, Globe } from 'lucide-react'
+import { Server, HardDrive, ArrowRight, CheckCircle2, Zap, Cloud, Cpu, Globe } from 'lucide-react'
 import { Reveal } from '@/components/ui/reveal'
 
 const hostingPackages = [
   { 
     icon: Server, 
-    title: 'Găzduire Start', 
-    desc: 'Ideal pentru site-uri de prezentare, bloguri și servicii email. Perfect pentru a începe.',
-    price: '99.00',
+    title: 'Găzduire Business', 
+    desc: 'Perfect pentru site-uri WordPress, aplicații web și proiecte cu trafic moderat.',
+    price: '38',
     period: '6 luni',
-    features: ['3GB NVMe SSD', 'Domenii nelimitate', 'Email nelimitat', 'cPanel + JetBackup', '1CPU / 1GB ram'],
+    currency: '€',
+    features: ['10GB NVMe SSD', 'Domenii nelimitate', 'cPanel + JetBackup', 'LiteSpeed + Imunify', '2CPU / 2GB RAM'],
     href: '/gazduire/web', 
   },
   { 
     icon: HardDrive, 
-    title: 'Găzduire Business', 
-    desc: 'Perfect pentru proiecte medii, site-uri WordPress și aplicații web cu trafic moderat.',
-    price: '199.00',
+    title: 'Performance Start', 
+    desc: 'Resurse dedicate CPU și RAM pentru site-uri cu cerințe ridicate de performanță.',
+    price: '171',
     period: '6 luni',
-    features: ['10GB NVMe SSD', 'Domenii nelimitate', 'Email nelimitat', 'LiteSpeed + Imunify', '2CPU / 2GB ram'],
-    href: '/gazduire/web',
+    currency: '€',
+    features: ['100GB NVMe SSD', 'Domenii nelimitate', 'cPanel + JetBackup', 'LiteSpeed Enterprise', '4CPU / 4GB RAM'],
+    href: '/gazduire/performance',
     popular: true,
   },
   { 
-    icon: ShoppingCart, 
-    title: 'Găzduire Corporate', 
-    desc: 'Creat special pentru magazine online, WooCommerce, PrestaShop și alte platforme e-commerce.',
-    price: '348.00',
+    icon: Cloud, 
+    title: 'VPS Pro Start', 
+    desc: 'Server virtual privat cu resurse dedicate, root access complet și IP dedicat.',
+    price: '210',
     period: '6 luni',
-    features: ['20GB NVMe SSD', 'Domenii nelimitate', 'Email nelimitat', 'LiteSpeed + Imunify', '2CPU / 2GB ram'],
-    href: '/gazduire/web',
+    currency: '€',
+    features: ['160GB NVMe SSD', '4 vCPU AMD EPYC', '8GB DDR5 RAM', 'IP dedicat IPv4+IPv6', 'Root access + DDoS'],
+    href: '/servere/vps',
   },
 ]
 
@@ -107,7 +110,7 @@ export function ServicesOverview() {
                 
                 {/* Price */}
                 <div className="mb-3">
-                  <span className="text-2xl font-bold text-primary">{pkg.price} lei</span>
+                  <span className="text-2xl font-bold text-primary">{pkg.price} {pkg.currency}</span>
                   <span className="text-muted-foreground text-sm">/{pkg.period}</span>
                 </div>
                 
