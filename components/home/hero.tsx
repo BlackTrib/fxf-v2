@@ -157,7 +157,7 @@ export function Hero() {
                       <h3 className="font-display font-bold text-lg text-foreground mt-1">Găzduire Business</h3>
                     </div>
                     <div className="text-right">
-                      <p className="text-2xl font-bold text-primary">199 lei</p>
+                      <p className="text-2xl font-bold text-primary">38 €</p>
                       <p className="text-xs text-muted-foreground">/6 luni</p>
                     </div>
                   </div>
