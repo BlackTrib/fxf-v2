@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const packages = [
   {
     name: 'Performance Start',
-    price: '89000',
+    price: '890',
     period: '6 luni',
     desc: 'Pentru site-uri cu trafic mediu și cerințe de performanță ridicată.',
     features: [
@@ -41,7 +41,7 @@ const packages = [
   },
   {
     name: 'Performance Pro',
-    price: '1,076.00',
+    price: '1076',
     period: '6 luni',
     desc: 'Ideal pentru aplicații complexe și magazine online cu trafic ridicat.',
     popular: true,
@@ -63,7 +63,7 @@ const packages = [
   },
   {
     name: 'Performance Business',
-    price: '1,291.00',
+    price: '1291',
     period: '6 luni',
     desc: 'Pentru proiecte enterprise cu trafic intens și cerințe premium.',
     features: [
@@ -84,7 +84,7 @@ const packages = [
   },
   {
     name: 'Performance Enterprise',
-    price: '1,738.00',
+    price: '1738',
     period: '6 luni',
     desc: 'Putere maximă pentru cele mai exigente proiecte enterprise.',
     features: [

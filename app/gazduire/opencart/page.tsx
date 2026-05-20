@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const packages = [
   {
     name: 'OC Start',
-    price: '54600',
+    price: '546',
     period: '6 luni',
     desc: 'Perfect pentru magazine noi OpenCart cu până la 500 produse.',
     features: [
@@ -41,7 +41,7 @@ const packages = [
   },
   {
     name: 'OC Business',
-    price: '59600',
+    price: '596',
     period: '6 luni',
     desc: 'Ideal pentru magazine în creștere cu până la 2000 produse.',
     popular: true,
@@ -63,7 +63,7 @@ const packages = [
   },
   {
     name: 'OC Pro',
-    price: '64500',
+    price: '645',
     period: '6 luni',
     desc: 'Pentru magazine mari cu mii de produse și trafic intens.',
     features: [
@@ -84,7 +84,7 @@ const packages = [
   },
   {
     name: 'OC Enterprise',
-    price: '74500',
+    price: '745',
     period: '6 luni',
     desc: 'Putere maximă pentru magazine OpenCart enterprise.',
     features: [
