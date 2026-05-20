@@ -33,7 +33,7 @@ const packages = [
     features: [
       { label: 'procesor', value: 'AMD Ryzen 5 3600' },
       { label: 'CPU', value: '6 cores / 12 threads @ 3.6 GHz' },
-      { label: 'memorie RAM', value: '64 GB DDR4' },
+      { label: 'memorie RAM', value: '64 GB DDR5' },
       { label: 'stocare', value: '512 GB NVMe SSD' },
       { label: 'trafic lunar', value: 'nelimitat' },
       { label: 'IP dedicat', value: 'IPv4' },
@@ -131,12 +131,16 @@ export default function DedicatPage() {
                 </div>
                 <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 text-balance">
                   Servere Dedicate
-                  <span className="block text-2xl sm:text-3xl lg:text-4xl mt-2 text-white/70">Hardware exclusiv pentru performanță maximă</span>
+                  <span className="block text-2xl sm:text-3xl lg:text-4xl mt-2 text-white/70">AMD Ryzen & Intel Core Ultra</span>
                 </h1>
                 <p className="text-white/70 text-lg sm:text-xl leading-relaxed mb-8">
-                  Servere fizice dedicate cu procesoare AMD Ryzen și Intel Core Ultra, RAM DDR5 și stocare SSD NVMe enterprise. 
-                  Putere brută pentru cele mai exigente proiecte.
+                  Server fizic exclusiv cu procesoare AMD Ryzen 5 / 7 / 9 și Intel Core Ultra, RAM DDR5, SSD NVMe și trafic nelimitat. Root access complet, IP dedicat, protecție DDoS inclusă.
                 </p>
+                <div className="flex flex-wrap gap-3 mb-8">
+                  {['de la 726 €/6 luni', 'Trafic nelimitat', 'Root access', 'IP dedicat IPv4'].map((tag) => (
+                    <span key={tag} className="bg-white/10 border border-white/15 text-white/80 text-xs font-medium px-3 py-1.5 rounded-full">{tag}</span>
+                  ))}
+                </div>
               </div>
               <PageHeroVisual page="servere-dedicat" />
             </div>
