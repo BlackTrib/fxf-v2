@@ -124,7 +124,7 @@ export default function StoragePage() {
                   Cloud Storage
                 </div>
                 <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 text-balance">
-                  Cloud Storage Sigur
+                  Cloud Storage
                   <span className="block text-2xl sm:text-3xl lg:text-4xl mt-2 text-white/70">Datele tale protejate 24/7</span>
                 </h1>
                 <p className="text-white/70 text-lg sm:text-xl leading-relaxed mb-8">
