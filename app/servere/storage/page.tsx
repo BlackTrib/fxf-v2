@@ -234,6 +234,10 @@ export default function StoragePage() {
         </section>
 
         {/* Benefits Section */}
+        <section className="py-12 bg-secondary/30">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="text-center max-w-2xl mx-auto mb-12">
+              <h2 className="font-display text-3xl font-bold text-foreground mb-4">De ce Cloud Storage la FXF?</h2>
               <p className="text-muted-foreground">Securitate și fiabilitate pentru datele tale importante.</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
