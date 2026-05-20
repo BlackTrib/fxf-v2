@@ -21,6 +21,7 @@ const packages = [
   {
     name: 'VPS Pro Start',
     price: '25',
+    price6months: '1.092',
     period: 'lună',
     desc: 'Ideal pentru aplicații web și site-uri cu trafic mediu.',
     popular: true,
@@ -41,6 +42,7 @@ const packages = [
   {
     name: 'VPS Pro Business',
     price: '45',
+    price6months: '2.184',
     period: 'lună',
     desc: 'Pentru proiecte business și baze de date.',
     features: [
@@ -60,6 +62,7 @@ const packages = [
   {
     name: 'VPS Pro Advanced',
     price: '75',
+    price6months: '3.216',
     period: 'lună',
     desc: 'Putere pentru aplicații enterprise și trafic intens.',
     features: [
@@ -79,6 +82,7 @@ const packages = [
   {
     name: 'VPS Pro Enterprise',
     price: '120',
+    price6months: '5.312',
     period: 'lună',
     desc: 'Maxim de performanță pentru proiecte critice.',
     features: [
@@ -162,6 +166,9 @@ export default function VPSPage() {
                     <div className="flex items-baseline justify-center gap-1">
                       <span className="text-3xl font-bold text-primary">{pkg.price}</span>
                       <span className="text-muted-foreground text-sm">EUR/{pkg.period}</span>
+                    </div>
+                    <div className="text-xs text-muted-foreground mt-2 pt-2 border-t border-border">
+                      {pkg.price6months} lei / 6 luni
                     </div>
                   </div>
                   <ul className="space-y-1.5 mb-5">
