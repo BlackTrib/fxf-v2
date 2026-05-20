@@ -6,11 +6,11 @@ import { Layers, ArrowRight, HardDrive, Shield, Clock, Headphones, Zap, Database
 import { PageHeroVisual } from '@/components/page-hero-visual'
 
 export const metadata: Metadata = {
-  title: 'Găzduire Magento România | Hosting Enterprise de la 105 EUR | FXF',
+  title: 'Găzduire Magento România | Hosting Enterprise de la 105 € | FXF',
   description: 'Găzduire Magento 2 optimizată pe servere SSD NVMe. Elasticsearch, Redis, Varnish cache, resurse dedicate enterprise. Suport tehnic specializat 24/7!',
   keywords: ['găzduire magento', 'hosting magento', 'magento 2 românia', 'hosting enterprise', 'găzduire e-commerce magento'],
   openGraph: {
-    title: 'Găzduire Magento România | Hosting Enterprise de la 105 EUR | FXF',
+    title: 'Găzduire Magento România | Hosting Enterprise de la 105 € | FXF',
     description: 'Găzduire Magento 2 optimizată cu Elasticsearch, Redis și Varnish cache pentru performanță enterprise.',
     url: 'https://fxfweb.ro/gazduire/magento',
   },
@@ -169,7 +169,7 @@ export default function GazduireMagentoPage() {
                     <p className="text-sm text-muted-foreground mb-4 min-h-[40px]">{pkg.desc}</p>
                     <div className="flex items-baseline justify-center gap-1">
                       <span className="text-4xl font-bold text-primary">{pkg.price}</span>
-                      <span className="text-muted-foreground">EUR/{pkg.period}</span>
+                      <span className="text-muted-foreground">€/{pkg.period}</span>
                     </div>
                   </div>
                   <ul className="space-y-2 mb-6">

@@ -6,11 +6,11 @@ import { HardDrive, ArrowRight, Check, Database, Shield, Zap, Lock, Globe, Cpu, 
 import { PageHeroVisual } from '@/components/page-hero-visual'
 
 export const metadata: Metadata = {
-  title: 'Cloud Storage și Backup | Stocare Sigură de la 10 EUR | FXF',
+  title: 'Cloud Storage și Backup | Stocare Sigură de la 10 € | FXF',
   description: 'Servicii de cloud storage și backup cu redundanță completă. Stocare sigură pentru datele tale, acces de oriunde, backup automat zilnic și criptare end-to-end.',
   keywords: ['cloud storage', 'backup online', 'stocare cloud', 'backup automat', 'cloud backup', 'stocare sigură'],
   openGraph: {
-    title: 'Cloud Storage și Backup | Stocare Sigură de la 10 EUR | FXF',
+    title: 'Cloud Storage și Backup | Stocare Sigură de la 10 € | FXF',
     description: 'Cloud storage cu redundanță, backup automat și criptare. Datele tale în siguranță 24/7.',
     url: 'https://fxfweb.ro/servere/storage',
   },
@@ -145,7 +145,7 @@ export default function StoragePage() {
                     <p className="text-xs text-muted-foreground mb-4 min-h-[32px]">{pkg.desc}</p>
                     <div className="flex items-baseline justify-center gap-1">
                       <span className="text-3xl font-bold text-primary">{pkg.price === 'Custom' ? pkg.price : pkg.price}</span>
-                      {pkg.price !== 'Custom' && <span className="text-muted-foreground text-sm">EUR/lună</span>}
+                      {pkg.price !== 'Custom' && <span className="text-muted-foreground text-sm">€/lună</span>}
                     </div>
                   </div>
                   <ul className="space-y-2 mb-6">

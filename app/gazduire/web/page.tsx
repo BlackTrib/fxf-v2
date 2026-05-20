@@ -6,11 +6,11 @@ import { Server, ArrowRight, HardDrive, Shield, Clock, Headphones, Zap, Globe, D
 import { PageHeroVisual } from '@/components/page-hero-visual'
 
 export const metadata: Metadata = {
-  title: 'Găzduire Web SSD România | Hosting de la 19 EUR | FXF Web Hosting',
-  description: 'Găzduire web pe servere SSD NVMe în România. 6 pachete de la 19 EUR/6 luni cu cPanel, SSL gratuit, backup zilnic și suport 24/7. Uptime 99.9% garantat!',
+  title: 'Găzduire Web SSD România | Hosting de la 19 € | FXF Web Hosting',
+  description: 'Găzduire web pe servere SSD NVMe în România. 6 pachete de la 19 €/6 luni cu cPanel, SSL gratuit, backup zilnic și suport 24/7. Uptime 99.9% garantat!',
   keywords: ['găzduire web', 'hosting românia', 'găzduire ssd', 'web hosting', 'găzduire nvme', 'hosting ieftin', 'cpanel hosting'],
   openGraph: {
-    title: 'Găzduire Web SSD România | Hosting de la 19 EUR | FXF Web Hosting',
+    title: 'Găzduire Web SSD România | Hosting de la 19 € | FXF Web Hosting',
     description: 'Găzduire web pe servere SSD NVMe. cPanel, SSL gratuit, backup zilnic, suport 24/7.',
     url: 'https://fxfweb.ro/gazduire/web',
   },
@@ -213,7 +213,7 @@ export default function GazduireWebPage() {
                     <p className="text-sm text-muted-foreground mb-4 min-h-[40px]">{pkg.desc}</p>
                     <div className="flex items-baseline justify-center gap-1">
                       <span className="text-4xl font-bold text-primary">{pkg.price}</span>
-                      <span className="text-muted-foreground">EUR/{pkg.period}</span>
+                      <span className="text-muted-foreground">€/{pkg.period}</span>
                     </div>
                   </div>
                   <ul className="space-y-2 mb-6">

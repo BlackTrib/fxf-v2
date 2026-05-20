@@ -6,11 +6,11 @@ import { ShoppingCart, ArrowRight, HardDrive, Shield, Clock, Headphones, Zap, Da
 import { PageHeroVisual } from '@/components/page-hero-visual'
 
 export const metadata: Metadata = {
-  title: 'Găzduire PrestaShop România | Hosting E-Commerce de la 105 EUR | FXF',
+  title: 'Găzduire PrestaShop România | Hosting E-Commerce de la 105 € | FXF',
   description: 'Găzduire PrestaShop optimizată pe servere SSD NVMe. Configurație specială pentru magazine online, SSL gratuit, resurse dedicate e-commerce. Suport tehnic 24/7!',
   keywords: ['găzduire prestashop', 'hosting prestashop', 'prestashop românia', 'hosting magazin online', 'găzduire e-commerce'],
   openGraph: {
-    title: 'Găzduire PrestaShop România | Hosting E-Commerce de la 105 EUR | FXF',
+    title: 'Găzduire PrestaShop România | Hosting E-Commerce de la 105 € | FXF',
     description: 'Găzduire PrestaShop optimizată cu configurație specială pentru magazine online și resurse dedicate.',
     url: 'https://fxfweb.ro/gazduire/prestashop',
   },
@@ -169,7 +169,7 @@ export default function GazduirePrestashopPage() {
                     <p className="text-sm text-muted-foreground mb-4 min-h-[40px]">{pkg.desc}</p>
                     <div className="flex items-baseline justify-center gap-1">
                       <span className="text-4xl font-bold text-primary">{pkg.price}</span>
-                      <span className="text-muted-foreground">EUR/{pkg.period}</span>
+                      <span className="text-muted-foreground">€/{pkg.period}</span>
                     </div>
                   </div>
                   <ul className="space-y-2 mb-6">

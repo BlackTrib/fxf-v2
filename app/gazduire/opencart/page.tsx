@@ -6,11 +6,11 @@ import { ShoppingBag, ArrowRight, HardDrive, Shield, Clock, Headphones, Zap, Dat
 import { PageHeroVisual } from '@/components/page-hero-visual'
 
 export const metadata: Metadata = {
-  title: 'Găzduire OpenCart România | Hosting E-Commerce de la 105 EUR | FXF',
+  title: 'Găzduire OpenCart România | Hosting E-Commerce de la 105 € | FXF',
   description: 'Găzduire OpenCart optimizată pe servere SSD NVMe. Auto-instalare OpenCart, configurație specială pentru magazine online, SSL gratuit. Suport tehnic 24/7!',
   keywords: ['găzduire opencart', 'hosting opencart', 'opencart românia', 'hosting magazin online', 'găzduire e-commerce opencart'],
   openGraph: {
-    title: 'Găzduire OpenCart România | Hosting E-Commerce de la 105 EUR | FXF',
+    title: 'Găzduire OpenCart România | Hosting E-Commerce de la 105 € | FXF',
     description: 'Găzduire OpenCart optimizată cu auto-instalare și configurație specială pentru magazine online.',
     url: 'https://fxfweb.ro/gazduire/opencart',
   },
@@ -169,7 +169,7 @@ export default function GazduireOpencartPage() {
                     <p className="text-sm text-muted-foreground mb-4 min-h-[40px]">{pkg.desc}</p>
                     <div className="flex items-baseline justify-center gap-1">
                       <span className="text-4xl font-bold text-primary">{pkg.price}</span>
-                      <span className="text-muted-foreground">EUR/{pkg.period}</span>
+                      <span className="text-muted-foreground">€/{pkg.period}</span>
                     </div>
                   </div>
                   <ul className="space-y-2 mb-6">

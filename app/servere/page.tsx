@@ -42,7 +42,7 @@ const servers = [
       'IP dedicat inclus',
       'Scalare flexibilă',
     ],
-    price: 'de la 15 EUR/lună',
+    price: 'de la 15 €/lună',
     color: 'bg-indigo-50',
   },
   {
@@ -78,7 +78,7 @@ const servers = [
       'Partajare securizată',
       'Version control fișiere',
     ],
-    price: 'de la 10 EUR/lună',
+    price: 'de la 10 €/lună',
     color: 'bg-green-50',
   },
 ]

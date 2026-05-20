@@ -6,11 +6,11 @@ import { Rocket, ArrowRight, HardDrive, Shield, Clock, Headphones, Zap, Database
 import { PageHeroVisual } from '@/components/page-hero-visual'
 
 export const metadata: Metadata = {
-  title: 'Găzduire Performance România | Hosting Premium de la 171 EUR | FXF',
+  title: 'Găzduire Performance România | Hosting Premium de la 171 € | FXF',
   description: 'Găzduire Performance cu resurse CPU și RAM dedicate. LiteSpeed Enterprise, backup 24/24h, uptime 99.99% SLA. Suport prioritar 24/7!',
   keywords: ['găzduire performance', 'hosting premium', 'găzduire resurse dedicate', 'hosting enterprise', 'găzduire rapidă'],
   openGraph: {
-    title: 'Găzduire Performance România | Hosting Premium de la 171 EUR | FXF',
+    title: 'Găzduire Performance România | Hosting Premium de la 171 € | FXF',
     description: 'Găzduire Performance cu resurse dedicate, LiteSpeed Enterprise și uptime 99.99% SLA.',
     url: 'https://fxfweb.ro/gazduire/performance',
   },
@@ -169,7 +169,7 @@ export default function GazduirePerformancePage() {
                     <p className="text-sm text-muted-foreground mb-4 min-h-[40px]">{pkg.desc}</p>
                     <div className="flex items-baseline justify-center gap-1">
                       <span className="text-4xl font-bold text-primary">{pkg.price}</span>
-                      <span className="text-muted-foreground">EUR/{pkg.period}</span>
+                      <span className="text-muted-foreground">€/{pkg.period}</span>
                     </div>
                   </div>
                   <ul className="space-y-2 mb-6">
