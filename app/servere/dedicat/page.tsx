@@ -178,7 +178,51 @@ export default function DedicatPage() {
               <p className="text-muted-foreground text-lg">Toate serverele includ IPMI/KVM, protecție DDoS și suport prioritar 24/7.</p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Featured Enterprise Card */}
+            <div className="mb-12 max-w-md mx-auto">
+              <div className="relative bg-card border-2 border-primary/30 rounded-3xl p-8">
+                <div className="absolute -top-3 -right-3 bg-primary text-white text-xs font-bold px-4 py-2 rounded-full text-center leading-tight">
+                  <div>Enterprise</div>
+                  <div className="text-10 font-normal">Nivel pro</div>
+                </div>
+                <div className="absolute -bottom-3 -left-3 bg-primary/20 border border-primary/40 text-primary text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1">
+                  <span>📈</span> Uptime 99.99%
+                </div>
+                
+                <div className="mb-6">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-primary/30 flex items-center justify-center text-primary text-lg">⚡</div>
+                    <div>
+                      <h3 className="font-bold text-lg text-foreground">Server Dedicat</h3>
+                      <p className="text-xs text-muted-foreground">Hardware 100% al tău</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-2 gap-3 mb-6">
+                  <div className="bg-primary/10 border border-primary/20 rounded-xl p-3 text-center">
+                    <div className="text-2xl font-bold text-primary">16</div>
+                    <div className="text-xs text-muted-foreground mt-1">Core<br/>CPU</div>
+                  </div>
+                  <div className="bg-primary/10 border border-primary/20 rounded-xl p-3 text-center">
+                    <div className="text-2xl font-bold text-primary">128GB</div>
+                    <div className="text-xs text-muted-foreground mt-1">RAM<br/>DDR5</div>
+                  </div>
+                  <div className="bg-primary/10 border border-primary/20 rounded-xl p-3 text-center">
+                    <div className="text-2xl font-bold text-primary">2TB</div>
+                    <div className="text-xs text-muted-foreground mt-1">SSD<br/>NVMe</div>
+                  </div>
+                  <div className="bg-primary/10 border border-primary/20 rounded-xl p-3 text-center">
+                    <div className="text-2xl font-bold text-primary">10</div>
+                    <div className="text-xs text-muted-foreground mt-1">Gbps<br/>Bandă</div>
+                  </div>
+                </div>
+
+                <Link href="/contact" className="block w-full text-center bg-primary text-white font-semibold py-3 rounded-xl hover:bg-primary/90 transition-all">
+                  Comandă Enterprise - 2179 €
+                </Link>
+              </div>
+            </div>
               {packages.map((pkg) => (
                 <div key={pkg.name} className={`rounded-2xl p-5 border-2 ${pkg.popular ? 'border-primary bg-primary/5 relative' : 'border-border bg-card'}`}>
                   {pkg.popular && <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">POPULAR</span>}
