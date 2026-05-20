@@ -23,8 +23,6 @@ const features = [
   { icon: Zap, title: 'Performanță maximă', desc: 'Procesoare AMD Ryzen și Intel Core Ultra.' },
   { icon: HardDrive, title: 'SSD NVMe Enterprise', desc: 'Stocare ultrarapidă pentru aplicații exigente.' },
 ]
-
-const packages = [
   { 
     name: 'Dedicat Start', 
     price: '726', 
@@ -143,27 +141,6 @@ export default function DedicatPage() {
                 </div>
               </div>
               <PageHeroVisual page="servere-dedicat" />
-            </div>
-          </div>
-        </section>
-
-        <section className="py-8 bg-secondary/50">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {features.map((f) => {
-                const Icon = f.icon
-                return (
-                  <div key={f.title} className="flex items-start gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                      <Icon size={18} className="text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-foreground text-sm">{f.title}</h3>
-                      <p className="text-xs text-muted-foreground">{f.desc}</p>
-                    </div>
-                  </div>
-                )
-              })}
             </div>
           </div>
         </section>
