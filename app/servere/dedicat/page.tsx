@@ -41,7 +41,7 @@ const packages = [
       { label: 'os', value: 'Ubuntu / Debian / AlmaLinux' },
       { label: 'protecție DDoS', value: 'inclusă' },
       { label: 'rețea', value: '10 Gbps' },
-      { label: 'asistență ticket', value: '24/7' },
+      { label: 'asistență ticket', value: '24/7 prioritar' },
     ],
   },
   { 
@@ -61,7 +61,7 @@ const packages = [
       { label: 'os', value: 'Ubuntu / Debian / AlmaLinux' },
       { label: 'protecție DDoS', value: 'inclusă' },
       { label: 'rețea', value: '10 Gbps' },
-      { label: 'asistență ticket', value: '24/7' },
+      { label: 'asistență ticket', value: '24/7 prioritar' },
     ],
   },
   { 
@@ -80,7 +80,7 @@ const packages = [
       { label: 'os', value: 'Ubuntu / Debian / AlmaLinux' },
       { label: 'protecție DDoS', value: 'inclusă' },
       { label: 'rețea', value: '10 Gbps' },
-      { label: 'asistență ticket', value: '24/7' },
+      { label: 'asistență ticket', value: '24/7 prioritar' },
     ],
   },
   { 

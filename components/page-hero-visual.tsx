@@ -428,10 +428,10 @@ function ServereDedicateVisual() {
         </div>
         <div className="grid grid-cols-2 gap-2">
           {[
-            { label: 'CPU', value: '64 Core' },
-            { label: 'RAM', value: '128GB' },
-            { label: 'SSD', value: '2TB' },
-            { label: 'Bandă', value: '1Gbps' },
+            { label: 'CPU', value: '16 Core' },
+            { label: 'RAM', value: '128GB DDR5' },
+            { label: 'SSD', value: '2TB NVMe' },
+            { label: 'Bandă', value: '10Gbps' },
           ].map((s, i) => (
             <div key={s.label} className="bg-white/10 rounded-lg p-2 text-center" style={{ animation: `float ${3 + i * 0.2}s ease-in-out infinite ${i * 0.2}s` }}>
               <p className="text-white font-bold text-sm">{s.value}</p>
