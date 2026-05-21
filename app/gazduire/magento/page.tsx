@@ -116,7 +116,7 @@ const benefits = [
   { icon: Cpu, title: 'PHP 8.x Optimizat', desc: 'PHP configurat cu extensii necesare Magento 2 (sodium, intl, etc.).' },
   { icon: Shield, title: 'Firewall Enterprise', desc: 'Protecție specifică pentru magazinele Magento și date clienți.' },
   { icon: HardDrive, title: 'SSD NVMe Enterprise', desc: 'Stocare ultrarapidă pentru bazele de date mari specifice Magento.' },
-  { icon: RefreshCw, title: 'Uptime 99.99% SLA', desc: 'Garanție SLA enterprise pentru disponibilitate maximă.' },
+  { icon: RefreshCw, title: 'Uptime 99.99%', desc: 'Disponibilitate maximă pentru magazinele Magento enterprise.' },
   { icon: Headphones, title: 'Suport Magento 24/7', desc: 'Echipă specializată Magento cu experiență enterprise.' },
 ]
 

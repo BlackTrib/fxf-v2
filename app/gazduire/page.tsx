@@ -132,7 +132,7 @@ const services = [
       'CPU & RAM garantate',
       'LiteSpeed Enterprise',
       'Backup 24 din 24 ore',
-      'Uptime 99.99% SLA',
+      'Uptime 99.99%',
       'ipv4 sau ipv6',
       'Suport ticket 24/7',
     ],

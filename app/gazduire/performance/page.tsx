@@ -7,11 +7,11 @@ import { PageHeroVisual } from '@/components/page-hero-visual'
 
 export const metadata: Metadata = {
   title: 'Găzduire Performance România | Hosting Premium de la 171 € | FXF',
-  description: 'Găzduire Performance cu resurse CPU și RAM dedicate. LiteSpeed Enterprise, backup 24/24h, uptime 99.99% SLA. Suport prioritar 24/7!',
+  description: 'Găzduire Performance cu resurse CPU și RAM dedicate. LiteSpeed Enterprise, backup 24/24h, uptime 99.99%. Suport prioritar 24/7!',
   keywords: ['găzduire performance', 'hosting premium', 'găzduire resurse dedicate', 'hosting enterprise', 'găzduire rapidă'],
   openGraph: {
     title: 'Găzduire Performance România | Hosting Premium de la 171 € | FXF',
-    description: 'Găzduire Performance cu resurse dedicate, LiteSpeed Enterprise și uptime 99.99% SLA.',
+    description: 'Găzduire Performance cu resurse dedicate, LiteSpeed Enterprise și uptime 99.99%.',
     url: 'https://fxfweb.ro/gazduire/performance',
   },
   alternates: { canonical: 'https://fxfweb.ro/gazduire/performance' },
@@ -110,7 +110,7 @@ const benefits = [
   { icon: Zap, title: 'LiteSpeed Enterprise', desc: 'Server web LiteSpeed Enterprise cu cache avansat și HTTP/3.' },
   { icon: Clock, title: 'Backup 2x pe Zi', desc: 'Backup-uri de două ori pe zi pentru protecție maximă a datelor.' },
   { icon: Globe, title: 'CDN Inclus', desc: 'Content Delivery Network pentru încărcare rapidă globală.' },
-  { icon: Shield, title: 'Uptime 99.99% SLA', desc: 'Garanție SLA enterprise cu compensare pentru orice downtime.' },
+  { icon: Shield, title: 'Uptime 99.99%', desc: 'Disponibilitate maximă cu compensare pentru orice downtime.' },
   { icon: Headphones, title: 'Suport Prioritar', desc: 'Răspuns în maxim 30 minute pentru cererile de suport.' },
   { icon: HardDrive, title: 'SSD NVMe Enterprise', desc: 'Stocare ultrarapidă pe discuri NVMe enterprise-grade.' },
   { icon: Lock, title: 'DDoS Protection', desc: 'Protecție avansată DDoS și firewall enterprise.' },

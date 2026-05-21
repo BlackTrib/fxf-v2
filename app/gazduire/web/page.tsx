@@ -158,7 +158,7 @@ const benefits = [
   { icon: Database, title: 'Baze de Date Nelimitate', desc: 'MySQL nelimitat pentru orice aplicație.' },
   { icon: Mail, title: 'Email Profesional', desc: 'Conturi email nelimitate cu webmail și SMTP.' },
   { icon: Cpu, title: 'CloudLinux OS', desc: 'Izolare resurse și stabilitate garantată.' },
-  { icon: RefreshCw, title: 'Uptime 99.9%', desc: 'Monitorizare 24/7 cu garanție SLA.' },
+  { icon: RefreshCw, title: 'Uptime 99.9%', desc: 'Monitorizare 24/7 pentru disponibilitate maximă.' },
   { icon: Headphones, title: 'Suport 24/7', desc: 'Echipă tehnică disponibilă non-stop prin ticket.' },
 ]
 
