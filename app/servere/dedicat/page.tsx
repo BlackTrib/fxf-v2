@@ -32,7 +32,7 @@ const packages = [
     desc: 'Perfect pentru proiecte medii și aplicații business.',
     features: [
       { label: 'procesor', value: 'AMD Ryzen 5 3600' },
-      { label: 'CPU', value: '6 cores / 12 threads @ 3.6 GHz' },
+      { label: 'CPU', value: '12 threads @ 3.6 GHz' },
       { label: 'memorie RAM', value: '64 GB DDR5' },
       { label: 'stocare', value: '512 GB NVMe SSD' },
       { label: 'trafic lunar', value: 'nelimitat' },
@@ -52,7 +52,7 @@ const packages = [
     desc: 'Ideal pentru aplicații business și magazine mari.',
     features: [
       { label: 'procesor', value: 'AMD Ryzen 7 PRO 8700GE' },
-      { label: 'CPU', value: '8 cores / 16 threads @ 3.65 GHz' },
+      { label: 'CPU', value: '16 threads @ 3.65 GHz' },
       { label: 'memorie RAM', value: '64 GB DDR5' },
       { label: 'stocare', value: '512 GB NVMe SSD' },
       { label: 'trafic lunar', value: 'nelimitat' },
@@ -71,7 +71,7 @@ const packages = [
     desc: 'Pentru aplicații enterprise cu trafic intens.',
     features: [
       { label: 'procesor', value: 'Intel Core Ultra 7 265' },
-      { label: 'CPU', value: '20 cores / 20 threads @ 2.4 GHz' },
+      { label: 'CPU', value: '20 threads @ 2.4 GHz' },
       { label: 'memorie RAM', value: '64 GB DDR5' },
       { label: 'stocare', value: '1 TB NVMe SSD' },
       { label: 'trafic lunar', value: 'nelimitat' },
@@ -90,7 +90,7 @@ const packages = [
     desc: 'Putere maximă pentru cele mai exigente proiecte.',
     features: [
       { label: 'procesor', value: 'AMD Ryzen 9 7950X3D' },
-      { label: 'CPU', value: '16 cores / 32 threads @ 4.2 GHz' },
+      { label: 'CPU', value: '32 threads @ 4.2 GHz' },
       { label: 'memorie RAM', value: '128 GB DDR5' },
       { label: 'stocare', value: '2 TB NVMe SSD' },
       { label: 'trafic lunar', value: 'nelimitat' },
