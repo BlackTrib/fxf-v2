@@ -162,8 +162,8 @@ export default function DedicatPage() {
                 <div key={pkg.name} className={`rounded-2xl p-5 border-2 ${pkg.popular ? 'border-primary bg-primary/5 relative' : 'border-border bg-card'}`}>
                   {pkg.popular && <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">POPULAR</span>}
                   <div className="text-center mb-5">
-                    <h3 className="font-display text-lg font-bold text-foreground mb-1">{pkg.name}</h3>
-                    <p className="text-xs text-muted-foreground mb-3 min-h-[32px]">{pkg.desc}</p>
+                    <h3 className="font-display text-xl font-bold text-foreground mb-1">{pkg.name}</h3>
+                    <p className="text-sm text-muted-foreground mb-4 min-h-[40px]">{pkg.desc}</p>
                     <div className="flex items-baseline justify-center gap-1">
                       <span className="text-4xl font-bold text-primary">{pkg.price}</span>
                       <span className="text-muted-foreground">€/{pkg.period}</span>
@@ -171,7 +171,7 @@ export default function DedicatPage() {
                   </div>
                   <ul className="space-y-1.5 mb-5">
                     {pkg.features.map((f) => (
-                      <li key={f.label} className="flex items-start gap-2 text-xs">
+                      <li key={f.label} className="flex items-start gap-2 text-sm">
                         <span className="w-1.5 h-1.5 rounded-full bg-accent-brand mt-1.5 shrink-0" />
                         <span className="text-muted-foreground">
                           {f.label} <span className="font-bold text-foreground">{f.value}</span>
