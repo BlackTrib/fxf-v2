@@ -64,7 +64,7 @@ const services = [
       'Staging environment',
       'Optimizare automată',
     ],
-    price: 'de la 546 lei/6 luni',
+    price: 'de la 105€/6 luni',
     color: 'bg-cyan-50',
   },
   {
@@ -82,7 +82,7 @@ const services = [
       'Backup zilnic pentru siguranță',
       'SSL gratuit pentru plăți',
     ],
-    price: 'de la 546 lei/6 luni',
+    price: 'de la 105€/6 luni',
     color: 'bg-emerald-50',
   },
   {
@@ -100,7 +100,7 @@ const services = [
       'Backup 24 din 24 ore',
       'Suport specializat OpenCart',
     ],
-    price: 'de la 546 lei/6 luni',
+    price: 'de la 105€/6 luni',
     color: 'bg-amber-50',
   },
   {
@@ -118,7 +118,7 @@ const services = [
       'SSL gratuit pentru plăți',
       'Suport specializat Magento',
     ],
-    price: 'de la 546 lei/6 luni',
+    price: 'de la 105€/6 luni',
     color: 'bg-orange-50',
   },
   {
@@ -136,7 +136,7 @@ const services = [
       'ipv4 sau ipv6',
       'Suport ticket 24/7',
     ],
-    price: 'de la 890 lei/6 luni',
+    price: 'de la 171€/6 luni',
     color: 'bg-rose-50',
   },
 ]
