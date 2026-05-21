@@ -173,6 +173,7 @@ export default function VPSPage() {
                   <Link href="/contact" className={`block w-full text-center py-2.5 rounded-xl text-sm font-semibold transition-all ${pkg.popular ? 'bg-primary text-white hover:bg-primary/90' : 'bg-secondary text-foreground hover:bg-secondary/80'}`}>
                     Comandă acum
                   </Link>
+                  <p className="text-xs text-muted-foreground text-center mt-2">+ taxă instalare și configurare <span className="font-semibold text-foreground">50 €</span></p>
                 </div>
               ))}
             </div>

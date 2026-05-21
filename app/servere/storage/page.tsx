@@ -65,7 +65,7 @@ const packages = [
   { 
     name: 'Business', 
     storage: '10 TB', 
-    price: '500', 
+    price: '400', 
     period: '6 luni',
     users: '5 utilizatori',
     desc: 'Pentru departamente și companii cu nevoie de stocare mare.' ,
@@ -83,7 +83,7 @@ const packages = [
   { 
     name: 'Enterprise', 
     storage: '20 TB', 
-    price: '1000', 
+    price: '800', 
     period: '6 luni',
     users: '10 utilizatori',
     desc: 'Soluție personalizată cu SLA enterprise și suport dedicat.' ,
@@ -169,6 +169,7 @@ export default function StoragePage() {
                   <Link href="/contact" className={`block w-full text-center py-2.5 rounded-xl text-sm font-semibold transition-all ${pkg.popular ? 'bg-primary text-white hover:bg-primary/90' : 'bg-secondary text-foreground hover:bg-secondary/80'}`}>
                     Comandă acum
                   </Link>
+                  <p className="text-xs text-muted-foreground text-center mt-2">+ taxă instalare și configurare <span className="font-semibold text-foreground">50 €</span></p>
                 </div>
               ))}
             </div>
