@@ -71,7 +71,7 @@ const packages = [
     desc: 'Pentru departamente și companii cu nevoie de stocare mare.' ,
     features: [
       'Trafic nelimitat',
-      'rețea 1 Gbps',
+      'rețea 10 Gbps',
       'FTP, FTPS, SFTP',
       'SCP, Samba/CIFS',
       'HTTPS, WebDAV',
@@ -89,7 +89,7 @@ const packages = [
     desc: 'Soluție personalizată cu SLA enterprise și suport dedicat.' ,
     features: [
       'Trafic nelimitat',
-      'rețea 1 Gbps',
+      'rețea 10 Gbps',
       'FTP, FTPS, SFTP',
       'SCP, Samba/CIFS',
       'HTTPS, WebDAV',

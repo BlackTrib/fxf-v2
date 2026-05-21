@@ -51,7 +51,7 @@ const packages = [
     popular: true,
     desc: 'Ideal pentru aplicații business și magazine mari.',
     features: [
-      { label: 'procesor', value: 'AMD Ryzen 7 PRO 8700GE' },
+      { label: 'procesor', value: 'AMD Ryzen 7 8700GE' },
       { label: 'CPU', value: '16 threads @ 3.65 GHz' },
       { label: 'memorie RAM', value: '64 GB DDR5' },
       { label: 'stocare', value: '512 GB NVMe SSD' },

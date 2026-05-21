@@ -41,9 +41,9 @@ const hostingPackages = [
 const additionalServices = [
   { 
     icon: Zap, 
-    title: 'Găzduire WordPress', 
-    desc: 'Hosting optimizat special pentru WordPress cu LiteSpeed Cache.',
-    href: '/gazduire/wordpress' 
+    title: 'Găzduire Web', 
+    desc: 'Hosting optimizat pentru orice tip de site cu LiteSpeed Cache.',
+    href: '/gazduire/web' 
   },
   { 
     icon: Cloud, 

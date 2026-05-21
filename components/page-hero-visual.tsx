@@ -370,7 +370,7 @@ function GazduireWebVisual() {
       </div>
       <div className="absolute bottom-6 left-4 bg-white/15 border border-white/20 rounded-xl px-3 py-2 backdrop-blur-sm animate-[float_3.5s_ease-in-out_infinite_1s] flex items-center gap-2">
         <Briefcase size={14} className="text-amber-300" />
-        <span className="text-white text-xs font-semibold">De la 16 Lei/lună</span>
+        <span className="text-white text-xs font-semibold">De la 3€/lună</span>
       </div>
     </div>
   )

@@ -37,7 +37,7 @@ const services = [
     icon: Server,
     title: 'Găzduire Web',
     subtitle: 'Pachete hosting SSD NVMe pentru orice tip de site',
-    desc: 'Găzduire web profesională pe servere ultrarapide SSD NVMe. Pachete de la 99 lei/6 luni cu SSL gratuit, cPanel, backup 24/24h și suport tehnic 24/7. Ideal pentru site-uri de prezentare, bloguri și aplicații web.',
+    desc: 'Găzduire web profesională pe servere ultrarapide SSD NVMe. Pachete de la 19€/6 luni cu SSL gratuit, cPanel, backup 24/24h și suport tehnic 24/7. Ideal pentru site-uri de prezentare, bloguri și aplicații web.',
     features: [
       'Stocare SSD NVMe rapidă',
       'cPanel & LiteSpeed incluse',
@@ -46,7 +46,7 @@ const services = [
       'Domenii & email nelimitate',
       'Suport tehnic 24/7',
     ],
-    price: 'de la 99 lei/6 luni',
+    price: 'de la 19€/6 luni',
     color: 'bg-blue-50',
   },
   {
