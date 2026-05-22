@@ -83,7 +83,7 @@ export default function ContactPage() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          access_key: '0af7bd53-cb68-45b7-98f4-63e5eb75da25',
+          access_key: '547905e1-9b51-4bf2-be7f-c49f411ac1f6',
           subject: `Solicitare nouă de la ${form.name} - FXF.ro`,
           from_name: 'FXF Website',
           ...form,
