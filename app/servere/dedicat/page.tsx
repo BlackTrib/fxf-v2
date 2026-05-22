@@ -168,6 +168,7 @@ export default function DedicatPage() {
                       <span className="text-4xl font-bold text-primary">{pkg.price}</span>
                       <span className="text-muted-foreground">€/{pkg.period}</span>
                     </div>
+                    <p className="text-xs text-muted-foreground mt-1.5">+ taxă instalare și configurare <span className="font-semibold text-foreground">50 €</span></p>
                   </div>
                   <ul className="space-y-1.5 mb-5">
                     {pkg.features.map((f) => (
@@ -182,7 +183,9 @@ export default function DedicatPage() {
                   <Link href="/contact" className={`block w-full text-center py-2.5 rounded-xl text-sm font-semibold transition-all ${pkg.popular ? 'bg-primary text-white hover:bg-primary/90' : 'bg-secondary text-foreground hover:bg-secondary/80'}`}>
                     Comandă acum
                   </Link>
-                  <p className="text-xs text-muted-foreground text-center mt-2">+ taxă instalare și configurare <span className="font-semibold text-foreground">50 €</span></p>
+                  <div className="mt-2 border border-red-400 rounded-lg px-3 py-1.5 text-center">
+                    <p className="text-xs font-semibold text-red-500">Administrare gratuita</p>
+                  </div>
                 </div>
               ))}
             </div>
