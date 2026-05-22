@@ -13,7 +13,8 @@ const hostingPackages = [
     period: '6 luni',
     currency: '€',
     features: ['10GB NVMe SSD', 'Domenii nelimitate', 'cPanel + JetBackup', 'LiteSpeed + Imunify', '2CPU / 2GB RAM'],
-    href: '/gazduire/web', 
+    href: '/gazduire/web',
+    badge: 'Configurare și migrare gratuită',
   },
   { 
     icon: HardDrive, 
@@ -25,6 +26,7 @@ const hostingPackages = [
     features: ['100GB NVMe SSD', 'Domenii nelimitate', 'cPanel + JetBackup', 'LiteSpeed Enterprise', '4CPU / 4GB RAM'],
     href: '/gazduire/performance',
     popular: true,
+    badge: 'Configurare și migrare gratuită',
   },
   { 
     icon: Cloud, 
@@ -35,6 +37,7 @@ const hostingPackages = [
     currency: '€',
     features: ['160GB NVMe SSD', '4 vCPU AMD EPYC', '8GB DDR5 RAM', 'IP dedicat IPv4+IPv6', 'Root access + DDoS'],
     href: '/servere/vps',
+    badge: 'Administrare gratuită',
   },
 ]
 
@@ -129,6 +132,12 @@ export function ServicesOverview() {
                   <span className="text-sm font-semibold text-primary group-hover:text-accent-brand flex items-center gap-1">
                     Comandă acum <ArrowRight size={14} />
                   </span>
+                  {pkg.badge && (
+                    <p className="text-xs text-muted-foreground mt-2">
+                      {pkg.badge.replace('gratuită', '')}
+                      <span className="font-semibold text-foreground">gratuită</span>
+                    </p>
+                  )}
                 </div>
               </Link>
             </Reveal>
