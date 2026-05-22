@@ -498,7 +498,7 @@ function GazduirePrestaShopVisual() {
           </div>
         </div>
         <div className="space-y-2">
-          {['PHP optimizat', 'Redis cache', 'Memorie dedicată'].map((item, i) => (
+          {['PHP optimizat', 'LiteSpeed Cache', 'Memorie dedicată'].map((item, i) => (
             <div key={item} className="flex items-center gap-2 bg-white/10 rounded-lg px-3 py-2" style={{ animation: `float ${3 + i * 0.3}s ease-in-out infinite ${i * 0.3}s` }}>
               <CheckCircle2 size={12} className="text-emerald-400" />
               <span className="text-white/80 text-xs">{item}</span>
