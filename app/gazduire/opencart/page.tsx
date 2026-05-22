@@ -116,7 +116,7 @@ const benefits = [
   { icon: Cpu, title: 'PHP Optimizat', desc: 'PHP 8.x configurat special pentru cerințele OpenCart.' },
   { icon: Shield, title: 'Firewall E-Commerce', desc: 'Protecție specifică pentru plăți online și date clienți.' },
   { icon: HardDrive, title: 'SSD NVMe', desc: 'Stocare ultrarapidă pentru încărcare instant a catalogului de produse.' },
-  { icon: RefreshCw, title: 'Uptime 99.9%', desc: 'Monitorizare 24/7 cu garanție SLA pentru disponibilitate maximă.' },
+  { icon: RefreshCw, title: 'Uptime 99.9%', desc: 'Monitorizare 24/7 pentru disponibilitate maximă.' },
   { icon: Headphones, title: 'Suport OC 24/7', desc: 'Echipă cu experiență OpenCart disponibilă non-stop.' },
 ]
 

@@ -86,7 +86,7 @@ const packages = [
     price: '800', 
     period: '6 luni',
     users: '10 utilizatori',
-    desc: 'Soluție personalizată cu SLA enterprise și suport dedicat.' ,
+    desc: 'Soluție personalizată cu suport dedicat 24/7.' ,
     features: [
       'Trafic nelimitat',
       'rețea 10 Gbps',
