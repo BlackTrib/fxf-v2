@@ -186,6 +186,7 @@ export default function GazduirePrestashopPage() {
                     Comandă acum
                   </Link>
                   <p className="text-xs text-muted-foreground text-center mt-2">Configurare și migrare <span className="font-semibold text-foreground">gratuit</span></p>
+                </div>
               ))}
             </div>
 
