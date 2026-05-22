@@ -183,8 +183,8 @@ export default function DedicatPage() {
                   <Link href="/contact" className={`block w-full text-center py-2.5 rounded-xl text-sm font-semibold transition-all ${pkg.popular ? 'bg-primary text-white hover:bg-primary/90' : 'bg-secondary text-foreground hover:bg-secondary/80'}`}>
                     Comandă acum
                   </Link>
-                  <div className="mt-2 border border-red-400 rounded-lg px-3 py-1.5 text-center">
-                    <p className="text-xs font-semibold text-red-500">Administrare gratuita</p>
+                  <div className="mt-2 border border-red-400 bg-red-50 dark:bg-red-950/40 rounded-lg px-3 py-2 text-center">
+                    <p className="text-xs font-bold text-red-600 dark:text-red-400">Administrare gratuită</p>
                   </div>
                 </div>
               ))}
