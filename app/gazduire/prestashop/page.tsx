@@ -185,7 +185,7 @@ export default function GazduirePrestashopPage() {
                   <Link href="/contact" className={`block w-full text-center py-3 rounded-xl text-sm font-semibold transition-all ${pkg.popular ? 'bg-primary text-white hover:bg-primary/90' : 'bg-secondary text-foreground hover:bg-secondary/80'}`}>
                     Comandă acum
                   </Link>
-                </div>
+                  <p className="text-xs text-muted-foreground text-center mt-2">Configurare și migrare <span className="font-semibold text-foreground">gratuit</span></p>
               ))}
             </div>
 
