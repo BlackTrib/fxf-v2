@@ -156,7 +156,7 @@ export default function StoragePage() {
                     <p className="text-sm text-muted-foreground mb-4 min-h-[40px]">{pkg.desc}</p>
                     <div className="flex items-baseline justify-center gap-1">
                       <span className="text-4xl font-bold text-primary">{pkg.price}</span>
-                      <span className="text-muted-foreground">�����/{pkg.period}</span>
+                      <span className="text-muted-foreground">{'€'}/{pkg.period}</span>
                     </div>
                     <p className="text-xs text-muted-foreground mt-1.5">+ taxă instalare și configurare <span className="font-semibold text-foreground">50 €</span></p>
                   </div>
