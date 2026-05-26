@@ -30,6 +30,7 @@ const packages = [
     price: '726', 
     period: '6 luni',
     desc: 'Perfect pentru proiecte medii și aplicații business.',
+    href: 'https://clienti.fxfweb.ro/store/gzduire-dedicate/dedicat-start',
     features: [
       { label: 'procesor', value: 'AMD Ryzen 5 3600' },
       { label: 'CPU', value: '12 threads @ 3.6 GHz' },
@@ -50,6 +51,7 @@ const packages = [
     period: '6 luni',
     popular: true,
     desc: 'Ideal pentru aplicații business și magazine mari.',
+    href: 'https://clienti.fxfweb.ro/store/gzduire-dedicate/dedicat-pro',
     features: [
       { label: 'procesor', value: 'AMD Ryzen 7 8700GE' },
       { label: 'CPU', value: '16 threads @ 3.65 GHz' },
@@ -69,6 +71,7 @@ const packages = [
     price: '1452', 
     period: '6 luni',
     desc: 'Pentru aplicații enterprise cu trafic intens.',
+    href: 'https://clienti.fxfweb.ro/store/gzduire-dedicate/dedicat-business',
     features: [
       { label: 'procesor', value: 'Intel Core Ultra 7 265' },
       { label: 'CPU', value: '20 threads @ 2.4 GHz' },
@@ -88,6 +91,7 @@ const packages = [
     price: '2179', 
     period: '6 luni',
     desc: 'Putere maximă pentru cele mai exigente proiecte.',
+    href: 'https://clienti.fxfweb.ro/store/gzduire-dedicate/dedicat-enterprise',
     features: [
       { label: 'procesor', value: 'AMD Ryzen 9 7950X3D' },
       { label: 'CPU', value: '32 threads @ 4.2 GHz' },
@@ -180,7 +184,7 @@ export default function DedicatPage() {
                       </li>
                     ))}
                   </ul>
-                  <Link href="/contact" className={`block w-full text-center py-2.5 rounded-xl text-sm font-semibold transition-all ${pkg.popular ? 'bg-primary text-white hover:bg-primary/90' : 'bg-secondary text-foreground hover:bg-secondary/80'}`}>
+                  <Link href={pkg.href} className={`block w-full text-center py-2.5 rounded-xl text-sm font-semibold transition-all ${pkg.popular ? 'bg-primary text-white hover:bg-primary/90' : 'bg-secondary text-foreground hover:bg-secondary/80'}`}>
                     Comandă acum
                   </Link>
                   <p className="text-xs text-muted-foreground text-center mt-2">Administrare <span className="font-semibold text-foreground">gratuită</span></p>
