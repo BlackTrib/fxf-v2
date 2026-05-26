@@ -172,7 +172,7 @@ export function Navbar() {
           {/* CTA */}
           <div className="hidden lg:block">
             <Link
-              href="/autentificare"
+              href="https://clienti.fxfweb.ro/login"
               className={cn(
                 'inline-flex items-center gap-2 px-4 py-2 rounded-lg text-[13px] font-semibold transition-all',
                 transparent
@@ -289,7 +289,7 @@ export function Navbar() {
           )}
           <div className="border-t border-border/50 mt-2 pt-2">
             <Link
-              href="/autentificare"
+              href="https://clienti.fxfweb.ro/login"
               className="block px-4 py-2.5 rounded-lg text-sm font-semibold bg-primary text-white text-center"
             >
               Autentificare

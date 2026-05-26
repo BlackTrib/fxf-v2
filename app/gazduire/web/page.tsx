@@ -23,6 +23,7 @@ const packages = [
     price: '19',
     period: '6 luni',
     desc: 'Ideal pentru site-uri mici de prezentare și bloguri personale.',
+    href: 'https://clienti.fxfweb.ro/store/gazduire-starter/silver-3gb',
     features: [
       { label: 'spațiu alocat', value: '3GB' },
       { label: 'mediu stocare', value: 'NVMe' },
@@ -44,6 +45,7 @@ const packages = [
     price: '28',
     period: '6 luni',
     desc: 'Perfect pentru site-uri în creștere cu mai mult conținut.',
+    href: 'https://clienti.fxfweb.ro/store/gazduire-starter/gold-6gb',
     features: [
       { label: 'spațiu alocat', value: '6GB' },
       { label: 'mediu stocare', value: 'NVMe' },
@@ -66,6 +68,7 @@ const packages = [
     period: '6 luni',
     desc: 'Recomandat pentru site-uri de afaceri și proiecte medii.',
     popular: true,
+    href: 'https://clienti.fxfweb.ro/store/gazduire-starter/platinum-9gb',
     features: [
       { label: 'spațiu alocat', value: '10GB' },
       { label: 'mediu stocare', value: 'NVMe' },
@@ -87,6 +90,7 @@ const packages = [
     price: '57',
     period: '6 luni',
     desc: 'Pentru site-uri profesionale cu trafic în creștere.',
+    href: 'https://clienti.fxfweb.ro/store/gazduire-business/silver-15gb',
     features: [
       { label: 'spațiu alocat', value: '15GB' },
       { label: 'mediu stocare', value: 'NVMe' },
@@ -108,6 +112,7 @@ const packages = [
     price: '67',
     period: '6 luni',
     desc: 'Optimizat pentru companii și magazine online medii.',
+    href: 'https://clienti.fxfweb.ro/store/gazduire-business/gold-20gb',
     features: [
       { label: 'spațiu alocat', value: '20GB' },
       { label: 'mediu stocare', value: 'NVMe' },
@@ -129,6 +134,7 @@ const packages = [
     price: '76',
     period: '6 luni',
     desc: 'Putere maximă pentru aplicații și site-uri cu trafic intens.',
+    href: 'https://clienti.fxfweb.ro/store/gazduire-business/platinum-25gb',
     features: [
       { label: 'spațiu alocat', value: '25GB' },
       { label: 'mediu stocare', value: 'NVMe' },
@@ -226,7 +232,7 @@ export default function GazduireWebPage() {
                       </li>
                     ))}
                   </ul>
-                  <Link href="/contact" className={`block w-full text-center py-3 rounded-xl text-sm font-semibold transition-all ${pkg.popular ? 'bg-primary text-white hover:bg-primary/90' : 'bg-secondary text-foreground hover:bg-secondary/80'}`}>
+                  <Link href={pkg.href} className={`block w-full text-center py-3 rounded-xl text-sm font-semibold transition-all ${pkg.popular ? 'bg-primary text-white hover:bg-primary/90' : 'bg-secondary text-foreground hover:bg-secondary/80'}`}>
                     Comandă acum
                   </Link>
                   <p className="text-xs text-muted-foreground text-center mt-2">Configurare și migrare <span className="font-semibold text-foreground">gratuită</span></p>
