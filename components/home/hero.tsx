@@ -185,7 +185,7 @@ export function Hero() {
                 {/* CTA */}
                 <div className="px-5 pb-5">
                   <Link
-                    href="/servicii/gazduire-web"
+                    href="/gazduire/web"
                     className="block w-full bg-primary text-white text-center py-3 rounded-lg text-sm font-semibold hover:bg-primary/90 transition-colors"
                   >
                     Comandă acum
