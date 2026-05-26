@@ -280,7 +280,7 @@ export default function DespreNoi() {
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 size={16} className="text-primary mt-0.5 shrink-0" />
-                  <span><strong>Prețuri corecte</strong> — pachete de la 99 lei pentru 6 luni, fără costuri ascunse</span>
+                  <span><strong>Prețuri corecte</strong> — pachete de la 19€ pentru 6 luni, fără costuri ascunse</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 size={16} className="text-primary mt-0.5 shrink-0" />

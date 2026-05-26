@@ -6,7 +6,7 @@ import { Server, HardDrive, ShoppingCart, ShoppingBag, Rocket, ArrowRight, Check
 
 export const metadata: Metadata = {
   title: 'Servicii Găzduire Web România | FXF Web Hosting',
-  description: 'Găzduire web SSD NVMe, VPS și hosting optimizat pentru WordPress, PrestaShop, OpenCart și Magento. Prețuri de la 99 lei/6 luni. SSL gratuit, cPanel, suport 24/7.',
+  description: 'Găzduire web SSD NVMe, VPS și hosting optimizat pentru WordPress, PrestaShop, OpenCart și Magento. Prețuri de la 19€/6 luni. SSL gratuit, cPanel, suport 24/7.',
   keywords: [
     'găzduire web',
     'hosting românia',

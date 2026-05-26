@@ -6,7 +6,7 @@ import { Cloud, Cpu, HardDrive, ArrowRight, Check, Zap, Shield, Clock, Headphone
 
 export const metadata: Metadata = {
   title: 'Servere VPS și Dedicate România | FXF Web Hosting',
-  description: 'Servere VPS Cloud și Servere Dedicate în România. Resurse garantate, root access, SSD NVMe, suport 24/7. Prețuri de la 150 lei/lună.',
+  description: 'Servere VPS Cloud și Servere Dedicate în România. Resurse garantate, root access, SSD NVMe, suport 24/7. Prețuri de la 35€/lună.',
   keywords: [
     'servere vps',
     'servere dedicate',

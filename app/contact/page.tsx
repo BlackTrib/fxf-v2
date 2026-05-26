@@ -324,7 +324,7 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <label htmlFor="period" className="block text-sm font-semibold text-foreground mb-2.5">
-                          Perioadă dorit��
+                          Perioadă dorită
                         </label>
                         <select
                           id="period"
