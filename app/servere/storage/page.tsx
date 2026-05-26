@@ -32,6 +32,7 @@ const packages = [
     period: '6 luni',
     users: '2 utilizatori',
     desc: 'Perfect pentru backupuri și stocare personală.' ,
+    href: 'https://clienti.fxfweb.ro/store/gzduire-storage/starter-storage',
     features: [
       'Trafic nelimitat',
       'rețea 1 Gbps',
@@ -51,6 +52,7 @@ const packages = [
     users: '3 utilizatori',
     popular: true,
     desc: 'Ideal pentru echipe mici și proiecte collaborative.' ,
+    href: 'https://clienti.fxfweb.ro/store/gzduire-storage/professional-storage',
     features: [
       'Trafic nelimitat',
       'rețea 1 Gbps',
@@ -69,6 +71,7 @@ const packages = [
     period: '6 luni',
     users: '5 utilizatori',
     desc: 'Pentru departamente și companii cu nevoie de stocare mare.' ,
+    href: 'https://clienti.fxfweb.ro/store/gzduire-storage/business-storage',
     features: [
       'Trafic nelimitat',
       'rețea 10 Gbps',
@@ -87,6 +90,7 @@ const packages = [
     period: '6 luni',
     users: '10 utilizatori',
     desc: 'Soluție personalizată cu suport dedicat 24/7.' ,
+    href: 'https://clienti.fxfweb.ro/store/gzduire-storage/enterprise-storage',
     features: [
       'Trafic nelimitat',
       'rețea 10 Gbps',
@@ -167,7 +171,7 @@ export default function StoragePage() {
                       <li key={i} className="flex items-start gap-2 text-sm"><span className="w-1.5 h-1.5 rounded-full bg-accent-brand mt-1.5 shrink-0" /><span className="text-muted-foreground">{f}</span></li>
                     ))}
                   </ul>
-                  <Link href="/contact" className={`block w-full text-center py-2.5 rounded-xl text-sm font-semibold transition-all ${pkg.popular ? 'bg-primary text-white hover:bg-primary/90' : 'bg-secondary text-foreground hover:bg-secondary/80'}`}>
+                  <Link href={pkg.href} className={`block w-full text-center py-2.5 rounded-xl text-sm font-semibold transition-all ${pkg.popular ? 'bg-primary text-white hover:bg-primary/90' : 'bg-secondary text-foreground hover:bg-secondary/80'}`}>
                     Comandă acum
                   </Link>
                   <p className="text-xs text-muted-foreground text-center mt-2">Administrare <span className="font-semibold text-foreground">gratuită</span></p>
