@@ -26,7 +26,7 @@ const features = [
 
 const packages = [
   { 
-    name: 'Starter', 
+    name: 'Starter Storage', 
     storage: '1 TB', 
     price: '150', 
     period: '6 luni',
@@ -44,7 +44,7 @@ const packages = [
     ]
   },
   { 
-    name: 'Professional', 
+    name: 'Professional Storage', 
     storage: '5 TB', 
     price: '250', 
     period: '6 luni',
@@ -63,7 +63,7 @@ const packages = [
     ]
   },
   { 
-    name: 'Business', 
+    name: 'Business Storage', 
     storage: '10 TB', 
     price: '400', 
     period: '6 luni',
@@ -81,7 +81,7 @@ const packages = [
     ]
   },
   { 
-    name: 'Enterprise', 
+    name: 'Enterprise Storage', 
     storage: '20 TB', 
     price: '800', 
     period: '6 luni',
