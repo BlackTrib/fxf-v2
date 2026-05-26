@@ -24,6 +24,7 @@ const packages = [
     period: '6 luni',
     desc: 'Ideal pentru aplicații web și site-uri cu trafic mediu.',
     popular: true,
+    href: 'https://clienti.fxfweb.ro/store/gazduire-vps/vps-pro-start',
     features: [
       { label: 'procesor', value: '4 vCPU AMD EPYC' },
       { label: 'memorie RAM', value: '8 GB DDR5' },
@@ -42,6 +43,7 @@ const packages = [
     price: '420',
     period: '6 luni',
     desc: 'Pentru proiecte business și baze de date.',
+    href: 'https://clienti.fxfweb.ro/store/gazduire-vps/vps-pro-business',
     features: [
       { label: 'procesor', value: '8 vCPU AMD EPYC' },
       { label: 'memorie RAM', value: '16 GB DDR5' },
@@ -60,6 +62,7 @@ const packages = [
     price: '618',
     period: '6 luni',
     desc: 'Putere pentru aplicații enterprise și trafic intens.',
+    href: 'https://clienti.fxfweb.ro/store/gazduire-vps/vps-pro-advanced',
     features: [
       { label: 'procesor', value: '12 vCPU AMD EPYC' },
       { label: 'memorie RAM', value: '24 GB DDR5' },
@@ -78,6 +81,7 @@ const packages = [
     price: '1022',
     period: '6 luni',
     desc: 'Maxim de performanță pentru proiecte critice.',
+    href: 'https://clienti.fxfweb.ro/store/gazduire-vps/vps-pro-enterprise',
     features: [
       { label: 'procesor', value: '16 vCPU AMD EPYC' },
       { label: 'memorie RAM', value: '32 GB DDR5' },
@@ -171,7 +175,7 @@ export default function VPSPage() {
                       </li>
                     ))}
                   </ul>
-                  <Link href="/contact" className={`block w-full text-center py-2.5 rounded-xl text-sm font-semibold transition-all ${pkg.popular ? 'bg-primary text-white hover:bg-primary/90' : 'bg-secondary text-foreground hover:bg-secondary/80'}`}>
+                  <Link href={pkg.href} className={`block w-full text-center py-2.5 rounded-xl text-sm font-semibold transition-all ${pkg.popular ? 'bg-primary text-white hover:bg-primary/90' : 'bg-secondary text-foreground hover:bg-secondary/80'}`}>
                     Comandă acum
                   </Link>
                   <p className="text-xs text-muted-foreground text-center mt-2">Administrare <span className="font-semibold text-foreground">gratuită</span></p>
