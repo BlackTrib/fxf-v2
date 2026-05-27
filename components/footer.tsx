@@ -34,6 +34,11 @@ const badges = [
   'Migrare gratuită',
 ]
 
+const parteneri = [
+  { href: 'https://fxf.ro', label: 'Creare Website' },
+  { href: 'https://epresta.ro', label: 'Dezvoltare PrestaShop' },
+]
+
 export function Footer() {
   return (
     <footer className="bg-primary text-white">
@@ -87,7 +92,7 @@ export function Footer() {
 
       {/* Main grid */}
       <div className="max-w-6xl mx-auto px-5 py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-10 mb-10">
 
           {/* Brand column */}
           <div className="sm:col-span-2 lg:col-span-1">
@@ -161,6 +166,26 @@ export function Footer() {
                     <span className="w-1 h-1 rounded-full bg-white/20 group-hover:bg-cyber transition-colors shrink-0" />
                     {s.label}
                   </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Parteneri column */}
+          <div>
+            <h3 className="text-[10px] font-bold uppercase tracking-wider text-white/30 mb-4">Parteneri</h3>
+            <ul className="space-y-2.5">
+              {parteneri.map((s) => (
+                <li key={s.href}>
+                  <a
+                    href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white/55 text-xs hover:text-white hover:translate-x-0.5 transition-all inline-flex items-center gap-1.5 group"
+                  >
+                    <span className="w-1 h-1 rounded-full bg-white/20 group-hover:bg-cyber transition-colors shrink-0" />
+                    {s.label}
+                  </a>
                 </li>
               ))}
             </ul>
