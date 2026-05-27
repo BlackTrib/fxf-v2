@@ -174,7 +174,7 @@ function ContactVisual() {
 
       <div className="absolute bottom-6 left-0 bg-white/15 border border-white/20 rounded-xl px-3 py-2 backdrop-blur-sm animate-[float_3.5s_ease-in-out_infinite_1s] flex items-center gap-2">
         <Mail size={13} className="text-blue-300" />
-        <span className="text-white text-xs font-semibold">contact@fxf.ro</span>
+        <span className="text-white text-xs font-semibold">suport@fxfweb.ro</span>
       </div>
 
       <div className="absolute top-1/2 -right-2 bg-white/15 border border-white/20 rounded-xl px-3 py-2 backdrop-blur-sm animate-[float_4s_ease-in-out_infinite_0.8s]">

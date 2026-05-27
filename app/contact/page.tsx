@@ -33,7 +33,7 @@ const periods = [
 
 const contactInfo = [
   { icon: Phone, label: 'Telefon', value: '+40 785 277 566', href: 'tel:+40785277566' },
-  { icon: Mail, label: 'Email', value: 'office@fxf.ro', href: 'mailto:office@fxf.ro' },
+  { icon: Mail, label: 'Email', value: 'suport@fxfweb.ro', href: 'mailto:suport@fxfweb.ro' },
   { icon: MapPin, label: 'Locație', value: 'Str. Topolnita nr 5, București, România', href: null },
   { icon: Clock, label: 'Program', value: 'Luni – Vineri, 10:00 – 18:00 EET | Weekend inchis', href: null },
 ]
