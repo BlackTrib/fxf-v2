@@ -1,35 +1,15 @@
-# Robots.txt for FXF Web Solution
-# https://fxf.ro
-
-User-agent: *
+User-Agent: *
 Allow: /
-
-# Sitemap location
-Sitemap: https://fxf.ro/sitemap.xml
-
-# Crawl-delay for polite bots
-Crawl-delay: 1
-
-# Block admin and private areas (if any)
 Disallow: /api/
-Disallow: /_next/
 Disallow: /admin/
+Disallow: /_next/
+Disallow: /private/
 
-# Allow all major search engines
-User-agent: Googlebot
+User-Agent: Googlebot
 Allow: /
 
-User-agent: Bingbot
+User-Agent: Bingbot
 Allow: /
 
-User-agent: Slurp
-Allow: /
-
-User-agent: DuckDuckBot
-Allow: /
-
-User-agent: Baiduspider
-Allow: /
-
-User-agent: YandexBot
-Allow: /
+Host: https://fxfweb.ro
+Sitemap: https://fxfweb.ro/sitemap.xml
