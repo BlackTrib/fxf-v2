@@ -249,7 +249,15 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-white/25 text-[10px]">
-            &copy; {new Date().getFullYear()} FXF Web Hosting SRL. Toate drepturile rezervate.
+            &copy; {new Date().getFullYear()} FXF Web Hosting SRL. Toate drepturile rezervate. {' '}
+            <a 
+              href="https://reclamatiisal.anpc.ro/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-cyber hover:text-white transition-colors underline"
+            >
+              ANPC
+            </a>
           </p>
           <div className="flex items-center gap-1 text-white/25 text-[10px]">
             <span>Servere în</span>
