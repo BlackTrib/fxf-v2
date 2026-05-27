@@ -5,8 +5,8 @@ import { Footer } from '@/components/footer'
 import { Server, HardDrive, ShoppingCart, ShoppingBag, Rocket, ArrowRight, Check, Zap, Shield, Clock, Headphones, Layers } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Servicii Găzduire Web România | FXF Web Hosting',
-  description: 'Găzduire web SSD NVMe, VPS și hosting optimizat pentru WordPress, PrestaShop, OpenCart și Magento. Prețuri de la 19€/6 luni. SSL gratuit, cPanel, suport 24/7.',
+  title: 'Servicii Găzduire Web România | FXF de la 3€/lună',
+  description: 'Găzduire web SSD NVMe de la 3€/lună. Hosting WordPress, PrestaShop, OpenCart, Magento și Performance. SSL gratuit, cPanel și suport 24/7.',
   keywords: [
     'găzduire web',
     'hosting românia',

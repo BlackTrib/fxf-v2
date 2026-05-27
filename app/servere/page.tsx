@@ -5,8 +5,8 @@ import { Footer } from '@/components/footer'
 import { Cloud, Cpu, HardDrive, ArrowRight, Check, Zap, Shield, Clock, Headphones, Server } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Servere VPS și Dedicate România | FXF Web Hosting',
-  description: 'Servere VPS Cloud și Servere Dedicate în România. Resurse garantate, root access, SSD NVMe, suport 24/7. Prețuri de la 35€/lună.',
+  title: 'Servere VPS și Dedicate România | FXF de la 35€/lună',
+  description: 'Servere VPS Cloud și Dedicate în România de la 35€/lună. Resurse garantate, root access, SSD NVMe, administrare gratuită și suport tehnic 24/7.',
   keywords: [
     'servere vps',
     'servere dedicate',

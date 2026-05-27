@@ -6,12 +6,12 @@ import { ShoppingCart, ArrowRight, HardDrive, Shield, Clock, Headphones, Zap, Da
 import { PageHeroVisual } from '@/components/page-hero-visual'
 
 export const metadata: Metadata = {
-  title: 'Găzduire PrestaShop România | Hosting E-Commerce de la 105 € | FXF',
-  description: 'Găzduire PrestaShop optimizată pe servere SSD NVMe. Configurație specială pentru magazine online, SSL gratuit, resurse dedicate e-commerce. Suport tehnic 24/7!',
+  title: 'Găzduire PrestaShop România | FXF de la 17€/lună',
+  description: 'Găzduire PrestaShop pe SSD NVMe de la 17€/lună. Configurație specială e-commerce, SSL gratuit, resurse dedicate și suport tehnic specializat 24/7!',
   keywords: ['găzduire prestashop', 'hosting prestashop', 'prestashop românia', 'hosting magazin online', 'găzduire e-commerce'],
   openGraph: {
-    title: 'Găzduire PrestaShop România | Hosting E-Commerce de la 105 € | FXF',
-    description: 'Găzduire PrestaShop optimizată cu configurație specială pentru magazine online și resurse dedicate.',
+    title: 'Găzduire PrestaShop România | FXF de la 17€/lună',
+    description: 'Găzduire PrestaShop optimizată cu configurație specială pentru magazine online.',
     url: 'https://fxfweb.ro/gazduire/prestashop',
   },
   alternates: { canonical: 'https://fxfweb.ro/gazduire/prestashop' },

@@ -6,12 +6,12 @@ import { Layers, ArrowRight, HardDrive, Shield, Clock, Headphones, Zap, Database
 import { PageHeroVisual } from '@/components/page-hero-visual'
 
 export const metadata: Metadata = {
-  title: 'Găzduire Magento România | Hosting Enterprise de la 105 € | FXF',
-  description: 'Găzduire Magento 2 optimizată pe servere SSD NVMe. Elasticsearch, Redis, Varnish cache, resurse dedicate enterprise. Suport tehnic specializat 24/7!',
+  title: 'Găzduire Magento 2 România | FXF de la 17€/lună',
+  description: 'Găzduire Magento 2 pe SSD NVMe de la 17€/lună. Elasticsearch, Redis, Varnish cache, resurse dedicate enterprise și suport tehnic specializat 24/7!',
   keywords: ['găzduire magento', 'hosting magento', 'magento 2 românia', 'hosting enterprise', 'găzduire e-commerce magento'],
   openGraph: {
-    title: 'Găzduire Magento România | Hosting Enterprise de la 105 € | FXF',
-    description: 'Găzduire Magento 2 optimizată cu Elasticsearch, Redis și Varnish cache pentru performanță enterprise.',
+    title: 'Găzduire Magento 2 România | FXF de la 17€/lună',
+    description: 'Găzduire Magento 2 cu Elasticsearch, Redis și Varnish cache pentru performanță enterprise.',
     url: 'https://fxfweb.ro/gazduire/magento',
   },
   alternates: { canonical: 'https://fxfweb.ro/gazduire/magento' },

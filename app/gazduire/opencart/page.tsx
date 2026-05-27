@@ -6,12 +6,12 @@ import { ShoppingBag, ArrowRight, HardDrive, Shield, Clock, Headphones, Zap, Dat
 import { PageHeroVisual } from '@/components/page-hero-visual'
 
 export const metadata: Metadata = {
-  title: 'Găzduire OpenCart România | Hosting E-Commerce de la 105 € | FXF',
-  description: 'Găzduire OpenCart optimizată pe servere SSD NVMe. Auto-instalare OpenCart, configurație specială pentru magazine online, SSL gratuit. Suport tehnic 24/7!',
+  title: 'Găzduire OpenCart România | FXF de la 17€/lună',
+  description: 'Găzduire OpenCart pe SSD NVMe de la 17€/lună. Auto-instalare, LiteSpeed Cache, SSL gratuit, MySQL optimizat și suport tehnic specializat 24/7!',
   keywords: ['găzduire opencart', 'hosting opencart', 'opencart românia', 'hosting magazin online', 'găzduire e-commerce opencart'],
   openGraph: {
-    title: 'Găzduire OpenCart România | Hosting E-Commerce de la 105 € | FXF',
-    description: 'Găzduire OpenCart optimizată cu auto-instalare și configurație specială pentru magazine online.',
+    title: 'Găzduire OpenCart România | FXF de la 17€/lună',
+    description: 'Găzduire OpenCart optimizată cu auto-instalare și configurație specială pentru magazine.',
     url: 'https://fxfweb.ro/gazduire/opencart',
   },
   alternates: { canonical: 'https://fxfweb.ro/gazduire/opencart' },

@@ -6,12 +6,12 @@ import { Server, ArrowRight, HardDrive, Shield, Clock, Headphones, Zap, Globe, D
 import { PageHeroVisual } from '@/components/page-hero-visual'
 
 export const metadata: Metadata = {
-  title: 'Găzduire Web SSD România | Hosting de la 19 € | FXF Web Hosting',
-  description: 'Găzduire web pe servere SSD NVMe în România. 6 pachete de la 19 €/6 luni cu cPanel, SSL gratuit, backup zilnic și suport 24/7. Uptime 99.9% garantat!',
+  title: 'Găzduire Web SSD România | FXF Hosting de la 3€/lună',
+  description: 'Găzduire web SSD NVMe în România de la 3€/lună. cPanel inclus, SSL gratuit, backup zilnic, LiteSpeed și suport tehnic 24/7. Uptime 99.9% garantat!',
   keywords: ['găzduire web', 'hosting românia', 'găzduire ssd', 'web hosting', 'găzduire nvme', 'hosting ieftin', 'cpanel hosting'],
   openGraph: {
-    title: 'Găzduire Web SSD România | Hosting de la 19 € | FXF Web Hosting',
-    description: 'Găzduire web pe servere SSD NVMe. cPanel, SSL gratuit, backup zilnic, suport 24/7.',
+    title: 'Găzduire Web SSD România | FXF Hosting de la 3€/lună',
+    description: 'Găzduire web SSD NVMe de la 3€/lună. cPanel, SSL gratuit, backup zilnic, suport 24/7.',
     url: 'https://fxfweb.ro/gazduire/web',
   },
   alternates: { canonical: 'https://fxfweb.ro/gazduire/web' },

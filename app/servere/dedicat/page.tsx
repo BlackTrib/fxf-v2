@@ -6,12 +6,12 @@ import { Cpu, ArrowRight, Check, Server, Shield, Zap, HardDrive, Globe, RefreshC
 import { PageHeroVisual } from '@/components/page-hero-visual'
 
 export const metadata: Metadata = {
-  title: 'Servere Dedicate România | Hardware AMD Ryzen & Intel de la 726 € | FXF',
-  description: 'Servere dedicate cu hardware exclusiv. Procesoare AMD Ryzen și Intel Core Ultra, RAM DDR5, SSD NVMe. Trafic nelimitat și suport prioritar 24/7. De la 726 €/6 luni.',
+  title: 'Servere Dedicate România | FXF de la 121€/lună',
+  description: 'Servere dedicate cu hardware exclusiv de la 121€/lună. AMD Ryzen și Intel Core Ultra, RAM DDR5, SSD NVMe, trafic nelimitat și suport prioritar 24/7.',
   keywords: ['servere dedicate', 'server dedicat românia', 'dedicated server', 'server fizic', 'hosting enterprise', 'amd ryzen server', 'intel core ultra server'],
   openGraph: {
-    title: 'Servere Dedicate România | Hardware AMD Ryzen & Intel de la 726 € | FXF',
-    description: 'Servere dedicate cu hardware exclusiv, procesoare AMD Ryzen și Intel Core Ultra și suport prioritar 24/7.',
+    title: 'Servere Dedicate România | FXF de la 121€/lună',
+    description: 'Servere dedicate AMD Ryzen și Intel Core Ultra cu hardware exclusiv și suport 24/7.',
     url: 'https://fxfweb.ro/servere/dedicat',
   },
   alternates: { canonical: 'https://fxfweb.ro/servere/dedicat' },

@@ -6,12 +6,12 @@ import { Cloud, ArrowRight, Server, Shield, Zap, Settings, HardDrive, Globe, Cpu
 import { PageHeroVisual } from '@/components/page-hero-visual'
 
 export const metadata: Metadata = {
-  title: 'VPS Cloud România | Servere Virtuale AMD EPYC de la 210 € | FXF',
-  description: 'Servere VPS cloud cu procesoare AMD EPYC, resurse dedicate și SSD NVMe. Root access, IP dedicat IPv4, scalare flexibilă și suport 24/7. De la 210 €/6 luni. Linux: Ubuntu, Debian, AlmaLinux.',
+  title: 'VPS Cloud România | AMD EPYC | FXF de la 35€/lună',
+  description: 'Servere VPS cloud AMD EPYC de la 35€/lună. Resurse dedicate, SSD NVMe, root access, IP dedicat IPv4+IPv6, scalare flexibilă și suport 24/7.',
   keywords: ['vps românia', 'server virtual', 'vps cloud', 'vps ssd', 'server vps', 'vps epyc', 'cloud hosting'],
   openGraph: {
-    title: 'VPS Cloud România | Servere Virtuale Private de la 210 € | FXF',
-    description: 'Servere VPS cu resurse dedicate, root access și SSD NVMe.',
+    title: 'VPS Cloud România | AMD EPYC | FXF de la 35€/lună',
+    description: 'Servere VPS cu resurse dedicate, root access și SSD NVMe de la 35€/lună.',
     url: 'https://fxfweb.ro/servere/vps',
   },
   alternates: { canonical: 'https://fxfweb.ro/servere/vps' },

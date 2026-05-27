@@ -6,12 +6,12 @@ import { Server, ArrowRight, HardDrive, Shield, Clock, Headphones, Zap, Globe, D
 import { PageHeroVisual } from '@/components/page-hero-visual'
 
 export const metadata: Metadata = {
-  title: 'Găzduire WordPress România | Hosting WordPress de la 105 € | FXF',
-  description: 'Găzduire WordPress optimizată pe servere SSD NVMe. Auto-instalare WordPress, updates automate, cache LiteSpeed, SSL gratuit. Suport tehnic specializat 24/7!',
+  title: 'Găzduire WordPress România | FXF de la 17€/lună',
+  description: 'Găzduire WordPress optimizată pe SSD NVMe de la 17€/lună. Auto-instalare, updates automate, LiteSpeed Cache, SSL gratuit și suport specializat 24/7!',
   keywords: ['găzduire wordpress', 'hosting wordpress', 'wordpress românia', 'wordpress hosting', 'găzduire wp', 'woocommerce hosting'],
   openGraph: {
-    title: 'Găzduire WordPress România | Hosting WordPress de la 105 € | FXF',
-    description: 'Găzduire WordPress optimizată cu auto-instalare, updates automate și cache LiteSpeed.',
+    title: 'Găzduire WordPress România | FXF de la 17€/lună',
+    description: 'Găzduire WordPress optimizată cu auto-instalare, LiteSpeed Cache și SSL gratuit.',
     url: 'https://fxfweb.ro/gazduire/wordpress',
   },
   alternates: { canonical: 'https://fxfweb.ro/gazduire/wordpress' },

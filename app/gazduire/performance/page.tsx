@@ -6,11 +6,11 @@ import { Rocket, ArrowRight, HardDrive, Shield, Clock, Headphones, Zap, Database
 import { PageHeroVisual } from '@/components/page-hero-visual'
 
 export const metadata: Metadata = {
-  title: 'Găzduire Performance România | Hosting Premium de la 171 € | FXF',
-  description: 'Găzduire Performance cu resurse CPU și RAM dedicate. LiteSpeed Enterprise, backup 24/24h, uptime 99.99%. Suport prioritar 24/7!',
+  title: 'Găzduire Performance România | FXF de la 28€/lună',
+  description: 'Găzduire Performance cu resurse CPU și RAM dedicate de la 28€/lună. LiteSpeed Enterprise, backup 24/24h, uptime 99.99% și suport prioritar 24/7!',
   keywords: ['găzduire performance', 'hosting premium', 'găzduire resurse dedicate', 'hosting enterprise', 'găzduire rapidă'],
   openGraph: {
-    title: 'Găzduire Performance România | Hosting Premium de la 171 € | FXF',
+    title: 'Găzduire Performance România | FXF de la 28€/lună',
     description: 'Găzduire Performance cu resurse dedicate, LiteSpeed Enterprise și uptime 99.99%.',
     url: 'https://fxfweb.ro/gazduire/performance',
   },

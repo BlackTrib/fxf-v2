@@ -21,7 +21,7 @@ const plusJakarta = Plus_Jakarta_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'Găzduire Web SSD România | FXF Web Hosting - Prețuri de la 19€',
+  title: 'Găzduire Web SSD România | FXF Hosting de la 3€/lună',
   description:
     'Găzduire web rapidă pe servere SSD NVMe în România. Hosting WordPress, PrestaShop, E-Commerce cu cPanel, SSL gratuit și suport 24/7. Uptime 99.9% garantat!',
   keywords: [

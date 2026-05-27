@@ -6,12 +6,12 @@ import { HardDrive, ArrowRight, Check, Database, Shield, Zap, Lock, Globe, Cpu, 
 import { PageHeroVisual } from '@/components/page-hero-visual'
 
 export const metadata: Metadata = {
-  title: 'Cloud Storage și Backup | Stocare Sigură de la 10 € | FXF',
-  description: 'Servicii de cloud storage și backup cu redundanță completă. Stocare sigură pentru datele tale, acces de oriunde, backup automat zilnic și criptare end-to-end.',
+  title: 'Cloud Storage România | Backup Sigur | FXF de la 25€/lună',
+  description: 'Cloud storage și backup de la 25€/lună. Redundanță completă, criptare AES-256, acces de oriunde, backup automat zilnic și restaurare rapidă a datelor.',
   keywords: ['cloud storage', 'backup online', 'stocare cloud', 'backup automat', 'cloud backup', 'stocare sigură'],
   openGraph: {
-    title: 'Cloud Storage și Backup | Stocare Sigură de la 10 € | FXF',
-    description: 'Cloud storage cu redundanță, backup automat și criptare. Datele tale în siguranță 24/7.',
+    title: 'Cloud Storage România | Backup Sigur | FXF de la 25€/lună',
+    description: 'Cloud storage cu redundanță, backup automat și criptare AES-256 de la 25€/lună.',
     url: 'https://fxfweb.ro/servere/storage',
   },
   alternates: { canonical: 'https://fxfweb.ro/servere/storage' },
