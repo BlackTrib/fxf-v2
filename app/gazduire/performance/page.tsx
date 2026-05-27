@@ -23,6 +23,7 @@ const packages = [
     price: '171',
     period: '6 luni',
     desc: 'Pentru site-uri cu trafic mediu și cerințe de performanță ridicată.',
+    href: 'https://clienti.fxfweb.ro/store/gazduire-performance/bronze-100gb',
     features: [
       { label: 'spațiu alocat', value: '100GB' },
       { label: 'mediu stocare', value: 'NVMe' },
@@ -45,6 +46,7 @@ const packages = [
     period: '6 luni',
     desc: 'Ideal pentru aplicații complexe și magazine online cu trafic ridicat.',
     popular: true,
+    href: 'https://clienti.fxfweb.ro/store/gazduire-performance/silver-150gb',
     features: [
       { label: 'spațiu alocat', value: '150GB' },
       { label: 'mediu stocare', value: 'NVMe' },
@@ -66,6 +68,7 @@ const packages = [
     price: '248',
     period: '6 luni',
     desc: 'Pentru proiecte enterprise cu trafic intens și cerințe premium.',
+    href: 'https://clienti.fxfweb.ro/store/gazduire-performance/gold-200gb',
     features: [
       { label: 'spațiu alocat', value: '200GB' },
       { label: 'mediu stocare', value: 'NVMe' },
@@ -87,6 +90,7 @@ const packages = [
     price: '334',
     period: '6 luni',
     desc: 'Putere maximă pentru cele mai exigente proiecte enterprise.',
+    href: 'https://clienti.fxfweb.ro/store/gazduire-performance/platinum-300gb',
     features: [
       { label: 'spațiu alocat', value: '300GB' },
       { label: 'mediu stocare', value: 'NVMe' },
@@ -182,7 +186,7 @@ export default function GazduirePerformancePage() {
                       </li>
                     ))}
                   </ul>
-                  <Link href="/contact" className={`block w-full text-center py-3 rounded-xl text-sm font-semibold transition-all ${pkg.popular ? 'bg-primary text-white hover:bg-primary/90' : 'bg-secondary text-foreground hover:bg-secondary/80'}`}>
+                  <Link href={pkg.href} className={`block w-full text-center py-3 rounded-xl text-sm font-semibold transition-all ${pkg.popular ? 'bg-primary text-white hover:bg-primary/90' : 'bg-secondary text-foreground hover:bg-secondary/80'}`}>
                     Comandă acum
                   </Link>
                   <p className="text-xs text-muted-foreground text-center mt-2">Configurare și migrare <span className="font-semibold text-foreground">gratuită</span></p>
