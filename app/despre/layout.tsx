@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Despre FXF Web Hosting | Găzduire Web Profesională România | Din 2021',
+  title: 'Despre FXF Web Hosting | Găzduire Web România',
   description:
-    'FXF Web Hosting - furnizor român de găzduire web din 2021. Servere SSD NVMe în Germania, uptime 99.9% garantat, suport tehnic 24/7. Peste 200 de clienți activi. Hosting pentru WordPress, PrestaShop, Magento.',
+    'FXF Web Hosting - furnizor român de găzduire web din 2021. Servere SSD NVMe, uptime 99.9% garantat, suport tehnic 24/7. Peste 200 de clienți activi.',
   keywords: [
     'fxf web hosting',
     'gazduire web romania',

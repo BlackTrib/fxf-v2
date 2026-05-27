@@ -55,8 +55,8 @@ export function PortfolioPreview() {
               industrii. Fiecare proiect vine cu date concrete de performanță și ROI verificabil.
             </p>
           </div>
-          <Link href="/portofoliu" className="text-sm font-medium text-primary hover:text-accent-brand flex items-center gap-1 transition-colors shrink-0">
-            Vezi toate proiectele <ArrowRight size={14} />
+          <Link href="/contact" className="text-sm font-medium text-primary hover:text-accent-brand flex items-center gap-1 transition-colors shrink-0">
+            Solicită ofertă <ArrowRight size={14} />
           </Link>
         </Reveal>
 
