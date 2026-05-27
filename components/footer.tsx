@@ -258,6 +258,15 @@ export function Footer() {
             >
               ANPC
             </a>
+            {' '} • {' '}
+            <a 
+              href="https://consumer-redress.ec.europa.eu/site-relocation_en" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-cyber hover:text-white transition-colors underline"
+            >
+              SOL
+            </a>
           </p>
           <div className="flex items-center gap-1 text-white/25 text-[10px]">
             <span>Servere în</span>
