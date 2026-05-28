@@ -116,7 +116,6 @@ const packages = [
 const benefits = [
   { icon: Cpu, title: 'Resurse Garantate', desc: 'CPU și RAM dedicate, fără supraalocare. Performanță constantă garantată.' },
   { icon: Zap, title: 'LiteSpeed Enterprise', desc: 'Server web LiteSpeed Enterprise cu cache avansat și HTTP/3.' },
-  { icon: Clock, title: 'Backup 2x pe Zi', desc: 'Backup-uri de două ori pe zi pentru protecție maximă a datelor.' },
   { icon: Globe, title: 'CDN Inclus', desc: 'Content Delivery Network pentru încărcare rapidă globală.' },
   { icon: Shield, title: 'Uptime 99.99%', desc: 'Disponibilitate maximă cu compensare pentru orice downtime.' },
   { icon: Headphones, title: 'Suport Prioritar', desc: 'Răspuns în maxim 30 minute pentru cererile de suport.' },
@@ -147,7 +146,7 @@ export default function GazduirePerformancePage() {
                   <span className="block text-2xl sm:text-3xl lg:text-4xl mt-2 text-white/70">Resurse dedicate pentru performanță maximă</span>
                 </h1>
                 <p className="text-white/70 text-lg sm:text-xl leading-relaxed mb-8">
-                  Găzduire Performance cu resurse CPU și RAM garantate, LiteSpeed Enterprise, backup 2x pe zi și 
+                  Găzduire Performance cu resurse CPU și RAM garantate, LiteSpeed Enterprise și 
                   suport prioritar. Ideal pentru site-uri cu trafic intens și aplicații complexe.
                 </p>
               </div>
@@ -268,7 +267,7 @@ export default function GazduirePerformancePage() {
                 Pachetele noastre de Găzduire Performance sunt concepute pentru proiecte care necesită resurse garantate și performanță constantă, indiferent de trafic. Spre deosebire de găzduirea shared tradițională, resursele CPU și RAM sunt dedicate contului tău, fără supraalocare.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                LiteSpeed Enterprise oferă cele mai rapide timpi de răspuns și cache avansat, în timp ce CDN-ul inclus asigură încărcare rapidă a conținutului pentru vizitatorii din toată lumea. Backup-urile de două ori pe zi garantează că poți restaura oricând la cea mai recentă versiune a site-ului.
+                LiteSpeed Enterprise oferă cele mai rapide timpi de răspuns și cache avansat, în timp ce CDN-ul inclus asigură încărcare rapidă a conținutului pentru vizitatorii din toată lumea. Backup-urile de două ori pe zi garantează c�� poți restaura oricând la cea mai recentă versiune a site-ului.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 Cu uptime garantat de 99.99% și suport prioritar cu răspuns în maxim 30 de minute, pachetele Performance sunt alegerea ideală pentru site-uri business-critical, magazine online cu trafic intens și aplicații web complexe.
