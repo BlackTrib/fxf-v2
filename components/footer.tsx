@@ -121,7 +121,7 @@ export function Footer() {
       </div>
 
       {/* Main grid */}
-      <div className="max-w-6xl mx-auto px-5 py-8 lg:py-12">
+      <div className="max-w-6xl mx-auto px-5 py-8 lg:py-12 border-t border-b border-white/10 lg:border-none">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-0 lg:gap-10 mb-6 lg:mb-10">
 
           {/* Brand column - always visible */}
