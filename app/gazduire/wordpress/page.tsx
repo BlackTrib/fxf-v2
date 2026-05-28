@@ -179,7 +179,7 @@ export default function GazduireWordPressPage() {
                       <span className="text-4xl font-bold text-primary">{pkg.monthlyPrice}</span>
                       <span className="text-muted-foreground">€/lună</span>
                     </div>
-                    <p className="text-xs text-muted-foreground mt-1">Plată {pkg.price}€ o dată la 6 luni</p>
+                    <p className="text-xs text-muted-foreground mt-1"><strong>Plată {pkg.price}€ o dată la 6 luni</strong></p>
                   </div>
                   <ul className="space-y-2 mb-6">
                     {pkg.features.map((f) => (
@@ -268,7 +268,7 @@ export default function GazduireWordPressPage() {
                 WordPress este cel mai popular sistem de gestionare a conținutului (CMS) din lume, alimentând peste 40% din toate site-urile web. Pachetele noastre de găzduire WordPress sunt special concepute pentru a oferi performanță optimă platformei WordPress, cu configurații server adaptate cerințelor specifice ale CMS-ului.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Fiecare pachet include LiteSpeed Cache pre-instalat și configurat, oferind cache pentru pagini, optimizare imagini, minificare CSS/JS și multe alte funcționalități care accelerează dramatic timpul de încărcare al site-ului tău WordPress.
+                Fiecare pachet include LiteSpeed Cache pre-instalat și configurat, oferind cache pentru pagini, optimizare imagini, minificare CSS/JS și multe alte funcționalități care accelerează dramatic timpul de încărcare al site-ului t��u WordPress.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 Pentru magazinele online bazate pe WooCommerce, oferim resurse suplimentare și configurații optimizate pentru procesarea comenzilor, gestionarea stocurilor și asigurarea unei experiențe de cumpărare fluidă pentru clienții tăi.

@@ -167,7 +167,7 @@ export default function VPSPage() {
                       <span className="text-4xl font-bold text-primary">{pkg.monthlyPrice}</span>
                       <span className="text-muted-foreground">€/lună</span>
                     </div>
-                    <p className="text-xs text-muted-foreground mt-1">Plată {pkg.price}€ o dată la 6 luni</p>
+                    <p className="text-xs text-muted-foreground mt-1"><strong>Plată {pkg.price}€ o dată la 6 luni</strong></p>
                     <p className="text-xs text-muted-foreground mt-1.5">+ taxă instalare și configurare <span className="font-semibold text-foreground">50 €</span></p>
                   </div>
                   <ul className="space-y-1.5 mb-5">

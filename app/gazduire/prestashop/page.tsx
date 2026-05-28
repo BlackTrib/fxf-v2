@@ -179,7 +179,7 @@ export default function GazduirePrestashopPage() {
                       <span className="text-4xl font-bold text-primary">{pkg.monthlyPrice}</span>
                       <span className="text-muted-foreground">€/lună</span>
                     </div>
-                    <p className="text-xs text-muted-foreground mt-1">Plată {pkg.price}€ o dată la 6 luni</p>
+                    <p className="text-xs text-muted-foreground mt-1"><strong>Plată {pkg.price}€ o dată la 6 luni</strong></p>
                   </div>
                   <ul className="space-y-2 mb-6">
                     {pkg.features.map((f) => (
