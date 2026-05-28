@@ -37,7 +37,7 @@ const services = [
     icon: Server,
     title: 'Găzduire Web',
     subtitle: 'Pachete hosting SSD NVMe pentru orice tip de site',
-    desc: 'Găzduire web profesională pe servere ultrarapide SSD NVMe. Pachete de la 19€/6 luni cu SSL gratuit, cPanel, backup 24/24h și suport tehnic 24/7. Ideal pentru site-uri de prezentare, bloguri și aplicații web.',
+    desc: 'Găzduire web profesională pe servere ultrarapide SSD NVMe. Pachete de la 3.17€/lună (19€/6 luni) cu SSL gratuit, cPanel, backup 24/24h și suport tehnic 24/7. Ideal pentru site-uri de prezentare, bloguri și aplicații web.',
     features: [
       'Stocare SSD NVMe rapidă',
       'cPanel & LiteSpeed incluse',
@@ -46,7 +46,7 @@ const services = [
       'Domenii & email nelimitate',
       'Suport tehnic 24/7',
     ],
-    price: 'de la 19€/6 luni',
+    price: 'de la 3.17€/lună',
     color: 'bg-blue-50',
   },
   {
@@ -64,25 +64,7 @@ const services = [
       'Staging environment',
       'Optimizare automată',
     ],
-    price: 'de la 105€/6 luni',
-    color: 'bg-cyan-50',
-  },
-  {
-    id: 'gazduire-prestashop',
-    href: '/gazduire/prestashop',
-    icon: ShoppingCart,
-    title: 'Găzduire PrestaShop',
-    subtitle: 'Hosting performant pentru magazine PrestaShop',
-    desc: 'Găzduire optimizată pentru PrestaShop cu resurse dedicate și configurații speciale pentru e-commerce. Performanță ridicată pentru magazine cu mii de produse și trafic intens. Configurație specifică pentru platforma PrestaShop.',
-    features: [
-      'Configurație optimizată PrestaShop',
-      'Resurse dedicate e-commerce',
-      'Cache avansat pentru produse',
-      'Suport tehnic specializat',
-      'Backup zilnic pentru siguranță',
-      'SSL gratuit pentru plăți',
-    ],
-    price: 'de la 105€/6 luni',
+    price: 'de la 17.50€/lună',
     color: 'bg-emerald-50',
   },
   {
@@ -100,7 +82,7 @@ const services = [
       'Backup 24 din 24 ore',
       'Suport specializat OpenCart',
     ],
-    price: 'de la 105€/6 luni',
+    price: 'de la 17.50€/lună',
     color: 'bg-amber-50',
   },
   {
@@ -118,7 +100,7 @@ const services = [
       'SSL gratuit pentru plăți',
       'Suport specializat Magento',
     ],
-    price: 'de la 105€/6 luni',
+    price: 'de la 17.50€/lună',
     color: 'bg-orange-50',
   },
   {
@@ -136,7 +118,7 @@ const services = [
       'ipv4 sau ipv6',
       'Suport ticket 24/7',
     ],
-    price: 'de la 171€/6 luni',
+    price: 'de la 28.50€/lună',
     color: 'bg-rose-50',
   },
 ]

@@ -42,7 +42,7 @@ const servers = [
       'IP dedicat IPv4+IPv6',
       'DDoS inclus',
     ],
-    price: 'de la 210 €/6 luni',
+    price: 'de la 35€/lună',
     color: 'bg-indigo-50',
   },
   {
@@ -60,7 +60,7 @@ const servers = [
       'Rețea 10 Gbps',
       'Root access + DDoS',
     ],
-    price: 'de la 726 €/6 luni',
+    price: 'de la 121€/lună',
     color: 'bg-purple-50',
   },
   {
@@ -78,7 +78,7 @@ const servers = [
       'Usable as network drive',
       'Acces API și securizat',
     ],
-    price: 'de la 150 €/6 luni',
+    price: 'de la 25€/lună',
     color: 'bg-green-50',
   },
 ]
