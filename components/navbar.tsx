@@ -103,7 +103,7 @@ export function Navbar() {
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center">
             <div className={cn(
-              'inline-flex items-center gap-0.5 rounded-full px-2 py-1.5 transition-all duration-300',
+              'inline-flex items-center gap-0.5 rounded-lg px-1 py-1 transition-all duration-300',
               transparent
                 ? 'bg-white shadow-sm'
                 : 'bg-secondary/60'
@@ -117,7 +117,7 @@ export function Navbar() {
                     onMouseLeave={() => setActiveDropdown(null)}
                   >
                     <button className={cn(
-                      'px-3 py-1.5 rounded-lg text-[13px] font-medium flex items-center gap-1 transition-colors',
+                      'px-3 py-1 rounded-md text-[13px] font-medium flex items-center gap-1 transition-colors',
                       transparent
                         ? 'text-foreground/70 hover:text-foreground hover:bg-secondary'
                         : 'text-foreground/70 hover:text-foreground hover:bg-secondary'
@@ -160,7 +160,7 @@ export function Navbar() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="px-3 py-1.5 rounded-lg text-[13px] font-medium transition-colors text-foreground/70 hover:text-foreground hover:bg-secondary"
+                    className="px-3 py-1 rounded-md text-[13px] font-medium transition-colors text-foreground/70 hover:text-foreground hover:bg-secondary"
                   >
                     {link.label}
                   </Link>
