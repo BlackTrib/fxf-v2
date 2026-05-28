@@ -103,7 +103,7 @@ export function Navbar() {
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center">
             <div className={cn(
-              'flex items-center gap-0.5 rounded-xl px-2 py-1.5 transition-all duration-300',
+              'inline-flex items-center gap-0.5 rounded-full px-2 py-1.5 transition-all duration-300',
               transparent
                 ? 'bg-white shadow-sm'
                 : 'bg-secondary/60'
