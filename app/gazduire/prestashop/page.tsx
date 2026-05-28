@@ -23,7 +23,7 @@ const packages = [
     price: '105',
     monthlyPrice: '17.50',
     period: '6 luni',
-    desc: 'Perfect pentru magazine noi PrestaShop cu până la 500 produse.',
+    desc: 'Perfect pentru magazine PrestaShop la început de drum.',
     href: 'https://clienti.fxfweb.ro/store/gazduire-e-commerce/bronze-30gb',
     features: [
       { label: 'spațiu alocat', value: '30GB' },
