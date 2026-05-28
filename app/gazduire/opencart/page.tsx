@@ -21,6 +21,7 @@ const packages = [
   {
     name: 'OC Start',
     price: '105',
+    monthlyPrice: '17.50',
     period: '6 luni',
     desc: 'Perfect pentru magazine noi OpenCart cu până la 500 produse.',
     href: 'https://clienti.fxfweb.ro/store/gazduire-e-commerce/bronze-30gb',
@@ -43,6 +44,7 @@ const packages = [
   {
     name: 'OC Business',
     price: '115',
+    monthlyPrice: '19.17',
     period: '6 luni',
     desc: 'Ideal pentru magazine în creștere cu până la 2000 produse.',
     popular: true,
@@ -66,6 +68,7 @@ const packages = [
   {
     name: 'OC Pro',
     price: '124',
+    monthlyPrice: '20.67',
     period: '6 luni',
     desc: 'Pentru magazine mari cu mii de produse și trafic intens.',
     href: 'https://clienti.fxfweb.ro/store/gazduire-e-commerce/gold-50gb',
@@ -88,6 +91,7 @@ const packages = [
   {
     name: 'OC Enterprise',
     price: '143',
+    monthlyPrice: '23.83',
     period: '6 luni',
     desc: 'Putere maximă pentru magazine OpenCart enterprise.',
     href: 'https://clienti.fxfweb.ro/store/gazduire-e-commerce/platinum-65gb',
@@ -172,9 +176,10 @@ export default function GazduireOpencartPage() {
                     <h3 className="font-display text-xl font-bold text-foreground mb-2">{pkg.name}</h3>
                     <p className="text-sm text-muted-foreground mb-4 min-h-[40px]">{pkg.desc}</p>
                     <div className="flex items-baseline justify-center gap-1">
-                      <span className="text-4xl font-bold text-primary">{pkg.price}</span>
-                      <span className="text-muted-foreground">€/{pkg.period}</span>
+                      <span className="text-4xl font-bold text-primary">{pkg.monthlyPrice}</span>
+                      <span className="text-muted-foreground">€/lună</span>
                     </div>
+                    <p className="text-xs text-muted-foreground mt-1">Plată {pkg.price}€ o dată la 6 luni</p>
                   </div>
                   <ul className="space-y-2 mb-6">
                     {pkg.features.map((f) => (

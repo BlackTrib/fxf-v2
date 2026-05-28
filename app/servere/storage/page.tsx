@@ -29,6 +29,7 @@ const packages = [
     name: 'Starter Storage', 
     storage: '1 TB', 
     price: '150', 
+    monthlyPrice: '25',
     period: '6 luni',
     users: '2 utilizatori',
     desc: 'Perfect pentru backupuri și stocare personală.' ,
@@ -48,6 +49,7 @@ const packages = [
     name: 'Professional Storage', 
     storage: '5 TB', 
     price: '250', 
+    monthlyPrice: '41.67',
     period: '6 luni',
     users: '3 utilizatori',
     popular: true,
@@ -68,6 +70,7 @@ const packages = [
     name: 'Business Storage', 
     storage: '10 TB', 
     price: '400', 
+    monthlyPrice: '66.67',
     period: '6 luni',
     users: '5 utilizatori',
     desc: 'Pentru departamente și companii cu nevoie de stocare mare.' ,
@@ -87,6 +90,7 @@ const packages = [
     name: 'Enterprise Storage', 
     storage: '20 TB', 
     price: '800', 
+    monthlyPrice: '133.33',
     period: '6 luni',
     users: '10 utilizatori',
     desc: 'Soluție personalizată cu suport dedicat 24/7.' ,
@@ -159,9 +163,10 @@ export default function StoragePage() {
                     <h3 className="font-display text-xl font-bold text-foreground mb-1">{pkg.name}</h3>
                     <p className="text-sm text-muted-foreground mb-4 min-h-[40px]">{pkg.desc}</p>
                     <div className="flex items-baseline justify-center gap-1">
-                      <span className="text-4xl font-bold text-primary">{pkg.price}</span>
-                      <span className="text-muted-foreground">{'€'}/{pkg.period}</span>
+                      <span className="text-4xl font-bold text-primary">{pkg.monthlyPrice}</span>
+                      <span className="text-muted-foreground">€/lună</span>
                     </div>
+                    <p className="text-xs text-muted-foreground mt-1">Plată {pkg.price}€ o dată la 6 luni</p>
                     <p className="text-xs text-muted-foreground mt-1.5">+ taxă instalare și configurare <span className="font-semibold text-foreground">50 €</span></p>
                   </div>
                   <ul className="space-y-1.5 mb-5">

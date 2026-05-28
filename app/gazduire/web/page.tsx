@@ -21,6 +21,7 @@ const packages = [
   {
     name: 'Start',
     price: '19',
+    monthlyPrice: '3.17',
     period: '6 luni',
     desc: 'Ideal pentru site-uri mici de prezentare și bloguri personale.',
     href: 'https://clienti.fxfweb.ro/store/gazduire-starter/silver-3gb',
@@ -43,6 +44,7 @@ const packages = [
   {
     name: 'Basic',
     price: '28',
+    monthlyPrice: '4.67',
     period: '6 luni',
     desc: 'Perfect pentru site-uri în creștere cu mai mult conținut.',
     href: 'https://clienti.fxfweb.ro/store/gazduire-starter/gold-6gb',
@@ -65,6 +67,7 @@ const packages = [
   {
     name: 'Business',
     price: '38',
+    monthlyPrice: '6.33',
     period: '6 luni',
     desc: 'Recomandat pentru site-uri de afaceri și proiecte medii.',
     popular: true,
@@ -88,6 +91,7 @@ const packages = [
   {
     name: 'Professional',
     price: '57',
+    monthlyPrice: '9.50',
     period: '6 luni',
     desc: 'Pentru site-uri profesionale cu trafic în creștere.',
     href: 'https://clienti.fxfweb.ro/store/gazduire-business/silver-15gb',
@@ -110,6 +114,7 @@ const packages = [
   {
     name: 'Corporate',
     price: '67',
+    monthlyPrice: '11.17',
     period: '6 luni',
     desc: 'Optimizat pentru companii și magazine online medii.',
     href: 'https://clienti.fxfweb.ro/store/gazduire-business/gold-20gb',
@@ -132,6 +137,7 @@ const packages = [
   {
     name: 'Enterprise',
     price: '76',
+    monthlyPrice: '12.67',
     period: '6 luni',
     desc: 'Putere maximă pentru aplicații și site-uri cu trafic intens.',
     href: 'https://clienti.fxfweb.ro/store/gazduire-business/platinum-25gb',
@@ -218,9 +224,10 @@ export default function GazduireWebPage() {
                     <h3 className="font-display text-xl font-bold text-foreground mb-2">Găzduire {pkg.name}</h3>
                     <p className="text-sm text-muted-foreground mb-4 min-h-[40px]">{pkg.desc}</p>
                     <div className="flex items-baseline justify-center gap-1">
-                      <span className="text-4xl font-bold text-primary">{pkg.price}</span>
-                      <span className="text-muted-foreground">€/{pkg.period}</span>
+                      <span className="text-4xl font-bold text-primary">{pkg.monthlyPrice}</span>
+                      <span className="text-muted-foreground">€/lună</span>
                     </div>
+                    <p className="text-xs text-muted-foreground mt-1">Plată {pkg.price}€ o dată la 6 luni</p>
                   </div>
                   <ul className="space-y-2 mb-6">
                     {pkg.features.map((f) => (

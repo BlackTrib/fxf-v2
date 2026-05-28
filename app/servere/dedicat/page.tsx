@@ -28,6 +28,7 @@ const packages = [
   { 
     name: 'Dedicat Start', 
     price: '726', 
+    monthlyPrice: '121',
     period: '6 luni',
     desc: 'Perfect pentru proiecte medii și aplicații business.',
     href: 'https://clienti.fxfweb.ro/store/gzduire-dedicate/dedicat-start',
@@ -48,6 +49,7 @@ const packages = [
   { 
     name: 'Dedicat Pro', 
     price: '944', 
+    monthlyPrice: '157',
     period: '6 luni',
     popular: true,
     desc: 'Ideal pentru aplicații business și magazine mari.',
@@ -69,6 +71,7 @@ const packages = [
   { 
     name: 'Dedicat Business', 
     price: '1452', 
+    monthlyPrice: '242',
     period: '6 luni',
     desc: 'Pentru aplicații enterprise cu trafic intens.',
     href: 'https://clienti.fxfweb.ro/store/gzduire-dedicate/dedicat-business',
@@ -89,6 +92,7 @@ const packages = [
   { 
     name: 'Dedicat Enterprise', 
     price: '2179', 
+    monthlyPrice: '363',
     period: '6 luni',
     desc: 'Putere maximă pentru cele mai exigente proiecte.',
     href: 'https://clienti.fxfweb.ro/store/gzduire-dedicate/dedicat-enterprise',
@@ -169,9 +173,10 @@ export default function DedicatPage() {
                     <h3 className="font-display text-xl font-bold text-foreground mb-1">{pkg.name}</h3>
                     <p className="text-sm text-muted-foreground mb-4 min-h-[40px]">{pkg.desc}</p>
                     <div className="flex items-baseline justify-center gap-1">
-                      <span className="text-4xl font-bold text-primary">{pkg.price}</span>
-                      <span className="text-muted-foreground">€/{pkg.period}</span>
+                      <span className="text-4xl font-bold text-primary">{pkg.monthlyPrice}</span>
+                      <span className="text-muted-foreground">€/lună</span>
                     </div>
+                    <p className="text-xs text-muted-foreground mt-1">Plată {pkg.price}€ o dată la 6 luni</p>
                     <p className="text-xs text-muted-foreground mt-1.5">+ taxă instalare și configurare <span className="font-semibold text-foreground">50 €</span></p>
                   </div>
                   <ul className="space-y-1.5 mb-5">

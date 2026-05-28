@@ -21,6 +21,7 @@ const packages = [
   {
     name: 'Performance Start',
     price: '171',
+    monthlyPrice: '28.50',
     period: '6 luni',
     desc: 'Pentru site-uri cu trafic mediu și cerințe de performanță ridicată.',
     href: 'https://clienti.fxfweb.ro/store/gazduire-performance/bronze-100gb',
@@ -43,6 +44,7 @@ const packages = [
   {
     name: 'Performance Pro',
     price: '207',
+    monthlyPrice: '34.50',
     period: '6 luni',
     desc: 'Ideal pentru aplicații complexe și magazine online cu trafic ridicat.',
     popular: true,
@@ -66,6 +68,7 @@ const packages = [
   {
     name: 'Performance Business',
     price: '248',
+    monthlyPrice: '41.33',
     period: '6 luni',
     desc: 'Pentru proiecte enterprise cu trafic intens și cerințe premium.',
     href: 'https://clienti.fxfweb.ro/store/gazduire-performance/gold-200gb',
@@ -88,6 +91,7 @@ const packages = [
   {
     name: 'Performance Enterprise',
     price: '334',
+    monthlyPrice: '55.67',
     period: '6 luni',
     desc: 'Putere maximă pentru cele mai exigente proiecte enterprise.',
     href: 'https://clienti.fxfweb.ro/store/gazduire-performance/platinum-300gb',
@@ -172,9 +176,10 @@ export default function GazduirePerformancePage() {
                     <h3 className="font-display text-xl font-bold text-foreground mb-2">{pkg.name}</h3>
                     <p className="text-sm text-muted-foreground mb-4 min-h-[40px]">{pkg.desc}</p>
                     <div className="flex items-baseline justify-center gap-1">
-                      <span className="text-4xl font-bold text-primary">{pkg.price}</span>
-                      <span className="text-muted-foreground">€/{pkg.period}</span>
+                      <span className="text-4xl font-bold text-primary">{pkg.monthlyPrice}</span>
+                      <span className="text-muted-foreground">€/lună</span>
                     </div>
+                    <p className="text-xs text-muted-foreground mt-1">Plată {pkg.price}€ o dată la 6 luni</p>
                   </div>
                   <ul className="space-y-2 mb-6">
                     {pkg.features.map((f) => (

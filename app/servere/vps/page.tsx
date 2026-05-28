@@ -21,6 +21,7 @@ const packages = [
   {
     name: 'VPS Pro Start',
     price: '210',
+    monthlyPrice: '35',
     period: '6 luni',
     desc: 'Ideal pentru aplicații web și site-uri cu trafic mediu.',
     popular: true,
@@ -41,6 +42,7 @@ const packages = [
   {
     name: 'VPS Pro Business',
     price: '420',
+    monthlyPrice: '70',
     period: '6 luni',
     desc: 'Pentru proiecte business și baze de date.',
     href: 'https://clienti.fxfweb.ro/store/gazduire-vps/vps-pro-business',
@@ -60,6 +62,7 @@ const packages = [
   {
     name: 'VPS Pro Advanced',
     price: '618',
+    monthlyPrice: '103',
     period: '6 luni',
     desc: 'Putere pentru aplicații enterprise și trafic intens.',
     href: 'https://clienti.fxfweb.ro/store/gazduire-vps/vps-pro-advanced',
@@ -79,6 +82,7 @@ const packages = [
   {
     name: 'VPS Pro Enterprise',
     price: '1022',
+    monthlyPrice: '170',
     period: '6 luni',
     desc: 'Maxim de performanță pentru proiecte critice.',
     href: 'https://clienti.fxfweb.ro/store/gazduire-vps/vps-pro-enterprise',
@@ -160,9 +164,10 @@ export default function VPSPage() {
                     <h3 className="font-display text-xl font-bold text-foreground mb-1">{pkg.name}</h3>
                     <p className="text-sm text-muted-foreground mb-4 min-h-[40px]">{pkg.desc}</p>
                     <div className="flex items-baseline justify-center gap-1">
-                      <span className="text-4xl font-bold text-primary">{pkg.price}</span>
-                      <span className="text-muted-foreground">€/{pkg.period}</span>
+                      <span className="text-4xl font-bold text-primary">{pkg.monthlyPrice}</span>
+                      <span className="text-muted-foreground">€/lună</span>
                     </div>
+                    <p className="text-xs text-muted-foreground mt-1">Plată {pkg.price}€ o dată la 6 luni</p>
                     <p className="text-xs text-muted-foreground mt-1.5">+ taxă instalare și configurare <span className="font-semibold text-foreground">50 €</span></p>
                   </div>
                   <ul className="space-y-1.5 mb-5">
