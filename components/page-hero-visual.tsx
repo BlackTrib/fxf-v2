@@ -159,10 +159,10 @@ function ContactVisual() {
             <p className="text-white/90 text-xs">Bună! Cu ce te pot ajuta?</p>
           </div>
           <div className="bg-primary/60 rounded-lg rounded-tr-none px-3 py-2 max-w-[85%] ml-auto">
-            <p className="text-white text-xs">Vreau un site profesional!</p>
+            <p className="text-white text-xs">Vreau găzduire rapidă și sigură!</p>
           </div>
           <div className="bg-white/15 rounded-lg rounded-tl-none px-3 py-2 max-w-[85%]">
-            <p className="text-white/90 text-xs">Perfact! Completează formularul...</p>
+            <p className="text-white/90 text-xs">Perfect! Completează formularul...</p>
           </div>
         </div>
       </div>
