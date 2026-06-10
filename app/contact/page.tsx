@@ -11,19 +11,29 @@ import { PageHeroVisual } from '@/components/page-hero-visual'
 // See app/contact/metadata.ts
 
 const services = [
-  'Găzduire Web SSD',
+  'Găzduire Web SSD NVMe',
   'Găzduire WordPress',
   'Găzduire PrestaShop',
-  'Găzduire Magazin Online (E-Commerce)',
-  'Domenii Web',
-  'VPS Cloud',
+  'Găzduire OpenCart',
+  'Găzduire Magento',
+  'Găzduire Performance',
+  'Înregistrare Domeniu',
+  'Transfer Domeniu',
   'Certificat SSL',
   'Migrare Site Web',
+  'Altele',
+]
+
+const periods = [
+  '6 luni',
+  '12 luni',
+  '24 luni',
+  'Nu știu încă',
 ]
 
 const contactInfo = [
   { icon: Phone, label: 'Telefon', value: '+40 785 277 566', href: 'tel:+40785277566' },
-  { icon: Mail, label: 'Email', value: 'office@fxf.ro', href: 'mailto:office@fxf.ro' },
+  { icon: Mail, label: 'Email', value: 'suport@fxfweb.ro', href: 'mailto:suport@fxfweb.ro' },
   { icon: MapPin, label: 'Locație', value: 'Str. Topolnita nr 5, București, România', href: null },
   { icon: Clock, label: 'Program', value: 'Luni – Vineri, 10:00 – 18:00 EET | Weekend inchis', href: null },
 ]
@@ -46,7 +56,7 @@ export default function ContactPage() {
     phone: '',
     company: '',
     service: '',
-    budget: '',
+    period: '',
     message: '',
   })
 
@@ -73,7 +83,7 @@ export default function ContactPage() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          access_key: '0af7bd53-cb68-45b7-98f4-63e5eb75da25',
+          access_key: '547905e1-9b51-4bf2-be7f-c49f411ac1f6',
           subject: `Solicitare nouă de la ${form.name} - FXF.ro`,
           from_name: 'FXF Website',
           ...form,
@@ -84,7 +94,7 @@ export default function ContactPage() {
       
       if (data.success) {
         setSent(true)
-        setForm({ name: '', email: '', phone: '', company: '', service: '', budget: '', message: '' })
+        setForm({ name: '', email: '', phone: '', company: '', service: '', period: '', message: '' })
       } else {
         alert('Eroare la trimitere. Încearcă din nou.')
       }
@@ -105,18 +115,16 @@ export default function ContactPage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="text-white/50 font-semibold text-sm uppercase tracking-widest mb-3">
-                  Contact FXF Web Solution
+                  Contact FXF Web Hosting
                 </p>
                 <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-5 text-balance">
-                  Contactează-ne pentru găzduire web de calitate
+                  Găsești soluția de hosting potrivită?
                 </h1>
                 <p className="text-white/70 text-lg leading-relaxed mb-4">
-                  Consultanța inițială este 100% gratuită și fără obligații. Spune-ne despre necesitățile tale 
-                  și oferim recomandări personalizate pentru soluția de găzduire potrivită.
+                  Completează formularul cu detaliile tale și echipa noastră de specialiști în hosting îți va contacta în 24 de ore cu o ofertă personalizată. Consultația este complet gratuită și fără obligații.
                 </p>
                 <p className="text-white/50 text-sm">
-                  Răspundem la toate solicitările în maxim 4 ore lucrative. Găzduire web SSD, WordPress, 
-                  PrestaShop, domenii, VPS - avem soluția pentru fiecare nevoie.
+                  Oferim hosting SSD NVMe pentru WordPress, PrestaShop, OpenCart, Magento, pachete Performance cu resurse dedicate și multe altele. Găzduire de calitate enterprise cu suport 24/7 și uptime garantat 99.9%.
                 </p>
               </div>
               <PageHeroVisual page="contact" />
@@ -223,7 +231,7 @@ export default function ContactPage() {
                     className="bg-card border border-border rounded-2xl p-8 lg:p-10 shadow-sm hover:shadow-md transition-shadow"
                   >
                     <h2 className="font-display font-bold text-2xl text-foreground mb-8">
-                      Ofertă Gratuită
+                      Solicită o ofertă de hosting
                     </h2>
 
                     {/* Row 1 */}
@@ -315,22 +323,20 @@ export default function ContactPage() {
                         </select>
                       </div>
                       <div>
-                        <label htmlFor="budget" className="block text-sm font-semibold text-foreground mb-2.5">
-                          Buget estimat
+                        <label htmlFor="period" className="block text-sm font-semibold text-foreground mb-2.5">
+                          Perioadă dorită
                         </label>
                         <select
-                          id="budget"
-                          name="budget"
-                          value={form.budget}
+                          id="period"
+                          name="period"
+                          value={form.period}
                           onChange={handleChange}
                           className="w-full bg-background border border-border rounded-xl px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"
                         >
-                          <option value="">Nu sunt sigur</option>
-                          <option value="sub-1000">Sub 1.000 EUR</option>
-                          <option value="1000-3000">1.000 EUR – 3.000 EUR</option>
-                          <option value="3000-6000">3.000 EUR – 6.000 EUR</option>
-                          <option value="6000-10000">6.000 EUR – 10.000 EUR</option>
-                          <option value="peste-10000">Peste 10.000 EUR</option>
+                          <option value="">Selectează perioada</option>
+                          {periods.map((p) => (
+                            <option key={p} value={p}>{p}</option>
+                          ))}
                         </select>
                       </div>
                     </div>
@@ -347,7 +353,7 @@ export default function ContactPage() {
                         rows={6}
                         value={form.message}
                         onChange={handleChange}
-                        placeholder="Spune-ne despre afacerea ta, obiectivele actuale și ce vrei să realizezi cu ajutorul nostru..."
+                        placeholder="Ex: Am nevoie de hosting WordPress pentru magazinul meu online cu ~500 produse, sau hosting pentru un site de prezentare cu trafic mediu..."
                         className="w-full bg-background border border-border rounded-xl px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all resize-none"
                       />
                     </div>
@@ -407,25 +413,50 @@ export default function ContactPage() {
           </div>
         </section>
 
-        {/* FAQ or CTA */}
+        {/* FAQ Hosting */}
         <section className="py-14 bg-secondary/30">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-            <h2 className="font-display text-3xl lg:text-4xl font-bold text-foreground mb-4 text-balance">
-              Întrebări frecvente despre colaborare
-            </h2>
-            <p className="text-muted-foreground text-base mb-8 max-w-2xl mx-auto leading-relaxed">
-              Răspunsuri la cele mai frecvente întrebări despre serviciile noastre de web design și development.
-            </p>
-            <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <h2 className="font-display text-3xl lg:text-4xl font-bold text-foreground mb-3 text-balance">
+                Întrebări frecvente despre hosting
+              </h2>
+              <p className="text-muted-foreground text-base max-w-2xl mx-auto leading-relaxed">
+                Răspunsuri la cele mai frecvente întrebări despre serviciile noastre de găzduire web.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               {[
-                { q: 'Cât costă un site?', a: 'Prețurile variază în funcție de complex și funcționalități. Oferim pachete de la 1.000€ pentru site-uri de prezentare și de la 2.500€ pentru magazine online.' },
-                { q: 'Cât timp durează dezvoltarea?', a: 'Un site standard durează 4-8 săptămâni. E-commerce-urile și platformele complexe pot dura 10-16 săptămâni.' },
-                { q: 'Oferiți suport după lansare?', a: 'Da, oferim mentenanță inclusă prima lună, apoi pachete de suport de la 100€/lună.' },
-                { q: 'Cum funcționează procesul?', a: 'Discuție inițială → Propunere → Design → Development → Testing → Lansare → Suport continuu.' },
+                { 
+                  q: 'Cum se face migrarea de la alt furnizor?', 
+                  a: 'Migrarea este complet gratuită! Echipa noastră se ocupă de transferul site-ului, bazei de date și email-urilor. În general, procesul durează 1-3 zile fără întreruperi pentru site-ul tău.' 
+                },
+                { 
+                  q: 'Care este diferența dintre pachete?', 
+                  a: 'Principala diferență este spațiul de stocare și resursele server (CPU/RAM). Pachete Web sunt ideale pentru site-uri mici, Business pentru WordPress/magazine medii, iar Performance pentru trafic intens cu resurse dedicate.' 
+                },
+                { 
+                  q: 'Ce este inclus în fiecare pachet?', 
+                  a: 'Toate pachetele includ: cPanel, SSL gratuit Let\'s Encrypt, backup 24/24h, protecție Imunify360, LiteSpeed Web Server, email nelimitat, și suport tehnic 24/7.' 
+                },
+                { 
+                  q: 'Cât durează activarea unui pachet?', 
+                  a: 'Activarea este instantanee! După plată, pachetul tău este activ în maxim 30 de minute. Dacă migrezi, echipa te contactează pentru a coordona transferul datelor.' 
+                },
+                { 
+                  q: 'Oferați garanție de uptime?', 
+                  a: 'Da, garantăm 99.9% uptime. Dacă nu respectăm această promisiune, primești credit proporțional cu orele de indisponibilitate.' 
+                },
+                { 
+                  q: 'Pot schimba pachetul ulterior?', 
+                  a: 'Absolut! Poți face upgrade sau downgrade oricând din panoul cPanel. Diferența de preț se va calcula proporțional pentru perioada rămasă.' 
+                },
               ].map((faq, i) => (
-                <div key={i} className="bg-card border border-border rounded-xl p-6 text-left">
-                  <h3 className="font-bold text-foreground mb-2">{faq.q}</h3>
-                  <p className="text-muted-foreground text-sm">{faq.a}</p>
+                <div key={i} className="bg-card border border-border rounded-xl p-6 hover:border-primary/20 transition-colors">
+                  <h3 className="font-bold text-foreground mb-2 flex items-start gap-2">
+                    <CheckCircle2 size={18} className="text-primary mt-0.5 shrink-0" />
+                    {faq.q}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{faq.a}</p>
                 </div>
               ))}
             </div>

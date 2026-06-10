@@ -1,58 +1,67 @@
 'use client'
 
 import Link from 'next/link'
-import { Server, ShoppingCart, Globe, HardDrive, ArrowRight, CheckCircle2, Zap } from 'lucide-react'
+import { Server, HardDrive, ArrowRight, CheckCircle2, Zap, Cloud, Cpu, Globe } from 'lucide-react'
 import { Reveal } from '@/components/ui/reveal'
 
 const hostingPackages = [
   { 
     icon: Server, 
-    title: 'Găzduire Starter', 
-    desc: 'Ideal pentru site-uri de prezentare mici, bloguri și serviciul email. Perfect pentru a începe.',
-    price: '55',
+    title: 'Găzduire Business', 
+    desc: 'Perfect pentru site-uri WordPress, aplicații web și proiecte cu trafic moderat.',
+    price: '38',
+    monthlyPrice: '6.33',
     period: '6 luni',
-    features: ['1GB NVMe SSD', 'Domenii nelimitate', 'Email nelimitat', 'cPanel + JetBackup', '1 CPU / 1GB RAM'],
-    href: '/servicii/gazduire-web', 
+    currency: '€',
+    features: ['10GB NVMe SSD', 'Domenii nelimitate', 'cPanel + JetBackup', 'LiteSpeed + Imunify', '2CPU / 2GB RAM'],
+    href: '/gazduire/web',
+    badge: 'Configurare și migrare gratuită',
   },
   { 
     icon: HardDrive, 
-    title: 'Găzduire Business', 
-    desc: 'Perfect pentru proiecte medii, site-uri WordPress și aplicații web cu trafic moderat.',
-    price: '207',
+    title: 'Performance Start', 
+    desc: 'Resurse dedicate CPU și RAM pentru site-uri cu cerințe ridicate de performanță.',
+    price: '171',
+    monthlyPrice: '28.50',
     period: '6 luni',
-    features: ['10GB NVMe SSD', 'Domenii nelimitate', 'Email nelimitat', 'LiteSpeed + Imunify', '2 CPU / 2GB RAM'],
-    href: '/servicii/gazduire-web',
-    popular: true 
+    currency: '€',
+    features: ['100GB NVMe SSD', 'Domenii nelimitate', 'cPanel + JetBackup', 'LiteSpeed Enterprise', '4CPU / 4GB RAM'],
+    href: '/gazduire/performance',
+    popular: true,
+    badge: 'Configurare și migrare gratuită',
   },
   { 
-    icon: ShoppingCart, 
-    title: 'Găzduire E-Commerce', 
-    desc: 'Creat special pentru magazine online PrestaShop, WooCommerce sau alte platforme e-commerce.',
-    price: '455',
+    icon: Cloud, 
+    title: 'VPS Pro Start', 
+    desc: 'Server virtual privat cu resurse dedicate, root access complet și IP dedicat.',
+    price: '210',
+    monthlyPrice: '35',
     period: '6 luni',
-    features: ['30GB NVMe SSD', 'Domenii nelimitate', 'Email nelimitat', 'LiteSpeed + Imunify', '3 CPU / 3GB RAM'],
-    href: '/servicii/gazduire-ecommerce' 
+    currency: '€',
+    features: ['160GB NVMe SSD', '4 vCPU AMD EPYC', '8GB DDR5 RAM', 'IP dedicat IPv4+IPv6', 'Root access + DDoS'],
+    href: '/servere/vps',
+    badge: 'Administrare gratuită',
   },
 ]
 
 const additionalServices = [
   { 
-    icon: Globe, 
-    title: 'Înregistrare Domenii', 
-    desc: 'Domenii .ro, .com, .eu și alte extensii la prețuri competitive.',
-    href: '/servicii/domenii' 
-  },
-  { 
     icon: Zap, 
-    title: 'Găzduire WordPress', 
-    desc: 'Hosting optimizat special pentru WordPress cu LiteSpeed Cache.',
-    href: '/servicii/gazduire-wordpress' 
+    title: 'Găzduire Web', 
+    desc: 'Hosting optimizat pentru orice tip de site cu LiteSpeed Cache.',
+    href: '/gazduire/web' 
   },
   { 
-    icon: Server, 
+    icon: Cloud, 
     title: 'VPS Cloud', 
-    desc: 'Servere virtuale private pentru proiecte care necesită resurse dedicate.',
-    href: '/servicii/vps' 
+    desc: 'Servere virtuale private cu resurse dedicate și root access complet.',
+    href: '/servere/vps' 
+  },
+  { 
+    icon: Cpu, 
+    title: 'Servere Dedicate', 
+    desc: 'Hardware dedicat 100% pentru proiecte enterprise cu trafic intens.',
+    href: '/servere/dedicat' 
   },
 ]
 
@@ -74,8 +83,8 @@ export function ServicesOverview() {
               cPanel, backup zilnic și suport tehnic 24/7.
             </p>
           </div>
-          <Link href="/servicii" className="text-sm font-medium text-primary hover:text-accent-brand flex items-center gap-1 transition-colors shrink-0">
-            Toate serviciile <ArrowRight size={14} />
+          <Link href="/gazduire" className="text-sm font-medium text-primary hover:text-accent-brand flex items-center gap-1 transition-colors shrink-0">
+            Toate pachetele <ArrowRight size={14} />
           </Link>
         </Reveal>
 
@@ -106,10 +115,11 @@ export function ServicesOverview() {
                 <p className="text-muted-foreground text-sm leading-relaxed mb-3">{pkg.desc}</p>
                 
                 {/* Price */}
-                <div className="mb-3">
-                  <span className="text-2xl font-bold text-primary">{pkg.price} lei</span>
-                  <span className="text-muted-foreground text-sm">/{pkg.period}</span>
+                <div className="mb-3 flex items-baseline gap-1">
+                  <span className="text-2xl font-bold text-primary">{pkg.monthlyPrice} {pkg.currency}</span>
+                  <span className="text-sm text-muted-foreground">/lună</span>
                 </div>
+                <p className="text-xs text-muted-foreground mb-3">Plată {pkg.price}€ la 6 luni</p>
                 
                 {/* Features list */}
                 <ul className="space-y-1.5 flex-1">
@@ -126,6 +136,12 @@ export function ServicesOverview() {
                   <span className="text-sm font-semibold text-primary group-hover:text-accent-brand flex items-center gap-1">
                     Comandă acum <ArrowRight size={14} />
                   </span>
+                  {pkg.badge && (
+                    <p className="text-xs text-muted-foreground mt-2">
+                      {pkg.badge.replace('gratuită', '')}
+                      <span className="font-semibold text-foreground">gratuită</span>
+                    </p>
+                  )}
                 </div>
               </Link>
             </Reveal>

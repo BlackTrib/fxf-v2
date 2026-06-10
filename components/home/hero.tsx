@@ -80,14 +80,14 @@ export function Hero() {
                   <Star key={i} className="w-3 h-3 text-amber-400 fill-amber-400" />
                 ))}
               </div>
-              <span className="text-white/60 text-xs font-medium">Hosting de încredere din 2020</span>
+              <span className="text-white/60 text-xs font-medium">Hosting de încredere din 2021</span>
             </div>
 
             {/* Headline */}
             <h1 className="font-display text-3xl sm:text-5xl lg:text-[3.5rem] font-bold text-white leading-[1.1] tracking-tight">
               Găzduire Web{' '}
               <span style={{ color: 'oklch(0.72 0.14 70)' }}>SSD NVMe</span>{' '}
-              în România cu{' '}
+              profesională cu{' '}
               <span style={{ color: 'oklch(0.72 0.14 70)' }}>uptime 99.9%</span>
             </h1>
 
@@ -95,7 +95,7 @@ export function Hero() {
             <p className="text-white/70 text-sm sm:text-base lg:text-lg leading-relaxed max-w-xl">
               FXF Web Hosting oferă servicii de găzduire web profesionale pe servere SSD NVMe 
               ultrarapide. Hosting optimizat pentru WordPress, PrestaShop și magazine online, 
-              cu cPanel, SSL gratuit și suport tehnic 24/7. Prețuri de la doar 55 lei/6 luni.
+              cu cPanel, SSL gratuit și suport tehnic 24/7. Prețuri de la doar 3.17€/lună (19€/6 luni).
             </p>
 
             {/* Features */}
@@ -125,7 +125,7 @@ export function Hero() {
             {/* CTAs */}
             <div className="flex flex-wrap gap-3 pt-2">
               <Link
-                href="/servicii/gazduire-web"
+                href="/gazduire/web"
                 className="inline-flex items-center gap-2 bg-white text-primary px-6 py-3 rounded-lg text-sm font-semibold hover:bg-cyber hover:text-primary transition-all glow-hover"
               >
                 Vezi pachetele de hosting
@@ -157,8 +157,8 @@ export function Hero() {
                       <h3 className="font-display font-bold text-lg text-foreground mt-1">Găzduire Business</h3>
                     </div>
                     <div className="text-right">
-                      <p className="text-2xl font-bold text-primary">207 lei</p>
-                      <p className="text-xs text-muted-foreground">/6 luni</p>
+                      <p className="text-2xl font-bold text-primary">6.33 €<span className="text-sm text-muted-foreground">/lună</span></p>
+                      <p className="text-xs text-muted-foreground">38€ la 6 luni</p>
                     </div>
                   </div>
                 </div>
@@ -169,8 +169,8 @@ export function Hero() {
                     { icon: HardDrive, label: 'Spațiu: 10GB NVMe SSD' },
                     { icon: Server, label: 'Domenii găzduite: Nelimitat' },
                     { icon: Zap, label: 'LiteSpeed + cPanel' },
-                    { icon: Shield, label: 'SSL Let\'s Encrypt gratuit' },
-                    { icon: Clock, label: 'Backup zilnic JetBackup' },
+                    { icon: Shield, label: "SSL Let's Encrypt gratuit" },
+                    { icon: Clock, label: 'Backup 24 din 24 ore' },
                     { icon: Headphones, label: 'Suport tehnic 24/7' },
                   ].map((f) => (
                     <div key={f.label} className="flex items-center gap-3 text-sm text-foreground/80">
@@ -185,7 +185,7 @@ export function Hero() {
                 {/* CTA */}
                 <div className="px-5 pb-5">
                   <Link
-                    href="/servicii/gazduire-web"
+                    href="/gazduire/web"
                     className="block w-full bg-primary text-white text-center py-3 rounded-lg text-sm font-semibold hover:bg-primary/90 transition-colors"
                   >
                     Comandă acum

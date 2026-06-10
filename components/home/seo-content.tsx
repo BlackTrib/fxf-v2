@@ -2,12 +2,12 @@ import Link from 'next/link'
 import { MapPin, Server, Briefcase } from 'lucide-react'
 
 const services = [
-  { title: 'Găzduire Web România', href: '/servicii/gazduire-web', desc: 'Pachete hosting SSD NVMe cu cPanel și SSL gratuit' },
-  { title: 'Găzduire WordPress', href: '/servicii/gazduire-wordpress', desc: 'Hosting optimizat pentru WordPress cu LiteSpeed Cache' },
-  { title: 'Găzduire PrestaShop', href: '/servicii/gazduire-prestashop', desc: 'Găzduire performantă pentru magazine PrestaShop' },
-  { title: 'Găzduire E-Commerce', href: '/servicii/gazduire-ecommerce', desc: 'Pachete speciale pentru magazine online' },
-  { title: 'Înregistrare Domenii', href: '/servicii/domenii', desc: 'Domenii .ro, .com, .eu la prețuri competitive' },
-  { title: 'VPS Cloud', href: '/servicii/vps', desc: 'Servere virtuale private cu resurse dedicate' },
+  { title: 'Găzduire Web România', href: '/gazduire/web', desc: 'Pachete hosting SSD NVMe cu cPanel și SSL gratuit' },
+  { title: 'Găzduire WordPress', href: '/gazduire/wordpress', desc: 'Hosting optimizat pentru WordPress cu LiteSpeed Cache' },
+  { title: 'Găzduire PrestaShop', href: '/gazduire/prestashop', desc: 'Găzduire performantă pentru magazine PrestaShop' },
+  { title: 'Găzduire Magento', href: '/gazduire/magento', desc: 'Găzduire optimizată pentru Magento 2 Enterprise' },
+  { title: 'Servere Dedicate', href: '/servere/dedicat', desc: 'Hardware dedicat 100% pentru proiecte enterprise' },
+  { title: 'VPS Cloud', href: '/servere/vps', desc: 'Servere virtuale private cu resurse dedicate' },
 ]
 
 const features = [
@@ -28,11 +28,11 @@ export function SEOContent() {
             <div className="prose prose-sm max-w-none text-muted-foreground space-y-3">
               <p>
                 <strong>FXF Web Hosting</strong> oferă servicii de găzduire web profesionale pe servere 
-                SSD NVMe ultrarapide localizate în Germania. Cu peste 4 ani de experiență și 500+ site-uri 
+                SSD NVMe ultrarapide localizate în Germania. Cu peste 5 ani de experiență și 200+ site-uri 
                 găzduite, suntem alegerea potrivită pentru afacerea ta online, indiferent de dimensiune.
               </p>
               <p>
-                Serverele noastre sunt echipate cu procesoare 64 Core, 96GB RAM DDR4 și stocare SSD NVMe 
+                Serverele noastre sunt echipate cu procesoare 64 Core, 96GB RAM DDR5 și stocare SSD NVMe 
                 montată în Raid 10 pentru performanță maximă și redundanță a datelor. Folosim CloudLinux 
                 pentru izolarea conturilor, LiteSpeed pentru viteză și Imunify360 pentru securitate avansată.
               </p>

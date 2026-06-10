@@ -23,15 +23,10 @@ export function Differentiators() {
             <h2 className="font-display text-3xl lg:text-4xl font-bold text-primary mb-3">
               Servere adaptate necesității tale
             </h2>
-            <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+            <p className="text-muted-foreground text-sm leading-relaxed mb-5">
               Folosim tehnologie care crește de până la 5 ori viteza de încărcare a site-ului. 
               Serverele noastre sunt rapide și puternice, având o arhitectură 64 Core, 96GB RAM 
               cu 6 unități SSD 1TB montate în Raid 10.
-            </p>
-            <p className="text-muted-foreground text-sm leading-relaxed mb-5">
-              Echipamentele noastre sunt colocate în cel mai modern datacenter din Germania, 
-              garantând astfel un timp de acces optim și o încărcare rapidă a site-ului dvs., 
-              indiferent de mărimea paginilor.
             </p>
             
             {/* Server specs */}
@@ -39,7 +34,7 @@ export function Differentiators() {
               <p className="text-xs font-semibold text-primary mb-2">Specificații server:</p>
               <div className="grid grid-cols-2 gap-2 text-xs text-muted-foreground">
                 <div>64 Core CPU</div>
-                <div>96GB RAM DDR4</div>
+                <div>96GB RAM DDR5</div>
                 <div>6x 1TB SSD NVMe</div>
                 <div>Raid 10</div>
                 <div>CloudLinux OS</div>

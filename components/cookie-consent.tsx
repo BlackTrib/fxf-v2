@@ -80,7 +80,7 @@ export function CookieConsent() {
           <p className="text-white/70 text-sm leading-relaxed mb-4">
             Folosim cookie-uri pentru a îmbunătăți experiența pe site, a analiza traficul și a personaliza conținutul.
             Poți alege ce categorii accepți sau le poți accepta pe toate.{' '}
-            <Link href="/politica-cookies" className="text-cyber underline underline-offset-2 hover:text-white transition-colors">
+            <Link href="/confidentialitate" className="text-cyber underline underline-offset-2 hover:text-white transition-colors">
               Politica cookies
             </Link>
           </p>

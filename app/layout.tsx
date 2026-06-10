@@ -21,7 +21,7 @@ const plusJakarta = Plus_Jakarta_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'Găzduire Web SSD România | FXF Web Hosting - Prețuri de la 55 lei',
+  title: 'Găzduire Web SSD România | FXF Hosting de la 3€/lună',
   description:
     'Găzduire web rapidă pe servere SSD NVMe în România. Hosting WordPress, PrestaShop, E-Commerce cu cPanel, SSL gratuit și suport 24/7. Uptime 99.9% garantat!',
   keywords: [
@@ -84,7 +84,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#1a2d5a',
+  themeColor: '#0f2340',
   width: 'device-width',
   initialScale: 1,
 }
@@ -138,12 +138,6 @@ export default function RootLayout({
         sameAs: [
           'https://www.facebook.com/fxfwebhosting',
         ],
-        aggregateRating: {
-          '@type': 'AggregateRating',
-          ratingValue: '4.9',
-          reviewCount: '127',
-          bestRating: '5',
-        },
       },
       {
         '@type': 'LocalBusiness',
@@ -181,6 +175,9 @@ export default function RootLayout({
                 name: 'Găzduire WordPress',
                 description: 'Hosting optimizat pentru WordPress cu LiteSpeed, cPanel și backup automat.',
               },
+              priceCurrency: 'EUR',
+              price: '17.50',
+              priceValidUntil: '2026-12-31',
             },
             {
               '@type': 'Offer',
@@ -189,14 +186,20 @@ export default function RootLayout({
                 name: 'Găzduire PrestaShop',
                 description: 'Găzduire optimizată pentru magazine PrestaShop cu performanță ridicată.',
               },
+              priceCurrency: 'EUR',
+              price: '17.50',
+              priceValidUntil: '2026-12-31',
             },
             {
               '@type': 'Offer',
               itemOffered: {
                 '@type': 'Service',
-                name: 'Găzduire E-Commerce',
-                description: 'Pachete speciale pentru magazine online cu resurse dedicate.',
+                name: 'Găzduire Magento',
+                description: 'Găzduire optimizată pentru Magento 2 Enterprise cu performanță ridicată.',
               },
+              priceCurrency: 'EUR',
+              price: '17.50',
+              priceValidUntil: '2026-12-31',
             },
             {
               '@type': 'Offer',
@@ -205,6 +208,9 @@ export default function RootLayout({
                 name: 'Înregistrare Domenii',
                 description: 'Domenii .ro, .com, .eu și alte extensii la prețuri competitive.',
               },
+              priceCurrency: 'EUR',
+              price: '8',
+              priceValidUntil: '2026-12-31',
             },
           ],
         },

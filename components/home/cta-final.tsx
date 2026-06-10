@@ -42,7 +42,7 @@ export function CTAFinal() {
             
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
-                href="/servicii/gazduire-web"
+                href="/gazduire/web"
                 className="inline-flex items-center justify-center gap-2 bg-white text-primary px-6 py-2.5 rounded-lg text-sm font-semibold hover:bg-cyber transition-colors"
               >
                 Vezi pachetele <ArrowRight size={14} />
